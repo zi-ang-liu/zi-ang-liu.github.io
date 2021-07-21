@@ -10,8 +10,8 @@ main:
     url: /jp/
   - title: "中文"
     url: /cn/
-  # - title: "知的システム計画学研究室"
-  #   url: http://forest.sys.okayama-u.ac.jp/nishilab/
+  - title: "知的システム計画学研究室"
+    url: http://forest.sys.okayama-u.ac.jp/nishilab/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
