@@ -55,14 +55,14 @@ nav:
   - Publications: publications.md
   - Teaching: 
     - Courses: teaching.md
-    - C Programming: 
-      - 講義資料: courses/c_programming/material.md
-      - 演習問題（前半）: courses/c_programming/prob_1.md
-      - 演習問題（後半）: courses/c_programming/prob_2.md
-    - AI with Python:
-      - 講義資料: courses/ai_python/materal.md
-    - 研究指導: 
-      - 参考文献: blog/参考文献.md
+    # - C Programming: 
+    #   - 講義資料: courses/c_programming/material.md
+    #   - 演習問題（前半）: courses/c_programming/prob_1.md
+    #   - 演習問題（後半）: courses/c_programming/prob_2.md
+    # - AI with Python:
+    #   - 講義資料: courses/ai_python/materal.md
+    # - 研究指導: 
+    #   - 参考文献: blog/参考文献.md
   - Links: links.md
 
 extra:
