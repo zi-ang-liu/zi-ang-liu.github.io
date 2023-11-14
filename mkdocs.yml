@@ -71,8 +71,8 @@ extra:
       link: https://scholar.google.com/citations?hl=en&user=_G5ufOEAAAAJ
     - icon: fontawesome/brands/researchgate
       link: https://www.researchgate.net/profile/Ziang-Liu-4
-    - icon: fontawesome/brands/Orcid
-      link: https://orcid.org/0000-0002-1364-3502
+    # - icon: fontawesome/brands/Orcid
+    #   link: https://orcid.org/0000-0002-1364-3502
     - icon: fontawesome/brands/github
       link: https://github.com/zi-ang-liu/
 
