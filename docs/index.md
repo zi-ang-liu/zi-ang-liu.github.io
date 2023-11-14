@@ -12,7 +12,7 @@ E-mail: liu.ziang@okayama-u.ac.jp
 [:simple-github:](https://github.com/zi-ang-liu/){ .github } 
 [:simple-googlescholar:](https://scholar.google.com/citations?hl=en&user=_G5ufOEAAAAJ){ .google-scholar } 
 [:fontawesome-brands-researchgate:](https://www.researchgate.net/profile/Ziang-Liu-4){ .researchgate } 
-[:simple-orcid:](https://orcid.org/0000-0002-1364-3502){ .orcid }
+<!-- [:simple-orcid:](https://orcid.org/0000-0002-1364-3502){ .orcid } -->
 
 ### Address
 3-1-1 Tsushima-naka, Kita-ku, Okayama 700-8530, Japan
