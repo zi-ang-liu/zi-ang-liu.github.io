@@ -18,10 +18,10 @@
     color: #4285F4;
 }
 
-/* .md-typeset h1 {
+.md-typeset h2 {
     font-size: 24px;
+    color: #000000;
 }
-
 
 .md-typeset p {
     font-size: 16px;
@@ -29,4 +29,4 @@
 
 .md-typeset li {
     font-size: 16px;
-} */
+}
