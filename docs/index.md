@@ -44,7 +44,7 @@
     __Seminar Materials__
 
     - [Python Programming](https://ziangs-organization.gitbook.io/python/)
-    - [Optimization](https://zi-ang-liu.github.io/optimization/)
-    - [Machine Learning](https://zi-ang-liu.github.io/machine-learning/)
+    - [Optimization](https://zi-ang-liu.github.io/jb-optimization/)
+    - [Machine Learning](https://zi-ang-liu.github.io/jb-machine_learning/)
 
 </div>
