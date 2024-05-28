@@ -21,7 +21,7 @@
 
     ---
     
-    - Data-driven optimization
+    - Optimization
     - Reinforcement learning
     - Artificial intelligence
     - Supply chain management
@@ -44,7 +44,7 @@
     __Seminar Materials__
 
     - [Python Programming](https://ziangs-organization.gitbook.io/python/)
-    - [Optimization](https://ziangs-organization.gitbook.io/optimization/)
-    - [Machine Learning](https://ziangs-organization.gitbook.io/machine-learning/)
+    - [Optimization](https://zi-ang-liu.github.io/optimization/)
+    - [Machine Learning](https://zi-ang-liu.github.io/machine-learning/)
 
 </div>
