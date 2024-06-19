@@ -5,7 +5,9 @@
 4. EJOR
 5. TASE 
 6. Deep Q-Networkとグラフ探索を組み合わせた
-複数台移動ロボットの経路計画法-->
+複数台移動ロボットの経路計画法
+粒子群最適化による産業用スカラ型ロボットの省エネルギー動作計画の検討
+ESWA-->
 7. Ziang Liu, Tatsushi Nishi, "Surrogate-assisted evolutionary optimization for perishable inventory management in multi-echelon distribution systems", Expert Systems with Applications, 2023. [:material-link:](https://doi.org/10.1016/j.eswa.2023.122179)
 8. Yu Nishihata, Ziang Liu, Tatsushi Nishi, "Evolutionary-Game-Theory-Based Epidemiological Model for Prediction of Infections with Application to Demand Forecasting in Pharmaceutical Inventory Management Problems", Applied Sciences, 2023. [:material-link:](https://doi.org/10.3390/app132011308)
 9. Md Alam, Tatsushi Nishi, Ziang Liu, Tomofumi Fujiwara, "A Novel Sampling-Based Optimal Motion Planning Algorithm for Energy-Efficient Robotic Pick and Place", Energies, 2023. [:material-link:](https://doi.org/10.3390/en16196910)
