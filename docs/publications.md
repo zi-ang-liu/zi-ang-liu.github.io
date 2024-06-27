@@ -2,25 +2,24 @@
 <!-- 1. AAI
 2. IJAT
 3. IJRR
-4. EJOR
 5. TASE 
-6. Deep Q-Networkとグラフ探索を組み合わせた
-複数台移動ロボットの経路計画法
-粒子群最適化による産業用スカラ型ロボットの省エネルギー動作計画の検討
 ESWA-->
-7. Ziang Liu, Tatsushi Nishi, "Surrogate-assisted evolutionary optimization for perishable inventory management in multi-echelon distribution systems", Expert Systems with Applications, 2023. [:material-link:](https://doi.org/10.1016/j.eswa.2023.122179)
-8. Yu Nishihata, Ziang Liu, Tatsushi Nishi, "Evolutionary-Game-Theory-Based Epidemiological Model for Prediction of Infections with Application to Demand Forecasting in Pharmaceutical Inventory Management Problems", Applied Sciences, 2023. [:material-link:](https://doi.org/10.3390/app132011308)
-9. Md Alam, Tatsushi Nishi, Ziang Liu, Tomofumi Fujiwara, "A Novel Sampling-Based Optimal Motion Planning Algorithm for Energy-Efficient Robotic Pick and Place", Energies, 2023. [:material-link:](https://doi.org/10.3390/en16196910)
-10. Ziang Liu, Tatsushi Nishi, "Data-driven evolutionary computation for service constrained inventory optimization in multi-echelon supply chains", Complex & Intelligent Systems, 2023. [:material-link:](https://doi.org/10.1007/s40747-023-01179-0)
-11. Tomoya Kawabe, Tatsushi Nishi, Ziang Liu, "Flexible Route Planning for Multiple Mobile Robots by Combining Q-Learning and Graph Search Algorithm", Applied Sciences, 2023. [:material-link:](https://doi.org/10.3390/app13031879)
-12. Ziang Liu, Tatsushi Nishi, "Adaptive heterogeneous particle swarm optimization with comprehensive learning strategy", Journal of Advanced Mechanical Design, Systems, and Manufacturing, 2022. [:material-link:](https://doi.org/10.1299/jamdsm.2022jamdsm0035)
-13. Hidetoshi Togo, Kohei Asanuma, Tatsushi Nishi, Ziang Liu, "Machine Learning and Inverse Optimization for Estimation of Weighting Factors in Multi-Objective Production Scheduling Problems", Applied Sciences, 2022. [:material-link:](https://doi.org/10.3390/app12199472)
-14. Kazuki Nonoyama, Ziang Liu, Tomofumi Fujiwara, Md Alam, Tatsushi Nishi, "Energy-Efficient Robot Configuration and Motion Planning Using Genetic Algorithm and Particle Swarm Optimization", Energies, 2022. [:material-link:](https://doi.org/10.3390/en15062074)
-15. Ziang Liu, Tatsushi Nishi, "Strategy dynamics particle swarm optimizer", Information Sciences, 2022. [:material-link:](https://doi.org/10.1016/j.ins.2021.10.028)
-16. Ziang Liu, Tatsushi Nishi, "Multipopulation Ensemble Particle Swarm Optimizer for Engineering Design Problems", Mathematical Problems in Engineering, 2020. [:material-link:](https://doi.org/10.1155/2020/1450985)
-17. Tatsushi Nishi, Michiko Matsuda, Mao Hasegawa, Roghayyeh Alizadeh, Ziang Liu, Takuto Terunuma, "Automatic Construction of Virtual Supply Chain as Multi-Agent System Using Enterprise E-Catalogues", International Journal of Automation Technology, 2020. [:material-link:](https://doi.org/10.20965/ijat.2020.p0713)
-18. Ziang Liu, Tatsushi Nishi, "Analyzing just-in-time purchasing strategy in supply chains using an evolutionary game approach", Journal of Advanced Mechanical Design, Systems, and Manufacturing, 2020. [:material-link:](https://doi.org/10.1299/jamdsm.2020jamdsm0070)
-19. Ziang Liu, Tatsushi Nishi, "Government Regulations on Closed-Loop Supply Chain with Evolutionarily Stable Strategy", Sustainability, 2019. [:material-link:](https://doi.org/10.3390/su11185030)
+4. Neural Network Assisted Branch and Bound Algorithm for Dynamic Berth Allocation Problems, European Journal of Operational Research 
+6. Deep Q-Networkとグラフ探索を組み合わせた複数台移動ロボットの経路計画法, システム制御情報学会論文誌
+7. 粒子群最適化による産業用スカラ型ロボットの省エネルギー動作計画の検討, システム制御情報学会論文誌
+8. Ziang Liu, Tatsushi Nishi, "Surrogate-assisted evolutionary optimization for perishable inventory management in multi-echelon distribution systems", Expert Systems with Applications, 2023. [:material-link:](https://doi.org/10.1016/j.eswa.2023.122179)
+9. Yu Nishihata, Ziang Liu, Tatsushi Nishi, "Evolutionary-Game-Theory-Based Epidemiological Model for Prediction of Infections with Application to Demand Forecasting in Pharmaceutical Inventory Management Problems", Applied Sciences, 2023. [:material-link:](https://doi.org/10.3390/app132011308)
+10. Md Alam, Tatsushi Nishi, Ziang Liu, Tomofumi Fujiwara, "A Novel Sampling-Based Optimal Motion Planning Algorithm for Energy-Efficient Robotic Pick and Place", Energies, 2023. [:material-link:](https://doi.org/10.3390/en16196910)
+11. Ziang Liu, Tatsushi Nishi, "Data-driven evolutionary computation for service constrained inventory optimization in multi-echelon supply chains", Complex & Intelligent Systems, 2023. [:material-link:](https://doi.org/10.1007/s40747-023-01179-0)
+12. Tomoya Kawabe, Tatsushi Nishi, Ziang Liu, "Flexible Route Planning for Multiple Mobile Robots by Combining Q-Learning and Graph Search Algorithm", Applied Sciences, 2023. [:material-link:](https://doi.org/10.3390/app13031879)
+13. Ziang Liu, Tatsushi Nishi, "Adaptive heterogeneous particle swarm optimization with comprehensive learning strategy", Journal of Advanced Mechanical Design, Systems, and Manufacturing, 2022. [:material-link:](https://doi.org/10.1299/jamdsm.2022jamdsm0035)
+14. Hidetoshi Togo, Kohei Asanuma, Tatsushi Nishi, Ziang Liu, "Machine Learning and Inverse Optimization for Estimation of Weighting Factors in Multi-Objective Production Scheduling Problems", Applied Sciences, 2022. [:material-link:](https://doi.org/10.3390/app12199472)
+15. Kazuki Nonoyama, Ziang Liu, Tomofumi Fujiwara, Md Alam, Tatsushi Nishi, "Energy-Efficient Robot Configuration and Motion Planning Using Genetic Algorithm and Particle Swarm Optimization", Energies, 2022. [:material-link:](https://doi.org/10.3390/en15062074)
+16. Ziang Liu, Tatsushi Nishi, "Strategy dynamics particle swarm optimizer", Information Sciences, 2022. [:material-link:](https://doi.org/10.1016/j.ins.2021.10.028)
+17. Ziang Liu, Tatsushi Nishi, "Multipopulation Ensemble Particle Swarm Optimizer for Engineering Design Problems", Mathematical Problems in Engineering, 2020. [:material-link:](https://doi.org/10.1155/2020/1450985)
+18. Tatsushi Nishi, Michiko Matsuda, Mao Hasegawa, Roghayyeh Alizadeh, Ziang Liu, Takuto Terunuma, "Automatic Construction of Virtual Supply Chain as Multi-Agent System Using Enterprise E-Catalogues", International Journal of Automation Technology, 2020. [:material-link:](https://doi.org/10.20965/ijat.2020.p0713)
+19. Ziang Liu, Tatsushi Nishi, "Analyzing just-in-time purchasing strategy in supply chains using an evolutionary game approach", Journal of Advanced Mechanical Design, Systems, and Manufacturing, 2020. [:material-link:](https://doi.org/10.1299/jamdsm.2020jamdsm0070)
+20. Ziang Liu, Tatsushi Nishi, "Government Regulations on Closed-Loop Supply Chain with Evolutionarily Stable Strategy", Sustainability, 2019. [:material-link:](https://doi.org/10.3390/su11185030)
 
 ## Conference papers
 <!-- CEC  CASE -->
