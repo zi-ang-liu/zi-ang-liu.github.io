@@ -23,9 +23,9 @@ ESWA-->
 
 ## Conference papers
 <!-- IEEM -->
-1. Surrogate-Assisted Evolutionary Computation for Distributed Simulation-based Inventory Optimization in Serial Supply Chains
-2. Task Planning for Robot Manipulator Using Natural Language Task Input with Large Language Mo
-3. Three-Dimensional Bin Packing Problems with the Operating Time of a Robot Manipulator 
+1. IEEE CEC, Surrogate-Assisted Evolutionary Computation for Distributed Simulation-based Inventory Optimization in Serial Supply Chains
+2. IEEE CASE, Task Planning for Robot Manipulator Using Natural Language Task Input with Large Language Model
+3. APMS, Three-Dimensional Bin Packing Problems with the Operating Time of a Robot Manipulator 
 4. Ziang Liu, Shun Ito, Tomoya Kawabe, Tatsushi Nishi, Tomofumi Fujiwara, "Multi-Objective Optimization for Three-Dimensional Packing Problem Using the Sequence-Triple Representation with Robot Motion Planning", 2023 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), 2023. [:material-link:](https://doi.org/10.1109/IEEM58616.2023.10406772)
 5. Masaya Shiraga, Tatsushi Nishi, Ziang Liu, Tomofumi Fujiwara, "Motion Planning of Industrial Robot by Data-Driven Optimization Using Petri Nets", 2023 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), 2023. [:material-link:](https://doi.org/10.1109/IEEM58616.2023.10406354)
 6. Yusuke Nomura, Ziang Liu, Tatsushi Nishi, "Deep Reinforcement Learning for Perishable Inventory Optimization Problem", 2023 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), 2023. [:material-link:](https://doi.org/10.1109/IEEM58616.2023.10406759)
