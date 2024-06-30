@@ -4,7 +4,7 @@
 3. IJRR
 5. TASE 
 ESWA-->
-4. Neural Network Assisted Branch and Bound Algorithm for Dynamic Berth Allocation Problems, European Journal of Operational Research 
+1. Korekane, S., Nishi, T., Tierney, K., & Liu, Z. (2024). Neural network assisted branch and bound algorithm for dynamic berth allocation problems. European Journal of Operational Research. [:material-link:](https://doi.org/10.1016/j.ejor.2024.06.040)
 6. Deep Q-Networkとグラフ探索を組み合わせた複数台移動ロボットの経路計画法, システム制御情報学会論文誌
 7. 粒子群最適化による産業用スカラ型ロボットの省エネルギー動作計画の検討, システム制御情報学会論文誌
 8. Ziang Liu, Tatsushi Nishi, "Surrogate-assisted evolutionary optimization for perishable inventory management in multi-echelon distribution systems", Expert Systems with Applications, 2023. [:material-link:](https://doi.org/10.1016/j.eswa.2023.122179)
