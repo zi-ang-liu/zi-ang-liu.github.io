@@ -5,8 +5,6 @@
 5. TASE 
 ESWA-->
 1. Korekane, S., Nishi, T., Tierney, K., & Liu, Z. (2024). Neural network assisted branch and bound algorithm for dynamic berth allocation problems. European Journal of Operational Research. [:material-link:](https://doi.org/10.1016/j.ejor.2024.06.040)
-6. Deep Q-Networkとグラフ探索を組み合わせた複数台移動ロボットの経路計画法, システム制御情報学会論文誌
-7. 粒子群最適化による産業用スカラ型ロボットの省エネルギー動作計画の検討, システム制御情報学会論文誌
 8. Ziang Liu, Tatsushi Nishi, "Surrogate-assisted evolutionary optimization for perishable inventory management in multi-echelon distribution systems", Expert Systems with Applications, 2023. [:material-link:](https://doi.org/10.1016/j.eswa.2023.122179)
 9. Yu Nishihata, Ziang Liu, Tatsushi Nishi, "Evolutionary-Game-Theory-Based Epidemiological Model for Prediction of Infections with Application to Demand Forecasting in Pharmaceutical Inventory Management Problems", Applied Sciences, 2023. [:material-link:](https://doi.org/10.3390/app132011308)
 10. Md Alam, Tatsushi Nishi, Ziang Liu, Tomofumi Fujiwara, "A Novel Sampling-Based Optimal Motion Planning Algorithm for Energy-Efficient Robotic Pick and Place", Energies, 2023. [:material-link:](https://doi.org/10.3390/en16196910)
@@ -20,6 +18,10 @@ ESWA-->
 18. Tatsushi Nishi, Michiko Matsuda, Mao Hasegawa, Roghayyeh Alizadeh, Ziang Liu, Takuto Terunuma, "Automatic Construction of Virtual Supply Chain as Multi-Agent System Using Enterprise E-Catalogues", International Journal of Automation Technology, 2020. [:material-link:](https://doi.org/10.20965/ijat.2020.p0713)
 19. Ziang Liu, Tatsushi Nishi, "Analyzing just-in-time purchasing strategy in supply chains using an evolutionary game approach", Journal of Advanced Mechanical Design, Systems, and Manufacturing, 2020. [:material-link:](https://doi.org/10.1299/jamdsm.2020jamdsm0070)
 20. Ziang Liu, Tatsushi Nishi, "Government Regulations on Closed-Loop Supply Chain with Evolutionarily Stable Strategy", Sustainability, 2019. [:material-link:](https://doi.org/10.3390/su11185030)
+
+## 日本語論文
+6. Deep Q-Networkとグラフ探索を組み合わせた複数台移動ロボットの経路計画法, システム制御情報学会論文誌
+7. 粒子群最適化による産業用スカラ型ロボットの省エネルギー動作計画の検討, システム制御情報学会論文誌
 
 ## Conference papers
 <!-- IEEM -->
