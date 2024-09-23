@@ -65,6 +65,8 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/zi-ang-liu/
 
+  generator: false
+  
   # alternate:
   #   - name: English
   #     link: /en/ 
@@ -85,6 +87,7 @@ extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   - stylesheets/extra.css
 
+copyright: Copyright &copy; 2021 Ziang Liu
 
 markdown_extensions:
   - attr_list
