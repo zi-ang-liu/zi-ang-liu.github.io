@@ -52,7 +52,7 @@ theme:
   # Page tree
 nav:
   - Home: index.md
-  - Publications: publications.md
+  # - Publications: publications.md
 
 extra:
   social:
