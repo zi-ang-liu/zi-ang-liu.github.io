@@ -15,36 +15,18 @@
 
 </div>
 
-<div class="grid cards" markdown>
 
--   :octicons-book-24: __Research interests__
+# Teaching
 
-    ---
-    
-    - Optimization
-    - Reinforcement learning
-    - Artificial intelligence
-    - Supply chain management
-  
-</div>
+## Okayama University
 
+- [プログラミング](https://zi-ang-liu.github.io/jb-c-programming/intro.html), 2021~
+- 機械工作実習I, 2021~
+- [システム工学総合](https://zi-ang-liu.github.io/jb-practice-on-systems-engineering/intro.html), 2024~
+- システム工学で何ができるか, 2024~
 
-<!-- Course -->
-<div class="grid cards" markdown>
+## Seminar Materials
 
--    :octicons-mortar-board-24: __Courses__
-
-    ---
-
-    __Okayama University__
-
-    - [プログラミング](https://ziangs-organization.gitbook.io/introduction-to-c/), 2021~
-    - 機械工作実習I, 2021~
-
-    __Seminar Materials__
-
-    - [Python Programming](https://ziangs-organization.gitbook.io/python/)
-    - [Optimization](https://zi-ang-liu.github.io/jb-optimization/)
-    - [Machine Learning](https://zi-ang-liu.github.io/jb-machine_learning/)
-
-</div>
+- [Python Programming](https://ziangs-organization.gitbook.io/python/)
+- [Optimization](https://zi-ang-liu.github.io/jb-optimization/)
+- [Machine Learning](https://zi-ang-liu.github.io/jb-machine_learning/)
