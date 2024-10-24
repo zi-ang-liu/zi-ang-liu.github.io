@@ -1,31 +1,31 @@
 
-# 
+## Ziang Liu 
 
-<div class="grid cards" markdown>
+I am an Assistant Professor at Okayama University.
 
--   :octicons-person-24: __Ziang Liu__  
+## Contact
 
-    ---
+Ziang Liu   
+Okayama University   
+3-1-1 Tsushima-naka, Kita-ku, Okayama 700-8530, Japan
+Email: liu.ziang@okayama-u.ac.jp   
 
-    :material-school: Assistant Professor  
-    :material-office-building-marker: Okayama University    
-    :material-email: liu.ziang@okayama-u.ac.jp   
+[Google Scholar](https://scholar.google.com/citations?hl=en&user=_G5ufOEAAAAJ)/
+[ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4)/
+[ORCID](https://orcid.org/0000-0002-1364-3502)/
+[GitHub](https://github.com/zi-ang-liu/)/
+[ResearchMap](https://researchmap.jp/liu.ziang)/
 
-    [:octicons-arrow-right-24: Researchmap](https://researchmap.jp/liu.ziang)
+## Teaching
 
-</div>
-
-
-# Teaching
-
-## Okayama University
+### Okayama University
 
 - [プログラミング](https://zi-ang-liu.github.io/jb-c-programming/intro.html), 2021~
 - 機械工作実習I, 2021~
 - [システム工学総合](https://zi-ang-liu.github.io/jb-practice-on-systems-engineering/intro.html), 2024~
 - システム工学で何ができるか, 2024~
 
-## Seminar Materials
+### Materials
 
 - [Python Programming](https://ziangs-organization.gitbook.io/python/)
 - [Optimization](https://zi-ang-liu.github.io/jb-optimization/)
