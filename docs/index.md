@@ -18,14 +18,14 @@ Email: liu.ziang@okayama-u.ac.jp
 
 ## Teaching
 
-### Okayama University
+**Okayama University**
 
 - [プログラミング](https://zi-ang-liu.github.io/jb-c-programming/intro.html), 2021~
 - 機械工作実習I, 2021~
 - [システム工学総合](https://zi-ang-liu.github.io/jb-practice-on-systems-engineering/intro.html), 2024~
 - システム工学で何ができるか, 2024~
 
-### Materials
+**Materials**
 
 - [Python Programming](https://ziangs-organization.gitbook.io/python/)
 - [Optimization](https://zi-ang-liu.github.io/jb-optimization/)
