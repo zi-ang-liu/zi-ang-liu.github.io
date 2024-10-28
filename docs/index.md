@@ -15,8 +15,8 @@ I am an Assistant Professor at Okayama University.
 
 - [プログラミング](https://zi-ang-liu.github.io/jb-c-programming/intro.html), 2021~
 - 機械工作実習I, 2021~
-- [システム工学総合](https://zi-ang-liu.github.io/jb-practice-on-systems-engineering/intro.html), 2024~
-- システム工学で何ができるか, 2024~
+- [システム工学総合Ⅱ](https://zi-ang-liu.github.io/jb-practice-on-systems-engineering/intro.html), 2024~
+- [システム工学で何ができるか](https://github.com/zi-ang-liu/Slides/tree/main/An-Introduction-to-Systems-Engineering), 2024~
 
 **Materials**
 
