@@ -1,7 +1,13 @@
+:root {
+    --md-primary-fg-color: #EE0F0F;
+    --md-primary-fg-color--light: #ECB7B7;
+    --md-primary-fg-color--dark: #90030C;
+}
+
 .md-typeset h2 {
     font-size: 24px;
     font-weight: bold;
-    color: black;
+    color: #012169;
 }
 
 .md-typeset h3 {
