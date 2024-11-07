@@ -23,9 +23,7 @@ I am an Assistant Professor at Okayama University.
 - [Optimization](https://zi-ang-liu.github.io/jb-optimization/)
 - [Machine Learning](https://zi-ang-liu.github.io/jb-machine_learning/)
 
-## Contact
-
-Ziang Liu   
+## Contact 
 [liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp)   
 Okayama University   
 3-1-1 Tsushima-naka, Kita-ku, Okayama 700-8530, Japan   
