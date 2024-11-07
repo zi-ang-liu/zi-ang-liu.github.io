@@ -12,12 +12,10 @@ I am an Assistant Professor at Okayama University.
 
 ## Teaching
 
-| Course                                                                                                              | Year  |
-| ------------------------------------------------------------------------------------------------------------------- | ----- |
-| [プログラミング](https://zi-ang-liu.github.io/jb-c-programming/intro.html)                                          | 2021~ |
-| 機械工作実習I                                                                                                       | 2021~ |
-| [システム工学総合Ⅱ](https://zi-ang-liu.github.io/jb-practice-on-systems-engineering/intro.html)                     | 2024~ |
-| [システム工学で何ができるか](https://github.com/zi-ang-liu/Slides/tree/main/An-Introduction-to-Systems-Engineering) | 2024~ |
+* [プログラミング](https://zi-ang-liu.github.io/jb-c-programming/intro.html), 2021~
+* 機械工作実習I, 2021~
+* [システム工学総合Ⅱ](https://zi-ang-liu.github.io/jb-practice-on-systems-engineering/intro.html), 2024~
+* [システム工学で何ができるか](https://github.com/zi-ang-liu/Slides/tree/main/An-Introduction-to-Systems-Engineering), 2024~
 
 ## Materials
 
@@ -28,6 +26,6 @@ I am an Assistant Professor at Okayama University.
 ## Contact
 
 Ziang Liu   
+[liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp)   
 Okayama University   
 3-1-1 Tsushima-naka, Kita-ku, Okayama 700-8530, Japan   
-[liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp)
