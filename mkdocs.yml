@@ -36,24 +36,10 @@ theme:
     - navigation.tabs.sticky
     - toc.follow
     - content.code.copy
-    # - toc.integrate
   
   palette: 
     primary: white
 
-    # # Palette toggle for light mode
-    # - scheme: default
-    #   toggle:
-    #     icon: material/brightness-7 
-    #     name: Switch to dark mode
-
-    # # Palette toggle for dark mode
-    # - scheme: slate
-    #   toggle:
-    #     icon: material/brightness-4
-    #     name: Switch to light mode
-
-  # Page tree
 nav:
   - Home: index.md
   # - Publications: publications.md
@@ -70,17 +56,6 @@ extra:
       link: https://github.com/zi-ang-liu/
 
   generator: false
-  
-  # alternate:
-  #   - name: English
-  #     link: /en/ 
-  #     lang: en
-  #   - name: 日本語
-  #     link: /jp/
-  #     lang: jp
-#     - name: 中文
-#       link: /zh/
-#       lang: zh
 
 extra_javascript:
   - javascripts/katex.js 
