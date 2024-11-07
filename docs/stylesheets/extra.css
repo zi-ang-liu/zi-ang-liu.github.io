@@ -1,7 +1,7 @@
 :root {
-    --md-primary-fg-color: #EE0F0F;
-    --md-primary-fg-color--light: #ECB7B7;
-    --md-primary-fg-color--dark: #90030C;
+    --md-primary-fg-color: #012169;
+    --md-primary-fg-color--light: #012169;
+    --md-primary-fg-color--dark: #012169;
 }
 
 .md-typeset h2 {
@@ -23,4 +23,9 @@
 .md-typeset li {
     font-size: 16px;
     margin: 0%;
+}
+
+/* link unvisited */
+.md-typeset a:link {
+    color: #012169;
 }

@@ -3,7 +3,7 @@
 ## Ziang Liu
 I am an Assistant Professor at Okayama University.
 
-[liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp) 
+Email: [liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp) 
 
 [Google Scholar](https://scholar.google.com/citations?hl=en&user=_G5ufOEAAAAJ) /
 [ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4) /

@@ -38,7 +38,7 @@ theme:
     - content.code.copy
   
   palette: 
-    primary: custom
+    primary: indigo
 
 nav:
   - Home: index.md
