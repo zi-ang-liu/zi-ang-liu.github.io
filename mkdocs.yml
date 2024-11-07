@@ -1,9 +1,19 @@
 site_name: Ziang Liu
-  
-theme:
-  
-  name: material
+site_url: https://zi-ang-liu.github.io/
+site_author: Ziang Liu
+copyright: Copyright &copy; 2021 Ziang Liu
+site_description: Ziang Liu's personal website
 
+theme:  
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - toc.follow
+    - content.code.copy
+    - header.autohide
   font:
     text: Roboto
     code: Roboto Mono
@@ -25,17 +35,11 @@ theme:
       quote: octicons/quote-16
 
   features:
-    - header.autohide
+    
 
   favicon: images/favicon_io/favicon.ico
 
-  features:
-    - navigation.instant
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - toc.follow
-    - content.code.copy
+
   
   palette: 
     primary: custom
@@ -65,7 +69,7 @@ extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   - stylesheets/extra.css
 
-copyright: Copyright &copy; 2021 Ziang Liu
+
 
 markdown_extensions:
   - attr_list
