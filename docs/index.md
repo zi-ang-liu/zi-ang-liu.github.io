@@ -1,6 +1,6 @@
 
 
-# Home
+# 
 
 ## Ziang Liu
 I am an Assistant Professor at Okayama University.
