@@ -21,8 +21,7 @@
 .md-typeset h2 {
     font-size: 24px;
     font-weight: bold;
-    color: #000000;
-    text-decoration: underline;
+    color: royalblue;
 }
 
 .md-typeset h3 {
@@ -37,4 +36,5 @@
 
 .md-typeset li {
     font-size: 16px;
+    margin: 0%;
 }
