@@ -4,6 +4,10 @@
     --md-primary-fg-color--dark: #012169;
 }
 
+.md-content .md-typeset h1 {
+    display: none;
+}
+
 .md-typeset h2 {
     font-size: 24px;
     font-weight: bold;
@@ -23,9 +27,4 @@
 .md-typeset li {
     font-size: 16px;
     margin: 0%;
-}
-
-/* link unvisited */
-.md-typeset a:link {
-    color: #012169;
 }
