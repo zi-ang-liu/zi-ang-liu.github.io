@@ -29,4 +29,4 @@ I am an Assistant Professor at Okayama University.
 Ziang Liu   
 Okayama University   
 3-1-1 Tsushima-naka, Kita-ku, Okayama 700-8530, Japan   
-Email: liu.ziang@okayama-u.ac.jp   
+[liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp)

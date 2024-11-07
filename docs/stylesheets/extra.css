@@ -20,6 +20,12 @@
 
 .md-typeset h2 {
     font-size: 24px;
+    font-weight: bold;
+}
+
+.md-typeset h3 {
+    font-size: 20px;
+    font-weight: normal;
 }
 
 .md-typeset p {
