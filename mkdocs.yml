@@ -38,7 +38,7 @@ theme:
     - content.code.copy
   
   palette: 
-    primary: white
+    primary: black
 
 nav:
   - Home: index.md
