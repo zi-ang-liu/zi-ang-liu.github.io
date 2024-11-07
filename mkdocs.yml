@@ -1,4 +1,4 @@
-site_name: Liu Ziang
+site_name: Ziang Liu
   
 theme:
   
@@ -42,7 +42,6 @@ theme:
 
 nav:
   - Home: index.md
-  # - Publications: publications.md
 
 extra:
   social:
