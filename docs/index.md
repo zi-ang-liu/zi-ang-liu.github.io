@@ -3,8 +3,6 @@
 ## Ziang Liu
 I am an Assistant Professor at Okayama University.
 
-Email: [liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp) 
-
 [Google Scholar](https://scholar.google.com/citations?hl=en&user=_G5ufOEAAAAJ) /
 [ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4) /
 [ORCID](https://orcid.org/0000-0002-1364-3502) /
@@ -26,6 +24,8 @@ Email: [liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp)
 - [Machine Learning](https://zi-ang-liu.github.io/jb-machine_learning/)
 
 ## Contact 
+
+Email: [liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp) 
   
 Okayama University   
 3-1-1 Tsushima-naka, Kita-ku, Okayama 700-8530, Japan   
