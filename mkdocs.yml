@@ -42,7 +42,7 @@ theme:
 
   
   palette: 
-    primary: custom
+    primary: indigo
 
 nav:
   - Home: index.md

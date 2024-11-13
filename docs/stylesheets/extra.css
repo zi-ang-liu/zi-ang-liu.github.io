@@ -1,8 +1,8 @@
-:root {
+/* :root {
     --md-primary-fg-color: #012169;
     --md-primary-fg-color--light: #012169;
     --md-primary-fg-color--dark: #012169;
-}
+} */
 
 .md-typeset h1 {
     font-size: 24px;
@@ -13,40 +13,18 @@
 .md-typeset h2 {
     font-size: 24px;
     font-weight: bold;
-    color: #012169;
 }
 
 .md-typeset h3 {
     font-size: 20px;
     font-weight: bold;
-    color: #012169;
 }
 
 .md-typeset p {
     font-size: 16px;
-    color: #333333;
 }
 
 .md-typeset li {
     font-size: 16px;
     margin: 0%;
-    color: #333333;
-}
-
-.md-typeset a {
-    color: #00AEEF;
-}
-
-.md-typeset a:hover {
-    color: #FF6600;
-    text-decoration: underline;
-}
-
-.md-typeset a:visited {
-    color: #00AEEF;
-}
-
-.md-typeset a:visited:hover {
-    color: #FF6600;
-    text-decoration: underline;
 }
