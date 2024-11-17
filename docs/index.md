@@ -19,8 +19,7 @@ I am an Assistant Professor at Okayama University.
 ### Materials
 
 - [Python Programming](https://ziangs-organization.gitbook.io/python/)
-- [Optimization](https://zi-ang-liu.github.io/jb-optimization/)
-- [Machine Learning](https://zi-ang-liu.github.io/jb-machine_learning/)
+- [Complex Systems](https://zi-ang-liu.github.io/complex-systems/intro.html)
 
 ### Contact 
 
