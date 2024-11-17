@@ -19,7 +19,7 @@ I am an Assistant Professor at Okayama University.
 ### Materials
 
 - [Python Programming](https://ziangs-organization.gitbook.io/python/)
-- [Complex Systems](https://zi-ang-liu.github.io/complex-systems/intro.html)
+- [Intelligent Systems](https://zi-ang-liu.github.io/intelligent-systems/intro.html)
 
 ### Contact 
 
