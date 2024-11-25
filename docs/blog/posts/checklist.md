@@ -17,3 +17,9 @@ date:
 - 数字と単位の間にスペースを入れる：700 mm
   - %はスペースを入れない：50%
 - 英語の単語と数字の間にスペースを入れる：10 minutes, Case 1, Example 2
+
+
+## 参考資料
+
+- https://www.tohoku-gakuin.ac.jp/colatelier/wp-content/uploads/2019/02/e73fbbd1ac962a1e2b4edbe066984ec2.pdf
+- 
