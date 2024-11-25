@@ -19,7 +19,14 @@ date:
 - 英語の単語と数字の間にスペースを入れる：10 minutes, Case 1, Example 2
 
 
+## 図
+
+- [ベクター画像](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%AF%E3%82%BF%E3%83%BC%E7%94%BB%E5%83%8F)（SVG, PDF, EPS）を使う
+- ネットや他の資料からコピーした図を使う場合、Copyrightを確認する
+- フローチャートを作成する場合、[draw.io](https://www.drawio.com/)を使う
+- 
+
 ## 参考資料
 
-- https://www.tohoku-gakuin.ac.jp/colatelier/wp-content/uploads/2019/02/e73fbbd1ac962a1e2b4edbe066984ec2.pdf
-- 
+<!-- - https://www.tohoku-gakuin.ac.jp/colatelier/wp-content/uploads/2019/02/e73fbbd1ac962a1e2b4edbe066984ec2.pdf
+-  -->
