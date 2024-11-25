@@ -36,10 +36,7 @@ theme:
 
   features:
     
-
   favicon: images/favicon_io/favicon.ico
-
-
   
   palette: 
     primary: indigo
@@ -73,6 +70,7 @@ extra_css:
 
 plugins:
   - blog
+  - search
 
 markdown_extensions:
   - attr_list
