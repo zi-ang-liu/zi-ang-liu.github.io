@@ -1,1 +1,1 @@
-# index of blog posts
+# Blog
