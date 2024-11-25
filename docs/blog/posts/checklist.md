@@ -24,7 +24,7 @@ date:
 - [ベクター画像](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%AF%E3%82%BF%E3%83%BC%E7%94%BB%E5%83%8F)（SVG, PDF, EPS）を使う
 - ネットや他の資料からコピーした図を使う場合、Copyrightを確認する
 - フローチャートを作成する場合、[draw.io](https://www.drawio.com/)を使う
-- 
+- 最近では、[Excalidraw](https://excalidraw.com/)で手書き風の図を作成している人もいる
 
 ## 参考資料
 
