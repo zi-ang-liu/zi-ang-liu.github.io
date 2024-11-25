@@ -45,7 +45,9 @@ theme:
     primary: indigo
 
 nav:
-  - Home: index.md
+  - index.md
+  - Blog:
+    - blog/index.md
 
 extra:
   social:
@@ -69,7 +71,8 @@ extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   - stylesheets/extra.css
 
-
+plugins:
+  - blog
 
 markdown_extensions:
   - attr_list
