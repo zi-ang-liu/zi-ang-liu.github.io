@@ -1,12 +1,12 @@
 ---
 date:
-  created: 2023-12-31
-  updated: 2024-12-31
+  created: 2024-01-01
+draft: true
 ---
 
-# Happy new years eve!
+# Happy new year!
 
-We hope you are all having fun and wish you all the best for the new year!
+Happy 2024 to everyone. Wishing you all the best!
 <!-- more -->
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
