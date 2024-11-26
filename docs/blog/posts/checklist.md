@@ -1,4 +1,6 @@
 ---
+title: 発表資料チェックリスト
+authors: [liu]
 date:
   created: 2024-11-25
 ---
