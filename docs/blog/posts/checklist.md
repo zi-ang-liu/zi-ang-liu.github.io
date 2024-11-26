@@ -7,7 +7,7 @@ date:
 
 # 発表資料チェックリスト
 
-- スライドのデザインを統一しているか(PowerPointを使う場合、**スライドマスター**を使う)
+- スライドのデザインを統一しているか(PowerPointの場合、**スライドマスター**を使う)
 - スライド番号を書いているか
 
 - スライドのフォントサイズは大きすぎないか
@@ -25,8 +25,8 @@ date:
 
 - [ベクター画像](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%AF%E3%82%BF%E3%83%BC%E7%94%BB%E5%83%8F)（SVG, PDF, EPS）を使う
 - ネットや他の資料からコピーした図を使う場合、Copyrightを確認する
-- フローチャートを作成する場合、[draw.io](https://www.drawio.com/)を使う
-- 最近では、[Excalidraw](https://excalidraw.com/)で手書き風の図を作成している人もいる
+- フローチャートを作成する場合、[draw.io](https://www.drawio.com/)は便利
+- 最近では、手書き風の図を論文に使うことが多い。[Excalidraw](https://excalidraw.com/)で作成すると良い
 
 ## 参考資料
 

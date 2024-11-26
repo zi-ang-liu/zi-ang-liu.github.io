@@ -62,7 +62,7 @@ theme:
     primary: indigo
 
 nav:
-  - index.md
+  - Home: index.md
   - Blog:
     - blog/index.md
 
