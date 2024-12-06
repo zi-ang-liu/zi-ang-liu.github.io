@@ -6,7 +6,7 @@ date:
   updated: 2024-1206
 ---
 
-# 無料で読める本
+<!-- # 無料で読める本
 
 ## Machine Learning
 
@@ -23,4 +23,4 @@ date:
 
 ## Mathematics
 
-- [Book of Proof](http://www.people.vcu.edu/~rhammack/BookOfProof/) by Richard Hammack
+- [Book of Proof](http://www.people.vcu.edu/~rhammack/BookOfProof/) by Richard Hammack -->
