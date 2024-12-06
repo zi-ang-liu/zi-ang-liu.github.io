@@ -1,3 +1,11 @@
+---
+title: 無料で読める本
+authors: [liu]
+date:
+  created: 2024-12-06
+  updated: 2024-1206
+---
+
 # 無料で読める本
 
 ## Machine Learning
