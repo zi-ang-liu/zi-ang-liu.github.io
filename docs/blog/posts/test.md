@@ -4,9 +4,10 @@ date:
   updated: 2024-12-31
 ---
 
-# Happy new years eve!
+# Test Post
 
-We hope you are all having fun and wish you all the best for the new year!
+This is a test post.
+
 <!-- more -->
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
