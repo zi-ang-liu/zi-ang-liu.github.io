@@ -9,6 +9,10 @@ I am an Assistant Professor at Okayama University.
 [Kaken](https://nrid.nii.ac.jp/ja/nrid/1000030908166/) /
 [GitHub](https://github.com/zi-ang-liu/)
 
+### Experience
+
+- Assistant Professor, Okayama University, 2021~
+
 ### Teaching
 
 * [プログラミング](https://zi-ang-liu.github.io/jb-c-programming/intro.html), 2021~
@@ -20,6 +24,8 @@ I am an Assistant Professor at Okayama University.
 
 - [Python Programming](https://ziangs-organization.gitbook.io/python/)
 - [Intelligent Systems](https://zi-ang-liu.github.io/intelligent-systems/intro.html)
+- [Database](https://zi-ang-liu.github.io/jb-database/intro.html)
+- [Computer Excersise](https://zi-ang-liu.github.io/jb-cs101/intro.html)
 
 ### Contact 
 
