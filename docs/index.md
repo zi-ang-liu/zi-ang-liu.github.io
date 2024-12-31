@@ -1,6 +1,6 @@
 # 
 
-### Ziang Liu
+## Ziang Liu
 I am an Assistant Professor at Okayama University.   
 [Google Scholar](https://scholar.google.com/citations?hl=en&user=_G5ufOEAAAAJ) /
 [ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4) /
@@ -24,8 +24,6 @@ I am an Assistant Professor at Okayama University.
 
 - [Python Programming](https://ziangs-organization.gitbook.io/python/)
 - [Intelligent Systems](https://zi-ang-liu.github.io/intelligent-systems/intro.html)
-- [Database](https://zi-ang-liu.github.io/jb-database/intro.html)
-- [Computer Excersise](https://zi-ang-liu.github.io/jb-cs101/intro.html)
 
 ### Contact 
 
