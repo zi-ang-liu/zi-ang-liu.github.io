@@ -4,9 +4,11 @@ date:
   # updated: 2024-12-31
 ---
 
-# 佛学概论
+# 佛学概论-读书笔记
 
 Buddhism: A Very Short Introduction, by Damien Keown, Oxford University Press, 2000.
+
+<!-- more -->
 
 ## 佛教与象
 
