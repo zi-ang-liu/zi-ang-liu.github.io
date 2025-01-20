@@ -13,18 +13,6 @@ I am an Assistant Professor at Okayama University.
 
 - Assistant Professor, Okayama University, 2021~
 
-### Teaching
-
-* [プログラミング](https://zi-ang-liu.github.io/jb-c-programming/intro.html), 2021~
-* 機械工作実習I, 2021~
-* [システム工学総合Ⅱ](https://zi-ang-liu.github.io/jb-practice-on-systems-engineering/intro.html), 2024~
-* [システム工学で何ができるか](https://github.com/zi-ang-liu/Slides/tree/main/An-Introduction-to-Systems-Engineering), 2024~
-
-### Materials
-
-- [Python Programming](https://ziangs-organization.gitbook.io/python/)
-- [Intelligent Systems](https://zi-ang-liu.github.io/intelligent-systems/intro.html)
-
 ### Contact 
 
 Email: [liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp)   
