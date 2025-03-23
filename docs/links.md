@@ -1,7 +1,12 @@
 # Links
 
+
+
+## 教育・研究
+
 - [学年暦](https://www.hosei.ac.jp/campuslife/guide/gakuji/gakunenreki/)
 - [全学ネットワークシステム ユーザ支援WEBサイト](https://netsys.hosei.ac.jp/)
+- [ソフトウェアステーション](https://software.k.hosei.ac.jp/)
 
 ## 所属
 
@@ -20,9 +25,11 @@
 
 ## その他
 
+- [規定集](https://www.hosei.ac.jp/kyoshokuin/kitei/index.html)
+
 ### [障がい学生支援室](https://www.hosei.ac.jp/shogai_shienshitsu/)
 
-### 小金井障がい学生支援室
+#### 小金井障がい学生支援室
 
 - 場所：管理棟２階
 - 開室時間：月～金曜日 9：00～17：00（昼休み 11：30~12：30）
