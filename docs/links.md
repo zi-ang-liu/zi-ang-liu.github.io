@@ -1,7 +1,5 @@
 # Links
 
-
-
 ## 教育・研究
 
 - [学年暦](https://www.hosei.ac.jp/campuslife/guide/gakuji/gakunenreki/)
