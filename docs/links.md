@@ -1,10 +1,16 @@
 # Links
 
+## 部品
+
+- [MF656Cdw](https://canon.jp/biz/product/printer/satera/mfp/lineup/mf656cdw)
+- 
+
 ## 教育・研究
 
 - [学年暦](https://www.hosei.ac.jp/campuslife/guide/gakuji/gakunenreki/)
 - [全学ネットワークシステム ユーザ支援WEBサイト](https://netsys.hosei.ac.jp/)
 - [ソフトウェアステーション](https://software.k.hosei.ac.jp/)
+- [授業サポートツール](https://info.hosei-kyoiku.jp/supporttools/)
 
 ## 所属
 
