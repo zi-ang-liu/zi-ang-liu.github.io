@@ -16,10 +16,13 @@ I am an Assistant Professor at Okayama University.
 
 ### Contact 
 
-Email: [liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp)   
+- Email: [liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp)   
 
-Address:   
+### Address:
+```
 Hosei University   
 3-7-2, Kajino-cho   
 Koganei-shi, Tokyo 184-8585   
 Japan
+```
+
