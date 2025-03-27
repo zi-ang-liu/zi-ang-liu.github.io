@@ -1,7 +1,7 @@
 # 
 
 ## Ziang Liu
-I am an Assistant Professor at Okayama University.   
+I am an Associate Professor at Hosei University.   
 [Google Scholar](https://scholar.google.com/citations?hl=en&user=_G5ufOEAAAAJ) /
 [ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4) /
 [ORCID](https://orcid.org/0000-0002-1364-3502) /
@@ -11,10 +11,18 @@ I am an Assistant Professor at Okayama University.
 
 ### Experience
 
-- Assistant Professor, Okayama University, 2021~
+- Associate Professor, Hosei University, Apr. 2025 - Present
+- Assistant Professor, Okayama University, Apr. 2021 - Mar. 2023
 
 ### Contact 
 
-Email: [liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp)   
-Okayama University   
-3-1-1 Tsushima-naka, Kita-ku, Okayama 700-8530, Japan   
+- Email: [liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp)   
+
+### Address:
+```
+Hosei University   
+3-7-2, Kajino-cho   
+Koganei-shi, Tokyo 184-8585   
+Japan
+```
+

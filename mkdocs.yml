@@ -63,6 +63,7 @@ theme:
 
 nav:
   - Home: index.md
+  - Courses: courses.md
   # - Blog:
   #   - blog/index.md
 
