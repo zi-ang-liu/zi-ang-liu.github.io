@@ -11,6 +11,7 @@
 - [全学ネットワークシステム ユーザ支援WEBサイト](https://netsys.hosei.ac.jp/)
 - [ソフトウェアステーション](https://software.k.hosei.ac.jp/)
 - [授業サポートツール](https://info.hosei-kyoiku.jp/supporttools/)
+- [教員ハンドブック](https://www.hosei.ac.jp/kyoshokuin/handbook/)
 
 ## 所属
 
