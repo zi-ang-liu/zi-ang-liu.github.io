@@ -2,7 +2,7 @@
 
 ## Ziang Liu
 I am an Associate Professor at Hosei University.   
-[Google Scholar](https://scholar.google.com/citations?hl=en&user=_G5ufOEAAAAJ) /
+[Google Scholar](https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl) /
 [ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4) /
 [ORCID](https://orcid.org/0000-0002-1364-3502) /
 [ResearchMap](https://researchmap.jp/liu.ziang) /
