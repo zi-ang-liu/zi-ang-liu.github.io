@@ -2,12 +2,17 @@
 
 ## Ziang Liu
 I am an Associate Professor at Hosei University.   
-[Google Scholar](https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl) /
-[ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4) /
-[ORCID](https://orcid.org/0000-0002-1364-3502) /
-[ResearchMap](https://researchmap.jp/liu.ziang) /
-[Kaken](https://nrid.nii.ac.jp/ja/nrid/1000030908166/) /
-[GitHub](https://github.com/zi-ang-liu/)
+
+### Publications
+
+- [Google Scholar](https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl)
+- [ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4)
+- [ORCID](https://orcid.org/0000-0002-1364-3502)
+- [ResearchMap](https://researchmap.jp/liu.ziang)
+
+### Funding
+
+- [Kaken](https://nrid.nii.ac.jp/ja/nrid/1000030908166/)
 
 ### Experience
 
