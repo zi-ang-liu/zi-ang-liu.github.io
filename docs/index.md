@@ -3,6 +3,8 @@
 ## Ziang Liu
 I am an Associate Professor in the [Department of Industrial and Systems Engineering](https://ise-hp.ws.hosei.ac.jp/) at [Hosei University](https://www.hosei.ac.jp/). 
 
+I am the Principal Investigator of the [Intelligent Systems Laboratory](https://isl-hosei.github.io/).
+
 ### Publications
 
 [Google Scholar](https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl) / 
