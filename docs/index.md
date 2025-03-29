@@ -3,18 +3,14 @@
 ## Ziang Liu
 I am an Associate Professor in the [Department of Industrial and Systems Engineering](https://ise-hp.ws.hosei.ac.jp/) at [Hosei University](https://www.hosei.ac.jp/). 
 
-I am the Principal Investigator of the [Intelligent Systems Laboratory](https://isl-hosei.github.io/).
-
-### Publications
-
 [Google Scholar](https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl) / 
 [ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4) / 
 [ORCID](https://orcid.org/0000-0002-1364-3502) / 
-[ResearchMap](https://researchmap.jp/liu.ziang)
+[ResearchMap](https://researchmap.jp/liu.ziang) /
+[Kaken](https://nrid.nii.ac.jp/ja/nrid/1000030908166/)
 
-### Funding
-
-- [Kaken](https://nrid.nii.ac.jp/ja/nrid/1000030908166/)
+### Lab
+- [Intelligent Systems Laboratory](https://isl-hosei.github.io/).
 
 ### Experience
 
