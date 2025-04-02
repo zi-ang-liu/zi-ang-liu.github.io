@@ -64,6 +64,8 @@ theme:
 nav:
   - Home: index.md
   - Courses: courses.md
+  - Material: material.md
+  - ホーム: ja/index.md
   # - Blog:
   #   - blog/index.md
 
@@ -80,13 +82,13 @@ extra:
 
   generator: false
 
-  alternate:
-    - name: English
-      link: /en/ 
-      lang: en
-    - name: Japanese
-      link: /ja/
-      lang: ja
+  # alternate:
+  #   - name: English
+  #     link: /en/ 
+  #     lang: en
+  #   - name: Japanese
+  #     link: /ja/
+  #     lang: ja
 
 extra_javascript:
   - javascripts/katex.js 
