@@ -70,7 +70,7 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/google 
-      link: https://scholar.google.com/citations?hl=en&user=_G5ufOEAAAAJ
+      link: https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl
     - icon: fontawesome/brands/researchgate
       link: https://www.researchgate.net/profile/Ziang-Liu-4
     - icon: simple/orcid
@@ -79,6 +79,14 @@ extra:
       link: https://github.com/zi-ang-liu/
 
   generator: false
+
+  alternate:
+    - name: English
+      link: /en/ 
+      lang: en
+    - name: Japanese
+      link: /ja/
+      lang: ja
 
 extra_javascript:
   - javascripts/katex.js 
