@@ -1,10 +1,8 @@
 # 
 
-### 劉 子昂
+### Ziang Liu
 
-- [法政大学](https://www.hosei.ac.jp/)
-- [経営システム工学科](https://ise-hp.ws.hosei.ac.jp/)
-- [Intelligent Systems Laboratory](https://isl-hosei.github.io/)
+Ziang Liu is an Associate Professor in the [Department of Industrial and Systems Engineering](https://ise-hp.ws.hosei.ac.jp/) at [Hosei University](https://www.hosei.ac.jp/). He is the head of the [Intelligent Systems Laboratory](https://isl-hosei.github.io/), conducting research in the fields of operations research, optimization, and machine learning. 
 
 [Google Scholar](https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl) / 
 [ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4) / 
@@ -17,14 +15,15 @@
 - Associate Professor, Hosei University, Apr. 2025 - Present
 - Assistant Professor, Okayama University, Apr. 2021 - Mar. 2023
 
-### 連絡先
+### Contact 
 
 - Email: [liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp)   
 
-### 住所
-
+### Address:
 ```
-〒184-8584 東京都小金井市梶野町3-7-2
-法政大学 理工学部 経営システム工学科
+Hosei University   
+3-7-2, Kajino-cho   
+Koganei-shi, Tokyo 184-8585   
+Japan
 ```
 
