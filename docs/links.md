@@ -13,6 +13,7 @@
 - [授業サポートツール](https://info.hosei-kyoiku.jp/supporttools/)
 - [教員ハンドブック](https://www.hosei.ac.jp/kyoshokuin/handbook/)
 
+
 ## 所属
 
 - [法政大学](https://www.hosei.ac.jp/)
@@ -26,6 +27,11 @@
 2. 上部メニュー「学習支援システム（WebClass）」を選択
 3. 画面右上の氏名を選択
 4. 「マニュアル」を選択
+
+## 研究費
+
+- [個人研究費マニュアル・各種様式・システム](https://www.hosei.ac.jp/suisin/gakunaisha/kojinkenkyuhi/) 
+  - (本件問い合わせ先：研究開発センター)
 
 
 ## その他
