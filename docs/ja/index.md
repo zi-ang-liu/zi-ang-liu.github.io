@@ -5,6 +5,8 @@
 准教授   
 ​博士（工学）
 
+### リンク
+
 [Google Scholar](https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl) / 
 [ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4) / 
 [ORCID](https://orcid.org/0000-0002-1364-3502) / 
@@ -13,14 +15,15 @@
 
 ### 職歴
 
-- 2025年4月 - 現在
-  - 法政大学, 理工学部 経営システム工学科, 准教授
-- 2021年4月 - 2025年3月
-  - 岡山大学, 学術研究院 環境生命自然科学学域, 助教
+| 年月                  | 所属                                     | 職名   |
+| --------------------- | ---------------------------------------- | ------ |
+| 2025年4月 - 現在      | 法政大学 理工学部 経営システム工学科     | 准教授 |
+| 2021年4月 - 2025年3月 | 岡山大学 学術研究院 環境生命自然科学学域 | 助教   |
 
-### 連絡先
 
-- Email: [liu.ziang@outlook.com](mailto:liu.ziang@outlook.com)   
+### Email
+
+[liu.ziang@outlook.com](mailto:liu.ziang@outlook.com)   
 
 ### 住所
 
