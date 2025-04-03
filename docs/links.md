@@ -1,12 +1,14 @@
 # Links
 
+- slack
+
 ## ガイダンス
 
 - [教員ハンドブック](https://www.hosei.ac.jp/kyoshokuin/handbook/)
 
 ## ネットワーク
 - [edu2025 ユーザ支援 Web サイト](https://kedu2025.ws.hosei.ac.jp)
-
+- (https://kedu2025.ws.hosei.ac.jp/preparation/)
 
 ## 教育・研究
 
