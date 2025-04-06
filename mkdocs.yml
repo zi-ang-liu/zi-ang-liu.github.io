@@ -63,9 +63,9 @@ theme:
 
 nav:
   - Home: index.md
-  - Courses: courses.md
-  - Material: material.md
   - ホーム: ja/index.md
+  - 資料: ja/material.md
+  - 担当科目: ja/course.md
   # - Blog:
   #   - blog/index.md
 
