@@ -24,7 +24,7 @@
 
 ### Email
 
-[liu.ziang@outlook.com](mailto:liu.ziang@outlook.com)   
+[liu+contact@hosei.ac.jp](mailto:liu+contact@hosei.ac.jp)   
 
 ### 住所
 

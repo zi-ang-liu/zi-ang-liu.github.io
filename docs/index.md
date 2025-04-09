@@ -17,7 +17,7 @@ Ziang Liu is an Associate Professor in the [Department of Industrial and Systems
 
 ### Contact 
 
-- Email: [liu.ziang@okayama-u.ac.jp](mailto:liu.ziang@okayama-u.ac.jp)   
+- Email: [liu+contact@hosei.ac.jp](mailto:liu+contact@hosei.ac.jp)   
 
 ### Address:
 ```
