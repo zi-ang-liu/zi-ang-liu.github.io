@@ -6,9 +6,7 @@ site_description: Ziang Liu's personal website
 
 theme:  
   name: material
-  features:
-    - navigation.tabs
-    # - navigation.tabs.sticky  
+  features:  
     - announce.dismiss
     - content.action.edit
     - content.action.view
@@ -19,7 +17,6 @@ theme:
     # - content.tabs.link
     - content.tooltips
     # - header.autohide
-    # - navigation.expand
     - navigation.footer
     - navigation.indexes
     # - navigation.instant
@@ -27,6 +24,8 @@ theme:
     # - navigation.instant.progress
     # - navigation.prune
     - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - search.highlight
