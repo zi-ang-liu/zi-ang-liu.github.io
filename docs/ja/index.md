@@ -4,7 +4,9 @@
 
 准教授   
 ​博士（工学）   
-​法政大学 理工学部 経営システム工学科
+[​法政大学](https://www.hosei.ac.jp/)
+[理工学部](https://www.hosei.ac.jp/riko/)
+[経営システム工学科](https://ise-hp.ws.hosei.ac.jp/)
 
 ### リンク
 
