@@ -100,7 +100,7 @@ extra_css:
   - stylesheets/extra.css
 
 plugins:
-  # - blog
+  - blog
   - search
 
 markdown_extensions:
