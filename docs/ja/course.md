@@ -3,8 +3,8 @@
 ## 講義
 ### 春学期
 
-- 計算機実習A（1年生/水曜1限/W203）  
-- リレーショナル・データベース（3年生/水曜2限/遠隔視聴覚室）
+- [計算機実習A](https://zi-ang-liu.github.io/jb-cs101/intro.html)（1年生/水曜1限/W203）  
+- [リレーショナル・データベース](https://zi-ang-liu.github.io/jb-database/intro.html)（3年生/水曜2限/遠隔視聴覚室）
 
 ### 秋学期
 
