@@ -29,7 +29,7 @@
 法政大学 理工学部 経営システム工学科
 ```
 
-[liu+contact@hosei.ac.jp](mailto:liu+contact@hosei.ac.jp)   
+Email: [liu+contact@hosei.ac.jp](mailto:liu+contact@hosei.ac.jp)   
 
 ## 担当科目
 
