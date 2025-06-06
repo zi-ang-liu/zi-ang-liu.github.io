@@ -4,7 +4,7 @@
 - [計算機実習A（Exercise on Computer and Information Technology A）](https://zi-ang-liu.github.io/jb-cs101/intro.html)
 - [リレーショナル・データベース（Relational Database）](https://zi-ang-liu.github.io/jb-database/intro.html)
 - [社会システム（Social Systems）]
-- [オペレーションズリサーチＢ（Operations Research II）]
+- [オペレーションズリサーチB（Operations Research II）]
 
 ### ゼミナール資料
 - [Python Programming](https://ziangs-organization.gitbook.io/python/)

@@ -17,13 +17,11 @@ Ziang Liu is an Associate Professor in the [Department of Industrial and Systems
 
 ### Contact 
 
-- Email: [liu+contact@hosei.ac.jp](mailto:liu+contact@hosei.ac.jp)   
-
-### Address:
 ```
 Hosei University   
-3-7-2, Kajino-cho   
+3-7-2 Kajino-cho   
 Koganei-shi, Tokyo 184-8585   
 Japan
 ```
 
+- Email: [liu+contact@hosei.ac.jp](mailto:liu+contact@hosei.ac.jp)   
