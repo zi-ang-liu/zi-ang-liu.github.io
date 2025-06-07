@@ -33,7 +33,7 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
-    - toc.integrate
+    # - toc.integrate
   font:
     text: Roboto
     code: Roboto Mono
@@ -53,18 +53,34 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
-
-  features:
     
   favicon: images/favicon_io/favicon.ico
   
-  palette: 
-    primary: indigo
+  # palette: 
+  #   primary: blue grey
+
+  palette:
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 nav:
   - Home: index.md
   - ホーム: ja/index.md
-  - 資料: ja/material.md
+  - Teaching: ja/material.md
   - Blog:
     - blog/index.md
 
@@ -105,6 +121,7 @@ plugins:
 markdown_extensions:
   - attr_list
   - md_in_html
+  - pymdownx.blocks.caption
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences

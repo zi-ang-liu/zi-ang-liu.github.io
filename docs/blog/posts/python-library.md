@@ -6,6 +6,8 @@ date:
 
 # Pythonライブラリ
 
+<!-- more -->
+
 ## 機械学習
 - [Scikit-learn](https://scikit-learn.org/stable/)：機械学習ライブラリ
   - 教師あり学習

@@ -6,6 +6,7 @@ date:
 
 # 参考書・参考資料（研究室用）
 
+<!-- more -->
 
 ## 強化学習
 - [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book-2nd.html) by Richard S. Sutton and Andrew G. Barto
