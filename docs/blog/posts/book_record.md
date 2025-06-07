@@ -15,6 +15,7 @@ Record of books I read, or plan to read.
 ### Planning
 
 - [Walden](https://en.wikipedia.org/wiki/Walden) by Henry David Thoreau
+- [The Moon and Sixpence](https://en.wikipedia.org/wiki/The_Moon_and_Sixpence) by W. Somerset Maugham
 
 ### Reading
 
