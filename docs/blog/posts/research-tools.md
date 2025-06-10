@@ -13,6 +13,10 @@ date:
 - [draw.io](https://www.drawio.com)：フローチャートなど
 - [Excalidraw](https://excalidraw.com/)：手書き風
 
+## PDF Reader
+
+- Google Scholar PDF Reader
+
 ## 文献管理
 文献を管理するだけでなく、WordやLaTexと連携し、参考文献の自動番号付き、自動生成などができます。
 - [Zotero](https://www.zotero.org/)：文献管理ソフト
