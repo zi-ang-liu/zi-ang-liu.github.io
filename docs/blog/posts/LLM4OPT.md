@@ -54,18 +54,18 @@ Finally, they introduce the applications of LLMs-based optimization in various f
 This paper provides a survey of the combination of EAs and LLMs, focusing on the following three main aspects:
 
 1. LLM-enhanced EA
-  - LLMs as search operators
-  - Algorithm generation
-  - Others
+   1. LLMs as search operators
+   2. Algorithm generation
+   3. Others
 2. EA-enhanced LLM
-  - Prompt engineering
-  - LLM architecture search
-  - Others
+   1. Prompt engineering
+   2. LLM architecture search
+   3. Others
 3. Applications
-  - Code generation
-  - Software engineering
-  - Neural architecture search
-  - Other generative tasks
+   1. Code generation
+   2. Software engineering
+   3. Neural architecture search
+   4. Other generative tasks
 
 iPrompt: Explaining Data Patterns in Natural Language via Interpretable Autoprompting
   - [paper]((https://arxiv.org/abs/2210.01848))
