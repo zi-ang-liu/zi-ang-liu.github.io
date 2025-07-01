@@ -35,13 +35,13 @@ This paper surveys the combination of LLMs and optimization algorithms, mainly f
       2. Algorithm Generation with Chain-of-Thought
 2. Optimization algorithms optimize LLMs
    1. Optimization model tuning
-     - Multi-task learning optimization
-     - Based on structural pruning
+      1. Multi-task learning optimization
+      2. Based on structural pruning
    2. Self-tuning optimization
    3. prompt optimization
-     - Continuous prompt optimization
-     - Discrete prompt optimization
-     - Black-box optimization prompt tuning
+      1. Continuous prompt optimization
+      2. Discrete prompt optimization
+      3. Black-box optimization prompt tuning
    4. Optimization network architecture search
 
 Finally, they introduce the applications of LLMs-based optimization in various fields.
