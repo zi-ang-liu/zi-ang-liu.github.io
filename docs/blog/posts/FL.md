@@ -7,6 +7,8 @@ date:
 
 # Federated Learning in Supply Chain Management
 
+<!-- more -->
+
 ## Incentive Mechanism
 
 A VCG-based Fair Incentive Mechanism for Federated Learning
@@ -36,7 +38,34 @@ Incentive mechanism design for Federated Learning with Stackelberg game perspect
 
 ## Federated reinforcement learning
 
+Federated reinforcement learning: Techniques, applications, and open challenges
+
+- [paper](https://arxiv.org/abs/2108.11887)
+- review paper
+
+### Supply Chain Management
+
 Privacy Preserving Multi-Agent Reinforcement Learning in Supply Chains
 
 - [paper](https://arxiv.org/abs/2312.05686)
 
+An Analysis of Multi-Agent Reinforcement Learning for Decentralized Inventory Control Systems
+
+- [paper](https://arxiv.org/abs/2307.11432)
+
+Federated Reinforcement Learning-Based Dynamic Resource Allocation and Task Scheduling in Edge for IoT Applications
+
+- [paper](https://doi.org/10.3390/s25072197)
+- sensors
+
+Federated Deep Reinforcement Learning for Energy-Efficient Edge Computing Offloading and Resource Allocation in Industrial Internet
+
+- [paper](https://doi.org/10.3390/app13116708)
+- applied sciences
+
+### AGV
+
+Federated Discrete Reinforcement Learning for Automatic Guided Vehicle Control
+
+- [paper](https://doi.org/10.1016/j.future.2023.08.021)
+- Future Generation Computer Systems
