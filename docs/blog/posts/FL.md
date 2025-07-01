@@ -1,4 +1,11 @@
-# Federated Learning
+---
+date:
+  created: 2025-07-01
+  updated: 2025-07-01
+---
+
+
+# Federated Learning in Supply Chain Management
 
 ## Incentive Mechanism
 
