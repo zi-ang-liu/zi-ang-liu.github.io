@@ -67,8 +67,6 @@ This paper provides a survey of the combination of EAs and LLMs, focusing on the
   - Neural architecture search
   - Other generative tasks
 
-### ORLM: A Customizable Framework in Training Large Models for Automated Optimization Modeling
-
 - iPrompt: Explaining Data Patterns in Natural Language via Interpretable Autoprompting
   - [paper]((https://arxiv.org/abs/2210.01848))
   - [source code](https://github.com/csinva/iprompt)
@@ -78,3 +76,4 @@ This paper provides a survey of the combination of EAs and LLMs, focusing on the
   - [source code](https://github.com/nuprl/MultiPL-E)
   - [BigCode Code Generation LM Harness](https://github.com/bigcode-project/bigcode-evaluation-harness)
 
+## Mechanism design for 
