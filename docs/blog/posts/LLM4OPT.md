@@ -27,12 +27,12 @@ This paper surveys the combination of LLMs and optimization algorithms, mainly f
 
 1. LLMs assist optimization algorithms
    1. LLMS as the Black-box Optimization Search Model
-     1. Guided Search Operators
-     2. Heuristic Search Operators
-     3. Multi-objective Optimization
+      1. Guided Search Operators
+      2. Heuristic Search Operators
+      3. Multi-objective Optimization
    2. LLMs as the Generator of Optimization Algorithms
-     1. Option Generation with the Cognitive of LLMs
-     2. Algorithm Generation with Chain-of-Thought
+      1. Option Generation with the Cognitive of LLMs
+      2. Algorithm Generation with Chain-of-Thought
 2. Optimization algorithms optimize LLMs
    1. Optimization model tuning
      - Multi-task learning optimization
