@@ -26,23 +26,23 @@ date:
 This paper surveys the combination of LLMs and optimization algorithms, mainly focusing on evolutionary algorithms. The authors categorize the research into the following two main directions:
 
 1. LLMs assist optimization algorithms
-   - LLMS as the Black-box Optimization Search Model
-     - Guided Search Operators
-     - Heuristic Search Operators
-     - Multi-objective Optimization
-   - LLMs as the Generator of Optimization Algorithms
-     - Option Generation with the Cognitive of LLMs
-     - Algorithm Generation with Chain-of-Thought
+   1. LLMS as the Black-box Optimization Search Model
+     1. Guided Search Operators
+     2. Heuristic Search Operators
+     3. Multi-objective Optimization
+   2. LLMs as the Generator of Optimization Algorithms
+     1. Option Generation with the Cognitive of LLMs
+     2. Algorithm Generation with Chain-of-Thought
 2. Optimization algorithms optimize LLMs
-   - Optimization model tuning
+   1. Optimization model tuning
      - Multi-task learning optimization
      - Based on structural pruning
-   - Self-tuning optimization
-   - prompt optimization
+   2. Self-tuning optimization
+   3. prompt optimization
      - Continuous prompt optimization
      - Discrete prompt optimization
      - Black-box optimization prompt tuning
-   - Optimization network architecture search
+   4. Optimization network architecture search
 
 Finally, they introduce the applications of LLMs-based optimization in various fields.
 
@@ -53,27 +53,27 @@ Finally, they introduce the applications of LLMs-based optimization in various f
 
 This paper provides a survey of the combination of EAs and LLMs, focusing on the following three main aspects:
 
-- LLM-enhanced EA
+1. LLM-enhanced EA
   - LLMs as search operators
   - Algorithm generation
   - Others
-- EA-enhanced LLM
+2. EA-enhanced LLM
   - Prompt engineering
   - LLM architecture search
   - Others
-- Applications
+3. Applications
   - Code generation
   - Software engineering
   - Neural architecture search
   - Other generative tasks
 
-- iPrompt: Explaining Data Patterns in Natural Language via Interpretable Autoprompting
+iPrompt: Explaining Data Patterns in Natural Language via Interpretable Autoprompting
   - [paper]((https://arxiv.org/abs/2210.01848))
   - [source code](https://github.com/csinva/iprompt)
 
-- MultiPL-E: A Scalable and Polyglot Approach to Benchmarking Neural Code Generation
+MultiPL-E: A Scalable and Polyglot Approach to Benchmarking Neural Code Generation
   - [paper](https://ieeexplore.ieee.org/abstract/document/10103177)
   - [source code](https://github.com/nuprl/MultiPL-E)
   - [BigCode Code Generation LM Harness](https://github.com/bigcode-project/bigcode-evaluation-harness)
 
-## Mechanism design for 
+
