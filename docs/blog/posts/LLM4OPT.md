@@ -9,11 +9,19 @@ date:
 
 <!-- more -->
 
-## Formulation
+## Modeling
 
 ### ORLM: A Customizable Framework in Training Large Models for Automated Optimization Modeling
+
+⭐️⭐️⭐️⭐️⭐️
+
 - [paper](https://pubsonline.informs.org/doi/10.1287/opre.2024.1233)
 - [source code](https://github.com/Cardinal-Operations/ORLM)
+
+This paper focusing on training open-source LLMs for optimization modeling and developing solver codes. They develop the OR-INSTRUCT, a semiautomated data synthesis framework. The also introduce the IndustryOR benchmark, which is a benchmark for testing LLMs on solving optimization problems.
+
+## LLMs as Operators
+
 
 
 ## LLMs and EA
