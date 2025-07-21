@@ -2,7 +2,7 @@
 
 ## 講義・実習
 
-- [計算機実習A](https://zi-ang-liu.github.io/jb-cs101/intro.html)（1年生/春学期/水曜1限/W203）  
+- [計算機実習A](https://zi-ang-liu.github.io/jb-computer-literacy)（1年生/春学期/水曜1限/W203）  
 - [リレーショナル・データベース](https://zi-ang-liu.github.io/jb-database/intro.html)（3年生/春学期/水曜2限/遠隔視聴覚室）
 - 社会システム（1年生/秋学期/金曜3限）
 - オペレーションズ・リサーチB（2年生/秋学期/水曜2限）
