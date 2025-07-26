@@ -1,4 +1,6 @@
-# 劉 子昂
+# ホーム
+
+## 劉 子昂
 
 <!-- ![Image title](../images/photo/liu.jpg){ loading=lazy } -->
 
