@@ -13,26 +13,7 @@ project:
     - file: docs/index.md
     - file: docs/index_ja.md
     - file: docs/teaching.md
-    - file: docs/publications.md
-    # - title: Docs
-    #   children:
-    #     - title: Blog
-    #       children:
-    #         - file: docs/blog/index.md
-    #         - title: Posts
-    #           children:
-    #             - file: docs/blog/posts/book_record.md
-    #             - file: docs/blog/posts/books.md
-    #             - file: docs/blog/posts/FL.md
-    #             - file: docs/blog/posts/LLM4OPT.md
-    #             - file: docs/blog/posts/python-library.md
-    #             - file: docs/blog/posts/python.md
-    #             - file: docs/blog/posts/random_thought.md
-    #             - file: docs/blog/posts/research-tools.md
-    #     - title: Ja
-    #       children:
-    #         - file: docs/ja/index.md
-    #         - file: docs/ja/material.md
+    # - file: docs/publications.md
     
 site:
   template: book-theme
