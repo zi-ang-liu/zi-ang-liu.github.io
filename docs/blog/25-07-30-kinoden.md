@@ -1,6 +1,5 @@
 # 書籍リスト（KinoDen）
 
-未所蔵
 データサイエンス入門　第3版
 
 - [KinoDen](https://kinoden.kinokuniya.co.jp/hosei_u/)

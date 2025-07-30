@@ -1,4 +1,8 @@
-# 書籍リスト
+# Kinoden書籍リスト
+
+法政大学図書館のKinodenで豊富な書籍を閲覧できます．
+
+大変便利なサービスと感じたので、ゼミ生向けにPythonを使った経営工学の学習に役立つ書籍をまとめました．
 
 ## Python入門
 
@@ -54,16 +58,7 @@
 - [強化学習アルゴリズム入門 (2019)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00024416)
 - [現場で使える！Python深層強化学習入門 (2019)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00034524)
 
-## 理論
-
-- [AI時代の離散数学 (2020)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00032062)
-  - Keywords: 論理関数，深層学習，グラフ理論，ネットワーク最適化
-- [データサイエンス入門　第2版](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00047543)
-- [グラフ理論入門(原書第4版) (2001)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00016566)
-- [データ構造とアルゴリズム (2017)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00026089)
-- [マルコフ決定過程 (2019)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00034289)
-
-### 人工知能
+## 人工知能
 
 - [人工知能入門](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00041467)
   - Keywords: 探索，推論，学習，進化的計算，ニューラルネットワーク，強化学習
@@ -74,10 +69,24 @@
 - [人工知能の創発](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00011749)
 - [タイトルメタヒューリスティクスとナチュラルコンピューティング](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00008641)
   - Keywords: 遺伝的アルゴリズム，粒子群最適化法，タブーサーチ，山登り法
+- [AI時代の離散数学 (2020)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00032062)
+  - Keywords: 論理関数，深層学習，グラフ理論，ネットワーク最適化
 
-### アルゴリズム
+## アルゴリズム
 
 - アルゴリズムイントロダクション
   - **世界的名著**
   - [アルゴリズムイントロダクション　第4版　1 (2024)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00087879)
   - [アルゴリズムイントロダクション　第4版　2 (2024)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00080844)
+- [データ構造とアルゴリズム (2017)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00026089)
+
+## モデリング
+
+- [グラフ理論入門(原書第4版) (2001)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00016566)
+- [マルコフ決定過程 (2019)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00034289)
+
+
+## データサイエンス
+- [データサイエンス入門　第2版](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00047543)
+
+
