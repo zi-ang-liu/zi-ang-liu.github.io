@@ -3,9 +3,9 @@
 ## 講義・実習
 
 - [計算機実習A](https://zi-ang-liu.github.io/jb-computer-literacy)（1年生/春学期/水曜1限/W203）  
-- [リレーショナル・データベース](https://zi-ang-liu.github.io/jb-database/intro.html)（3年生/春学期/水曜2限/遠隔視聴覚室）
-- 社会システム（1年生/秋学期/金曜3限）
-- オペレーションズ・リサーチB（2年生/秋学期/水曜2限）
+- [リレーショナル・データベース](https://zi-ang-liu.github.io/jb-database)（3年生/春学期/水曜2限/遠隔視聴覚室）
+- [社会システム](https://zi-ang-liu.github.io/jb-sse)（1年生/秋学期/金曜3限/W305）
+- [オペレーションズ・リサーチB](https://zi-ang-liu.github.io/jb-or)（2年生/秋学期/水曜2限/W202）
 <!-- - 離散システム工学（3年生/春学期） -->
 
 ## ゼミナール・PBL等
