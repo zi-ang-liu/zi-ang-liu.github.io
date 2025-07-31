@@ -26,7 +26,6 @@
 - [Basic Math](https://zi-ang-liu.github.io/jb-basic-math/intro.html)
 
 ## 過去の担当科目
-
 * [プログラミング](https://zi-ang-liu.github.io/jb-c-programming/intro.html), 2021~2024
 * 機械工作実習I, 2021~2024, OU
 * [システム工学総合Ⅱ](https://zi-ang-liu.github.io/jb-practice-on-systems-engineering/intro.html), 2024
@@ -41,3 +40,7 @@
 | 3時限目 | 13:20～15:00 |
 | 4時限目 | 15:10～16:50 |
 | 5時限目 | 17:00～18:40 |
+
+## 公開講義
+
+- [探索による問題解決](https://zi-ang-liu.github.io/jb-open-campus), 2025, 法政大学オープンキャンパス
