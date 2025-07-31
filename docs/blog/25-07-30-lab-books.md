@@ -58,6 +58,14 @@
 - [強化学習アルゴリズム入門 (2019)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00024416)
 - [現場で使える！Python深層強化学習入門 (2019)](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00034524)
 
+## 経営工学 + Excel
+
+- [入門　経営科学　改訂版](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00009061)
+- [例題で学ぶ　OR入門](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00026069)
+- [Excelで学ぶオペレーションズリサーチ](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00012267)
+- 
+
+
 ## 人工知能
 
 - [人工知能入門](https://kinoden.kinokuniya.co.jp/hosei_u/bookdetail/p/KP00041467)
