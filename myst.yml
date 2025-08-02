@@ -18,6 +18,7 @@ project:
       children:
         - file: docs/blog/25-07-30-lab-books.md
         - file: docs/blog/25-07-30-overleaf.md
+        - file: docs/blog/marl-scm.md
     # - file: docs/publications.md
     
 site:
