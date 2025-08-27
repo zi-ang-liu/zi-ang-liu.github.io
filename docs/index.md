@@ -23,7 +23,7 @@ Ziang Liu is an Associate Professor in the [Department of Industrial and Systems
 ```
 Hosei University   
 3-7-2 Kajino-cho   
-Koganei-shi, Tokyo 184-8585   
+Koganei-shi, Tokyo 184-8584 
 Japan
 ```
 
