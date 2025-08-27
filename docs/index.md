@@ -27,4 +27,4 @@ Koganei-shi, Tokyo 184-8584
 Japan
 ```
 
-Email: [liu+contact@hosei.ac.jp](mailto:liu+contact@hosei.ac.jp)   
+- Email: [liu+contact@hosei.ac.jp](mailto:liu+contact@hosei.ac.jp)   
