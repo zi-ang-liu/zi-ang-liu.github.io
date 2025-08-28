@@ -20,16 +20,11 @@ Ziang Liu is an Associate Professor in the [Department of Industrial and Systems
 
 ## Contact 
 
-```{python}
-from ipyleaflet import Map, basemaps, basemap_to_tiles
-
-lat = 48
-long = 350
-
-print("title=", f"World Map at {lat}, {long}")
-
-Map(basemap=basemap_to_tiles(basemaps.OpenStreetMap.Mapnik),
-    center=(lat, long), zoom=2)
+```
+Hosei University   
+3-7-2 Kajino-cho   
+Koganei-shi, Tokyo 184-8584 
+Japan
 ```
 
 - Email: [liu+contact@hosei.ac.jp](mailto:liu+contact@hosei.ac.jp)   
