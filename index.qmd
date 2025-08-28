@@ -13,14 +13,6 @@ about:
     - icon: envelope
       text: Email
       href: mailto:liu@hosei.ac.jp
-    - text: ResearchGate
-      href: https://www.researchgate.net/profile/Ziang-Liu-4
-    - text: ORCID
-      href: https://orcid.org/0000-0002-1364-3502
-    - text: ResearchMap
-      href: https://researchmap.jp/liu.ziang
-    - text: Kaken
-      href: https://nrid.nii.ac.jp/ja/nrid/1000030908166/
 format: 
   html:
     page-layout: full
@@ -37,6 +29,7 @@ Ziang Liu is an Associate Professor in the [Department of Industrial and Systems
 ## Address
 <i class="bi bi-geo-alt"></i> 
 Hosei University, Tokyo 184-8584, Japan
+
 
 <!-- ## 講義・実習
 
