@@ -16,15 +16,15 @@ website:
       - icon: github
         href: https://github.com/zi-ang-liu
   page-footer: 
-    left: |
-      [ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4) <br>
-      [ORCID](https://orcid.org/0000-0002-1364-3502) <br>
-      [ResearchMap](https://researchmap.jp/liu.ziang) <br>
-      [Kaken](https://nrid.nii.ac.jp/ja/nrid/1000030908166/)
+    # left: |
+    #   [ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4) <br>
+    #   [ORCID](https://orcid.org/0000-0002-1364-3502) <br>
+    #   [ResearchMap](https://researchmap.jp/liu.ziang) <br>
+    #   [Kaken](https://nrid.nii.ac.jp/ja/nrid/1000030908166/)
     center: "Copyright 2025, Ziang Liu"
     right: |
-      [法政大学](https://www.hosei.ac.jp/) <br>
-      [経営システム工学科](https://ise-hp.ws.hosei.ac.jp/) <br>
+      [法政大学](https://www.hosei.ac.jp/)
+      [経営システム工学科](https://ise-hp.ws.hosei.ac.jp/)
       [知能システム研究室](https://isl-hosei.github.io/)
     border: true
 format:
