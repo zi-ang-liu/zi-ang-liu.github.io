@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "About",
+    "title": "Ziang Liu",
     "section": "",
     "text": "Ziang Liu is an Associate Professor in the Department of Industrial and Systems Engineering at Hosei University. He is the head of the Intelligent Systems Laboratory, conducting research in the fields of operations research, optimization, and machine learning."
   },
@@ -51,7 +51,7 @@
   {
     "objectID": "index.html#experience",
     "href": "index.html#experience",
-    "title": "About",
+    "title": "Ziang Liu",
     "section": "Experience",
     "text": "Experience\nHosei University | Associate Professor | April 2025 - Present\nOkayama University | Assistant Professor | April 2021 - March 2025"
   },
@@ -65,8 +65,22 @@
   {
     "objectID": "index.html#address",
     "href": "index.html#address",
-    "title": "About",
+    "title": "Ziang Liu",
     "section": "Address",
-    "text": "Address\n Tokyo 184-8584, Japan"
+    "text": "Address\n Hosei University, Tokyo 184-8584, Japan"
+  },
+  {
+    "objectID": "index.html#講義実習",
+    "href": "index.html#講義実習",
+    "title": "Ziang Liu",
+    "section": "講義・実習",
+    "text": "講義・実習\n\n計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）"
+  },
+  {
+    "objectID": "index.html#公開講義",
+    "href": "index.html#公開講義",
+    "title": "Ziang Liu",
+    "section": "公開講義",
+    "text": "公開講義\n\n探索による問題解決, 2025, 法政大学オープンキャンパス"
   }
 ]

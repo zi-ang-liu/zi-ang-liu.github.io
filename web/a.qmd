@@ -1,0 +1,24 @@
+---
+title: "Palmer Penguins"
+format: dashboard
+---
+    
+# Bills 
+
+```{python}
+```
+
+# Flippers {orientation="columns" scrolling="true"}
+
+## Column
+
+```{python}
+```
+
+```{python}
+```
+
+## Column 
+
+```{python}
+```
