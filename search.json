@@ -14,6 +14,13 @@
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "計算機実習A\n1年生/春学期/水曜1限/W203\n\n\nリレーショナル・データベース\n3年生/春学期/水曜2限/遠隔視聴覚室\n\n\n社会システム\n1年生/秋学期/金曜3限/W305\n\n\nオペレーションズ・リサーチB\n2年生/秋学期/水曜2限/W202"
+  },
+  {
     "objectID": "posts/post-with-code/index.html",
     "href": "posts/post-with-code/index.html",
     "title": "Post With Code",
