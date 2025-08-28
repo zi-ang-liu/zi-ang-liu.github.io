@@ -1,10 +1,14 @@
 ---
 title: "Teaching"
+date-modified: today
 ---
 
-| **科目名** | **学年** | **学期** | **曜日・時限** | **教室** |
-|------------|----------|----------|----------------|----------|
-| [計算機実習A](https://zi-ang-liu.github.io/jb-computer-literacy) | 1年生 | 春学期 | 水曜1限 | W203 |
-| [リレーショナル・データベース](https://zi-ang-liu.github.io/jb-database) | 3年生 | 春学期 | 水曜2限 | 遠隔視聴覚室 |
-| [社会システム](https://zi-ang-liu.github.io/jb-sse) | 1年生 | 秋学期 | 金曜3限 | W305 |
-| [オペレーションズ・リサーチB](https://zi-ang-liu.github.io/jb-or) | 2年生 | 秋学期 | 水曜2限 | W202 |
+## 法政大学
+
+- [計算機実習A](https://zi-ang-liu.github.io/jb-computer-literacy)（1年生/春学期/水曜1限/W203）  
+- [リレーショナル・データベース](https://zi-ang-liu.github.io/jb-database)（3年生/春学期/水曜2限/遠隔視聴覚室）
+- [社会システム](https://zi-ang-liu.github.io/jb-sse)（1年生/秋学期/金曜3限/W305）
+- [オペレーションズ・リサーチB](https://zi-ang-liu.github.io/jb-or)（2年生/秋学期/水曜2限/W202）
+
+<!-- ## 過去の担当科目 -->
+

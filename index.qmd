@@ -7,7 +7,7 @@ about:
     - icon: github
       text: Github
       href: https://github.com/zi-ang-liu
-    - icon: google
+    - icon: mortarboard-fill
       text: Google Scholar
       href: https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl
     - icon: envelope
@@ -30,14 +30,5 @@ Ziang Liu is an Associate Professor in the [Department of Industrial and Systems
 <i class="bi bi-geo-alt"></i> 
 Hosei University, Tokyo 184-8584, Japan
 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d844.3094314537518!2d139.52192276947667!3d35.70991056214731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e58edb669a13%3A0x83f0db33261d084d!2z5rOV5pS_5aSn5a2m5bCP6YeR5LqV44Kt44Oj44Oz44OR44K56KW_6aSo!5e0!3m2!1sja!2sjp!4v1756395581130!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-<!-- ## 講義・実習
-
-- [計算機実習A](https://zi-ang-liu.github.io/jb-computer-literacy)（1年生/春学期/水曜1限/W203）  
-- [リレーショナル・データベース](https://zi-ang-liu.github.io/jb-database)（3年生/春学期/水曜2限/遠隔視聴覚室）
-- [社会システム](https://zi-ang-liu.github.io/jb-sse)（1年生/秋学期/金曜3限/W305）
-- [オペレーションズ・リサーチB](https://zi-ang-liu.github.io/jb-or)（2年生/秋学期/水曜2限/W202）
-
-## 公開講義
-
-- [探索による問題解決](https://zi-ang-liu.github.io/jb-open-campus), 2025, 法政大学オープンキャンパス -->
