@@ -1,2 +1,6 @@
 # MyST build outputs
 _build
+
+# Quarto build outputs
+/.quarto/
+/_site/
