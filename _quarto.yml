@@ -25,7 +25,35 @@ website:
 format:
   html:
     theme:
-      light: flatly
+      light: pulse
       dark: darkly
     css: styles.css
 favicon: https://github.com/zi-ang-liu.png
+
+
+# default
+# cerulean
+# cosmo
+# cyborg
+# darkly
+# flatly
+# journal
+# litera
+# lumen
+# lux
+# materia
+# minty
+# morph
+# pulse
+# quartz
+# sandstone
+# simplex
+# sketchy
+# slate
+# solar
+# spacelab
+# superhero
+# united
+# vapor
+# yeti
+# zephyr
