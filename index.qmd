@@ -1,6 +1,7 @@
 ---
 title: "Ziang Liu"
 image: https://avatars.githubusercontent.com/u/50853393?s=96&v=4
+email-obfuscation: javascript
 about:
   template: trestles
   links:
@@ -25,10 +26,3 @@ Ziang Liu is an Associate Professor in the [Department of Industrial and Systems
 **Hosei University** | Associate Professor | April 2025 - Present
 
 **Okayama University** | Assistant Professor | April 2021 - March 2025
-
-## Address
-<i class="bi bi-geo-alt"></i> 
-Hosei University, Tokyo 184-8584, Japan
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d844.3094314537518!2d139.52192276947667!3d35.70991056214731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e58edb669a13%3A0x83f0db33261d084d!2z5rOV5pS_5aSn5a2m5bCP6YeR5LqV44Kt44Oj44Oz44OR44K56KW_6aSo!5e0!3m2!1sja!2sjp!4v1756395581130!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
