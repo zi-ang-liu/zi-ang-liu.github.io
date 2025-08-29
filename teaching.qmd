@@ -10,5 +10,5 @@ date-modified: today
 - [社会システム](https://zi-ang-liu.github.io/jb-sse)（1年生/秋学期/金曜3限/W305）
 - [オペレーションズ・リサーチB](https://zi-ang-liu.github.io/jb-or)（2年生/秋学期/水曜2限/W202）
 
-<!-- ## 過去の担当科目 -->
+## 過去の担当科目
 
