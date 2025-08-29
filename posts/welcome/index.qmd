@@ -1,7 +1,7 @@
 ---
 title: "Welcome To My Blog"
-author: "Tristan O'Malley"
-date: "2025-08-25"
+author: "Ziang Liu"
+date: today
 categories: [news]
 ---
 

@@ -8,14 +8,15 @@ about:
     - icon: mortarboard-fill
       text: Google Scholar
       href: https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl
-    - icon: envelope
-      text: Email
-      href: mailto:liu@hosei.ac.jp
-    - text: Lab
-      href: https://isl-hosei.github.io/
     - icon: github
       text: Github
       href: https://github.com/zi-ang-liu
+    - icon: envelope
+      text: Email
+      href: mailto:liu@hosei.ac.jp
+    - text: Lab/研究室
+      icon: house-fill
+      href: https://isl-hosei.github.io/
 format: 
   html:
     page-layout: full
@@ -51,5 +52,3 @@ Ziang Liu is an Associate Professor in the [Department of Industrial and Systems
 
 **Okayama University** | Assistant Professor | April 2021 - March 2025
 :::
-
-
