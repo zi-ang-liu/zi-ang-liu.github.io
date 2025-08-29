@@ -3,6 +3,10 @@ project:
 
 website:
   title: "Ziang Liu"
+  favicon: favicon.io
+  site-url: https://zi-ang-liu.github.io
+  description: "Ziang Liu's Personal Website"
+  open-graph: true
   navbar:
     search: true
     left:
@@ -28,7 +32,6 @@ format:
       light: pulse
       dark: darkly
     css: styles.css
-favicon: https://github.com/zi-ang-liu.png
 
 
 # default
