@@ -4,3 +4,5 @@ _build
 # Quarto build outputs
 /.quarto/
 /_site/
+
+**/*.quarto_ipynb
