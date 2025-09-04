@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Welcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 4, 2025\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nAug 28, 2025\n\n\nHarlow Malloc\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "note.html",
+    "href": "note.html",
+    "title": "Ziang Liu",
+    "section": "",
+    "text": "quarto publish gh-pages\nicon: https://icons.getbootstrap.com"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
     "objectID": "teaching.html",
     "href": "teaching.html",
     "title": "Teaching",
@@ -14,53 +35,11 @@
     "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）"
   },
   {
-    "objectID": "teaching.html#過去の担当科目",
-    "href": "teaching.html#過去の担当科目",
-    "title": "Teaching",
-    "section": "過去の担当科目",
-    "text": "過去の担当科目"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ziang Liu",
-    "section": "",
-    "text": "日本語English中文\n\n\n\n劉 子昂\n准教授, ​博士（工学）\n​法政大学 理工学部 経営システム工学科\n\n職歴\n2025年4月 - 現在 | 法政大学 准教授\n2021年4月 - 2025年3月 | 岡山大学 助教\n\n\n研究分野\n\n最適化\n人工知能\n経営工学\n\n\n\n\n\n\nZiang Liu\nZiang Liu is an Associate Professor in the Department of Industrial and Systems Engineering at Hosei University. He is the head of the Intelligent Systems Laboratory, conducting research in the fields of operations research, optimization, and machine learning.\n\nExperience\nHosei University | Associate Professor | April 2025 - Present\nOkayama University | Assistant Professor | April 2021 - March 2025\n\n\n\n\n\n刘子昂\n副教授, 博士\n法政大学 理工学部 经营系统工学科\n\n工作经历\n2025年4月 - 现在，法政大学 副教授\n2021年4月 - 2025年3月，冈山大学 助理教授\n\n\n研究领域\n\n最优化\n人工智能\n运筹学"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Welcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nAug 28, 2025\n\n\nHarlow Malloc\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "contact.html",
     "href": "contact.html",
     "title": "Contact",
     "section": "",
-    "text": "Homepage"
-  },
-  {
-    "objectID": "contact.html#qr",
-    "href": "contact.html#qr",
-    "title": "Contact",
-    "section": "",
-    "text": "Homepage"
-  },
-  {
-    "objectID": "note.html",
-    "href": "note.html",
-    "title": "Ziang Liu",
-    "section": "",
-    "text": "quarto publish gh-pages"
+    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan\n\n\n\nHomepage"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -68,5 +47,12 @@
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ziang Liu",
+    "section": "",
+    "text": "日本語English中文\n\n\n\n劉 子昂\n准教授, ​博士（工学）\n​法政大学 理工学部 経営システム工学科\n\n職歴\n2025年4月 - 現在 | 法政大学 准教授\n2021年4月 - 2025年3月 | 岡山大学 助教\n\n\n研究分野\n\n最適化\n人工知能\n経営工学\n\n\n\n\n\n\nZiang Liu\nZiang Liu is an Associate Professor in the Department of Industrial and Systems Engineering at Hosei University. He is the head of the Intelligent Systems Laboratory, conducting research in the fields of operations research, optimization, and machine learning.\n\nExperience\nHosei University | Associate Professor | April 2025 - Present\nOkayama University | Assistant Professor | April 2021 - March 2025\n\n\n\n\n\n刘子昂\n副教授, 博士\n法政大学 理工学部 经营系统工学科\n\n工作经历\n2025年4月 - 现在，法政大学 副教授\n2021年4月 - 2025年3月，冈山大学 助理教授\n\n\n研究领域\n\n最优化\n人工智能\n运筹学"
   }
 ]
