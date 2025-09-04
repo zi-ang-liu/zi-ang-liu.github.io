@@ -12,3 +12,6 @@ date-modified: today
 
 ## 過去の担当科目
 
+<!-- ## 公開講義
+
+- [探索による問題解決](https://zi-ang-liu.github.io/jb-open-campus), 2025, 法政大学オープンキャンパス  -->

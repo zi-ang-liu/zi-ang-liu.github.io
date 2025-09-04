@@ -2,6 +2,4 @@
 title: "Contact"
 ---
 
-## QR
-
-![Homepage](qrcode_zi-ang-liu.github.io.png)
+![Homepage](images/home-qrcode.png){width=150px}

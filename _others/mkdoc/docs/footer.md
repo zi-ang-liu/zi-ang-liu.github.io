@@ -1,3 +1,0 @@
-# footer
-
-author: Ziang Liu
