@@ -1,8 +1,11 @@
 ---
 title: "Ziang Liu"
 image: https://avatars.githubusercontent.com/u/50853393?s=96&v=4
+# image: images/liu.jpg
 email-obfuscation: javascript
 about:
+  image-width: 10em
+  image-shape: rounded
   template: trestles
   links:
     - icon: mortarboard-fill
@@ -14,9 +17,18 @@ about:
     - icon: envelope
       text: Email
       href: mailto:liu@hosei.ac.jp
+    - icon: caret-right-fill
+      text: researchmap
+      href: https://researchmap.jp/liu.ziang
     - text: Lab/研究室
       icon: house-fill
       href: https://isl-hosei.github.io/
+    - text: ORCID
+      href: https://orcid.org/0000-0002-1364-3502
+    - text: KAKEN
+      href: https://nrid.nii.ac.jp/ja/nrid/1000030908166/
+    - text: ResearchGate
+      href: https://www.researchgate.net/profile/Ziang-Liu-4
 format: 
   html:
     page-layout: full

@@ -2,4 +2,16 @@
 title: "Contact"
 ---
 
+```
+〒184-8584 東京都小金井市梶野町3-7-2
+法政大学 理工学部 経営システム工学科
+```
+
+```
+Hosei University   
+3-7-2 Kajino-cho   
+Koganei-shi, Tokyo 184-8584 
+Japan
+```
+
 ![Homepage](images/home-qrcode.png){width=150px}
