@@ -7,7 +7,7 @@ categories: [news]
 
 ## インストール
 
-Mac の場合，Homebrew を使う．
+Mac の場合，Homebrew を使用してインストールできる．
 
 ```
 brew install pipx

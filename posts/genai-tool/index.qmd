@@ -1,0 +1,14 @@
+---
+title: "生成AI ツールまとめ"
+author: "劉子昂"
+date: 2025-09-06
+categories: [news]
+---
+
+[NotebookLM](https://notebooklm.google)
+
+[P4Us](https://promptforus.com)
+
+https://www.nri.com/jp/knowledge/glossary/index.html
+
+canvas
