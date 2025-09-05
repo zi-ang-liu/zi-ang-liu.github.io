@@ -31,7 +31,7 @@ website:
 format:
   html:
     theme:
-      light: cosmo
+      light: Sketchy
       dark: darkly
     css: styles.css
 

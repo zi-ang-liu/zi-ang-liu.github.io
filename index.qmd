@@ -55,12 +55,19 @@ format:
 
 ## English
 ### Ziang Liu
-Ziang Liu is an Associate Professor in the [Department of Industrial and Systems Engineering](https://ise-hp.ws.hosei.ac.jp/) at [Hosei University](https://www.hosei.ac.jp/). He is the head of the [Intelligent Systems Laboratory](https://isl-hosei.github.io/), conducting research in the fields of operations research, optimization, and machine learning.
+<!-- Ziang Liu is an Associate Professor in the [Department of Industrial and Systems Engineering](https://ise-hp.ws.hosei.ac.jp/) at [Hosei University](https://www.hosei.ac.jp/). He is the head of the [Intelligent Systems Laboratory](https://isl-hosei.github.io/), conducting research in the fields of operations research, optimization, and machine learning. -->
+Associate Professor, Ph.D.   
+Department of Industrial and Systems Engineering, Hosei University
 
 #### Experience
 
 **Hosei University** | Associate Professor | April 2025 - Present    
 **Okayama University** | Assistant Professor | April 2021 - March 2025
+
+#### Research Interests
+- Optimization
+- Artificial Intelligence
+- Operations Research
 
 ## 中文
 ### 刘子昂   
@@ -77,3 +84,7 @@ Ziang Liu is an Associate Professor in the [Department of Industrial and Systems
 - 人工智能
 - 运筹学
 :::
+
+<a href="https://isl-hosei.github.io/join.html">
+  <button type="button" class="btn btn-primary">Join our Lab</button>
+</a>
