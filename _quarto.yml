@@ -19,6 +19,8 @@ website:
       - text: "Blog"
         href: blog.qmd
     right:
+      - text: "Open Source"
+        href: open-source.qmd
       - icon: github
         href: https://github.com/zi-ang-liu
   page-footer: 
