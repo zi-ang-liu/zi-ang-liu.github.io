@@ -207,7 +207,14 @@
     "href": "open-source.html",
     "title": "Open Source",
     "section": "",
-    "text": "mdptools: A Python library for Markov Decision Processes.\ninventory-gym: A collection of environments for inventory control problems, compatible with Gymnasium, Stable Baselines3, and mdptools."
+    "text": "I actively develop and maintain several open-source projects. While most are still in their early stages, I am continually improving them with the goal of contributing meaningful tools to the research community."
+  },
+  {
+    "objectID": "open-source.html#reinforcement-learning",
+    "href": "open-source.html#reinforcement-learning",
+    "title": "Open Source",
+    "section": "Reinforcement Learning",
+    "text": "Reinforcement Learning\n\nmdptools: A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning.\ninventory-gym: A suite of inventory control environments compatible with Gymnasium, Stable Baselines3, and mdptools."
   },
   {
     "objectID": "index.html",
