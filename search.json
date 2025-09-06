@@ -207,7 +207,7 @@
     "href": "open-source.html",
     "title": "Open Source",
     "section": "",
-    "text": "mdptools: A Python library for Markov Decision Processes."
+    "text": "mdptools: A Python library for Markov Decision Processes.\ninventory-gym: A collection of environments for inventory control problems, compatible with Gymnasium, Stable Baselines3, and mdptools."
   },
   {
     "objectID": "index.html",
