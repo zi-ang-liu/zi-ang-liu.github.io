@@ -3,3 +3,4 @@ title: "Open Source"
 ---
 
 - [mdptools](https://github.com/zi-ang-liu/mdptools): A Python library for Markov Decision Processes.
+- [inventory-gym](https://github.com/zi-ang-liu/inventory-gym): A collection of environments for inventory control problems, compatible with Gymnasium, Stable Baselines3, and mdptools.
