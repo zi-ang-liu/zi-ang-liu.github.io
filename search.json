@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Kinoden 書籍リスト\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 5, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\npipx とは？\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 5, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nOverleafで日本語を使う\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 5, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n研究ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 5, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
+    "text": "Kinoden 書籍リスト\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\npipx とは？\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nOverleafで日本語を使う\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n研究ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n生成AI ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "note.html",
@@ -12,6 +12,13 @@
     "title": "Ziang Liu",
     "section": "",
     "text": "quarto publish gh-pages\nicon: https://icons.getbootstrap.com"
+  },
+  {
+    "objectID": "posts/genai-tool/index.html",
+    "href": "posts/genai-tool/index.html",
+    "title": "生成AI ツールまとめ",
+    "section": "",
+    "text": "NotebookLM\nP4Us\nhttps://www.nri.com/jp/knowledge/glossary/index.html\ncanvas"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -25,14 +32,14 @@
     "href": "posts/pipx/index.html",
     "title": "pipx とは？",
     "section": "",
-    "text": "Mac の場合，Homebrew を使う．\nbrew install pipx\npipx ensurepath\nインストール後、ターミナルを再起動する．\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
+    "text": "Mac の場合，Homebrew を使用してインストールできる．\nbrew install pipx\npipx ensurepath\nインストール後、ターミナルを再起動する．\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
   },
   {
     "objectID": "posts/pipx/index.html#インストール",
     "href": "posts/pipx/index.html#インストール",
     "title": "pipx とは？",
     "section": "",
-    "text": "Mac の場合，Homebrew を使う．\nbrew install pipx\npipx ensurepath\nインストール後、ターミナルを再起動する．\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
+    "text": "Mac の場合，Homebrew を使用してインストールできる．\nbrew install pipx\npipx ensurepath\nインストール後、ターミナルを再起動する．\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
   },
   {
     "objectID": "contact.html",
@@ -196,10 +203,17 @@
     "text": "Mac\n\nWine: Mac上で.exeフィアルを実行する"
   },
   {
+    "objectID": "open-source.html",
+    "href": "open-source.html",
+    "title": "Open Source",
+    "section": "",
+    "text": "mdptools: A Python library for Markov Decision Processes."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Ziang Liu",
     "section": "",
-    "text": "日本語English中文\n\n\n\n劉 子昂\n准教授, ​博士（工学）\n​法政大学 理工学部 経営システム工学科\n\n職歴\n2025年4月 - 現在 | 法政大学 准教授\n2021年4月 - 2025年3月 | 岡山大学 助教\n\n\n研究分野\n\n最適化\n人工知能\n経営工学\n\n\n\n\n\n\nZiang Liu\n\nAssociate Professor, Ph.D.\nDepartment of Industrial and Systems Engineering, Hosei University\n\nExperience\nHosei University | Associate Professor | April 2025 - Present\nOkayama University | Assistant Professor | April 2021 - March 2025\n\n\nResearch Interests\n\nOptimization\nArtificial Intelligence\nOperations Research\n\n\n\n\n\n\n刘子昂\n副教授, 博士\n法政大学 理工学部 经营系统工学科\n\n工作经历\n2025年4月 - 现在，法政大学 副教授\n2021年4月 - 2025年3月，冈山大学 助理教授\n\n\n研究领域\n\n最优化\n人工智能\n运筹学\n\n\n\n\n\n\n Join our Lab"
+    "text": "English日本語中文\n\n\n\nZiang Liu\n\nAssociate Professor, Ph.D.\nDepartment of Industrial and Systems Engineering, Hosei University\n\nExperience\nHosei University | Associate Professor | April 2025 - Present\nOkayama University | Assistant Professor | April 2021 - March 2025\n\n\nResearch Interests\n\nOptimization\nArtificial Intelligence\nOperations Research\n\n\n\n\n\n\n劉 子昂\n准教授, ​博士（工学）\n​法政大学 理工学部 経営システム工学科\n\n職歴\n2025年4月 - 現在 | 法政大学 准教授\n2021年4月 - 2025年3月 | 岡山大学 助教\n\n\n研究分野\n\n最適化\n人工知能\n経営工学\n\n\n\n\n\n\n刘子昂\n副教授, 博士\n法政大学 理工学部 经营系统工学科\n\n工作经历\n2025年4月 - 现在，法政大学 副教授\n2021年4月 - 2025年3月，冈山大学 助理教授\n\n\n研究领域\n\n最优化\n人工智能\n运筹学\n\n\n\n\n\n\n Join our Lab"
   }
 ]
