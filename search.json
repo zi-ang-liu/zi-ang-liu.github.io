@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Kinoden 書籍リスト\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\npipx とは？\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nOverleafで日本語を使う\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n研究ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n生成AI ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
+    "text": "Kinoden 書籍リスト\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 8, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\npipx とは？\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 8, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nOverleafで日本語を使う\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 8, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nFree Books\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 8, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n研究ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 8, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n生成AI ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "note.html",
@@ -21,60 +21,18 @@
     "text": "NotebookLM\nP4Us\nhttps://www.nri.com/jp/knowledge/glossary/index.html\ncanvas"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/free-books/indes.html",
+    "href": "posts/free-books/indes.html",
+    "title": "Free Books",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "An Introduction to Statistical Learning (ISL)"
   },
   {
-    "objectID": "posts/pipx/index.html",
-    "href": "posts/pipx/index.html",
-    "title": "pipx とは？",
+    "objectID": "posts/overleaf/index.html",
+    "href": "posts/overleaf/index.html",
+    "title": "Overleafで日本語を使う",
     "section": "",
-    "text": "Mac の場合，Homebrew を使用してインストールできる．\nbrew install pipx\npipx ensurepath\nインストール後、ターミナルを再起動する．\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
-  },
-  {
-    "objectID": "posts/pipx/index.html#インストール",
-    "href": "posts/pipx/index.html#インストール",
-    "title": "pipx とは？",
-    "section": "",
-    "text": "Mac の場合，Homebrew を使用してインストールできる．\nbrew install pipx\npipx ensurepath\nインストール後、ターミナルを再起動する．\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
-  },
-  {
-    "objectID": "contact.html#address",
-    "href": "contact.html#address",
-    "title": "Contact",
-    "section": "",
-    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
-  },
-  {
-    "objectID": "contact.html#qr-code-for-homepage",
-    "href": "contact.html#qr-code-for-homepage",
-    "title": "Contact",
-    "section": "QR Code for Homepage",
-    "text": "QR Code for Homepage"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）"
-  },
-  {
-    "objectID": "teaching.html#法政大学",
-    "href": "teaching.html#法政大学",
-    "title": "Teaching",
-    "section": "",
-    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）"
+    "text": "Overleafで日本語を使う方法を紹介します。\nhttps://ja.overleaf.com/learn/latex/Japanese\n\npLaTeXを使う\n論文のテンプレートがpLaTeXを使っている場合、以下のように設定する。\n\nMenu &gt; Compile &gt; LaTeX を選択する。\n「latexmkrc」ファイルを作成し、以下の内容を記述する。\n\n$latex = 'platex';\n$bibtex = 'pbibtex';\n$dvipdf = 'dvipdfmx %O -o %D %S';\n$makeindex = 'mendex %O -o %D %S';"
   },
   {
     "objectID": "posts/kinoden/indes.html",
@@ -133,11 +91,60 @@
     "text": "データサイエンス\n\nデータサイエンス入門　第2版"
   },
   {
-    "objectID": "posts/overleaf/index.html",
-    "href": "posts/overleaf/index.html",
-    "title": "Overleafで日本語を使う",
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
     "section": "",
-    "text": "Overleafで日本語を使う方法を紹介します。\nhttps://ja.overleaf.com/learn/latex/Japanese\n\npLaTeXを使う\n論文のテンプレートがpLaTeXを使っている場合、以下のように設定する。\n\nMenu &gt; Compile &gt; LaTeX を選択する。\n「latexmkrc」ファイルを作成し、以下の内容を記述する。\n\n$latex = 'platex';\n$bibtex = 'pbibtex';\n$dvipdf = 'dvipdfmx %O -o %D %S';\n$makeindex = 'mendex %O -o %D %S';"
+    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）"
+  },
+  {
+    "objectID": "teaching.html#法政大学",
+    "href": "teaching.html#法政大学",
+    "title": "Teaching",
+    "section": "",
+    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
+  },
+  {
+    "objectID": "contact.html#address",
+    "href": "contact.html#address",
+    "title": "Contact",
+    "section": "",
+    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
+  },
+  {
+    "objectID": "contact.html#qr-code-for-homepage",
+    "href": "contact.html#qr-code-for-homepage",
+    "title": "Contact",
+    "section": "QR Code for Homepage",
+    "text": "QR Code for Homepage"
+  },
+  {
+    "objectID": "posts/pipx/index.html",
+    "href": "posts/pipx/index.html",
+    "title": "pipx とは？",
+    "section": "",
+    "text": "Mac の場合，Homebrew を使用してインストールできる．\nbrew install pipx\npipx ensurepath\nインストール後、ターミナルを再起動する．\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
+  },
+  {
+    "objectID": "posts/pipx/index.html#インストール",
+    "href": "posts/pipx/index.html#インストール",
+    "title": "pipx とは？",
+    "section": "",
+    "text": "Mac の場合，Homebrew を使用してインストールできる．\nbrew install pipx\npipx ensurepath\nインストール後、ターミナルを再起動する．\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
     "objectID": "posts/research-tool/index.html",
