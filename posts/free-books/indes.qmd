@@ -1,0 +1,8 @@
+---
+title: "Free Books"
+author: "劉子昂"
+date: today
+categories: [news]
+---
+
+[An Introduction to Statistical Learning (ISL)](https://www.statlearning.com/)
