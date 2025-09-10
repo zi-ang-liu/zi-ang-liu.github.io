@@ -1,9 +1,15 @@
 ---
-title: "pipx とは？"
+title: "pipx を使ってみた"
 author: "劉子昂"
-date: today
+date: 2025-09-10
 categories: [news]
 ---
+
+pipx は python のアプリケーションを独立した環境でインストールし，実行できるツールである．
+
+pip や conda と違い，アプリケーションごとに環境を分けるため，依存関係の衝突を避けることができる．
+
+ホームページ: https://pipx.pypa.io/stable/
 
 ## インストール
 
