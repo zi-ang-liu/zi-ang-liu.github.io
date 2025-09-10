@@ -2,14 +2,14 @@
 title: "pipx を使ってみた"
 author: "劉子昂"
 date: 2025-09-10
-categories: [news]
+categories: ["python"]
 ---
 
 pipx は python のアプリケーションを独立した環境でインストールし，実行できるツールである．
 
-pip や conda と違い，アプリケーションごとに環境を分けるため，依存関係の衝突を避けることができる．
+- [https://pipx.pypa.io/](https://pipx.pypa.io/)
 
-ホームページ: https://pipx.pypa.io/stable/
+pip や conda と違い，アプリケーションごとに環境を分けるため，依存関係の衝突を避けることができる．
 
 ## インストール
 
@@ -19,8 +19,6 @@ Mac の場合，Homebrew を使用してインストールできる．
 brew install pipx
 pipx ensurepath
 ```
-
-インストール後、ターミナルを再起動する．
 
 下記のコマンドでバーションを確認し，数字が表示されれば成功．
 
