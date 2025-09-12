@@ -1,0 +1,16 @@
+---
+title: "中国の大学ランキング"
+author: "劉子昂"
+date: today
+categories: [news]
+---
+
+
+
+
+日本の未来創造人材制度や高度外国人材ポイント制度などでは，以下の３つの世界大学ランキングを参考にしています。
+
+- [QS世界大学ランキング](https://www.topuniversities.com/university-rankings)
+- [THE世界大学ランキング](https://www.timeshighereducation.com/world-university-rankings)
+- [世界大学学術ランキング（ARWU）](https://www.shanghairanking.com/rankings)
+
