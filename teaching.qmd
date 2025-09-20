@@ -9,8 +9,20 @@ date-modified: today
 - [リレーショナル・データベース](https://zi-ang-liu.github.io/jb-database)（3年生/春学期/水曜2限/遠隔視聴覚室）
 - [社会システム](https://zi-ang-liu.github.io/systems-engineering-book)（1年生/秋学期/金曜3限/W305）
 - [オペレーションズ・リサーチB](https://zi-ang-liu.github.io/or-book)（2年生/秋学期/水曜2限/W202）
+- 経営工学ゼミナール（4年生/年間/木曜3限）
+- PBL（3年生/秋学期/木曜4限）
 
-<!-- ## 過去の担当科目
+## 時間割（小金井キャンパス）
+
+| 時限    | 時間帯       |
+| ------- | ------------ |
+| 1時限目 | 9:00～10:40  |
+| 2時限目 | 10:50～12:30 |
+| 3時限目 | 13:20～15:00 |
+| 4時限目 | 15:10～16:50 |
+| 5時限目 | 17:00～18:40 |
+
+<!-- <!-- ## 過去の担当科目
 
 - [プログラミング](https://zi-ang-liu.github.io/jb-c-programming/intro.html), 2021~2024
 - 機械工作実習I, 2021~2024, OU
@@ -37,15 +49,6 @@ date-modified: today
 ## ゼミナール資料
 - [Python Programming](https://ziangs-organization.gitbook.io/python/)
 - [Intelligent Systems](https://zi-ang-liu.github.io/intelligent-systems/intro.html)
-- [Basic Math](https://zi-ang-liu.github.io/jb-basic-math/intro.html)
+- [Basic Math](https://zi-ang-liu.github.io/jb-basic-math/intro.html) -->
 
 
-## 時間割(小金井キャンパス)
-
-| 時限    | 時間帯       |
-| ------- | ------------ |
-| 1時限目 | 9:00～10:40  |
-| 2時限目 | 10:50～12:30 |
-| 3時限目 | 13:20～15:00 |
-| 4時限目 | 15:10～16:50 |
-| 5時限目 | 17:00～18:40 | -->
