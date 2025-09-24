@@ -5,11 +5,13 @@ date: today
 categories: [news]
 ---
 
-このページは大学教員向けに、中国の大学群・大学ランキングについて簡単に説明するものである。
+このページは大学教員向けに、中国の大学群・大学ランキングについて簡単に説明するものです。
 
 ## 大学ランキングの調べ方
 
-ここでは、ARWUという世界大学ランキングを使って、中国の大学のランキングを調べる方法を説明する。ARWUは上海ランキングとも呼ばれ、上海交通大学が2003年に発表したのが始まりである。ARWUの中国語版のサイトでは中国の大学全体のランキングを発表している。そこに中国語の大学名で検索すると、各大学のランキングがわかる。
+ここでは、ARWUという世界大学ランキングを使って、中国の大学のランキングを調べる方法を説明します。ARWUは上海ランキングとも呼ばれ、上海交通大学が2003年に発表したのが始まりです。
+
+英語版のARWUサイトでは、一部の中国の大学しか表示されませんが、中国語版のARWUサイトでは中国の大学全体のランキングを発表しています。そこに中国語の大学名で検索すると、各大学のランキングがわかります。
 
 調べ方は以下の通り。
 
@@ -21,15 +23,12 @@ categories: [news]
 
 :::{.callout-note}
 
-日本の「未来創造人材制度」や「高度外国人材ポイント制度」などでは、以下の３つの世界大学ランキングを使用している。
+日本の「[未来創造人材制度](https://www.moj.go.jp/isa/applications/resources/newimmiact_3_evaluate_index.html)」や「[高度外国人材ポイント制度](https://www.moj.go.jp/isa/applications/status/designatedactivities51.html)」などでは、ARWUのランキングが評価基準の一つとして使われています。
 
 - [QS世界大学ランキング](https://www.topuniversities.com/university-rankings)
 - [THE世界大学ランキング](https://www.timeshighereducation.com/world-university-rankings)
 - [世界大学学術ランキング（ARWU）](https://www.shanghairanking.com/rankings)
 :::
-
-
-
 
 <!-- ## 985、211、双一流とは
 
