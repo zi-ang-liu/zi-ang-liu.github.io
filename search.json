@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "プロンプト進化\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 25, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nKinoden 書籍リスト\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 25, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学群（大学教員向け）\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 25, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nOverleafで日本語を使う\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 25, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nFree Books\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 25, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n研究ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 25, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\npipx を使ってみた\n\n\n\npython\n\n\n\n\n\n\n\n\n\nSep 10, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n生成AI ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
+    "text": "プロンプト進化\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 22, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nオンライン教材\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 22, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nKinoden 書籍リスト\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 22, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学群（大学教員向け）\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 22, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nOverleafで日本語を使う\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 22, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nFree Books\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 22, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n研究ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 22, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\npipx を使ってみた\n\n\n\npython\n\n\n\n\n\n\n\n\n\nSep 10, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n生成AI ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "note.html",
@@ -49,11 +49,32 @@
     "text": "インストール\nMac の場合，Homebrew を使用してインストールできる．\nbrew install pipx\npipx ensurepath\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
   },
   {
-    "objectID": "posts/paper-prompt-evolution/index.html",
-    "href": "posts/paper-prompt-evolution/index.html",
-    "title": "プロンプト進化",
+    "objectID": "posts/online-textbook/index.html",
+    "href": "posts/online-textbook/index.html",
+    "title": "オンライン教材",
     "section": "",
-    "text": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning\nhttps://mp.weixin.qq.com/s/0-Opg-D5Eu_t0Gj_J4pcfg"
+    "text": "https://bookdown.org/masayukeeeee/jiyu-dslec-2023-01/"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
+  },
+  {
+    "objectID": "contact.html#address",
+    "href": "contact.html#address",
+    "title": "Contact",
+    "section": "",
+    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
+  },
+  {
+    "objectID": "contact.html#qr-code-for-homepage",
+    "href": "contact.html#qr-code-for-homepage",
+    "title": "Contact",
+    "section": "QR Code for Homepage",
+    "text": "QR Code for Homepage"
   },
   {
     "objectID": "teaching.html",
@@ -77,25 +98,11 @@
     "text": "時間割（小金井キャンパス）\n\n\n\n時限\n時間帯\n\n\n\n\n1時限目\n9:00～10:40\n\n\n2時限目\n10:50～12:30\n\n\n3時限目\n13:20～15:00\n\n\n4時限目\n15:10～16:50\n\n\n5時限目\n17:00～18:40"
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
+    "objectID": "posts/paper-prompt-evolution/index.html",
+    "href": "posts/paper-prompt-evolution/index.html",
+    "title": "プロンプト進化",
     "section": "",
-    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
-  },
-  {
-    "objectID": "contact.html#address",
-    "href": "contact.html#address",
-    "title": "Contact",
-    "section": "",
-    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
-  },
-  {
-    "objectID": "contact.html#qr-code-for-homepage",
-    "href": "contact.html#qr-code-for-homepage",
-    "title": "Contact",
-    "section": "QR Code for Homepage",
-    "text": "QR Code for Homepage"
+    "text": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning\nhttps://mp.weixin.qq.com/s/0-Opg-D5Eu_t0Gj_J4pcfg"
   },
   {
     "objectID": "posts/kinoden/indes.html",
