@@ -32,9 +32,9 @@ website:
     border: true
 format:
   html:
-    theme:
-      light: Minty
-      dark: darkly
+    theme: slate
+      # light: slate
+      # dark: darkly
     css: styles.css
 
 
