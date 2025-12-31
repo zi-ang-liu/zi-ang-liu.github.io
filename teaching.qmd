@@ -3,14 +3,144 @@ title: "Teaching"
 date-modified: today
 ---
 
-## 法政大学
 
-- [計算機実習A](https://zi-ang-liu.github.io/jb-computer-literacy)（1年生/春学期/水曜1限/W203）  
-- [リレーショナル・データベース](https://zi-ang-liu.github.io/jb-database)（3年生/春学期/水曜2限/遠隔視聴覚室）
-- [社会システム](https://zi-ang-liu.github.io/systems-engineering-book)（1年生/秋学期/金曜3限/W305）
-- [オペレーションズ・リサーチB](https://zi-ang-liu.github.io/or-book)（2年生/秋学期/水曜2限/W202）
-- 経営工学ゼミナール（4年生/年間/木曜3限）
-- PBL（3年生/秋学期/木曜4限）
+## 春学期
+
+```{=html}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">時限</th>
+      <th scope="col">月</th>
+      <th scope="col">火</th>
+      <th scope="col">水</th>
+      <th scope="col">木</th>
+      <th scope="col">金</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 1限 -->
+    <tr>
+      <th scope="row">1限<br>9:00–10:40</th>
+      <td></td>
+      <td></td>
+      <td class="table-success">
+        <a href="https://zi-ang-liu.github.io/jb-computer-literacy">
+          計算機実習A
+        </a><br>W203
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">2限<br>10:50–12:30</th>
+      <td></td>
+      <td></td>
+      <td class="table-success">
+        <a href="https://zi-ang-liu.github.io/jb-database">
+          RDB
+        </a><br>遠隔視聴覚室
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">3限<br>13:20–15:00</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="table-success">
+        4年ゼミ<br>研究室
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">4限<br>15:10–16:50</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="table-success">
+        基礎演習<br>研究室
+      </td>
+      <td>会議</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+## 秋学期
+
+```{=html}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">時限</th>
+      <th scope="col">月</th>
+      <th scope="col">火</th>
+      <th scope="col">水</th>
+      <th scope="col">木</th>
+      <th scope="col">金</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 1限 -->
+    <tr>
+      <th scope="row">1限<br>9:00–10:40</th>
+      <td></td>
+      <td></td>
+      <td ></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">2限<br>10:50–12:30</th>
+      <td></td>
+      <td></td>
+      <td class="table-success">
+        <a href="https://zi-ang-liu.github.io/or-book">
+          OR-B
+        </a><br>W202
+      </td>
+      <td class="table-info">
+        Algorithms
+        <br>大学院
+      </td>
+      <td class="table-info">
+        Advanced MS
+        <br>大学院
+        </td>
+    </tr>
+    <tr>
+      <th scope="row">3限<br>13:20–15:00</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="table-success">
+        4年ゼミ<br>研究室
+      </td>
+      <td class="table-success">
+        <a href="https://zi-ang-liu.github.io/systems-engineering-book">
+          社会システム
+        </a><br>W305
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">4限<br>15:10–16:50</th>
+      <td></td>
+      <td></td>
+      <td class="table-info">
+        IIST Seminar
+        <br>大学院
+        </td>
+      <td class="table-success">
+        PBL<br>研究室
+      </td>
+      <td>会議</td>
+    </tr>
+  </tbody>
+</table>
+```
+
 
 ## 時間割（小金井キャンパス）
 
@@ -21,6 +151,15 @@ date-modified: today
 | 3時限目 | 13:20～15:00 |
 | 4時限目 | 15:10～16:50 |
 | 5時限目 | 17:00～18:40 |
+
+<!-- ## 法政大学
+
+- [計算機実習A](https://zi-ang-liu.github.io/jb-computer-literacy)（1年生/春学期/水曜1限/W203）  
+- [リレーショナル・データベース](https://zi-ang-liu.github.io/jb-database)（3年生/春学期/水曜2限/遠隔視聴覚室）
+- [社会システム](https://zi-ang-liu.github.io/systems-engineering-book)（1年生/秋学期/金曜3限/W305）
+- [オペレーションズ・リサーチB](https://zi-ang-liu.github.io/or-book)（2年生/秋学期/水曜2限/W202）
+- 経営工学ゼミナール（4年生/年間/木曜3限）
+- PBL（3年生/秋学期/木曜4限） -->
 
 <!-- <!-- ## 過去の担当科目
 
@@ -50,5 +189,3 @@ date-modified: today
 - [Python Programming](https://ziangs-organization.gitbook.io/python/)
 - [Intelligent Systems](https://zi-ang-liu.github.io/intelligent-systems/intro.html)
 - [Basic Math](https://zi-ang-liu.github.io/jb-basic-math/intro.html) -->
-
-

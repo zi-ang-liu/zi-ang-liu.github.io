@@ -32,9 +32,8 @@ website:
     border: true
 format:
   html:
-    theme: slate
-      # light: slate
-      # dark: darkly
+    theme: 
+      light: [slate, custom.scss]
     css: styles.css
 
 
