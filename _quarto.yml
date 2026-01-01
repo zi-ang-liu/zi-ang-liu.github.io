@@ -33,7 +33,8 @@ website:
 format:
   html:
     theme: 
-      light: [slate, custom.scss]
+      light: [lumen, custom.scss]
+      dark: [darkly, dark_custom.scss]
     css: styles.css
 
 

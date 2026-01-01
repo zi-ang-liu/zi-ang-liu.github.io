@@ -141,6 +141,17 @@ date-modified: today
 </table>
 ```
 
+<!-- ## Books
+
+```{=html}
+<div class="card bg-secondary mb-3" style="max-width: 20rem;">
+  <div class="card-header">Operations Research</div>
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+``` -->
+
 
 ## 時間割（小金井キャンパス）
 
