@@ -34,7 +34,7 @@ format:
   html:
     theme: 
       light: [lumen, custom.scss]
-      dark: [darkly, dark_custom.scss]
+      # dark: [darkly, dark_custom.scss]
     css: styles.css
 
 

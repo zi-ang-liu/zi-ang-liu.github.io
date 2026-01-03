@@ -102,11 +102,11 @@ date-modified: today
         </a><br>W202
       </td>
       <td class="table-info">
-        Algorithms
+        アルゴリズム
         <br>大学院
       </td>
       <td class="table-info">
-        Advanced MS
+        経営科学
         <br>大学院
         </td>
     </tr>
@@ -129,7 +129,7 @@ date-modified: today
       <td></td>
       <td></td>
       <td class="table-info">
-        IIST Seminar
+        IISTセミナー
         <br>大学院
         </td>
       <td class="table-success">
