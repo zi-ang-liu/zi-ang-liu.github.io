@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "プロンプト進化\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nオンライン教材\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nKinoden 書籍リスト\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学群（大学教員向け）\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nOverleafで日本語を使う\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nFree Books\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n研究ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\npipx を使ってみた\n\n\n\npython\n\n\n\n\n\n\n\n\n\nSep 10, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n生成AI ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
+    "text": "プロンプト進化\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 22, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学群（大学教員向け）\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 22, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nOverleafで日本語を使う\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 22, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\npipx を使ってみた\n\n\n\npython\n\n\n\n\n\n\n\n\n\nSep 10, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n生成AI ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "note.html",
@@ -19,13 +19,6 @@
     "title": "生成AI ツールまとめ",
     "section": "",
     "text": "NotebookLM\nP4Us\nhttps://www.nri.com/jp/knowledge/glossary/index.html\ncanvas"
-  },
-  {
-    "objectID": "posts/free-books/indes.html",
-    "href": "posts/free-books/indes.html",
-    "title": "Free Books",
-    "section": "",
-    "text": "An Introduction to Statistical Learning (ISL)"
   },
   {
     "objectID": "posts/overleaf/index.html",
@@ -47,13 +40,6 @@
     "title": "pipx を使ってみた",
     "section": "インストール",
     "text": "インストール\nMac の場合，Homebrew を使用してインストールできる．\nbrew install pipx\npipx ensurepath\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
-  },
-  {
-    "objectID": "posts/online-textbook/index.html",
-    "href": "posts/online-textbook/index.html",
-    "title": "オンライン教材",
-    "section": "",
-    "text": "https://bookdown.org/masayukeeeee/jiyu-dslec-2023-01/"
   },
   {
     "objectID": "contact.html",
@@ -81,21 +67,14 @@
     "href": "teaching.html",
     "title": "Teaching",
     "section": "",
-    "text": "時限\n月\n火\n水\n木\n金\n\n\n\n\n1限\n9:00–10:40\n\n\n計算機実習A\nW203\n\n\n\n\n2限\n10:50–12:30\n\n\nRDB\n遠隔視聴覚室\n\n\n\n\n3限\n13:20–15:00\n\n\n\n4年ゼミ\n研究室\n\n\n\n4限\n15:10–16:50\n\n\n\n基礎演習\n研究室\n会議"
+    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n\n\n\n\n\n経営工学基礎演習（3年生/春学期）\nPBL（3年生/秋学期）\n卒業研究（4年生/年間）"
   },
   {
-    "objectID": "teaching.html#春学期",
-    "href": "teaching.html#春学期",
+    "objectID": "teaching.html#法政大学",
+    "href": "teaching.html#法政大学",
     "title": "Teaching",
     "section": "",
-    "text": "時限\n月\n火\n水\n木\n金\n\n\n\n\n1限\n9:00–10:40\n\n\n計算機実習A\nW203\n\n\n\n\n2限\n10:50–12:30\n\n\nRDB\n遠隔視聴覚室\n\n\n\n\n3限\n13:20–15:00\n\n\n\n4年ゼミ\n研究室\n\n\n\n4限\n15:10–16:50\n\n\n\n基礎演習\n研究室\n会議"
-  },
-  {
-    "objectID": "teaching.html#秋学期",
-    "href": "teaching.html#秋学期",
-    "title": "Teaching",
-    "section": "秋学期",
-    "text": "秋学期\n\n\n\n\n\n\n\n\n\n\n\n時限\n月\n火\n水\n木\n金\n\n\n\n\n1限\n9:00–10:40\n\n\n\n\n\n\n\n2限\n10:50–12:30\n\n\nOR-B\nW202\nアルゴリズム\n大学院\n経営科学\n大学院\n\n\n3限\n13:20–15:00\n\n\n\n4年ゼミ\n研究室\n社会システム\nW305\n\n\n4限\n15:10–16:50\n\n\nIISTセミナー\n大学院\nPBL\n研究室\n会議"
+    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n\n\n\n\n\n経営工学基礎演習（3年生/春学期）\nPBL（3年生/秋学期）\n卒業研究（4年生/年間）"
   },
   {
     "objectID": "teaching.html#時間割小金井キャンパス",
@@ -105,102 +84,32 @@
     "text": "時間割（小金井キャンパス）\n\n\n\n時限\n時間帯\n\n\n\n\n1時限目\n9:00～10:40\n\n\n2時限目\n10:50～12:30\n\n\n3時限目\n13:20～15:00\n\n\n4時限目\n15:10～16:50\n\n\n5時限目\n17:00～18:40"
   },
   {
+    "objectID": "timetable.html",
+    "href": "timetable.html",
+    "title": "Ziang Liu",
+    "section": "",
+    "text": "時限\n月\n火\n水\n木\n金\n\n\n\n\n1限\n9:00–10:40\n\n\n計算機実習A\nW203\n\n\n\n\n2限\n10:50–12:30\n\n\nRDB\n遠隔視聴覚室\n\n\n\n\n3限\n13:20–15:00\n\n\n\n4年ゼミ\n研究室\n\n\n\n4限\n15:10–16:50\n\n\n\n基礎演習\n研究室\n会議"
+  },
+  {
+    "objectID": "timetable.html#春学期",
+    "href": "timetable.html#春学期",
+    "title": "Ziang Liu",
+    "section": "",
+    "text": "時限\n月\n火\n水\n木\n金\n\n\n\n\n1限\n9:00–10:40\n\n\n計算機実習A\nW203\n\n\n\n\n2限\n10:50–12:30\n\n\nRDB\n遠隔視聴覚室\n\n\n\n\n3限\n13:20–15:00\n\n\n\n4年ゼミ\n研究室\n\n\n\n4限\n15:10–16:50\n\n\n\n基礎演習\n研究室\n会議"
+  },
+  {
+    "objectID": "timetable.html#秋学期",
+    "href": "timetable.html#秋学期",
+    "title": "Ziang Liu",
+    "section": "秋学期",
+    "text": "秋学期\n\n\n\n\n\n\n\n\n\n\n\n時限\n月\n火\n水\n木\n金\n\n\n\n\n1限\n9:00–10:40\n\n\n\n\n\n\n\n2限\n10:50–12:30\n\n\nOR-B\nW202\nアルゴリズム\n大学院\n経営科学\n大学院\n\n\n3限\n13:20–15:00\n\n\n\n4年ゼミ\n研究室\n社会システム\nW305\n\n\n4限\n15:10–16:50\n\n\nIISTセミナー\n大学院\nPBL\n研究室\n会議"
+  },
+  {
     "objectID": "posts/paper-prompt-evolution/index.html",
     "href": "posts/paper-prompt-evolution/index.html",
     "title": "プロンプト進化",
     "section": "",
     "text": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning\nhttps://mp.weixin.qq.com/s/0-Opg-D5Eu_t0Gj_J4pcfg"
-  },
-  {
-    "objectID": "posts/kinoden/indes.html",
-    "href": "posts/kinoden/indes.html",
-    "title": "Kinoden 書籍リスト",
-    "section": "",
-    "text": "法政大学図書館のKinodenで豊富な書籍を閲覧できます．\nKinodenは、下記のリンクからアクセスできます．\nKinoDen"
-  },
-  {
-    "objectID": "posts/kinoden/indes.html#python入門",
-    "href": "posts/kinoden/indes.html#python入門",
-    "title": "Kinoden 書籍リスト",
-    "section": "Python入門",
-    "text": "Python入門\n\nPython言語によるプログラミングイントロダクション　第2版 (2017)\nChatGPTと学ぶPython入門\nよくわかる Python入門\nスッキリわかるPython入門\nゼロからやさしくはじめるPython入門\nマンガでざっくり学ぶPython（パイソン）"
-  },
-  {
-    "objectID": "posts/kinoden/indes.html#経営工学",
-    "href": "posts/kinoden/indes.html#経営工学",
-    "title": "Kinoden 書籍リスト",
-    "section": "経営工学",
-    "text": "経営工学\n\nPythonで経営工学を学ぶ\n\nPython コンピュータシミュレーション入門 (2021)\n\nKeywords: 感染症モデル，線型計画法，在庫管理，待ち行列，グラフ理論，遺伝的アルゴリズム，ゲーム理論，強化学習\n経営工学に関するテーマが多く取り上げられている．\n\n\n\n\nExcelで経営工学を学ぶ\n\n入門　経営科学　改訂版\n例題で学ぶ　OR入門\nExcelで学ぶオペレーションズリサーチ"
-  },
-  {
-    "objectID": "posts/kinoden/indes.html#最適化",
-    "href": "posts/kinoden/indes.html#最適化",
-    "title": "Kinoden 書籍リスト",
-    "section": "最適化",
-    "text": "最適化\n\nPythonで数理最適化を学ぶ\n\nPythonではじめる数理最適化　第2版 (2024)\n\nKeywords: 数理最適化，モデリング，ケーススタディ（学校のクラス編成，配送計画，商品推薦）\n\nPythonによる実務で役立つ最適化問題100+ 1 (2022)\n\n栄養問題、最短路問題など\n内容が公開されている．Link\n\nPythonによる数理最適化入門 (2018)\nあたらしい数理最適化 (2012)\n\nKeywords: 施設配置問題、箱詰め問題と切断問題、スケジューリング問題など\n\n\n\n\nソースコードなし\n\n最適化の基礎"
-  },
-  {
-    "objectID": "posts/kinoden/indes.html#機械学習",
-    "href": "posts/kinoden/indes.html#機械学習",
-    "title": "Kinoden 書籍リスト",
-    "section": "機械学習",
-    "text": "機械学習\n\nPythonで機械学習を学ぶ\n\nPython機械学習プログラミング (2022)\n\nKeywords: データ前処理，教師あり学習，教師なし学習，強化学習，Sklearn，PyTorch\n機械学習アルゴリズムの理論と実装を学べる．数学，プログラミングの両方に自信がある人向け．\n\nスッキリわかるPythonによる機械学習入門\n\nKeywords: 教師あり学習，教師なし学習\n機械学習ライブラリの使い方を学べる．数式が苦手な人向け．\n\nいちばんやさしいPython機械学習の教本"
-  },
-  {
-    "objectID": "posts/kinoden/indes.html#データサイエンス",
-    "href": "posts/kinoden/indes.html#データサイエンス",
-    "title": "Kinoden 書籍リスト",
-    "section": "データサイエンス",
-    "text": "データサイエンス\n\nPythonでデータサイエンスを学ぶ\n\nデータサイエンス教本(2018)\n\nKeywords: 回帰分析，パターン認識，深層学習，時系列分析，画像処理\n\nPython時系列分析クックブック\nPythonによる実務で役立つデータサイエンス練習問題 200+ 1 (2023)\n\nKeywords: 練習問題\n\n\n\n\nソースコードなし\n\nデータサイエンス入門　第3版\nデータ分析とデータサイエンス"
-  },
-  {
-    "objectID": "posts/kinoden/indes.html#統計学",
-    "href": "posts/kinoden/indes.html#統計学",
-    "title": "Kinoden 書籍リスト",
-    "section": "統計学",
-    "text": "統計学\n\nPythonで統計学を学ぶ\n\nPythonで学ぶあたらしい統計学の教科書　第2版\nPythonで学ぶ統計的機械学習\n\n\n\nRで統計学を学ぶ\n\n理工系のための統計入門 (2016)\nＲによる統計解析\n\n\n\nソースコードなし\n\n数理統計学の基礎 (2014)\n教養のための統計入門 (2016)\n新統計入門 (1996)\n確率統計 (1996)\n確率・統計 (2019)\n経営科学のための確率統計入門 (2022)"
-  },
-  {
-    "objectID": "posts/kinoden/indes.html#システム工学",
-    "href": "posts/kinoden/indes.html#システム工学",
-    "title": "Kinoden 書籍リスト",
-    "section": "システム工学",
-    "text": "システム工学\n\nシステム工学 (1996)"
-  },
-  {
-    "objectID": "posts/kinoden/indes.html#xai",
-    "href": "posts/kinoden/indes.html#xai",
-    "title": "Kinoden 書籍リスト",
-    "section": "XAI",
-    "text": "XAI\n\n実践XAI［説明可能なAI］ (2023)"
-  },
-  {
-    "objectID": "posts/kinoden/indes.html#強化学習",
-    "href": "posts/kinoden/indes.html#強化学習",
-    "title": "Kinoden 書籍リスト",
-    "section": "強化学習",
-    "text": "強化学習\n\nTensorFlowによる深層強化学習入門 (2021)\n強化学習アルゴリズム入門 (2019)\n現場で使える！Python深層強化学習入門 (2019)"
-  },
-  {
-    "objectID": "posts/kinoden/indes.html#人工知能",
-    "href": "posts/kinoden/indes.html#人工知能",
-    "title": "Kinoden 書籍リスト",
-    "section": "人工知能",
-    "text": "人工知能\n\n人工知能入門\n\nKeywords: 探索，推論，学習，進化的計算，ニューラルネットワーク，強化学習\n\n人工知能原理\n\nKeywords: 探索，機械学習，進化的計算，強化学習\n\n基礎から学ぶ人工知能の教科書\n\nKeywords: 学習，推論，深層学習，進化的計算，強化学習\n\n人工知能の創発\nタイトルメタヒューリスティクスとナチュラルコンピューティング\n\nKeywords: 遺伝的アルゴリズム，粒子群最適化法，タブーサーチ，山登り法\n\nAI時代の離散数学 (2020)\n\nKeywords: 論理関数，深層学習，グラフ理論，ネットワーク最適化"
-  },
-  {
-    "objectID": "posts/kinoden/indes.html#アルゴリズム",
-    "href": "posts/kinoden/indes.html#アルゴリズム",
-    "title": "Kinoden 書籍リスト",
-    "section": "アルゴリズム",
-    "text": "アルゴリズム\n\nアルゴリズムイントロダクション\n\n世界的名著\nアルゴリズムイントロダクション　第4版　1 (2024)\nアルゴリズムイントロダクション　第4版　2 (2024)\n\nデータ構造とアルゴリズム (2017)"
-  },
-  {
-    "objectID": "posts/kinoden/indes.html#モデリング",
-    "href": "posts/kinoden/indes.html#モデリング",
-    "title": "Kinoden 書籍リスト",
-    "section": "モデリング",
-    "text": "モデリング\n\nグラフ理論入門(原書第4版) (2001)\nマルコフ決定過程 (2019)"
   },
   {
     "objectID": "posts/china-university/index.html",
@@ -222,69 +131,6 @@
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "posts/research-tool/index.html",
-    "href": "posts/research-tool/index.html",
-    "title": "研究ツールまとめ",
-    "section": "",
-    "text": "論文の作図に非常におすすめ、一回でも試してみてください。\n\ndraw.io：フローチャートなど\nExcalidraw：手書き風"
-  },
-  {
-    "objectID": "posts/research-tool/index.html#作図",
-    "href": "posts/research-tool/index.html#作図",
-    "title": "研究ツールまとめ",
-    "section": "",
-    "text": "論文の作図に非常におすすめ、一回でも試してみてください。\n\ndraw.io：フローチャートなど\nExcalidraw：手書き風"
-  },
-  {
-    "objectID": "posts/research-tool/index.html#pdf-reader",
-    "href": "posts/research-tool/index.html#pdf-reader",
-    "title": "研究ツールまとめ",
-    "section": "PDF Reader",
-    "text": "PDF Reader\n\nGoogle Scholar PDF Reader"
-  },
-  {
-    "objectID": "posts/research-tool/index.html#文献管理",
-    "href": "posts/research-tool/index.html#文献管理",
-    "title": "研究ツールまとめ",
-    "section": "文献管理",
-    "text": "文献管理\n文献を管理するだけでなく、WordやLaTexと連携し、参考文献の自動番号付き、自動生成などができます。\n\nZotero：文献管理ソフト\nMendeley：文献管理ソフト\nPaperpile：文献管理ソフト（有料）"
-  },
-  {
-    "objectID": "posts/research-tool/index.html#プログラミング",
-    "href": "posts/research-tool/index.html#プログラミング",
-    "title": "研究ツールまとめ",
-    "section": "プログラミング",
-    "text": "プログラミング\n\nGithub：プロジェクトの管理、他人のコードの参考\nGithub Copilot：コーディングアシスタント\nVSCode：エディタ"
-  },
-  {
-    "objectID": "posts/research-tool/index.html#文章作成",
-    "href": "posts/research-tool/index.html#文章作成",
-    "title": "研究ツールまとめ",
-    "section": "文章作成",
-    "text": "文章作成\n\nOverleaf：LaTeXエディタ\nMarkdown：軽量マークアップ言語"
-  },
-  {
-    "objectID": "posts/research-tool/index.html#英語文章作成",
-    "href": "posts/research-tool/index.html#英語文章作成",
-    "title": "研究ツールまとめ",
-    "section": "英語文章作成",
-    "text": "英語文章作成\n\nGrammarly：文法チェック\nAcademic Phrasebank：アカデミックライティング"
-  },
-  {
-    "objectID": "posts/research-tool/index.html#スライド作成と発表",
-    "href": "posts/research-tool/index.html#スライド作成と発表",
-    "title": "研究ツールまとめ",
-    "section": "スライド作成と発表",
-    "text": "スライド作成と発表\n\nBeamer：LaTeXスライド作成\n\nPympress：PDFスライド発表\n\nMarp：Markdownスライド作成"
-  },
-  {
-    "objectID": "posts/research-tool/index.html#mac",
-    "href": "posts/research-tool/index.html#mac",
-    "title": "研究ツールまとめ",
-    "section": "Mac",
-    "text": "Mac\n\nWine: Mac上で.exeフィアルを実行する"
   },
   {
     "objectID": "open-source.html",
