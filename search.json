@@ -4,84 +4,56 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "プロンプト進化\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 22, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学群（大学教員向け）\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 22, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nOverleafで日本語を使う\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 22, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\npipx を使ってみた\n\n\n\npython\n\n\n\n\n\n\n\n\n\nSep 10, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n生成AI ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
+    "text": "プロンプト進化\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 8, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学群（大学教員向け）\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 8, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nOverleafで日本語を使う\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 8, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\npipx を使ってみた\n\n\n\npython\n\n\n\n\n\n\n\n\n\nSep 10, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\n生成AI ツールまとめ\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 6, 2025\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "note.html",
-    "href": "note.html",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Ziang Liu",
     "section": "",
-    "text": "quarto publish gh-pages\nicon: https://icons.getbootstrap.com"
+    "text": "English日本語中文\n\n\n\nZiang Liu\n\nAssociate Professor, Ph.D.\nDepartment of Industrial and Systems Engineering, Hosei University\n\nExperience\nHosei University | Associate Professor | April 2025 - Present\nOkayama University | Assistant Professor | April 2021 - March 2025\n\n\nResearch Interests\n\nOptimization\nArtificial Intelligence\nOperations Research\n\n\n\n\n\n\n劉 子昂\n准教授, ​博士（工学）\n​法政大学 理工学部 経営システム工学科\n\n職歴\n2025年4月 - 現在 | 法政大学 准教授\n2021年4月 - 2025年3月 | 岡山大学 助教\n\n\n研究分野\n\n最適化\n人工知能\n経営工学\n\n\n\n\n\n\n刘子昂\n副教授, 博士\n法政大学 理工学部 经营系统工学科\n\n工作经历\n2025年4月 - 现在，法政大学 副教授\n2021年4月 - 2025年3月，冈山大学 助理教授\n\n\n研究领域\n\n最优化\n人工智能\n运筹学\n\n\n\n\n\n\n Join our Lab"
   },
   {
-    "objectID": "posts/genai-tool/index.html",
-    "href": "posts/genai-tool/index.html",
-    "title": "生成AI ツールまとめ",
+    "objectID": "open-source.html",
+    "href": "open-source.html",
+    "title": "Open Source",
     "section": "",
-    "text": "NotebookLM\nP4Us\nhttps://www.nri.com/jp/knowledge/glossary/index.html\ncanvas"
+    "text": "I actively develop and maintain several open-source projects. While most are still in their early stages, I am continually improving them with the goal of contributing meaningful tools to the research community."
   },
   {
-    "objectID": "posts/overleaf/index.html",
-    "href": "posts/overleaf/index.html",
-    "title": "Overleafで日本語を使う",
+    "objectID": "open-source.html#reinforcement-learning",
+    "href": "open-source.html#reinforcement-learning",
+    "title": "Open Source",
+    "section": "Reinforcement Learning",
+    "text": "Reinforcement Learning\n\nmdptools: A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning.\ninventory-gym: A suite of inventory control environments compatible with Gymnasium, Stable Baselines3, and mdptools."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
     "section": "",
-    "text": "Overleafで日本語を使う方法を紹介します。\nhttps://ja.overleaf.com/learn/latex/Japanese\n\npLaTeXを使う\n論文のテンプレートがpLaTeXを使っている場合、以下のように設定する。\n\nMenu &gt; Compile &gt; LaTeX を選択する。\n「latexmkrc」ファイルを作成し、以下の内容を記述する。\n\n$latex = 'platex';\n$bibtex = 'pbibtex';\n$dvipdf = 'dvipdfmx %O -o %D %S';\n$makeindex = 'mendex %O -o %D %S';"
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
-    "objectID": "posts/pipx/index.html",
-    "href": "posts/pipx/index.html",
-    "title": "pipx を使ってみた",
+    "objectID": "posts/china-university/index.html",
+    "href": "posts/china-university/index.html",
+    "title": "中国の大学群（大学教員向け）",
     "section": "",
-    "text": "pipx は python のアプリケーションを独立した環境でインストールし，実行できるツールである．\npip や conda と違い，アプリケーションごとに環境を分けるため，依存関係の衝突を避けることができる．"
+    "text": "このページは大学教員向けに、中国の大学群・大学ランキングについて簡単に説明するものです。"
   },
   {
-    "objectID": "posts/pipx/index.html#インストール",
-    "href": "posts/pipx/index.html#インストール",
-    "title": "pipx を使ってみた",
-    "section": "インストール",
-    "text": "インストール\nMac の場合，Homebrew を使用してインストールできる．\nbrew install pipx\npipx ensurepath\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
+    "objectID": "posts/china-university/index.html#大学ランキングの調べ方",
+    "href": "posts/china-university/index.html#大学ランキングの調べ方",
+    "title": "中国の大学群（大学教員向け）",
+    "section": "大学ランキングの調べ方",
+    "text": "大学ランキングの調べ方\nここでは、ARWUという世界大学ランキングを使って、中国の大学のランキングを調べる方法を説明します。ARWUは上海ランキングとも呼ばれ、上海交通大学が2003年に発表したのが始まりです。\n英語版のARWUサイトでは、一部の中国の大学しか表示されませんが、中国語版のARWUサイトでは中国の大学全体のランキングを発表しています。そこに中国語の大学名で検索すると、各大学のランキングがわかります。\n調べ方は以下の通り。\n\nARWUの中国語版サイトにアクセス\n検索ボックス（请输入大学名称）に大学名を入力\n検索結果でランキングを確認\n\nステップ2では、簡体字の大学名を入力する必要がある。例えば、「精華大学」の場合、「清华大学」と入力する。\n\n\n\n\n\n\nNote\n\n\n\n日本の「未来創造人材制度」や「高度外国人材ポイント制度」などでは、ARWUのランキングが評価基準の一つとして使われています。\n\nQS世界大学ランキング\nTHE世界大学ランキング\n世界大学学術ランキング（ARWU）"
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
+    "objectID": "posts/paper-prompt-evolution/index.html",
+    "href": "posts/paper-prompt-evolution/index.html",
+    "title": "プロンプト進化",
     "section": "",
-    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
-  },
-  {
-    "objectID": "contact.html#address",
-    "href": "contact.html#address",
-    "title": "Contact",
-    "section": "",
-    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
-  },
-  {
-    "objectID": "contact.html#qr-code-for-homepage",
-    "href": "contact.html#qr-code-for-homepage",
-    "title": "Contact",
-    "section": "QR Code for Homepage",
-    "text": "QR Code for Homepage"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n\n\n\n\n\n経営工学基礎演習（3年生/春学期）\nPBL（3年生/秋学期）\n卒業研究（4年生/年間）"
-  },
-  {
-    "objectID": "teaching.html#法政大学",
-    "href": "teaching.html#法政大学",
-    "title": "Teaching",
-    "section": "",
-    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n\n\n\n\n\n経営工学基礎演習（3年生/春学期）\nPBL（3年生/秋学期）\n卒業研究（4年生/年間）"
-  },
-  {
-    "objectID": "teaching.html#時間割小金井キャンパス",
-    "href": "teaching.html#時間割小金井キャンパス",
-    "title": "Teaching",
-    "section": "時間割（小金井キャンパス）",
-    "text": "時間割（小金井キャンパス）\n\n\n\n時限\n時間帯\n\n\n\n\n1時限目\n9:00～10:40\n\n\n2時限目\n10:50～12:30\n\n\n3時限目\n13:20～15:00\n\n\n4時限目\n15:10～16:50\n\n\n5時限目\n17:00～18:40"
+    "text": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning\nhttps://mp.weixin.qq.com/s/0-Opg-D5Eu_t0Gj_J4pcfg"
   },
   {
     "objectID": "timetable.html",
@@ -105,52 +77,87 @@
     "text": "秋学期\n\n\n\n\n\n\n\n\n\n\n\n時限\n月\n火\n水\n木\n金\n\n\n\n\n1限\n9:00–10:40\n\n\n\n\n\n\n\n2限\n10:50–12:30\n\n\nOR-B\nW202\nアルゴリズム\n大学院\n経営科学\n大学院\n\n\n3限\n13:20–15:00\n\n\n\n4年ゼミ\n研究室\n社会システム\nW305\n\n\n4限\n15:10–16:50\n\n\nIISTセミナー\n大学院\nPBL\n研究室\n会議"
   },
   {
-    "objectID": "posts/paper-prompt-evolution/index.html",
-    "href": "posts/paper-prompt-evolution/index.html",
-    "title": "プロンプト進化",
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
     "section": "",
-    "text": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning\nhttps://mp.weixin.qq.com/s/0-Opg-D5Eu_t0Gj_J4pcfg"
+    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n\n\n\n\n\n経営工学基礎演習（3年生/春学期）\nPBL（3年生/秋学期）\n卒業研究（4年生/年間）"
   },
   {
-    "objectID": "posts/china-university/index.html",
-    "href": "posts/china-university/index.html",
-    "title": "中国の大学群（大学教員向け）",
+    "objectID": "teaching.html#法政大学",
+    "href": "teaching.html#法政大学",
+    "title": "Teaching",
     "section": "",
-    "text": "このページは大学教員向けに、中国の大学群・大学ランキングについて簡単に説明するものです。"
+    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n\n\n\n\n\n経営工学基礎演習（3年生/春学期）\nPBL（3年生/秋学期）\n卒業研究（4年生/年間）"
   },
   {
-    "objectID": "posts/china-university/index.html#大学ランキングの調べ方",
-    "href": "posts/china-university/index.html#大学ランキングの調べ方",
-    "title": "中国の大学群（大学教員向け）",
-    "section": "大学ランキングの調べ方",
-    "text": "大学ランキングの調べ方\nここでは、ARWUという世界大学ランキングを使って、中国の大学のランキングを調べる方法を説明します。ARWUは上海ランキングとも呼ばれ、上海交通大学が2003年に発表したのが始まりです。\n英語版のARWUサイトでは、一部の中国の大学しか表示されませんが、中国語版のARWUサイトでは中国の大学全体のランキングを発表しています。そこに中国語の大学名で検索すると、各大学のランキングがわかります。\n調べ方は以下の通り。\n\nARWUの中国語版サイトにアクセス\n検索ボックス（请输入大学名称）に大学名を入力\n検索結果でランキングを確認\n\nステップ2では、簡体字の大学名を入力する必要がある。例えば、「精華大学」の場合、「清华大学」と入力する。\n\n\n\n\n\n\nNote\n\n\n\n日本の「未来創造人材制度」や「高度外国人材ポイント制度」などでは、ARWUのランキングが評価基準の一つとして使われています。\n\nQS世界大学ランキング\nTHE世界大学ランキング\n世界大学学術ランキング（ARWU）"
+    "objectID": "teaching.html#時間割小金井キャンパス",
+    "href": "teaching.html#時間割小金井キャンパス",
+    "title": "Teaching",
+    "section": "時間割（小金井キャンパス）",
+    "text": "時間割（小金井キャンパス）\n\n\n\n時限\n時間帯\n\n\n\n\n1時限目\n9:00～10:40\n\n\n2時限目\n10:50～12:30\n\n\n3時限目\n13:20～15:00\n\n\n4時限目\n15:10～16:50\n\n\n5時限目\n17:00～18:40"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
   },
   {
-    "objectID": "open-source.html",
-    "href": "open-source.html",
-    "title": "Open Source",
+    "objectID": "contact.html#address",
+    "href": "contact.html#address",
+    "title": "Contact",
     "section": "",
-    "text": "I actively develop and maintain several open-source projects. While most are still in their early stages, I am continually improving them with the goal of contributing meaningful tools to the research community."
+    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
   },
   {
-    "objectID": "open-source.html#reinforcement-learning",
-    "href": "open-source.html#reinforcement-learning",
-    "title": "Open Source",
-    "section": "Reinforcement Learning",
-    "text": "Reinforcement Learning\n\nmdptools: A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning.\ninventory-gym: A suite of inventory control environments compatible with Gymnasium, Stable Baselines3, and mdptools."
+    "objectID": "contact.html#qr-code-for-homepage",
+    "href": "contact.html#qr-code-for-homepage",
+    "title": "Contact",
+    "section": "QR Code for Homepage",
+    "text": "QR Code for Homepage"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "posts/pipx/index.html",
+    "href": "posts/pipx/index.html",
+    "title": "pipx を使ってみた",
+    "section": "",
+    "text": "pipx は python のアプリケーションを独立した環境でインストールし，実行できるツールである．\npip や conda と違い，アプリケーションごとに環境を分けるため，依存関係の衝突を避けることができる．"
+  },
+  {
+    "objectID": "posts/pipx/index.html#インストール",
+    "href": "posts/pipx/index.html#インストール",
+    "title": "pipx を使ってみた",
+    "section": "インストール",
+    "text": "インストール\nMac の場合，Homebrew を使用してインストールできる．\nbrew install pipx\npipx ensurepath\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
+  },
+  {
+    "objectID": "posts/overleaf/index.html",
+    "href": "posts/overleaf/index.html",
+    "title": "Overleafで日本語を使う",
+    "section": "",
+    "text": "Overleafで日本語を使う方法を紹介します。\nhttps://ja.overleaf.com/learn/latex/Japanese\n\npLaTeXを使う\n論文のテンプレートがpLaTeXを使っている場合、以下のように設定する。\n\nMenu &gt; Compile &gt; LaTeX を選択する。\n「latexmkrc」ファイルを作成し、以下の内容を記述する。\n\n$latex = 'platex';\n$bibtex = 'pbibtex';\n$dvipdf = 'dvipdfmx %O -o %D %S';\n$makeindex = 'mendex %O -o %D %S';"
+  },
+  {
+    "objectID": "posts/genai-tool/index.html",
+    "href": "posts/genai-tool/index.html",
+    "title": "生成AI ツールまとめ",
+    "section": "",
+    "text": "NotebookLM\nP4Us\nhttps://www.nri.com/jp/knowledge/glossary/index.html\ncanvas"
+  },
+  {
+    "objectID": "note.html",
+    "href": "note.html",
     "title": "Ziang Liu",
     "section": "",
-    "text": "English日本語中文\n\n\n\nZiang Liu\n\nAssociate Professor, Ph.D.\nDepartment of Industrial and Systems Engineering, Hosei University\n\nExperience\nHosei University | Associate Professor | April 2025 - Present\nOkayama University | Assistant Professor | April 2021 - March 2025\n\n\nResearch Interests\n\nOptimization\nArtificial Intelligence\nOperations Research\n\n\n\n\n\n\n劉 子昂\n准教授, ​博士（工学）\n​法政大学 理工学部 経営システム工学科\n\n職歴\n2025年4月 - 現在 | 法政大学 准教授\n2021年4月 - 2025年3月 | 岡山大学 助教\n\n\n研究分野\n\n最適化\n人工知能\n経営工学\n\n\n\n\n\n\n刘子昂\n副教授, 博士\n法政大学 理工学部 经营系统工学科\n\n工作经历\n2025年4月 - 现在，法政大学 副教授\n2021年4月 - 2025年3月，冈山大学 助理教授\n\n\n研究领域\n\n最优化\n人工智能\n运筹学\n\n\n\n\n\n\n Join our Lab"
+    "text": "quarto publish gh-pages\nicon: https://icons.getbootstrap.com"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Akter, M. S., Nishi, T., & Liu, Z. (2026). A multi-period multi-objective model for sustainable supply chain optimization using MILP framework. In IFIP advances in information and communication technology (Vol. 765, pp. 303–319). Springer Nature Switzerland. https://doi.org/10.1007/978-3-032-03534-9\\_21\n\n\nAlam, M. M., Nishi, T., Liu, Z., & Fujiwara, T. (2023). A novel sampling-based optimal motion planning algorithm for energy-efficient robotic pick and place. Energies, 16(19). https://doi.org/10.3390/en16196910\n\n\nBando, T., Nishi, T., Alam, M. M., Liu, Z., & Fujiwara, T. (2022). Automatic generation of optimization model using process mining and petri nets for optimal motion planning of 6-DOF manipulators. 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 11767–11772. https://doi.org/10.1109/iros47612.2022.9982201\n\n\nDebuchi, N., Nishi, T., & Liu, Z. (2022). Distributed optimization for supply chain planning for multiple companies using subgradient method and consensus control. In IFIP advances in information and communication technology (pp. 216–223). Springer Nature Switzerland. https://doi.org/10.1007/978-3-031-16411-8\\_27\n\n\nFukushima, K., Nishi, T., & Liu, Z. (2023). A combined deep Q-network and graph search for three dimensional route planning problems for multiple mobile robots. 2023 IEEE 19th International Conference on Automation Science and Engineering (CASE), 1–6. https://doi.org/10.1109/case56687.2023.10260638\n\n\nHara, K., Nishi, T., Liu, Z., & Fujiwara, T. (2023). Collision-free motion planning for multiple robot arms by combining deep Q-network and graph search algorithm. 2023 IEEE 19th International Conference on Automation Science and Engineering (CASE), 1–6. https://doi.org/10.1109/case56687.2023.10260329\n\n\nKaimujjaman, M., Nishi, T., Fujiwara, T., & Liu, Z. (2024). Designing a mobile manipulator and motion planning for autonomous navigation with a* and Q-learning algorithms. 2024 International Symposium on Flexible Automation, 87882. https://doi.org/10.1115/isfa2024-141112\n\n\nKamiebisu, R., Saso, T., Nakao, J., Liu, Z., Nishi, T., & Matsuda, M. (2022). Use cases of the platform for structuring a smart supply chain in discrete manufacturing. Procedia CIRP, 107, 687–692. https://doi.org/10.1016/j.procir.2022.05.046\n\n\nKawabe, T., Liu, Z., Nishi, T., Alam, M. M., & Fujiwara, T. (2022). Optimal motion planning and layout design in robotic cellular manufacturing systems. 2022 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), 1541–1545. https://doi.org/10.1109/ieem55944.2022.9989566\n\n\nKawabe, T., Nishi, T., & Liu, Z. (2023). Flexible route planning for multiple mobile robots by combining q–learning and graph search algorithm. Applied Sciences, 13(3). https://doi.org/10.3390/app13031879\n\n\nKawabe, T., Nishi, T., Liu, Z., & Fujiwara, T. (2024). Task planning for robot manipulator using natural language task input with large language models. 2024 IEEE 20th International Conference on Automation Science and Engineering (CASE), 3484–3489. https://doi.org/10.1109/case59546.2024.10711671\n\n\nKawabe, T., Nishi, T., Liu, Z., & Fujiwara, T. (2025). Surrogate-assisted motion planning and layout design of robotic cellular manufacturing systems. Engineering Applications of Artificial Intelligence, 150. https://doi.org/10.1016/j.engappai.2025.110530\n\n\nKawabe, T., Nishi, T., Ziang, L., & Fujiwara, T. (2023). Symbolic sequence optimization approach for task and motion planning of robot manipulators. 2023 IEEE 19th International Conference on Automation Science and Engineering (CASE). https://doi.org/10.1109/case56687.2023.10260452\n\n\nKorekane, S., Nishi, T., Tierney, K., & Liu, Z. (2024). Neural network assisted branch and bound algorithm for dynamic berth allocation problems. European Journal of Operational Research, 319(2), 531–542. https://doi.org/10.1016/j.ejor.2024.06.040\n\n\nKurakado, H., Nishi, T., & Liu, Z. (2024). Data-driven scheduling of cellular manufacturing systems using process mining with petri nets. In IFIP advances in information and communication technology (pp. 17–28). Springer Nature Switzerland. https://doi.org/10.1007/978-3-031-65894-5\\_2\n\n\nLiu, Z., Ito, S., Kawabe, T., Nishi, T., & Fujiwara, T. (2023). Multi-objective optimization for three-dimensional packing problem using the sequence-triple representation with robot motion planning. 2023 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), 1–5. https://doi.org/10.1109/ieem58616.2023.10406772\n\n\nLiu, Z., Kawabe, T., Nishi, T., Ito, S., & Fujiwara, T. (2024). Surrogate-assisted multi-objective optimization for simultaneous three-dimensional packing and motion planning problems using the sequence-triple representation. Applied Artificial Intelligence, 38(1). https://doi.org/10.1080/08839514.2024.2398895\n\n\nLiu, Z., & Nishi, T. (2019a). An evolutionary game model in closed-loop supply chain. 2019 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), 896–900. https://doi.org/10.1109/ieem44572.2019.8978741\n\n\nLiu, Z., & Nishi, T. (2019b). Government regulations on closed-loop supply chain with evolutionarily stable strategy. Sustainability, 11(18). https://doi.org/10.3390/su11185030\n\n\nLiu, Z., & Nishi, T. (2020a). Analyzing just-in-time purchasing strategy in supply chains using an evolutionary game approach. Journal of Advanced Mechanical Design Systems and Manufacturing, 14(5). https://doi.org/10.1299/jamdsm.2020jamdsm0070\n\n\nLiu, Z., & Nishi, T. (2020b). Multipopulation ensemble particle swarm optimizer for engineering design problems. Mathematical Problems in Engineering, 2020(1). https://doi.org/10.1155/2020/1450985\n\n\nLiu, Z., & Nishi, T. (2022a). Adaptive heterogeneous particle swarm optimization with comprehensive learning strategy. Journal of Advanced Mechanical Design Systems and Manufacturing, 16(4). https://doi.org/10.1299/jamdsm.2022jamdsm0035\n\n\nLiu, Z., & Nishi, T. (2022b). Strategy dynamics particle swarm optimizer. Information Sciences, 582, 665–703. https://doi.org/10.1016/j.ins.2021.10.028\n\n\nLiu, Z., & Nishi, T. (2023). Inventory control with lateral transshipment using proximal policy optimization. 2023 5th International Conference on Data-Driven Optimization of Complex Systems (DOCS), 1–6. https://doi.org/10.1109/docs60977.2023.10294547\n\n\nLiu, Z., & Nishi, T. (2024a). Data-driven evolutionary computation for service constrained inventory optimization in multi-echelon supply chains. Complex & Intelligent Systems, 10(1), 825–846. https://doi.org/10.1007/s40747-023-01179-0\n\n\nLiu, Z., & Nishi, T. (2024b). Surrogate-assisted evolutionary computation for distributed simulation-based inventory optimization in serial supply chains. 2024 IEEE Congress on Evolutionary Computation (CEC), 104, 1–7. https://doi.org/10.1109/cec60901.2024.10612189\n\n\nLiu, Z., & Nishi, T. (2024c). Surrogate-assisted evolutionary optimization for perishable inventory management in multi-echelon distribution systems. Expert Systems With Applications, 238. https://doi.org/10.1016/j.eswa.2023.122179\n\n\nLiu, Z., Shirakashi, R., Kamiebisu, R., Nishi, T., & Matsuda, M. (2023). Simulation-based optimization using virtual supply chain structured by the configuration platform. IFAC-PapersOnLine, 56(2), 7840–7845. https://doi.org/10.1016/j.ifacol.2023.10.1145\n\n\nMatsuda, H., Nishi, T., Liu, Z., & Fujiwara, T. (2024). A transfer learning for estimation of operation time for 6-axis robot arms. 2024 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), 1154–1158. https://doi.org/10.1109/ieem62345.2024.10857125\n\n\nMatsuda, M., Nishi, T., Kamiebisu, R., Hasegawa, M., Alizadeh, R., & Liu, Z. (2021). Use of virtual supply chain constructed by cyber-physical systems concept. Procedia CIRP, 104, 351–356. https://doi.org/10.1016/j.procir.2021.11.059\n\n\nMikyu, N., Nishi, T., Liu, Z., & Fujiwara, T. (2024). Three-dimensional bin packing problems with the operating time of a robot manipulator. In IFIP advances in information and communication technology (pp. 44–60). Springer Nature Switzerland. https://doi.org/10.1007/978-3-031-65894-5\\_4\n\n\nNakao, J., Nishi, T., & Liu, Z. (2023). Robust optimization for bilevel production planning problems under customer’s uncertainties. 2023 IEEE International Conference on Systems, Man, and Cybernetics (SMC), 3546–3551. https://doi.org/10.1109/smc53992.2023.10394540\n\n\nNishi, T., Debuchi, N., & Liu, Z. (2024). Distributed optimization algorithm for multi-agent optimization problems using consensus control. Journal of Advanced Mechanical Design Systems and Manufacturing, 18(5). https://doi.org/10.1299/jamdsm.2024jamdsm0073\n\n\nNishi, T., Kurakado, H., & Liu, Z. (2024). Resource constrained project scheduling formulation for optimization of product input sequence and workforce scheduling for multi-stage multi-product cellular production lines. Journal of Advanced Mechanical Design Systems and Manufacturing, 18(5). https://doi.org/10.1299/jamdsm.2024jamdsm0062\n\n\nNishi, T., Matsuda, M., Hasegawa, M., Alizadeh, R., Liu, Z., & Terunuma, T. (2020). Automatic construction of virtual supply chain as multi-agent system using enterprise E-catalogues. International Journal of Automation Technology, 14(5), 713–722. https://doi.org/10.20965/ijat.2020.p0713\n\n\nNishihata, Y., Liu, Z., & Nishi, T. (2022). Epidemiological model of COVID-19 based on evolutionary game theory: Considering the viral mutations. 2022 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), 686–690. https://doi.org/10.1109/ieem55944.2022.9989989\n\n\nNishihata, Y., Liu, Z., & Nishi, T. (2023). Evolutionary-game-theory-based epidemiological model for prediction of infections with application to demand forecasting in pharmaceutical inventory management problems. Applied Sciences, 13(20). https://doi.org/10.3390/app132011308\n\n\nNomura, Y., Liu, Z., & Nishi, T. (2023). Deep reinforcement learning for perishable inventory optimization problem. 2023 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), 0370–0374. https://doi.org/10.1109/ieem58616.2023.10406759\n\n\nNomura, Y., Liu, Z., & Nishi, T. (2025). Deep reinforcement learning for dynamic pricing and ordering policies in perishable inventory management. Applied Sciences, 15(5). https://doi.org/10.3390/app15052421\n\n\nNonoyama, K., Liu, Z., Fujiwara, T., Alam, M. M., & Nishi, T. (2022). Energy-efficient robot configuration and motion planning using genetic algorithm and particle swarm optimization. Energies, 15(6). https://doi.org/10.3390/en15062074\n\n\nOyama, Y., Nishi, T., Liu, Z., Alam, M. M., & Fujiwara, T. (2022). Decision support system for selecting robot systems for pick-and-place operation of robot manipulator. 2022 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), 0530–0534. https://doi.org/10.1109/ieem55944.2022.9989780\n\n\nShiraga, M., Nishi, T., Liu, Z., & Fujiwara, T. (2023). Motion planning of industrial robot by data-driven optimization using petri nets. 2023 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), 1199–1203. https://doi.org/10.1109/ieem58616.2023.10406354\n\n\nTaniguchi, T., Nishi, T., Liu, Z., & Fujiwara, T. (2024). Simultaneous optimization of placement planning and motion planning for a single robotic arm using genetic algorithm. 2024 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM), 708–712. https://doi.org/10.1109/ieem62345.2024.10857105\n\n\nToda, K., Nishi, T., & Liu, Z. (2026). Local explanation method for ordering policy in perishable inventory management problem using LLM and LIME. In IFIP advances in information and communication technology (Vol. 765, pp. 289–302). Springer Nature Switzerland. https://doi.org/10.1007/978-3-032-03534-9\\_20\n\n\nTogo, H., Asanuma, K., Nishi, T., & Liu, Z. (2022). Machine learning and inverse optimization for estimation of weighting factors in multi-objective production scheduling problems. Applied Sciences, 12(19). https://doi.org/10.3390/app12199472\n\n\n福島昂之介, 西竜志, 劉子昂, & 藤原始史. (2024). Deep q-Networkとグラフ探索を組み合わせた複数台移動ロボットの経路計画法. システム制御情報学会論文誌, 37(8), 207–215. https://doi.org/10.5687/iscie.37.207\n\n\n藤原始史, 西竜志, & 劉子昂. (2024). 粒子群最適化による産業用スカラ型ロボットの省エネルギー動作計画の検討. システム制御情報学会論文誌, 37(11), 283–290. https://doi.org/10.5687/iscie.37.283"
   }
 ]
