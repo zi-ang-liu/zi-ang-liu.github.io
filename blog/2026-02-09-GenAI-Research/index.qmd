@@ -1,0 +1,12 @@
+---
+title: "Research with Generative AI"
+author: "Ziang Liu"
+date: 2025-09-01
+categories: [news]
+---
+
+Summarizing how to use Generative AI for research purposes.
+
+![](thumbnail.jpg)
+
+
