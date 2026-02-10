@@ -18,8 +18,8 @@ website:
         href: publications.qmd
       - text: "Contact"
         href: contact.qmd
-      # - text: "Blog"
-      #   href: blog.qmd
+      - text: "Blog"
+        href: blog.qmd
     right:
       - text: "Open Source"
         href: open-source.qmd

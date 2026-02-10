@@ -1,0 +1,14 @@
+---
+title: "Papers"
+author: "Ziang Liu"
+date: 2026-02-09
+categories: [news]
+---
+
+Sumerized list of papsers that I have read recently.
+
+<!-- ![](thumbnail.jpg) -->
+
+## Papers
+
+- Automated selection of the number of replications for a discrete-event simulation

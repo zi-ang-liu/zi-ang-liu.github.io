@@ -1,12 +1,44 @@
 ---
-title: "Research with Generative AI"
+title: "Tools for Literature Review"
 author: "Ziang Liu"
-date: 2025-09-01
+date: 2026-02-09
 categories: [news]
 ---
 
-Summarizing how to use Generative AI for research purposes.
+Summarizing tools that can help with literature review for research papers.
 
-![](thumbnail.jpg)
+<!-- ![](thumbnail.jpg) -->
+
+## Search engines
+
+- [Google Scholar](https://scholar.google.com/)
+- [Semantic Scholar](https://www.semanticscholar.org/)
+
+## Semantic search
+
+- [Consensus](https://consensus.app/)
+  - An AI-powered academic search engine.
+- [Elicit](https://elicit.org/)
 
 
+## Citation network
+
+Citation network tools help visualize and explore relationships between research papers. It starts from one or more seed papers and builds a network of related works based on citations.
+
+These tools can help identify influential papers, discover emerging trends, and find gaps in the literature.
+The generated citation networks can be used to guide literature reviews and tell research stories.
+
+- [Litmaps](https://litmaps.com/)
+  - [How to do a literature review: 5 minute guide with Litmaps](https://www.youtube.com/watch?v=gxm3ahIaO7c)
+  - [Tell Your Research Story with Litmaps](https://www.youtube.com/watch?v=E7aS5rcYX-I)
+- [ResearchRabbit](https://www.researchrabbit.ai/)
+  - [How to get started with ResearchRabbit](https://www.youtube.com/watch?v=J1YXarr8U0A)
+- [Connected Papers](https://www.connectedpapers.com/)
+
+
+## Reading
+
+- [NotebookLM](https://www.notebooklm.com/)
+  - An AI research assistant by Google that helps read, understand, and summarize pdf files, videos, and web pages. 
+- [Scholarcy](https://www.scholarcy.com/)
+  - Summarizes research papers and highlights key points.
