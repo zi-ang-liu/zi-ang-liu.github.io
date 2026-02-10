@@ -4,6 +4,7 @@ image: https://avatars.githubusercontent.com/u/50853393?s=96&v=4
 # image: images/liu.jpg
 email-obfuscation: javascript
 about:
+  id: hero-heading
   image-width: 10em
   image-shape: rounded
   template: trestles
@@ -33,6 +34,8 @@ format:
   html:
     page-layout: full
 ---
+
+:::{#hero-heading}
 
 ::: {.panel-tabset}
 ## English
@@ -88,3 +91,11 @@ Department of Industrial and Systems Engineering, Hosei University
 <a href="https://isl-hosei.github.io/join.html">
   <button type="button" class="btn btn-primary">Join our Lab</button>
 </a>
+
+:::
+
+<!-- jolla
+trestles
+solana
+marquee
+broadside -->
