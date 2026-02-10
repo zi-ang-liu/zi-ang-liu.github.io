@@ -42,3 +42,7 @@ The generated citation networks can be used to guide literature reviews and tell
   - An AI research assistant by Google that helps read, understand, and summarize pdf files, videos, and web pages. 
 - [Scholarcy](https://www.scholarcy.com/)
   - Summarizes research papers and highlights key points.
+
+## 
+
+https://next-ai-drawio.jiang.jp/en
