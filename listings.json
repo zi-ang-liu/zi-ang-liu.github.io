@@ -2,12 +2,9 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/paper-prompt-evolution/index.html",
-      "/posts/china-university/index.html",
-      "/posts/overleaf/index.html",
-      "/posts/pipx/index.html",
-      "/posts/genai-tool/index.html",
-      "/posts/welcome/index.html"
+      "/blog/papers/index.html",
+      "/blog/2026-02-09-GenAI-Research/index.html",
+      "/blog/welcome/index.html"
     ]
   }
 ]
