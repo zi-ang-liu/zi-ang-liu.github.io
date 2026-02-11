@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Recent Papers on RL for Operations Research\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 10, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nTools for Literature Review\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 9, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学ランキング\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 7, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
+    "text": "Papers on Reinforcement Learning for Operations Research\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 11, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nTools for Literature Review\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 9, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学ランキング\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 7, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/2026-02-09-GenAI-Research/index.html",
@@ -137,14 +137,21 @@
     "href": "teaching.html",
     "title": "Teaching",
     "section": "",
-    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n\n\n\n\n\n経営工学基礎演習（3年生/春学期）\nPBL（3年生/秋学期）\n卒業研究（4年生/年間）"
+    "text": "Operations Research\nData Science\nDatabase\nReinforcement Learning\nComputer Literacy"
+  },
+  {
+    "objectID": "teaching.html#lecture-notes",
+    "href": "teaching.html#lecture-notes",
+    "title": "Teaching",
+    "section": "",
+    "text": "Operations Research\nData Science\nDatabase\nReinforcement Learning\nComputer Literacy"
   },
   {
     "objectID": "teaching.html#法政大学",
     "href": "teaching.html#法政大学",
     "title": "Teaching",
-    "section": "",
-    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n\n\n\n\n\n経営工学基礎演習（3年生/春学期）\nPBL（3年生/秋学期）\n卒業研究（4年生/年間）"
+    "section": "法政大学",
+    "text": "法政大学\n\n授業\n\n計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n\n\n\nゼミナール・PBL等\n\n経営工学基礎演習（3年生/春学期）\nPBL（3年生/秋学期）\n卒業研究（4年生/年間）"
   },
   {
     "objectID": "teaching.html#時間割小金井キャンパス",
@@ -205,23 +212,23 @@
   {
     "objectID": "blog/papers/index.html",
     "href": "blog/papers/index.html",
-    "title": "Recent Papers on RL for Operations Research",
+    "title": "Papers on Reinforcement Learning for Operations Research",
     "section": "",
     "text": "Recording of recent research papers related to reinforcement learning for operations research problems."
   },
   {
     "objectID": "blog/papers/index.html#rl-for-inventory-management",
     "href": "blog/papers/index.html#rl-for-inventory-management",
-    "title": "Recent Papers on RL for Operations Research",
+    "title": "Papers on Reinforcement Learning for Operations Research",
     "section": "RL for inventory management",
-    "text": "RL for inventory management\n\nF. Stranieri, F. Stella, and C. Kouki, “Performance of deep reinforcement learning algorithms in two-echelon inventory control systems,” Int. J. Prod. Res., vol. 62, no. 17, pp. 6211–6226, Sept. 2024. Code\n\nMDP formulation;\nDRL algorithms\nBalance allocation rule;\nBO for heuristic policies;\nSeasonal demand;\n\nX. Liu, C. Alexopoulos, and Y. Peng, “A simulation-driven machine learning framework for large-scale inventory management,” Ann. Oper. Res., pp. 1–27, Oct. 2025. Code\n\nImitation learning with target heuristic policies\nReal data from JD.com (not public)\nMulti-product, single and multi-echelon\nComputational complexity; Optimiality proofs;\n\nT. Temizöz, C. Imdahl, R. Dijkman, D. Lamghari-Idrissi, and W. van Jaarsveld, “Deep controlled learning for inventory control,” Eur. J. Oper. Res., vol. 324, no. 1, pp. 104–117, July 2025. Code written in C++\n\nNew algorithm, Deep controlled learning, for Input-Driven MDPs\nRL as classification problem\n3 problems: lost sales, perishable inventory, and random lead times"
+    "text": "RL for inventory management\n\nF. Stranieri, F. Stella, and C. Kouki, “Performance of deep reinforcement learning algorithms in two-echelon inventory control systems,” Int. J. Prod. Res., vol. 62, no. 17, pp. 6211–6226, Sept. 2024. Code\n\nMethod:\n\nMDP formulation; DRL algorithms; Balance allocation rule;\nBO for heuristic policies;\n\nProblem: two-echelon inventory control systems, seasonal demand;\n\nX. Liu, C. Alexopoulos, and Y. Peng, “A simulation-driven machine learning framework for large-scale inventory management,” Ann. Oper. Res., pp. 1–27, Oct. 2025. Code\n\nImitation learning with target heuristic policies\nReal data from JD.com (not public)\nProblem: Multi-product, single and multi-echelon\nComputational complexity; Optimiality proofs;\n\nT. Temizöz, C. Imdahl, R. Dijkman, D. Lamghari-Idrissi, and W. van Jaarsveld, “Deep controlled learning for inventory control,” Eur. J. Oper. Res., vol. 324, no. 1, pp. 104–117, July 2025. Code written in C++\n\nMethods:\n\nNew algorithm, Deep controlled learning, for Input-Driven MDPs\nRL as classification problem\n\nProblem: lost sales, perishable inventory, and random lead times"
   },
   {
     "objectID": "blog/papers/index.html#rl-for-operations-research-problems",
     "href": "blog/papers/index.html#rl-for-operations-research-problems",
-    "title": "Recent Papers on RL for Operations Research",
+    "title": "Papers on Reinforcement Learning for Operations Research",
     "section": "RL for operations research problems",
-    "text": "RL for operations research problems\n\nA. Ramanujam et al., “SafeOR-Gym: A benchmark suite for safe reinforcement learning algorithms on practical operations research problems,” arXiv [cs.LG], 02-June-2025. Code\n\n9 OR environments\nConstrained Markov Decision Process (CMDP)\nConstraints handling methods\nConstraint RL algorithms"
+    "text": "RL for operations research problems\n\nA. Ramanujam et al., “SafeOR-Gym: A benchmark suite for safe reinforcement learning algorithms on practical operations research problems,” arXiv [cs.LG], 02-June-2025. Code\n\nProblems: 9 OR environments\nMethods: Safe RL algorithms\n\nConstrained Markov Decision Process (CMDP)\nConstraints handling methods\nConstraint RL algorithms"
   },
   {
     "objectID": "blog/welcome/index.html",
