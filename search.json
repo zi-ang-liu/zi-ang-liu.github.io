@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Papers\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 9, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nTools for Literature Review\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 9, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
+    "text": "Recent Papers on RL for Operations Research\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 10, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nTools for Literature Review\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 9, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学ランキング\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 7, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/2026-02-09-GenAI-Research/index.html",
@@ -42,39 +42,60 @@
     "text": "Reading\n\nNotebookLM\n\nAn AI research assistant by Google that helps read, understand, and summarize pdf files, videos, and web pages.\n\nScholarcy\n\nSummarizes research papers and highlights key points."
   },
   {
-    "objectID": "blog/papers/index.html",
-    "href": "blog/papers/index.html",
-    "title": "Papers",
+    "objectID": "blog/2026-02-09-GenAI-Research/index.html#section",
+    "href": "blog/2026-02-09-GenAI-Research/index.html#section",
+    "title": "Tools for Literature Review",
     "section": "",
-    "text": "Sumerized list of papsers that I have read recently."
+    "text": "https://next-ai-drawio.jiang.jp/en"
   },
   {
-    "objectID": "blog/papers/index.html#papers",
-    "href": "blog/papers/index.html#papers",
-    "title": "Papers",
-    "section": "Papers",
-    "text": "Papers\n\nAutomated selection of the number of replications for a discrete-event simulation"
+    "objectID": "blog/2026-02-07-china-university/index.html",
+    "href": "blog/2026-02-07-china-university/index.html",
+    "title": "中国の大学ランキング",
+    "section": "",
+    "text": "本資料は大学教員を対象に，中国の大学ランキングについて解説するものである．"
   },
   {
-    "objectID": "note.html",
-    "href": "note.html",
+    "objectID": "blog/2026-02-07-china-university/index.html#arwu世界大学学術ランキング",
+    "href": "blog/2026-02-07-china-university/index.html#arwu世界大学学術ランキング",
+    "title": "中国の大学ランキング",
+    "section": "ARWU（世界大学学術ランキング）",
+    "text": "ARWU（世界大学学術ランキング）\n世界大学ランキングには様々なものが存在するが，代表的なものとして以下の三つが挙げられる．\n\nQS世界大学ランキング\nTHE世界大学ランキング\n世界大学学術ランキング\n\nこのうち世界大学学術ランキング（ARWU）は，2003年に上海交通大学によって創始された指標である．他ランキングと比較して，論文引用数，Nature・Science誌論文数など，研究業績を用いて評価を行う点に特徴がある．"
+  },
+  {
+    "objectID": "blog/2026-02-07-china-university/index.html#大学ランキングの調べ方",
+    "href": "blog/2026-02-07-china-university/index.html#大学ランキングの調べ方",
+    "title": "中国の大学ランキング",
+    "section": "大学ランキングの調べ方",
+    "text": "大学ランキングの調べ方\nARWUの英語版サイトでは上位校のみの掲載に留まるが，中国語版サイトでは中国国内の大学を網羅した詳細なランキングが公表されている．中国語の正式名称で検索を行うことにより，各大学の正確な立ち位置を把握することが可能である．\n\nARWUの中国語版サイトにアクセス\n検索ボックス（请输入大学名称）に該当する大学名を入力\n検索結果よりランキングを確認\n\nステップ2において，大学名は「簡体字」で入力する必要がある点に注意されたい（例：「清華大学」→「清华大学」）．"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Ziang Liu",
     "section": "",
-    "text": "quarto publish gh-pages\nicon: https://icons.getbootstrap.com"
+    "text": "Google Scholar\n  \n  \n    \n     Github\n  \n  \n    \n     Email\n  \n  \n    \n     researchmap\n  \n  \n    \n     Lab/研究室\n  \n  \n     ORCID\n  \n  \n     KAKEN\n  \n  \n     ResearchGate\n  \n\n  \n  \n\nEnglish日本語中文\n\n\n\nZiang Liu\n\nAssociate Professor, Ph.D.\nDepartment of Industrial and Systems Engineering, Hosei University\n\n\nResearch Interests\n\nOptimization\nArtificial Intelligence\nOperations Research\n\n\n\n\n\n\n劉 子昂\n准教授, ​博士（工学）\n​法政大学 理工学部 経営システム工学科\n\n\n研究分野\n\n最適化\n人工知能\n経営工学\n\n\n\n\n\n\n刘子昂\n副教授, 博士\n法政大学 理工学部 经营系统工学科\n\n\n研究领域\n\n最优化\n人工智能\n运筹学\n\n\n\n\n\n\n Join our Lab"
   },
   {
-    "objectID": "posts/genai-tool/index.html",
-    "href": "posts/genai-tool/index.html",
-    "title": "生成AI ツールまとめ",
+    "objectID": "open-source.html",
+    "href": "open-source.html",
+    "title": "Open Source",
     "section": "",
-    "text": "NotebookLM\nP4Us\nhttps://www.nri.com/jp/knowledge/glossary/index.html\ncanvas"
+    "text": "I actively develop and maintain several open-source projects. While most are still in their early stages, I am continually improving them with the goal of contributing meaningful tools to the research community."
   },
   {
-    "objectID": "posts/overleaf/index.html",
-    "href": "posts/overleaf/index.html",
-    "title": "Overleafで日本語を使う",
+    "objectID": "open-source.html#reinforcement-learning",
+    "href": "open-source.html#reinforcement-learning",
+    "title": "Open Source",
+    "section": "Reinforcement Learning",
+    "text": "Reinforcement Learning\n\nmdptools: A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning.\ninventory-gym: A suite of inventory control environments compatible with Gymnasium, Stable Baselines3, and mdptools."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
     "section": "",
-    "text": "Overleafで日本語を使う方法を紹介します。\nhttps://ja.overleaf.com/learn/latex/Japanese\n\npLaTeXを使う\n論文のテンプレートがpLaTeXを使っている場合、以下のように設定する。\n\nMenu &gt; Compile &gt; LaTeX を選択する。\n「latexmkrc」ファイルを作成し、以下の内容を記述する。\n\n$latex = 'platex';\n$bibtex = 'pbibtex';\n$dvipdf = 'dvipdfmx %O -o %D %S';\n$makeindex = 'mendex %O -o %D %S';"
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
     "objectID": "posts/pipx/index.html",
@@ -161,46 +182,46 @@
     "text": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning\nhttps://mp.weixin.qq.com/s/0-Opg-D5Eu_t0Gj_J4pcfg"
   },
   {
-    "objectID": "posts/china-university/index.html",
-    "href": "posts/china-university/index.html",
-    "title": "中国の大学群（大学教員向け）",
+    "objectID": "posts/overleaf/index.html",
+    "href": "posts/overleaf/index.html",
+    "title": "Overleafで日本語を使う",
     "section": "",
-    "text": "このページは大学教員向けに、中国の大学群・大学ランキングについて簡単に説明するものです。"
+    "text": "Overleafで日本語を使う方法を紹介します。\nhttps://ja.overleaf.com/learn/latex/Japanese\n\npLaTeXを使う\n論文のテンプレートがpLaTeXを使っている場合、以下のように設定する。\n\nMenu &gt; Compile &gt; LaTeX を選択する。\n「latexmkrc」ファイルを作成し、以下の内容を記述する。\n\n$latex = 'platex';\n$bibtex = 'pbibtex';\n$dvipdf = 'dvipdfmx %O -o %D %S';\n$makeindex = 'mendex %O -o %D %S';"
   },
   {
-    "objectID": "posts/china-university/index.html#大学ランキングの調べ方",
-    "href": "posts/china-university/index.html#大学ランキングの調べ方",
-    "title": "中国の大学群（大学教員向け）",
-    "section": "大学ランキングの調べ方",
-    "text": "大学ランキングの調べ方\nここでは、ARWUという世界大学ランキングを使って、中国の大学のランキングを調べる方法を説明します。ARWUは上海ランキングとも呼ばれ、上海交通大学が2003年に発表したのが始まりです。\n英語版のARWUサイトでは、一部の中国の大学しか表示されませんが、中国語版のARWUサイトでは中国の大学全体のランキングを発表しています。そこに中国語の大学名で検索すると、各大学のランキングがわかります。\n調べ方は以下の通り。\n\nARWUの中国語版サイトにアクセス\n検索ボックス（请输入大学名称）に大学名を入力\n検索結果でランキングを確認\n\nステップ2では、簡体字の大学名を入力する必要がある。例えば、「精華大学」の場合、「清华大学」と入力する。\n\n\n\n\n\n\nNote\n\n\n\n日本の「未来創造人材制度」や「高度外国人材ポイント制度」などでは、ARWUのランキングが評価基準の一つとして使われています。\n\nQS世界大学ランキング\nTHE世界大学ランキング\n世界大学学術ランキング（ARWU）"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/genai-tool/index.html",
+    "href": "posts/genai-tool/index.html",
+    "title": "生成AI ツールまとめ",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "NotebookLM\nP4Us\nhttps://www.nri.com/jp/knowledge/glossary/index.html\ncanvas"
   },
   {
-    "objectID": "open-source.html",
-    "href": "open-source.html",
-    "title": "Open Source",
-    "section": "",
-    "text": "I actively develop and maintain several open-source projects. While most are still in their early stages, I am continually improving them with the goal of contributing meaningful tools to the research community."
-  },
-  {
-    "objectID": "open-source.html#reinforcement-learning",
-    "href": "open-source.html#reinforcement-learning",
-    "title": "Open Source",
-    "section": "Reinforcement Learning",
-    "text": "Reinforcement Learning\n\nmdptools: A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning.\ninventory-gym: A suite of inventory control environments compatible with Gymnasium, Stable Baselines3, and mdptools."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "note.html",
+    "href": "note.html",
     "title": "Ziang Liu",
     "section": "",
-    "text": "English日本語中文\n\n\n\nZiang Liu\n\nAssociate Professor, Ph.D.\nDepartment of Industrial and Systems Engineering, Hosei University\n\n\nResearch Interests\n\nOptimization\nArtificial Intelligence\nOperations Research\n\n\n\n\n\n\n劉 子昂\n准教授, ​博士（工学）\n​法政大学 理工学部 経営システム工学科\n\n\n研究分野\n\n最適化\n人工知能\n経営工学\n\n\n\n\n\n\n刘子昂\n副教授, 博士\n法政大学 理工学部 经营系统工学科\n\n\n研究领域\n\n最优化\n人工智能\n运筹学\n\n\n\n\n\n\n Join our Lab"
+    "text": "quarto publish gh-pages\nicon: https://icons.getbootstrap.com"
+  },
+  {
+    "objectID": "blog/papers/index.html",
+    "href": "blog/papers/index.html",
+    "title": "Recent Papers on RL for Operations Research",
+    "section": "",
+    "text": "Recording of recent research papers related to reinforcement learning for operations research problems."
+  },
+  {
+    "objectID": "blog/papers/index.html#rl-for-inventory-management",
+    "href": "blog/papers/index.html#rl-for-inventory-management",
+    "title": "Recent Papers on RL for Operations Research",
+    "section": "RL for inventory management",
+    "text": "RL for inventory management\n\nF. Stranieri, F. Stella, and C. Kouki, “Performance of deep reinforcement learning algorithms in two-echelon inventory control systems,” Int. J. Prod. Res., vol. 62, no. 17, pp. 6211–6226, Sept. 2024. Code\n\nMDP formulation;\nDRL algorithms\nBalance allocation rule;\nBO for heuristic policies;\nSeasonal demand;\n\nX. Liu, C. Alexopoulos, and Y. Peng, “A simulation-driven machine learning framework for large-scale inventory management,” Ann. Oper. Res., pp. 1–27, Oct. 2025. Code\n\nImitation learning with target heuristic policies\nReal data from JD.com (not public)\nMulti-product, single and multi-echelon\nComputational complexity; Optimiality proofs;\n\nT. Temizöz, C. Imdahl, R. Dijkman, D. Lamghari-Idrissi, and W. van Jaarsveld, “Deep controlled learning for inventory control,” Eur. J. Oper. Res., vol. 324, no. 1, pp. 104–117, July 2025. Code written in C++\n\nNew algorithm, Deep controlled learning, for Input-Driven MDPs\nRL as classification problem\n3 problems: lost sales, perishable inventory, and random lead times"
+  },
+  {
+    "objectID": "blog/papers/index.html#rl-for-operations-research-problems",
+    "href": "blog/papers/index.html#rl-for-operations-research-problems",
+    "title": "Recent Papers on RL for Operations Research",
+    "section": "RL for operations research problems",
+    "text": "RL for operations research problems\n\nA. Ramanujam et al., “SafeOR-Gym: A benchmark suite for safe reinforcement learning algorithms on practical operations research problems,” arXiv [cs.LG], 02-June-2025. Code\n\n9 OR environments\nConstrained Markov Decision Process (CMDP)\nConstraints handling methods\nConstraint RL algorithms"
   },
   {
     "objectID": "blog/welcome/index.html",
