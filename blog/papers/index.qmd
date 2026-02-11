@@ -1,8 +1,8 @@
 ---
-title: "Recent Papers on RL for Operations Research"
+title: "Papers on Reinforcement Learning for Operations Research"
 author: "Ziang Liu"
-date: 2026-02-10
-categories: [news]
+date: 2026-02-11
+categories: [research]
 ---
 
 Recording of recent research papers related to reinforcement learning for operations research problems.
@@ -12,34 +12,28 @@ Recording of recent research papers related to reinforcement learning for operat
 ## RL for inventory management
 
 - F. Stranieri, F. Stella, and C. Kouki, “Performance of deep reinforcement learning algorithms in two-echelon inventory control systems,” Int. J. Prod. Res., vol. 62, no. 17, pp. 6211–6226, Sept. 2024. [Code](https://github.com/frenkowski/SCIMAI-Gym)
-  - MDP formulation;
-  - DRL algorithms
-  - Balance allocation rule; 
-  - BO for heuristic policies;
-  - Seasonal demand;
+  - Method: 
+    - MDP formulation; DRL algorithms; Balance allocation rule; 
+    - BO for heuristic policies;
+  - Problem: two-echelon inventory control systems, seasonal demand;
 - X. Liu, C. Alexopoulos, and Y. Peng, “A simulation-driven machine learning framework for large-scale inventory management,” Ann. Oper. Res., pp. 1–27, Oct. 2025. [Code](https://github.com/xiaotianliu01/DRL_Large_Scale_Inventory)
   - Imitation learning with target heuristic policies
   - Real data from JD.com (not public)
-  - Multi-product, single and multi-echelon
+  - Problem: Multi-product, single and multi-echelon
   - Computational complexity; Optimiality proofs; 
 - T. Temizöz, C. Imdahl, R. Dijkman, D. Lamghari-Idrissi, and W. van Jaarsveld, “Deep controlled learning for inventory control,” Eur. J. Oper. Res., vol. 324, no. 1, pp. 104–117, July 2025. [Code written in C++](https://github.com/tarkantemizoz/DynaPlex)
-  - New algorithm, Deep controlled learning, for Input-Driven MDPs
-  - RL as classification problem
-  - 3 problems: lost sales, perishable inventory, and random lead times
-  
-
-
+  - Methods:
+    - New algorithm, Deep controlled learning, for Input-Driven MDPs
+    - RL as classification problem
+  - Problem: lost sales, perishable inventory, and random lead times
 
 ## RL for operations research problems
 
 - A. Ramanujam et al., “SafeOR-Gym: A benchmark suite for safe reinforcement learning algorithms on practical operations research problems,” arXiv [cs.LG], 02-June-2025. [Code](https://github.com/li-group/SafeOR-Gym)
-  - 9 OR environments
-  - Constrained Markov Decision Process (CMDP)
-  - Constraints handling methods
-  - Constraint RL algorithms
-  
-
-  
-
+  - Problems: 9 OR environments
+  - Methods: Safe RL algorithms
+    - Constrained Markov Decision Process (CMDP)
+    - Constraints handling methods
+    - Constraint RL algorithms
 
 <!-- - Automated selection of the number of replications for a discrete-event simulation -->
