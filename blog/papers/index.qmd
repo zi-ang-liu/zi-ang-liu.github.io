@@ -12,20 +12,26 @@ Recording of recent research papers related to reinforcement learning for operat
 ## RL for inventory management
 
 - F. Stranieri, F. Stella, and C. Kouki, “Performance of deep reinforcement learning algorithms in two-echelon inventory control systems,” Int. J. Prod. Res., vol. 62, no. 17, pp. 6211–6226, Sept. 2024. [Code](https://github.com/frenkowski/SCIMAI-Gym)
+  - Problem: two-echelon inventory control systems, seasonal demand;
   - Method: 
     - MDP formulation; DRL algorithms; Balance allocation rule; 
     - BO for heuristic policies;
-  - Problem: two-echelon inventory control systems, seasonal demand;
 - X. Liu, C. Alexopoulos, and Y. Peng, “A simulation-driven machine learning framework for large-scale inventory management,” Ann. Oper. Res., pp. 1–27, Oct. 2025. [Code](https://github.com/xiaotianliu01/DRL_Large_Scale_Inventory)
   - Imitation learning with target heuristic policies
   - Real data from JD.com (not public)
   - Problem: Multi-product, single and multi-echelon
   - Computational complexity; Optimiality proofs; 
 - T. Temizöz, C. Imdahl, R. Dijkman, D. Lamghari-Idrissi, and W. van Jaarsveld, “Deep controlled learning for inventory control,” Eur. J. Oper. Res., vol. 324, no. 1, pp. 104–117, July 2025. [Code written in C++](https://github.com/tarkantemizoz/DynaPlex)
-  - Methods:
-    - New algorithm, Deep controlled learning, for Input-Driven MDPs
-    - RL as classification problem
   - Problem: lost sales, perishable inventory, and random lead times
+  - Methods:
+    - New algorithm, **Deep controlled learning**, for Input-Driven MDPs
+    - RL as classification problem
+- H. Dehaybe, D. Catanzaro, and P. Chevalier, “Deep Reinforcement Learning for inventory optimization with non-stationary uncertain demand,” Eur. J. Oper. Res., vol. 314, no. 2, pp. 433–445, Apr. 2024.
+  - Problem: 
+    - Single-Item Stochastic Lot-Sizing Problem (SISLSP) with non-stationary uncertain demand
+  - Methods:
+    - State Embedding of Forecast Windows
+    - 
 
 ## RL for operations research problems
 
