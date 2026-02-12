@@ -7,43 +7,43 @@
     "text": "Papers on Reinforcement Learning for Operations Research\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 11, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nTools for Literature Review\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 9, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学ランキング\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 7, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog/2026-02-09-GenAI-Research/index.html",
-    "href": "blog/2026-02-09-GenAI-Research/index.html",
+    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html",
+    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html",
     "title": "Tools for Literature Review",
     "section": "",
     "text": "Summarizing tools that can help with literature review for research papers."
   },
   {
-    "objectID": "blog/2026-02-09-GenAI-Research/index.html#search-engines",
-    "href": "blog/2026-02-09-GenAI-Research/index.html#search-engines",
+    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#search-engines",
+    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#search-engines",
     "title": "Tools for Literature Review",
     "section": "Search engines",
     "text": "Search engines\n\nGoogle Scholar\nSemantic Scholar"
   },
   {
-    "objectID": "blog/2026-02-09-GenAI-Research/index.html#semantic-search",
-    "href": "blog/2026-02-09-GenAI-Research/index.html#semantic-search",
+    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#semantic-search",
+    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#semantic-search",
     "title": "Tools for Literature Review",
     "section": "Semantic search",
     "text": "Semantic search\n\nConsensus\n\nAn AI-powered academic search engine.\n\nElicit"
   },
   {
-    "objectID": "blog/2026-02-09-GenAI-Research/index.html#citation-network",
-    "href": "blog/2026-02-09-GenAI-Research/index.html#citation-network",
+    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#citation-network",
+    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#citation-network",
     "title": "Tools for Literature Review",
     "section": "Citation network",
     "text": "Citation network\nCitation network tools help visualize and explore relationships between research papers. It starts from one or more seed papers and builds a network of related works based on citations.\nThese tools can help identify influential papers, discover emerging trends, and find gaps in the literature. The generated citation networks can be used to guide literature reviews and tell research stories.\n\nLitmaps\n\nHow to do a literature review: 5 minute guide with Litmaps\nTell Your Research Story with Litmaps\n\nResearchRabbit\n\nHow to get started with ResearchRabbit\n\nConnected Papers"
   },
   {
-    "objectID": "blog/2026-02-09-GenAI-Research/index.html#reading",
-    "href": "blog/2026-02-09-GenAI-Research/index.html#reading",
+    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#reading",
+    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#reading",
     "title": "Tools for Literature Review",
     "section": "Reading",
     "text": "Reading\n\nNotebookLM\n\nAn AI research assistant by Google that helps read, understand, and summarize pdf files, videos, and web pages.\n\nScholarcy\n\nSummarizes research papers and highlights key points."
   },
   {
-    "objectID": "blog/2026-02-09-GenAI-Research/index.html#section",
-    "href": "blog/2026-02-09-GenAI-Research/index.html#section",
+    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#section",
+    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#section",
     "title": "Tools for Literature Review",
     "section": "",
     "text": "https://next-ai-drawio.jiang.jp/en"
@@ -221,7 +221,7 @@
     "href": "blog/papers/index.html#rl-for-inventory-management",
     "title": "Papers on Reinforcement Learning for Operations Research",
     "section": "RL for inventory management",
-    "text": "RL for inventory management\n\nF. Stranieri, F. Stella, and C. Kouki, “Performance of deep reinforcement learning algorithms in two-echelon inventory control systems,” Int. J. Prod. Res., vol. 62, no. 17, pp. 6211–6226, Sept. 2024. Code\n\nMethod:\n\nMDP formulation; DRL algorithms; Balance allocation rule;\nBO for heuristic policies;\n\nProblem: two-echelon inventory control systems, seasonal demand;\n\nX. Liu, C. Alexopoulos, and Y. Peng, “A simulation-driven machine learning framework for large-scale inventory management,” Ann. Oper. Res., pp. 1–27, Oct. 2025. Code\n\nImitation learning with target heuristic policies\nReal data from JD.com (not public)\nProblem: Multi-product, single and multi-echelon\nComputational complexity; Optimiality proofs;\n\nT. Temizöz, C. Imdahl, R. Dijkman, D. Lamghari-Idrissi, and W. van Jaarsveld, “Deep controlled learning for inventory control,” Eur. J. Oper. Res., vol. 324, no. 1, pp. 104–117, July 2025. Code written in C++\n\nMethods:\n\nNew algorithm, Deep controlled learning, for Input-Driven MDPs\nRL as classification problem\n\nProblem: lost sales, perishable inventory, and random lead times"
+    "text": "RL for inventory management\n\nF. Stranieri, F. Stella, and C. Kouki, “Performance of deep reinforcement learning algorithms in two-echelon inventory control systems,” Int. J. Prod. Res., vol. 62, no. 17, pp. 6211–6226, Sept. 2024. Code\n\nProblem: two-echelon inventory control systems, seasonal demand;\nMethod:\n\nMDP formulation; DRL algorithms; Balance allocation rule;\nBO for heuristic policies;\n\n\nX. Liu, C. Alexopoulos, and Y. Peng, “A simulation-driven machine learning framework for large-scale inventory management,” Ann. Oper. Res., pp. 1–27, Oct. 2025. Code\n\nImitation learning with target heuristic policies\nReal data from JD.com (not public)\nProblem: Multi-product, single and multi-echelon\nComputational complexity; Optimiality proofs;\n\nT. Temizöz, C. Imdahl, R. Dijkman, D. Lamghari-Idrissi, and W. van Jaarsveld, “Deep controlled learning for inventory control,” Eur. J. Oper. Res., vol. 324, no. 1, pp. 104–117, July 2025. Code written in C++\n\nProblem: lost sales, perishable inventory, and random lead times\nMethods:\n\nNew algorithm, Deep controlled learning, for Input-Driven MDPs\nRL as classification problem\n\n\nH. Dehaybe, D. Catanzaro, and P. Chevalier, “Deep Reinforcement Learning for inventory optimization with non-stationary uncertain demand,” Eur. J. Oper. Res., vol. 314, no. 2, pp. 433–445, Apr. 2024.\n\nProblem:\n\nSingle-Item Stochastic Lot-Sizing Problem (SISLSP) with non-stationary uncertain demand\n\nMethods:\n\nState Embedding of Forecast Windows"
   },
   {
     "objectID": "blog/papers/index.html#rl-for-operations-research-problems",
