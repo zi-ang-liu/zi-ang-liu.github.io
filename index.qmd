@@ -2,10 +2,15 @@
 title: "Ziang Liu"
 image: https://avatars.githubusercontent.com/u/50853393?s=96&v=4
 # image: images/liu.jpg
+# jolla
+# trestles
+# solana
+# marquee
+# broadside
 email-obfuscation: javascript
 about:
   id: hero-heading
-  image-width: 10em
+  image-width: 5em
   image-shape: rounded
   template: trestles
   links:
@@ -30,9 +35,9 @@ about:
       href: https://nrid.nii.ac.jp/ja/nrid/1000030908166/
     - text: ResearchGate
       href: https://www.researchgate.net/profile/Ziang-Liu-4
-format: 
-  html:
-    page-layout: full
+# format: 
+#   html:
+#     page-layout: full
 ---
 
 :::{#hero-heading}
@@ -88,16 +93,9 @@ Department of Industrial and Systems Engineering, Hosei University
 - 运筹学
 :::
 
+
 <a href="https://isl-hosei.github.io/join.html">
   <button type="button" class="btn btn-primary">Join our Lab</button>
 </a>
 
 :::
-
-<!-- jolla
-trestles
-solana
-marquee
-broadside -->
-
-<!-- ## Lecture -->
