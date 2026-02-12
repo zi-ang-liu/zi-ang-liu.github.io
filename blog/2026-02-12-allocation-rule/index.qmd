@@ -1,0 +1,12 @@
+---
+title: "Allocation rules in multi-echelon distribution systems"
+author: "Ziang Liu"
+date: 2026-02-12
+categories: [inventory management, research]
+---
+
+When the order quantity exceeds the available inventory at a warehouse, allocation rules determine how to distribute the limited stock among multiple downstream facilities. Different allocation rules can significantly impact the performance of a multi-echelon distribution system.
+
+![](thumbnail.jpg)
+
+

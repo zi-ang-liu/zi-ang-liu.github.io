@@ -1,0 +1,16 @@
+---
+title: "Subscription Tools for Research and Education"
+author: "Ziang Liu"
+date: 2026-02-13
+categories: [research]
+---
+
+
+
+![](thumbnail.jpg)
+
+
+- [overleaf](https://www.overleaf.com/)
+- [paperpile](https://www.paperpile.com/)
+- [litmaps](https://www.litmaps.com/)
+- [slack](https://slack.com/)
