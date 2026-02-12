@@ -12,7 +12,7 @@ Recording of recent research papers related to reinforcement learning for operat
 ## RL for inventory management
 
 - F. Stranieri, F. Stella, and C. Kouki, “Performance of deep reinforcement learning algorithms in two-echelon inventory control systems,” Int. J. Prod. Res., vol. 62, no. 17, pp. 6211–6226, Sept. 2024. [Code](https://github.com/frenkowski/SCIMAI-Gym)
-  - Problem: two-echelon inventory control systems, seasonal demand;
+  - Problem: two-echelon inventory control systems, seasonal demand, multi-products
   - Method: 
     - MDP formulation; DRL algorithms; Balance allocation rule; 
     - BO for heuristic policies;

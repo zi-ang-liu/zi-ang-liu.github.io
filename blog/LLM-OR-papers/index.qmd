@@ -1,0 +1,11 @@
+---
+title: "Papers on Large Language Models for Optimization and Operations Research"
+author: "Ziang Liu"
+date: 2026-02-11
+categories: [research]
+---
+
+Recording of recent research papers related to large language models for optimization and operations research problems.
+
+<!-- ![](thumbnail.jpg) -->
+
