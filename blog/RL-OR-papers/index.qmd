@@ -26,12 +26,17 @@ Recording of recent research papers related to reinforcement learning for operat
   - Methods:
     - New algorithm, **Deep controlled learning**, for Input-Driven MDPs
     - RL as classification problem
-- H. Dehaybe, D. Catanzaro, and P. Chevalier, “Deep Reinforcement Learning for inventory optimization with non-stationary uncertain demand,” Eur. J. Oper. Res., vol. 314, no. 2, pp. 433–445, Apr. 2024.
+- H. Dehaybe, D. Catanzaro, and P. Chevalier, “Deep Reinforcement Learning for inventory optimization with non-stationary uncertain demand,” Eur. J. Oper. Res., vol. 314, no. 2, pp. 433–445, Apr. 2024. [Code](https://github.com/HenriDeh/DRL_MMULS/tree/single-item)
   - Problem: 
     - Single-Item Stochastic Lot-Sizing Problem (SISLSP) with non-stationary uncertain demand
   - Methods:
     - State Embedding of Forecast Windows
-    - 
+- I. Kaynov, M. van Knippenberg, V. Menkovski, A. van Breemen, and W. van Jaarsveld, “Deep Reinforcement Learning for One-Warehouse Multi-Retailer inventory management,” Int. J. Prod. Econ., vol. 267, no. 109088, p. 109088, Jan. 2024.
+  - Problem: One-Warehouse Multi-Retailer (OWMR) inventory management
+  - Methods:
+    - Sequential allocation rule
+  - Experiments:
+    - Shows the proportional allocation rule does not work well and the sequential allocation rule performs better
 
 ## RL for operations research problems
 

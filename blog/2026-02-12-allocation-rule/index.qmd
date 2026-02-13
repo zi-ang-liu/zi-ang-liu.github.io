@@ -2,11 +2,38 @@
 title: "Allocation rules in multi-echelon distribution systems"
 author: "Ziang Liu"
 date: 2026-02-12
+bibliography: references.bib
 categories: [inventory management, research]
 ---
 
 When the order quantity exceeds the available inventory at a warehouse, allocation rules determine how to distribute the limited stock among multiple downstream facilities. Different allocation rules can significantly impact the performance of a multi-echelon distribution system.
 
-![](thumbnail.jpg)
+![](Gemini_Generated_Image_7z8rv47z8rv47z8r.png)
 
+## Proportional Allocation Rule
 
+The proportional allocation rule is widely used and intuitive. This rule scale down the orders from each retailer proportionally based on their original order quantities to match the available inventory at the warehouse.
+
+Let $q_i$ be the order quantity from retailer $i$, and $I$ be the available inventory at the warehouse. The proportional allocation rule adjusts the order quantities as follows:
+
+$$
+q_i \leftarrow \frac{q_i}{\sum_{j} q_j} I
+$$
+
+My experiments and previous studies [@Kaynov2024-qb] have shown that the proportional allocation rule often fails to learn effective inventory policies in multi-echelon systems. 
+
+## Randomized Sequential Allocation Rule
+
+@Kaynov2024-qb proposed the randomized sequential allocation rule to address the limitations of the proportional rule. In this approach, the sequence of retailers is randomized in each period. The warehouse then allocates inventory to retailers in this random order until the available stock is exhausted.
+  
+The experimental results in @Kaynov2024-qb demonstrate that the randomized sequential allocation rule leads to feasible actions.
+
+@Stranieri2024-qo indicated that the last facilities in the allocation sequence may receive insufficient inventory under the randomized sequential allocation rule, resulting it difficult to recover from stockouts.
+
+## Balanced allocation rule
+
+@Stranieri2024-qo proposed the balanced allocation rule. This rule proceeds in three steps:
+
+1. randomly select a retailer
+2. if the order quantity from the selected retailer is larger than 0, then decrease its order by 1 unit.
+3. repeat steps 1 and 2 until the total order quantity matches the available inventory at the warehouse.
