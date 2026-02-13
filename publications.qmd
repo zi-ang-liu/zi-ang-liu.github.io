@@ -6,5 +6,16 @@ nocite: |
   @*
 ---
 
+
+<!-- ## Work in Progress
+
+## Waiting for publication
+
+- Motion and Path Planning of Mobile Robot
+for Autonomous Navigation with A∗ and
+Q-learning Algorithms*
+
+## Published Works -->
+
 ::: {#refs}
 :::
