@@ -38,6 +38,15 @@ about:
 # format: 
 #   html:
 #     page-layout: full
+
+listing:
+  - id: projects
+    contents: 
+      - /projects
+    sort: "date desc"
+    type: default
+    categories: false
+    max-items: 3
 ---
 
 :::{#hero-heading}
@@ -98,4 +107,9 @@ Department of Industrial and Systems Engineering, Hosei University
   <button type="button" class="btn btn-primary">Join our Lab</button>
 </a>
 
+:::
+
+## Research Projects
+
+:::{#projects}
 :::
