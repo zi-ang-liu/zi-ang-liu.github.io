@@ -1,0 +1,10 @@
+---
+title: "Selecting the Run-length for Simulation"
+author: "Ziang Liu"
+date: 2026-02-13
+bibliography: references.bib
+categories: [simulation, research]
+---
+
+
+
