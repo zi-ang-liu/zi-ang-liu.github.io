@@ -2,9 +2,12 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/blog/papers/index.html",
+      "/blog/2026-02-12-allocation-rule/index.html",
+      "/blog/RL-OR-papers/index.html",
+      "/blog/LLM-OR-papers/index.html",
       "/blog/2026-02-09-Tools-for-Literature-Review/index.html",
       "/blog/2026-02-07-china-university/index.html",
+      "/blog/2026-02-13-subscription/index.html",
       "/blog/welcome/index.html"
     ]
   }
