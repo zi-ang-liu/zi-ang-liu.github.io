@@ -3,14 +3,6 @@ title: "Teaching"
 date-modified: today
 ---
 
-## Lecture Notes
-
-- [Operations Research](https://zi-ang-liu.github.io/or-book/)
-- [Data Science](https://zi-ang-liu.github.io/data-science-book/)
-- [Database](https://zi-ang-liu.github.io/database-book/)
-- [Reinforcement Learning](https://zi-ang-liu.github.io/rl-book/)
-- [Computer Literacy](https://zi-ang-liu.github.io/computer-literacy-book/)
-
 ## 法政大学
 
 ### 授業

@@ -47,6 +47,40 @@ listing:
     type: default
     categories: false
     max-items: 3
+
+  - id: books
+    type: grid
+    grid-columns: 4
+    contents:
+      - title: "Operations Research"
+        image: https://zi-ang-liu.github.io/or-book/cover.png
+        path: https://zi-ang-liu.github.io/or-book/
+        description: ""
+        
+      - title: "Data Science"
+        image: https://zi-ang-liu.github.io/data-science-book/cover.png
+        path: https://zi-ang-liu.github.io/data-science-book/
+        description: ""
+        
+      - title: "Database Systems"
+        image: https://zi-ang-liu.github.io/database-book/cover.png
+        path: https://zi-ang-liu.github.io/database-book/
+        description: ""
+      
+      - title: "Computer Literacy"
+        image: https://zi-ang-liu.github.io/computer-literacy-book/cover.png
+        path: https://zi-ang-liu.github.io/computer-literacy-book/
+        description: ""
+
+      - title: "Reinforcement Learning"
+        image: https://zi-ang-liu.github.io/rl-book/cover.png
+        path: https://zi-ang-liu.github.io/rl-book/
+        description: ""
+    
+    # Optional: Hide categories or date if not needed
+    categories: false
+    sort-ui: false
+    filter-ui: false
 ---
 
 :::{#hero-heading}
@@ -63,10 +97,10 @@ Department of Industrial and Systems Engineering, Hosei University
 **Hosei University** | Associate Professor | April 2025 - Present    
 **Okayama University** | Assistant Professor | April 2021 - March 2025 -->
 
-#### Research Interests
+<!-- #### Research Interests
 - Optimization
 - Artificial Intelligence
-- Operations Research
+- Operations Research -->
 
 ## 日本語
 ### 劉 子昂 
@@ -109,7 +143,13 @@ Department of Industrial and Systems Engineering, Hosei University
 
 :::
 
+## Lecture Notes
+
+:::{#books}
+:::
+
 ## Research Projects
 
 :::{#projects}
 :::
+
