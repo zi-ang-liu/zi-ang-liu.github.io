@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Allocation rules in multi-echelon distribution systems\n\n\n\ninventory management\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 12, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nPapers on Reinforcement Learning for Operations Research\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 11, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nPapers on Large Language Models for Optimization and Operations Research\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 11, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nTools for Literature Review\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 9, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学ランキング\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 7, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nSubscription Tools for Research and Education\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 2, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
+    "text": "Selecting the Run-length for Simulation\n\n\n\nsimulation\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 13, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nAllocation rules in multi-echelon distribution systems\n\n\n\ninventory management\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 12, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nPapers on Reinforcement Learning for Operations Research\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 11, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nPapers on Large Language Models for Optimization and Operations Research\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 11, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nTools for Literature Review\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 9, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学ランキング\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 7, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nSubscription Tools for Research and Education\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 2, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/LLM-OR-papers/index.html",
@@ -42,6 +42,153 @@
     "text": "RL for operations research problems\n\nA. Ramanujam et al., “SafeOR-Gym: A benchmark suite for safe reinforcement learning algorithms on practical operations research problems,” arXiv [cs.LG], 02-June-2025. Code\n\nProblems: 9 OR environments\nMethods: Safe RL algorithms\n\nConstrained Markov Decision Process (CMDP)\nConstraints handling methods\nConstraint RL algorithms"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ziang Liu",
+    "section": "",
+    "text": "Google Scholar\n  \n  \n    \n     Github\n  \n  \n    \n     Email\n  \n  \n    \n     researchmap\n  \n  \n    \n     Lab/研究室\n  \n  \n     ORCID\n  \n  \n     KAKEN\n  \n  \n     ResearchGate\n  \n\n  \n  \n\nEnglish日本語中文\n\n\n\n\n\nAssociate Professor, Ph.D.\nDepartment of Industrial and Systems Engineering, Hosei University\n\n\n\n\n\n\n\n准教授, ​博士（工学）\n​法政大学 理工学部 経営システム工学科\n\n\n\n\n最適化\n人工知能\n経営工学\n\n\n\n\n\n\n\n副教授, 博士\n法政大学 理工学部 经营系统工学科\n\n\n\n\n最优化\n人工智能\n运筹学\n\n\n\n\n\n\n Join our Lab"
+  },
+  {
+    "objectID": "index.html#lecture-notes",
+    "href": "index.html#lecture-notes",
+    "title": "Ziang Liu",
+    "section": "Lecture Notes",
+    "text": "Lecture Notes\n\n\n\n\n\n\n\n\n\n\nOperations Research\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Science\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDatabase Systems\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputer Literacy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReinforcement Learning\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#research-projects",
+    "href": "index.html#research-projects",
+    "title": "Ziang Liu",
+    "section": "Research Projects",
+    "text": "Research Projects\n\n\n\n\n\n\n\n\n\n\n深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム\n\n\nDeveloping explainable decision support systems for inventory management using deep reinforcement learning\n\n\n\n\n\n\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\n動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築\n\n\nDevelopment of Data-Driven Optimization Fundamentals for Supply Chains Using Dynamic Model Construction Platform\n\n\n\n\n\n\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "open-source.html",
+    "href": "open-source.html",
+    "title": "Open Source",
+    "section": "",
+    "text": "I actively develop and maintain several open-source projects. While most are still in their early stages, I am continually improving them with the goal of contributing meaningful tools to the research community."
+  },
+  {
+    "objectID": "open-source.html#reinforcement-learning",
+    "href": "open-source.html#reinforcement-learning",
+    "title": "Open Source",
+    "section": "Reinforcement Learning",
+    "text": "Reinforcement Learning\n\nmdptools: A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning.\ninventory-gym: A suite of inventory control environments compatible with Gymnasium, Stable Baselines3, and mdptools."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/pipx/index.html",
+    "href": "posts/pipx/index.html",
+    "title": "pipx を使ってみた",
+    "section": "",
+    "text": "pipx は python のアプリケーションを独立した環境でインストールし，実行できるツールである．\npip や conda と違い，アプリケーションごとに環境を分けるため，依存関係の衝突を避けることができる．"
+  },
+  {
+    "objectID": "posts/pipx/index.html#インストール",
+    "href": "posts/pipx/index.html#インストール",
+    "title": "pipx を使ってみた",
+    "section": "インストール",
+    "text": "インストール\nMac の場合，Homebrew を使用してインストールできる．\nbrew install pipx\npipx ensurepath\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
+  },
+  {
+    "objectID": "contact.html#address",
+    "href": "contact.html#address",
+    "title": "Contact",
+    "section": "",
+    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
+  },
+  {
+    "objectID": "contact.html#qr-code-for-homepage",
+    "href": "contact.html#qr-code-for-homepage",
+    "title": "Contact",
+    "section": "QR Code for Homepage",
+    "text": "QR Code for Homepage"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n最適化アルゴリズム特論（大学院/秋学期/）"
+  },
+  {
+    "objectID": "teaching.html#法政大学",
+    "href": "teaching.html#法政大学",
+    "title": "Teaching",
+    "section": "",
+    "text": "計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n最適化アルゴリズム特論（大学院/秋学期/）"
+  },
+  {
+    "objectID": "teaching.html#時間割小金井キャンパス",
+    "href": "teaching.html#時間割小金井キャンパス",
+    "title": "Teaching",
+    "section": "時間割（小金井キャンパス）",
+    "text": "時間割（小金井キャンパス）\n\n\n\n時限\n時間帯\n\n\n\n\n1時限目\n9:00～10:40\n\n\n2時限目\n10:50～12:30\n\n\n3時限目\n13:20～15:00\n\n\n4時限目\n15:10～16:50\n\n\n5時限目\n17:00～18:40"
+  },
+  {
+    "objectID": "timetable.html",
+    "href": "timetable.html",
+    "title": "Ziang Liu",
+    "section": "",
+    "text": "時限\n月\n火\n水\n木\n金\n\n\n\n\n1限\n9:00–10:40\n\n\n計算機実習A\nW203\n\n\n\n\n2限\n10:50–12:30\n\n\nRDB\n遠隔視聴覚室\n\n\n\n\n3限\n13:20–15:00\n\n\n\n4年ゼミ\n研究室\n\n\n\n4限\n15:10–16:50\n\n\n\n基礎演習\n研究室\n会議"
+  },
+  {
+    "objectID": "timetable.html#春学期",
+    "href": "timetable.html#春学期",
+    "title": "Ziang Liu",
+    "section": "",
+    "text": "時限\n月\n火\n水\n木\n金\n\n\n\n\n1限\n9:00–10:40\n\n\n計算機実習A\nW203\n\n\n\n\n2限\n10:50–12:30\n\n\nRDB\n遠隔視聴覚室\n\n\n\n\n3限\n13:20–15:00\n\n\n\n4年ゼミ\n研究室\n\n\n\n4限\n15:10–16:50\n\n\n\n基礎演習\n研究室\n会議"
+  },
+  {
+    "objectID": "timetable.html#秋学期",
+    "href": "timetable.html#秋学期",
+    "title": "Ziang Liu",
+    "section": "秋学期",
+    "text": "秋学期\n\n\n\n\n\n\n\n\n\n\n\n時限\n月\n火\n水\n木\n金\n\n\n\n\n1限\n9:00–10:40\n\n\n\n\n\n\n\n2限\n10:50–12:30\n\n\nOR-B\nW202\nアルゴリズム\n大学院\n経営科学\n大学院\n\n\n3限\n13:20–15:00\n\n\n\n4年ゼミ\n研究室\n社会システム\nW305\n\n\n4限\n15:10–16:50\n\n\nIISTセミナー\n大学院\nPBL\n研究室\n会議"
+  },
+  {
+    "objectID": "posts/paper-prompt-evolution/index.html",
+    "href": "posts/paper-prompt-evolution/index.html",
+    "title": "プロンプト進化",
+    "section": "",
+    "text": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning\nhttps://mp.weixin.qq.com/s/0-Opg-D5Eu_t0Gj_J4pcfg"
+  },
+  {
+    "objectID": "posts/overleaf/index.html",
+    "href": "posts/overleaf/index.html",
+    "title": "Overleafで日本語を使う",
+    "section": "",
+    "text": "Overleafで日本語を使う方法を紹介します。\nhttps://ja.overleaf.com/learn/latex/Japanese\n\npLaTeXを使う\n論文のテンプレートがpLaTeXを使っている場合、以下のように設定する。\n\nMenu &gt; Compile &gt; LaTeX を選択する。\n「latexmkrc」ファイルを作成し、以下の内容を記述する。\n\n$latex = 'platex';\n$bibtex = 'pbibtex';\n$dvipdf = 'dvipdfmx %O -o %D %S';\n$makeindex = 'mendex %O -o %D %S';"
+  },
+  {
+    "objectID": "posts/genai-tool/index.html",
+    "href": "posts/genai-tool/index.html",
+    "title": "生成AI ツールまとめ",
+    "section": "",
+    "text": "NotebookLM\nP4Us\nhttps://www.nri.com/jp/knowledge/glossary/index.html\ncanvas"
+  },
+  {
+    "objectID": "note.html",
+    "href": "note.html",
+    "title": "Ziang Liu",
+    "section": "",
+    "text": "quarto publish gh-pages\nicon: https://icons.getbootstrap.com"
+  },
+  {
     "objectID": "blog/2026-02-12-allocation-rule/index.html",
     "href": "blog/2026-02-12-allocation-rule/index.html",
     "title": "Allocation rules in multi-echelon distribution systems",
@@ -68,146 +215,6 @@
     "title": "Allocation rules in multi-echelon distribution systems",
     "section": "Balanced allocation rule",
     "text": "Balanced allocation rule\nStranieri, Stella, and Kouki (2024) proposed the balanced allocation rule. This rule proceeds in three steps:\n\nrandomly select a retailer\nif the order quantity from the selected retailer is larger than 0, then decrease its order by 1 unit.\nrepeat steps 1 and 2 until the total order quantity matches the available inventory at the warehouse."
-  },
-  {
-    "objectID": "note.html",
-    "href": "note.html",
-    "title": "Ziang Liu",
-    "section": "",
-    "text": "quarto publish gh-pages\nicon: https://icons.getbootstrap.com"
-  },
-  {
-    "objectID": "posts/genai-tool/index.html",
-    "href": "posts/genai-tool/index.html",
-    "title": "生成AI ツールまとめ",
-    "section": "",
-    "text": "NotebookLM\nP4Us\nhttps://www.nri.com/jp/knowledge/glossary/index.html\ncanvas"
-  },
-  {
-    "objectID": "posts/overleaf/index.html",
-    "href": "posts/overleaf/index.html",
-    "title": "Overleafで日本語を使う",
-    "section": "",
-    "text": "Overleafで日本語を使う方法を紹介します。\nhttps://ja.overleaf.com/learn/latex/Japanese\n\npLaTeXを使う\n論文のテンプレートがpLaTeXを使っている場合、以下のように設定する。\n\nMenu &gt; Compile &gt; LaTeX を選択する。\n「latexmkrc」ファイルを作成し、以下の内容を記述する。\n\n$latex = 'platex';\n$bibtex = 'pbibtex';\n$dvipdf = 'dvipdfmx %O -o %D %S';\n$makeindex = 'mendex %O -o %D %S';"
-  },
-  {
-    "objectID": "posts/paper-prompt-evolution/index.html",
-    "href": "posts/paper-prompt-evolution/index.html",
-    "title": "プロンプト進化",
-    "section": "",
-    "text": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning\nhttps://mp.weixin.qq.com/s/0-Opg-D5Eu_t0Gj_J4pcfg"
-  },
-  {
-    "objectID": "timetable.html",
-    "href": "timetable.html",
-    "title": "Ziang Liu",
-    "section": "",
-    "text": "時限\n月\n火\n水\n木\n金\n\n\n\n\n1限\n9:00–10:40\n\n\n計算機実習A\nW203\n\n\n\n\n2限\n10:50–12:30\n\n\nRDB\n遠隔視聴覚室\n\n\n\n\n3限\n13:20–15:00\n\n\n\n4年ゼミ\n研究室\n\n\n\n4限\n15:10–16:50\n\n\n\n基礎演習\n研究室\n会議"
-  },
-  {
-    "objectID": "timetable.html#春学期",
-    "href": "timetable.html#春学期",
-    "title": "Ziang Liu",
-    "section": "",
-    "text": "時限\n月\n火\n水\n木\n金\n\n\n\n\n1限\n9:00–10:40\n\n\n計算機実習A\nW203\n\n\n\n\n2限\n10:50–12:30\n\n\nRDB\n遠隔視聴覚室\n\n\n\n\n3限\n13:20–15:00\n\n\n\n4年ゼミ\n研究室\n\n\n\n4限\n15:10–16:50\n\n\n\n基礎演習\n研究室\n会議"
-  },
-  {
-    "objectID": "timetable.html#秋学期",
-    "href": "timetable.html#秋学期",
-    "title": "Ziang Liu",
-    "section": "秋学期",
-    "text": "秋学期\n\n\n\n\n\n\n\n\n\n\n\n時限\n月\n火\n水\n木\n金\n\n\n\n\n1限\n9:00–10:40\n\n\n\n\n\n\n\n2限\n10:50–12:30\n\n\nOR-B\nW202\nアルゴリズム\n大学院\n経営科学\n大学院\n\n\n3限\n13:20–15:00\n\n\n\n4年ゼミ\n研究室\n社会システム\nW305\n\n\n4限\n15:10–16:50\n\n\nIISTセミナー\n大学院\nPBL\n研究室\n会議"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Operations Research\nData Science\nDatabase\nReinforcement Learning\nComputer Literacy"
-  },
-  {
-    "objectID": "teaching.html#lecture-notes",
-    "href": "teaching.html#lecture-notes",
-    "title": "Teaching",
-    "section": "",
-    "text": "Operations Research\nData Science\nDatabase\nReinforcement Learning\nComputer Literacy"
-  },
-  {
-    "objectID": "teaching.html#法政大学",
-    "href": "teaching.html#法政大学",
-    "title": "Teaching",
-    "section": "法政大学",
-    "text": "法政大学\n\n授業\n\n計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n最適化アルゴリズム特論（大学院/秋学期/）"
-  },
-  {
-    "objectID": "teaching.html#時間割小金井キャンパス",
-    "href": "teaching.html#時間割小金井キャンパス",
-    "title": "Teaching",
-    "section": "時間割（小金井キャンパス）",
-    "text": "時間割（小金井キャンパス）\n\n\n\n時限\n時間帯\n\n\n\n\n1時限目\n9:00～10:40\n\n\n2時限目\n10:50～12:30\n\n\n3時限目\n13:20～15:00\n\n\n4時限目\n15:10～16:50\n\n\n5時限目\n17:00～18:40"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
-  },
-  {
-    "objectID": "contact.html#address",
-    "href": "contact.html#address",
-    "title": "Contact",
-    "section": "",
-    "text": "〒184-8584 東京都小金井市梶野町3-7-2\n法政大学 理工学部 経営システム工学科\nHosei University   \n3-7-2 Kajino-cho   \nKoganei-shi, Tokyo 184-8584 \nJapan"
-  },
-  {
-    "objectID": "contact.html#qr-code-for-homepage",
-    "href": "contact.html#qr-code-for-homepage",
-    "title": "Contact",
-    "section": "QR Code for Homepage",
-    "text": "QR Code for Homepage"
-  },
-  {
-    "objectID": "posts/pipx/index.html",
-    "href": "posts/pipx/index.html",
-    "title": "pipx を使ってみた",
-    "section": "",
-    "text": "pipx は python のアプリケーションを独立した環境でインストールし，実行できるツールである．\npip や conda と違い，アプリケーションごとに環境を分けるため，依存関係の衝突を避けることができる．"
-  },
-  {
-    "objectID": "posts/pipx/index.html#インストール",
-    "href": "posts/pipx/index.html#インストール",
-    "title": "pipx を使ってみた",
-    "section": "インストール",
-    "text": "インストール\nMac の場合，Homebrew を使用してインストールできる．\nbrew install pipx\npipx ensurepath\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "open-source.html",
-    "href": "open-source.html",
-    "title": "Open Source",
-    "section": "",
-    "text": "I actively develop and maintain several open-source projects. While most are still in their early stages, I am continually improving them with the goal of contributing meaningful tools to the research community."
-  },
-  {
-    "objectID": "open-source.html#reinforcement-learning",
-    "href": "open-source.html#reinforcement-learning",
-    "title": "Open Source",
-    "section": "Reinforcement Learning",
-    "text": "Reinforcement Learning\n\nmdptools: A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning.\ninventory-gym: A suite of inventory control environments compatible with Gymnasium, Stable Baselines3, and mdptools."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ziang Liu",
-    "section": "",
-    "text": "Google Scholar\n  \n  \n    \n     Github\n  \n  \n    \n     Email\n  \n  \n    \n     researchmap\n  \n  \n    \n     Lab/研究室\n  \n  \n     ORCID\n  \n  \n     KAKEN\n  \n  \n     ResearchGate\n  \n\n  \n  \n\nEnglish日本語中文\n\n\n\nZiang Liu\n\nAssociate Professor, Ph.D.\nDepartment of Industrial and Systems Engineering, Hosei University\n\n\nResearch Interests\n\nOptimization\nArtificial Intelligence\nOperations Research\n\n\n\n\n\n\n劉 子昂\n准教授, ​博士（工学）\n​法政大学 理工学部 経営システム工学科\n\n\n研究分野\n\n最適化\n人工知能\n経営工学\n\n\n\n\n\n\n刘子昂\n副教授, 博士\n法政大学 理工学部 经营系统工学科\n\n\n研究领域\n\n最优化\n人工智能\n运筹学\n\n\n\n\n\n\n Join our Lab"
   },
   {
     "objectID": "blog/2026-02-07-china-university/index.html",
