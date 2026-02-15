@@ -44,9 +44,10 @@ listing:
     contents: 
       - /projects
     sort: "date desc"
-    type: default
-    categories: false
+    type: grid
+    categories: true
     max-items: 3
+    grid-columns: 2
 
   - id: books
     type: grid
