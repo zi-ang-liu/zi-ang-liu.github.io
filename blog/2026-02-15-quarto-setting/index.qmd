@@ -1,0 +1,63 @@
+---
+title: "Quarto Configuration for Book"
+author: "Ziang Liu"
+date: 2026-02-15
+categories: [quarto]
+---
+
+Quarto projects can be configured using a `_quarto.yml` file. A sample configuration is shown below:
+
+```yaml
+project:
+  type: book
+
+book:
+  title: "mybook"
+  author: "Ziang Liu"
+  date: "2/15/2026"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+```
+
+## freeze
+
+With the increasing content of the book, it may take a long time to render the entire book. To save time, setting `freeze: auto` will only render the changed files, which can significantly speed up the rendering process.
+
+```yaml
+execute:
+  freeze: auto
+```
+
+## pdf 
+
+The following configuration can be used to generate a PDF version of the book using LuaLaTeX and the `ltjbook` document class, which is suitable for books with Japanese content.
+
+`use-rsvg-convert: true` is required to render SVG images in the PDF output.
+
+```yaml
+format:
+  pdf:
+    pdf-engine: lualatex
+    documentclass: ltjbook
+    toc: true
+    toc-depth: 1
+    use-rsvg-convert: true
+```
+
+## pseudocode
+
+```yaml
+filters:
+  - pseudocode
+```
