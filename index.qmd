@@ -39,49 +39,15 @@ about:
 #   html:
 #     page-layout: full
 
-listing:
-  - id: projects
-    contents: 
-      - /projects
-    sort: "date desc"
-    type: grid
-    categories: true
-    max-items: 3
-    grid-columns: 2
-
-  - id: books
-    type: grid
-    grid-columns: 4
-    contents:
-      - title: "Operations Research"
-        image: https://zi-ang-liu.github.io/or-book/cover.png
-        path: https://zi-ang-liu.github.io/or-book/
-        description: ""
-        
-      - title: "Data Science"
-        image: https://zi-ang-liu.github.io/data-science-book/cover.png
-        path: https://zi-ang-liu.github.io/data-science-book/
-        description: ""
-        
-      - title: "Database Systems"
-        image: https://zi-ang-liu.github.io/database-book/cover.png
-        path: https://zi-ang-liu.github.io/database-book/
-        description: ""
-      
-      - title: "Computer Literacy"
-        image: https://zi-ang-liu.github.io/computer-literacy-book/cover.png
-        path: https://zi-ang-liu.github.io/computer-literacy-book/
-        description: ""
-
-      - title: "Reinforcement Learning"
-        image: https://zi-ang-liu.github.io/rl-book/cover.png
-        path: https://zi-ang-liu.github.io/rl-book/
-        description: ""
-    
-    # Optional: Hide categories or date if not needed
-    categories: false
-    sort-ui: false
-    filter-ui: false
+# listing:
+#   - id: projects
+#     contents: 
+#       - /projects
+#     sort: "date desc"
+#     type: grid
+#     categories: true
+#     max-items: 3
+#     grid-columns: 2
 ---
 
 :::{#hero-heading}
@@ -144,13 +110,4 @@ Department of Industrial and Systems Engineering, Hosei University
 
 :::
 
-## Lecture Notes
-
-:::{#books}
-:::
-
-## Research Projects
-
-:::{#projects}
-:::
 

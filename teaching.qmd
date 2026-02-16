@@ -1,7 +1,42 @@
 ---
 title: "Teaching"
 date-modified: today
+listing:
+    - id: books
+      type: grid
+      grid-columns: 4
+      contents:
+      - title: "Operations Research"
+        image: https://zi-ang-liu.github.io/or-book/cover.png
+        path: https://zi-ang-liu.github.io/or-book/
+        description: ""
+        
+      - title: "Data Science"
+        image: https://zi-ang-liu.github.io/data-science-book/cover.png
+        path: https://zi-ang-liu.github.io/data-science-book/
+        description: ""
+        
+      - title: "Database Systems"
+        image: https://zi-ang-liu.github.io/database-book/cover.png
+        path: https://zi-ang-liu.github.io/database-book/
+        description: ""
+    
+      - title: "Computer Literacy"
+        image: https://zi-ang-liu.github.io/computer-literacy-book/cover.png
+        path: https://zi-ang-liu.github.io/computer-literacy-book/
+        description: ""
+
+      - title: "Reinforcement Learning"
+        image: https://zi-ang-liu.github.io/rl-book/cover.png
+        path: https://zi-ang-liu.github.io/rl-book/
+        description: ""
+        categories: false
 ---
+
+## Lecture Notes
+
+:::{#books}
+:::
 
 ## 法政大学
 
