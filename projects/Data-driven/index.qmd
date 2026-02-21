@@ -5,3 +5,8 @@ subtitle: "Development of Data-Driven Optimization Fundamentals for Supply Chain
 # date: 2025-09-01
 categories: [JSPS KAKENHI]
 ---
+
+- 研究課題: [23K22983](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23K22983/)
+- 研究代表者: 西 竜志
+- 研究分担者: 劉 子昂
+- 研究期間: 2024年4月1日 - 2026年3月31日
