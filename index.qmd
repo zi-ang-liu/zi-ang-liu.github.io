@@ -94,10 +94,7 @@ Associate Professor, Ph.D.
 - 运筹学
 :::
 
-
-<a href="https://isl-hosei.github.io/join.html">
-  <button type="button" class="btn btn-primary">Join our Lab</button>
-</a>
+[Join our Lab](https://isl-hosei.github.io/join.html){.btn .btn-primary}
 
 :::
 
