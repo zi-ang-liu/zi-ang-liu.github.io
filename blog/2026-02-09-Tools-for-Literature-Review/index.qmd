@@ -12,10 +12,10 @@ Summarizing tools that can help with literature review for research papers.
 ## Search engines
 
 - [Google Scholar](https://scholar.google.com/)
-- [Semantic Scholar](https://www.semanticscholar.org/)
 
 ## Semantic search
 
+- [Semantic Scholar](https://www.semanticscholar.org/)
 - [Consensus](https://consensus.app/)
   - An AI-powered academic search engine.
 - [Elicit](https://elicit.org/)

@@ -1,0 +1,56 @@
+---
+title: "Algorithms for Federated Reinforcement Learning"
+author: "Ziang Liu"
+date: 2026-02-15
+categories: [research, reinforcement learning, federated learning]
+---
+
+## Federated Reinforcement Learning with Environment Heterogeneity
+
+
+H. Jin, Y. Peng, W. Yang, S. Wang, and Z. Zhang, “Federated Reinforcement Learning with environment heterogeneity,” arXiv [cs.LG], 2022.
+  
+
+
+### Problem setting:
+
+- $n$ agents located in $n$ different environments.
+- Each agent $i$ has the same state space $\mathcal{S}$, action space $\mathcal{A}$, reward function $r$, but different transition dynamics $P_i$.
+
+### Algorithm:
+
+Learn a uniformly good policy: `QAvg` and `PAvg`
+
+Personalization: embedding-based method, applied to `DQNAvg` and `DDPGAvg`
+
+#### QAvg
+
+Each agent $i$ in iteration $t$ maintains a local Q-function $Q^t_i$. Agents perform local updates using their own data.
+After local updates, agents communicate their Q-functions to get the average Q-function:
+
+$$
+\bar{Q}_t(s, a) \leftarrow \frac{1}{n} \sum_{i=1}^n Q_t^i(s, a), \quad \forall s \in \mathcal{S}, a \in \mathcal{A}
+$$
+
+Then, 
+
+$$
+Q_{t}^i(s, a) \leftarrow \bar{Q}_t(s, a), \quad \forall s \in \mathcal{S}, a \in \mathcal{A}, i = 1, \ldots, n.
+$$
+
+#### PAvg
+
+Each agent $i$ repeats the local update for several iterations to get a local policy $\pi_{t}^i(\cdot|s)$. Then, agents communicate their policies to get the average policy:
+
+$$
+\bar{\pi}_t(a|s) \leftarrow \frac{1}{n} \sum_{i=1}^n \pi_t^i(a|s), \quad \forall s \in \mathcal{S}, a \in \mathcal{A}
+$$
+
+Then,
+
+$$
+\pi_{t}^i(a|s) \leftarrow \bar{\pi}_t(a|s), \quad \forall s \in \mathcal{S}, a \in \mathcal{A}, i = 1, \ldots, n.
+$$
+
+### Personalization
+
