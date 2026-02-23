@@ -7,11 +7,8 @@ categories: [research, reinforcement learning, federated learning]
 
 ## Federated Reinforcement Learning with Environment Heterogeneity
 
-
-H. Jin, Y. Peng, W. Yang, S. Wang, and Z. Zhang, “Federated Reinforcement Learning with environment heterogeneity,” arXiv [cs.LG], 2022.
+H. Jin, Y. Peng, W. Yang, S. Wang, and Z. Zhang, “Federated Reinforcement Learning with environment heterogeneity,” arXiv [cs.LG], 2022. [code](https://github.com/pengyang7881187/FedRL)
   
-
-
 ### Problem setting:
 
 - $n$ agents located in $n$ different environments.
@@ -54,3 +51,8 @@ $$
 
 ### Personalization
 
+Each environment is associated with a unique ID, and the ID is embedded into a vector. The embedding vector is concatenated with the state representation and fed into the Q-network or policy network.
+
+For never-seen-before environments, the vector is initialized as the average of the embedding vectors of the training environments.
+
+## 
