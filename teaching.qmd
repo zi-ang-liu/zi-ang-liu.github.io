@@ -4,7 +4,7 @@ date-modified: today
 listing:
     - id: books
       type: grid
-      grid-columns: 5
+      grid-columns: 3
       contents:
       - title: "Operations Research"
         image: https://zi-ang-liu.github.io/or-book/cover.png

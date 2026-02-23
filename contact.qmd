@@ -1,6 +1,10 @@
 ---
 title: "Contact"
+title-block-banner: true
 ---
+
+
+## 📍Location
 
 ::: {.columns}
 

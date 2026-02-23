@@ -1,16 +1,25 @@
 ---
-title: "Papers on Reinforcement Learning for Operations Research"
+title: "Papers"
 author: "Ziang Liu"
-date: 2026-02-11
+date: 2026-02-23
 categories: [research]
+image: "thumbnail.jpg"
 ---
 
-Recording of recent research papers related to reinforcement learning for operations research problems.
 
-<!-- ![](thumbnail.jpg) -->
+Recording of research papers that I have read, with a brief summary and my thoughts. I will update this page regularly as I read more papers. 
 
-## RL for inventory management
+## Table of contents
 
+- [Reinforcement learning](#reinforcement-learning)
+- [Federated learning](#federated-learning)
+
+## Reinforcement learning
+
+### RL for inventory management
+
+- B. Rolf, I. Jackson, M. Müller, S. Lang, T. Reggelin, and D. Ivanov, “A review on reinforcement learning algorithms and applications in supply chain management,” Int. J. Prod. Res., vol. 61, no. 20, pp. 7151–7179, Oct. 2023.
+  - **Review paper**
 - F. Stranieri, F. Stella, and C. Kouki, “Performance of deep reinforcement learning algorithms in two-echelon inventory control systems,” Int. J. Prod. Res., vol. 62, no. 17, pp. 6211–6226, Sept. 2024. [Code](https://github.com/frenkowski/SCIMAI-Gym)
   - Problem: two-echelon inventory control systems, seasonal demand, multi-products
   - Method: 
@@ -38,7 +47,7 @@ Recording of recent research papers related to reinforcement learning for operat
   - Experiments:
     - Shows the proportional allocation rule does not work well and the sequential allocation rule performs better
 
-## RL for operations research problems
+### RL for operations research problems
 
 - A. Ramanujam et al., “SafeOR-Gym: A benchmark suite for safe reinforcement learning algorithms on practical operations research problems,” arXiv [cs.LG], 02-June-2025. [Code](https://github.com/li-group/SafeOR-Gym)
   - Problems: 9 OR environments
@@ -46,5 +55,19 @@ Recording of recent research papers related to reinforcement learning for operat
     - Constrained Markov Decision Process (CMDP)
     - Constraints handling methods
     - Constraint RL algorithms
+- 
 
 <!-- - Automated selection of the number of replications for a discrete-event simulation -->
+
+## Federated learning
+
+### Federated reinforcement learning
+
+- H. Jin, Y. Peng, W. Yang, S. Wang, and Z. Zhang, “Federated Reinforcement Learning with environment heterogeneity,” arXiv [cs.LG], 2022. [code](https://github.com/pengyang7881187/FedRL)
+  - Problem setting: $n$ agents located in $n$ different environments, with the same state space, action space, reward function, but different transition dynamics.
+  - Algorithm: Learn a uniformly good policy (QAvg and PAvg) and personalization (embedding-based method, applied to DQNAvg and DDPGAvg).
+
+### Federated learning for supply chain management
+
+- H. Wang, F. Xie, Q. Duan, and J. Li, “Federated learning for supply chain demand forecasting,” Math. Probl. Eng., vol. 2022, pp. 1–8, Nov. 2022. [Code](https://github.com/yuxiaowww/BDCI-2018-Supply-Chain-Demand-Forecast)
+  - vertical federated LSTM model.
