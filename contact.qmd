@@ -2,12 +2,14 @@
 title: "Contact"
 ---
 
-## Address
+::: {.columns}
 
-```
+::: {.column width="40%"}
+
+<!-- ```
 〒184-8584 東京都小金井市梶野町3-7-2
 法政大学 理工学部 経営システム工学科
-```
+``` -->
 
 ```
 Hosei University   
@@ -15,7 +17,22 @@ Hosei University
 Koganei-shi, Tokyo 184-8584 
 Japan
 ```
+:::
 
-## QR Code for Homepage
+::: {.column width="60%"}
 
-![](images/home-qrcode.png){width=150px}
+::: {.cell}
+```{=html}
+<!-- Responsive Google Map -->
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1016.9049864746312!2d139.52284847612208!3d35.70947918364517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e589329d7c6f%3A0x1b9f01fa3c32d3b6!2z5rOV5pS_5aSn5a2m5bCP6YeR5LqV44Kt44Oj44Oz44OR44K5!5e0!3m2!1sen!2sjp!4v1756452075113!5m2!1sen!2sjp" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+```
+:::
+:::
+
+:::
+
+<!-- ## QR Code for Homepage
+
+![](images/home-qrcode.png){width=150px} -->
