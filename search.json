@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Quarto Configuration for Book\n\n\n\nquarto\n\n\n\n\n\n\n\n\n\nFeb 15, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nSelecting the Run-length for Simulation\n\n\n\nsimulation\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 13, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nAllocation rules in multi-echelon distribution systems\n\n\n\ninventory management\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 12, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nPapers on Reinforcement Learning for Operations Research\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 11, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nPapers on Large Language Models for Optimization and Operations Research\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 11, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nTools for Literature Review\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 9, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学ランキング\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 7, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nSubscription Tools for Research and Education\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 2, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
+    "text": "Quarto Configuration for Book\n\n\n\nquarto\n\n\n\n\n\n\n\n\n\nFeb 15, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nAlgorithms for Federated Reinforcement Learning\n\n\n\nresearch\n\nreinforcement learning\n\nfederated learning\n\n\n\n\n\n\n\n\n\nFeb 15, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nSelecting the Run-length for Simulation\n\n\n\nsimulation\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 13, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nAllocation rules in multi-echelon distribution systems\n\n\n\ninventory management\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 12, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nPapers on Reinforcement Learning for Operations Research\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 11, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nPapers on Large Language Models for Optimization and Operations Research\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 11, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nTools for Literature Review\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 9, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学ランキング\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 7, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nSubscription Tools for Research and Education\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 2, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/LLM-OR-papers/index.html",
@@ -14,95 +14,95 @@
     "text": "Recording of recent research papers related to large language models for optimization and operations research problems."
   },
   {
-    "objectID": "blog/welcome/index.html",
-    "href": "blog/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html",
+    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html",
+    "title": "Tools for Literature Review",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "Summarizing tools that can help with literature review for research papers."
   },
   {
-    "objectID": "blog/RL-OR-papers/index.html",
-    "href": "blog/RL-OR-papers/index.html",
-    "title": "Papers on Reinforcement Learning for Operations Research",
+    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#search-engines",
+    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#search-engines",
+    "title": "Tools for Literature Review",
+    "section": "Search engines",
+    "text": "Search engines\n\nGoogle Scholar"
+  },
+  {
+    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#semantic-search",
+    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#semantic-search",
+    "title": "Tools for Literature Review",
+    "section": "Semantic search",
+    "text": "Semantic search\n\nSemantic Scholar\nConsensus\n\nAn AI-powered academic search engine.\n\nElicit"
+  },
+  {
+    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#citation-network",
+    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#citation-network",
+    "title": "Tools for Literature Review",
+    "section": "Citation network",
+    "text": "Citation network\nCitation network tools help visualize and explore relationships between research papers. It starts from one or more seed papers and builds a network of related works based on citations.\nThese tools can help identify influential papers, discover emerging trends, and find gaps in the literature. The generated citation networks can be used to guide literature reviews and tell research stories.\n\nLitmaps\n\nHow to do a literature review: 5 minute guide with Litmaps\nTell Your Research Story with Litmaps\n\nResearchRabbit\n\nHow to get started with ResearchRabbit\n\nConnected Papers"
+  },
+  {
+    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#reading",
+    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#reading",
+    "title": "Tools for Literature Review",
+    "section": "Reading",
+    "text": "Reading\n\nNotebookLM\n\nAn AI research assistant by Google that helps read, understand, and summarize pdf files, videos, and web pages.\n\nScholarcy\n\nSummarizes research papers and highlights key points."
+  },
+  {
+    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#section",
+    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#section",
+    "title": "Tools for Literature Review",
     "section": "",
-    "text": "Recording of recent research papers related to reinforcement learning for operations research problems."
+    "text": "https://next-ai-drawio.jiang.jp/en"
   },
   {
-    "objectID": "blog/RL-OR-papers/index.html#rl-for-inventory-management",
-    "href": "blog/RL-OR-papers/index.html#rl-for-inventory-management",
-    "title": "Papers on Reinforcement Learning for Operations Research",
-    "section": "RL for inventory management",
-    "text": "RL for inventory management\n\nF. Stranieri, F. Stella, and C. Kouki, “Performance of deep reinforcement learning algorithms in two-echelon inventory control systems,” Int. J. Prod. Res., vol. 62, no. 17, pp. 6211–6226, Sept. 2024. Code\n\nProblem: two-echelon inventory control systems, seasonal demand, multi-products\nMethod:\n\nMDP formulation; DRL algorithms; Balance allocation rule;\nBO for heuristic policies;\n\n\nX. Liu, C. Alexopoulos, and Y. Peng, “A simulation-driven machine learning framework for large-scale inventory management,” Ann. Oper. Res., pp. 1–27, Oct. 2025. Code\n\nImitation learning with target heuristic policies\nReal data from JD.com (not public)\nProblem: Multi-product, single and multi-echelon\nComputational complexity; Optimiality proofs;\n\nT. Temizöz, C. Imdahl, R. Dijkman, D. Lamghari-Idrissi, and W. van Jaarsveld, “Deep controlled learning for inventory control,” Eur. J. Oper. Res., vol. 324, no. 1, pp. 104–117, July 2025. Code written in C++\n\nProblem: lost sales, perishable inventory, and random lead times\nMethods:\n\nNew algorithm, Deep controlled learning, for Input-Driven MDPs\nRL as classification problem\n\n\nH. Dehaybe, D. Catanzaro, and P. Chevalier, “Deep Reinforcement Learning for inventory optimization with non-stationary uncertain demand,” Eur. J. Oper. Res., vol. 314, no. 2, pp. 433–445, Apr. 2024. Code\n\nProblem:\n\nSingle-Item Stochastic Lot-Sizing Problem (SISLSP) with non-stationary uncertain demand\n\nMethods:\n\nState Embedding of Forecast Windows\n\n\nI. Kaynov, M. van Knippenberg, V. Menkovski, A. van Breemen, and W. van Jaarsveld, “Deep Reinforcement Learning for One-Warehouse Multi-Retailer inventory management,” Int. J. Prod. Econ., vol. 267, no. 109088, p. 109088, Jan. 2024.\n\nProblem: One-Warehouse Multi-Retailer (OWMR) inventory management\nMethods:\n\nSequential allocation rule\n\nExperiments:\n\nShows the proportional allocation rule does not work well and the sequential allocation rule performs better"
-  },
-  {
-    "objectID": "blog/RL-OR-papers/index.html#rl-for-operations-research-problems",
-    "href": "blog/RL-OR-papers/index.html#rl-for-operations-research-problems",
-    "title": "Papers on Reinforcement Learning for Operations Research",
-    "section": "RL for operations research problems",
-    "text": "RL for operations research problems\n\nA. Ramanujam et al., “SafeOR-Gym: A benchmark suite for safe reinforcement learning algorithms on practical operations research problems,” arXiv [cs.LG], 02-June-2025. Code\n\nProblems: 9 OR environments\nMethods: Safe RL algorithms\n\nConstrained Markov Decision Process (CMDP)\nConstraints handling methods\nConstraint RL algorithms"
-  },
-  {
-    "objectID": "blog/2026-02-15-quarto-setting/index.html",
-    "href": "blog/2026-02-15-quarto-setting/index.html",
-    "title": "Quarto Configuration for Book",
+    "objectID": "blog/2026-02-13-subscription/index.html",
+    "href": "blog/2026-02-13-subscription/index.html",
+    "title": "Subscription Tools for Research and Education",
     "section": "",
-    "text": "Quarto projects can be configured using a _quarto.yml file. A sample configuration is shown below:"
+    "text": "overleaf\npaperpile\nlitmaps\nslack"
   },
   {
-    "objectID": "blog/2026-02-15-quarto-setting/index.html#freeze",
-    "href": "blog/2026-02-15-quarto-setting/index.html#freeze",
-    "title": "Quarto Configuration for Book",
-    "section": "freeze",
-    "text": "freeze\nWith the increasing content of the book, it may take a long time to render the entire book. To save time, setting freeze: auto will only render the changed files, which can significantly speed up the rendering process.\nexecute:\n  freeze: auto"
-  },
-  {
-    "objectID": "blog/2026-02-15-quarto-setting/index.html#pdf",
-    "href": "blog/2026-02-15-quarto-setting/index.html#pdf",
-    "title": "Quarto Configuration for Book",
-    "section": "pdf",
-    "text": "pdf\nThe following configuration can be used to generate a PDF version of the book using LuaLaTeX and the ltjbook document class, which is suitable for books with Japanese content.\nuse-rsvg-convert: true is required to render SVG images in the PDF output.\nformat:\n  pdf:\n    pdf-engine: lualatex\n    documentclass: ltjbook\n    toc: true\n    toc-depth: 1\n    use-rsvg-convert: true"
-  },
-  {
-    "objectID": "blog/2026-02-15-quarto-setting/index.html#pseudocode",
-    "href": "blog/2026-02-15-quarto-setting/index.html#pseudocode",
-    "title": "Quarto Configuration for Book",
-    "section": "pseudocode",
-    "text": "pseudocode\nfilters:\n  - pseudocode"
-  },
-  {
-    "objectID": "blog/2026-02-12-allocation-rule/index.html",
-    "href": "blog/2026-02-12-allocation-rule/index.html",
-    "title": "Allocation rules in multi-echelon distribution systems",
+    "objectID": "blog/2026-02-07-china-university/index.html",
+    "href": "blog/2026-02-07-china-university/index.html",
+    "title": "中国の大学ランキング",
     "section": "",
-    "text": "When the order quantity exceeds the available inventory at a warehouse, allocation rules determine how to distribute the limited stock among multiple downstream facilities. Different allocation rules can significantly impact the performance of a multi-echelon distribution system."
+    "text": "本資料は大学教員を対象に，中国の大学ランキングについて解説するものである．"
   },
   {
-    "objectID": "blog/2026-02-12-allocation-rule/index.html#proportional-allocation-rule",
-    "href": "blog/2026-02-12-allocation-rule/index.html#proportional-allocation-rule",
-    "title": "Allocation rules in multi-echelon distribution systems",
-    "section": "Proportional Allocation Rule",
-    "text": "Proportional Allocation Rule\nThe proportional allocation rule is widely used and intuitive. This rule scale down the orders from each retailer proportionally based on their original order quantities to match the available inventory at the warehouse.\nLet \\(q_i\\) be the order quantity from retailer \\(i\\), and \\(I\\) be the available inventory at the warehouse. The proportional allocation rule adjusts the order quantities as follows:\n\\[\nq_i \\leftarrow \\frac{q_i}{\\sum_{j} q_j} I\n\\]\nMy experiments and previous studies (Kaynov et al. 2024) have shown that the proportional allocation rule often fails to learn effective inventory policies in multi-echelon systems."
+    "objectID": "blog/2026-02-07-china-university/index.html#arwu世界大学学術ランキング",
+    "href": "blog/2026-02-07-china-university/index.html#arwu世界大学学術ランキング",
+    "title": "中国の大学ランキング",
+    "section": "ARWU（世界大学学術ランキング）",
+    "text": "ARWU（世界大学学術ランキング）\n世界大学ランキングには様々なものが存在するが，代表的なものとして以下の三つが挙げられる．\n\nQS世界大学ランキング\nTHE世界大学ランキング\n世界大学学術ランキング\n\nこのうち世界大学学術ランキング（ARWU）は，2003年に上海交通大学によって創始された指標である．他ランキングと比較して，論文引用数，Nature・Science誌論文数など，研究業績を用いて評価を行う点に特徴がある．"
   },
   {
-    "objectID": "blog/2026-02-12-allocation-rule/index.html#randomized-sequential-allocation-rule",
-    "href": "blog/2026-02-12-allocation-rule/index.html#randomized-sequential-allocation-rule",
-    "title": "Allocation rules in multi-echelon distribution systems",
-    "section": "Randomized Sequential Allocation Rule",
-    "text": "Randomized Sequential Allocation Rule\nKaynov et al. (2024) proposed the randomized sequential allocation rule to address the limitations of the proportional rule. In this approach, the sequence of retailers is randomized in each period. The warehouse then allocates inventory to retailers in this random order until the available stock is exhausted.\nThe experimental results in Kaynov et al. (2024) demonstrate that the randomized sequential allocation rule leads to feasible actions.\nStranieri, Stella, and Kouki (2024) indicated that the last facilities in the allocation sequence may receive insufficient inventory under the randomized sequential allocation rule, resulting it difficult to recover from stockouts."
+    "objectID": "blog/2026-02-07-china-university/index.html#大学ランキングの調べ方",
+    "href": "blog/2026-02-07-china-university/index.html#大学ランキングの調べ方",
+    "title": "中国の大学ランキング",
+    "section": "大学ランキングの調べ方",
+    "text": "大学ランキングの調べ方\nARWUの英語版サイトでは上位校のみの掲載に留まるが，中国語版サイトでは中国国内の大学を網羅した詳細なランキングが公表されている．中国語の正式名称で検索を行うことにより，各大学の正確な立ち位置を把握することが可能である．\n\nARWUの中国語版サイトにアクセス\n検索ボックス（请输入大学名称）に該当する大学名を入力\n検索結果よりランキングを確認\n\nステップ2において，大学名は「簡体字」で入力する必要がある点に注意されたい（例：「清華大学」→「清华大学」）．"
   },
   {
-    "objectID": "blog/2026-02-12-allocation-rule/index.html#balanced-allocation-rule",
-    "href": "blog/2026-02-12-allocation-rule/index.html#balanced-allocation-rule",
-    "title": "Allocation rules in multi-echelon distribution systems",
-    "section": "Balanced allocation rule",
-    "text": "Balanced allocation rule\nStranieri, Stella, and Kouki (2024) proposed the balanced allocation rule. This rule proceeds in three steps:\n\nrandomly select a retailer\nif the order quantity from the selected retailer is larger than 0, then decrease its order by 1 unit.\nrepeat steps 1 and 2 until the total order quantity matches the available inventory at the warehouse."
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ziang Liu",
+    "section": "",
+    "text": "Associate Professor, Ph.D.\nDepartment of Industrial and Systems Engineering,\nHosei University\n \n  \n   \n  \n    \n     Google Scholar\n  \n  \n    \n     Github\n  \n  \n    \n     Email\n  \n  \n    \n     researchmap\n  \n  \n    \n     Lab/研究室\n  \n  \n     ORCID\n  \n  \n     KAKEN\n  \n  \n     ResearchGate"
+  },
+  {
+    "objectID": "projects/Data-driven/index.html",
+    "href": "projects/Data-driven/index.html",
+    "title": "動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築",
+    "section": "",
+    "text": "研究課題: 23K22983\n研究代表者: 西 竜志\n研究分担者: 劉 子昂\n研究期間: 2024年4月1日 - 2026年3月31日"
   },
   {
     "objectID": "note.html",
     "href": "note.html",
     "title": "Ziang Liu",
     "section": "",
-    "text": "quarto publish gh-pages\nicon: https://icons.getbootstrap.com"
+    "text": "quarto publish gh-pages\nicon: https://icons.getbootstrap.com\n\nEnglish日本語中文\n\n\n\nZiang Liu\n\nAssociate Professor, Ph.D.\nDepartment of Industrial and Systems Engineering,\nHosei University\n\n\n\n\n\n\n劉 子昂\n准教授, ​博士（工学）\n​法政大学 理工学部 経営システム工学科\n\n\n研究分野\n\n最適化\n人工知能\n経営工学\n\n\n\n\n\n\n刘子昂\n副教授, 博士\n法政大学 理工学部 经营系统工学科\n\n\n研究领域\n\n最优化\n人工智能\n运筹学\n\n\n\n\n\n\nJoin our Lab"
   },
   {
     "objectID": "posts/genai-tool/index.html",
@@ -231,81 +231,116 @@
     "text": "Reinforcement Learning\n\nmdptools: A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning.\ninventory-gym: A suite of inventory control environments compatible with Gymnasium, Stable Baselines3, and mdptools."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ziang Liu",
+    "objectID": "projects/RL-XAI/index.html",
+    "href": "projects/RL-XAI/index.html",
+    "title": "深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム",
     "section": "",
-    "text": "Google Scholar\n  \n  \n    \n     Github\n  \n  \n    \n     Email\n  \n  \n    \n     researchmap\n  \n  \n    \n     Lab/研究室\n  \n  \n     ORCID\n  \n  \n     KAKEN\n  \n  \n     ResearchGate\n  \n\n  \n  \n\nEnglish日本語中文\n\n\n\nZiang Liu\n\nAssociate Professor, Ph.D.\nDepartment of Industrial and Systems Engineering, Hosei University\n\n\n\n\n\n\n劉 子昂\n准教授, ​博士（工学）\n​法政大学 理工学部 経営システム工学科\n\n\n研究分野\n\n最適化\n人工知能\n経営工学\n\n\n\n\n\n\n刘子昂\n副教授, 博士\n法政大学 理工学部 经营系统工学科\n\n\n研究领域\n\n最优化\n人工智能\n运筹学\n\n\n\n\n\n\n Join our Lab"
+    "text": "研究課題: 23K13514\n研究代表者: 劉子昂\n研究期間: 2023年4月1日 -"
   },
   {
-    "objectID": "blog/2026-02-07-china-university/index.html",
-    "href": "blog/2026-02-07-china-university/index.html",
-    "title": "中国の大学ランキング",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "本資料は大学教員を対象に，中国の大学ランキングについて解説するものである．"
+    "text": "深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム\n\n\n\nJSPS KAKENHI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築\n\n\n\nJSPS KAKENHI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog/2026-02-07-china-university/index.html#arwu世界大学学術ランキング",
-    "href": "blog/2026-02-07-china-university/index.html#arwu世界大学学術ランキング",
-    "title": "中国の大学ランキング",
-    "section": "ARWU（世界大学学術ランキング）",
-    "text": "ARWU（世界大学学術ランキング）\n世界大学ランキングには様々なものが存在するが，代表的なものとして以下の三つが挙げられる．\n\nQS世界大学ランキング\nTHE世界大学ランキング\n世界大学学術ランキング\n\nこのうち世界大学学術ランキング（ARWU）は，2003年に上海交通大学によって創始された指標である．他ランキングと比較して，論文引用数，Nature・Science誌論文数など，研究業績を用いて評価を行う点に特徴がある．"
-  },
-  {
-    "objectID": "blog/2026-02-07-china-university/index.html#大学ランキングの調べ方",
-    "href": "blog/2026-02-07-china-university/index.html#大学ランキングの調べ方",
-    "title": "中国の大学ランキング",
-    "section": "大学ランキングの調べ方",
-    "text": "大学ランキングの調べ方\nARWUの英語版サイトでは上位校のみの掲載に留まるが，中国語版サイトでは中国国内の大学を網羅した詳細なランキングが公表されている．中国語の正式名称で検索を行うことにより，各大学の正確な立ち位置を把握することが可能である．\n\nARWUの中国語版サイトにアクセス\n検索ボックス（请输入大学名称）に該当する大学名を入力\n検索結果よりランキングを確認\n\nステップ2において，大学名は「簡体字」で入力する必要がある点に注意されたい（例：「清華大学」→「清华大学」）．"
-  },
-  {
-    "objectID": "blog/2026-02-13-subscription/index.html",
-    "href": "blog/2026-02-13-subscription/index.html",
-    "title": "Subscription Tools for Research and Education",
+    "objectID": "blog/2026-02-12-allocation-rule/index.html",
+    "href": "blog/2026-02-12-allocation-rule/index.html",
+    "title": "Allocation rules in multi-echelon distribution systems",
     "section": "",
-    "text": "overleaf\npaperpile\nlitmaps\nslack"
+    "text": "When the order quantity exceeds the available inventory at a warehouse, allocation rules determine how to distribute the limited stock among multiple downstream facilities. Different allocation rules can significantly impact the performance of a multi-echelon distribution system."
   },
   {
-    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html",
-    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html",
-    "title": "Tools for Literature Review",
+    "objectID": "blog/2026-02-12-allocation-rule/index.html#proportional-allocation-rule",
+    "href": "blog/2026-02-12-allocation-rule/index.html#proportional-allocation-rule",
+    "title": "Allocation rules in multi-echelon distribution systems",
+    "section": "Proportional Allocation Rule",
+    "text": "Proportional Allocation Rule\nThe proportional allocation rule is widely used and intuitive. This rule scale down the orders from each retailer proportionally based on their original order quantities to match the available inventory at the warehouse.\nLet \\(q_i\\) be the order quantity from retailer \\(i\\), and \\(I\\) be the available inventory at the warehouse. The proportional allocation rule adjusts the order quantities as follows:\n\\[\nq_i \\leftarrow \\frac{q_i}{\\sum_{j} q_j} I\n\\]\nMy experiments and previous studies (Kaynov et al. 2024) have shown that the proportional allocation rule often fails to learn effective inventory policies in multi-echelon systems."
+  },
+  {
+    "objectID": "blog/2026-02-12-allocation-rule/index.html#randomized-sequential-allocation-rule",
+    "href": "blog/2026-02-12-allocation-rule/index.html#randomized-sequential-allocation-rule",
+    "title": "Allocation rules in multi-echelon distribution systems",
+    "section": "Randomized Sequential Allocation Rule",
+    "text": "Randomized Sequential Allocation Rule\nKaynov et al. (2024) proposed the randomized sequential allocation rule to address the limitations of the proportional rule. In this approach, the sequence of retailers is randomized in each period. The warehouse then allocates inventory to retailers in this random order until the available stock is exhausted.\nThe experimental results in Kaynov et al. (2024) demonstrate that the randomized sequential allocation rule leads to feasible actions.\nStranieri, Stella, and Kouki (2024) indicated that the last facilities in the allocation sequence may receive insufficient inventory under the randomized sequential allocation rule, resulting it difficult to recover from stockouts."
+  },
+  {
+    "objectID": "blog/2026-02-12-allocation-rule/index.html#balanced-allocation-rule",
+    "href": "blog/2026-02-12-allocation-rule/index.html#balanced-allocation-rule",
+    "title": "Allocation rules in multi-echelon distribution systems",
+    "section": "Balanced allocation rule",
+    "text": "Balanced allocation rule\nStranieri, Stella, and Kouki (2024) proposed the balanced allocation rule. This rule proceeds in three steps:\n\nrandomly select a retailer\nif the order quantity from the selected retailer is larger than 0, then decrease its order by 1 unit.\nrepeat steps 1 and 2 until the total order quantity matches the available inventory at the warehouse."
+  },
+  {
+    "objectID": "blog/2026-02-15-quarto-setting/index.html",
+    "href": "blog/2026-02-15-quarto-setting/index.html",
+    "title": "Quarto Configuration for Book",
     "section": "",
-    "text": "Summarizing tools that can help with literature review for research papers."
+    "text": "Quarto projects can be configured using a _quarto.yml file. A sample configuration is shown below:"
   },
   {
-    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#search-engines",
-    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#search-engines",
-    "title": "Tools for Literature Review",
-    "section": "Search engines",
-    "text": "Search engines\n\nGoogle Scholar\nSemantic Scholar"
+    "objectID": "blog/2026-02-15-quarto-setting/index.html#freeze",
+    "href": "blog/2026-02-15-quarto-setting/index.html#freeze",
+    "title": "Quarto Configuration for Book",
+    "section": "freeze",
+    "text": "freeze\nWith the increasing content of the book, it may take a long time to render the entire book. To save time, setting freeze: auto will only render the changed files, which can significantly speed up the rendering process.\nexecute:\n  freeze: auto"
   },
   {
-    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#semantic-search",
-    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#semantic-search",
-    "title": "Tools for Literature Review",
-    "section": "Semantic search",
-    "text": "Semantic search\n\nConsensus\n\nAn AI-powered academic search engine.\n\nElicit"
+    "objectID": "blog/2026-02-15-quarto-setting/index.html#pdf",
+    "href": "blog/2026-02-15-quarto-setting/index.html#pdf",
+    "title": "Quarto Configuration for Book",
+    "section": "pdf",
+    "text": "pdf\nThe following configuration can be used to generate a PDF version of the book using LuaLaTeX and the ltjbook document class, which is suitable for books with Japanese content.\nuse-rsvg-convert: true is required to render SVG images in the PDF output.\nformat:\n  pdf:\n    pdf-engine: lualatex\n    documentclass: ltjbook\n    toc: true\n    toc-depth: 1\n    use-rsvg-convert: true"
   },
   {
-    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#citation-network",
-    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#citation-network",
-    "title": "Tools for Literature Review",
-    "section": "Citation network",
-    "text": "Citation network\nCitation network tools help visualize and explore relationships between research papers. It starts from one or more seed papers and builds a network of related works based on citations.\nThese tools can help identify influential papers, discover emerging trends, and find gaps in the literature. The generated citation networks can be used to guide literature reviews and tell research stories.\n\nLitmaps\n\nHow to do a literature review: 5 minute guide with Litmaps\nTell Your Research Story with Litmaps\n\nResearchRabbit\n\nHow to get started with ResearchRabbit\n\nConnected Papers"
+    "objectID": "blog/2026-02-15-quarto-setting/index.html#pseudocode",
+    "href": "blog/2026-02-15-quarto-setting/index.html#pseudocode",
+    "title": "Quarto Configuration for Book",
+    "section": "pseudocode",
+    "text": "pseudocode\nfilters:\n  - pseudocode"
   },
   {
-    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#reading",
-    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#reading",
-    "title": "Tools for Literature Review",
-    "section": "Reading",
-    "text": "Reading\n\nNotebookLM\n\nAn AI research assistant by Google that helps read, understand, and summarize pdf files, videos, and web pages.\n\nScholarcy\n\nSummarizes research papers and highlights key points."
-  },
-  {
-    "objectID": "blog/2026-02-09-Tools-for-Literature-Review/index.html#section",
-    "href": "blog/2026-02-09-Tools-for-Literature-Review/index.html#section",
-    "title": "Tools for Literature Review",
+    "objectID": "blog/RL-OR-papers/index.html",
+    "href": "blog/RL-OR-papers/index.html",
+    "title": "Papers on Reinforcement Learning for Operations Research",
     "section": "",
-    "text": "https://next-ai-drawio.jiang.jp/en"
+    "text": "Recording of recent research papers related to reinforcement learning for operations research problems."
+  },
+  {
+    "objectID": "blog/RL-OR-papers/index.html#rl-for-inventory-management",
+    "href": "blog/RL-OR-papers/index.html#rl-for-inventory-management",
+    "title": "Papers on Reinforcement Learning for Operations Research",
+    "section": "RL for inventory management",
+    "text": "RL for inventory management\n\nF. Stranieri, F. Stella, and C. Kouki, “Performance of deep reinforcement learning algorithms in two-echelon inventory control systems,” Int. J. Prod. Res., vol. 62, no. 17, pp. 6211–6226, Sept. 2024. Code\n\nProblem: two-echelon inventory control systems, seasonal demand, multi-products\nMethod:\n\nMDP formulation; DRL algorithms; Balance allocation rule;\nBO for heuristic policies;\n\n\nX. Liu, C. Alexopoulos, and Y. Peng, “A simulation-driven machine learning framework for large-scale inventory management,” Ann. Oper. Res., pp. 1–27, Oct. 2025. Code\n\nImitation learning with target heuristic policies\nReal data from JD.com (not public)\nProblem: Multi-product, single and multi-echelon\nComputational complexity; Optimiality proofs;\n\nT. Temizöz, C. Imdahl, R. Dijkman, D. Lamghari-Idrissi, and W. van Jaarsveld, “Deep controlled learning for inventory control,” Eur. J. Oper. Res., vol. 324, no. 1, pp. 104–117, July 2025. Code written in C++\n\nProblem: lost sales, perishable inventory, and random lead times\nMethods:\n\nNew algorithm, Deep controlled learning, for Input-Driven MDPs\nRL as classification problem\n\n\nH. Dehaybe, D. Catanzaro, and P. Chevalier, “Deep Reinforcement Learning for inventory optimization with non-stationary uncertain demand,” Eur. J. Oper. Res., vol. 314, no. 2, pp. 433–445, Apr. 2024. Code\n\nProblem:\n\nSingle-Item Stochastic Lot-Sizing Problem (SISLSP) with non-stationary uncertain demand\n\nMethods:\n\nState Embedding of Forecast Windows\n\n\nI. Kaynov, M. van Knippenberg, V. Menkovski, A. van Breemen, and W. van Jaarsveld, “Deep Reinforcement Learning for One-Warehouse Multi-Retailer inventory management,” Int. J. Prod. Econ., vol. 267, no. 109088, p. 109088, Jan. 2024.\n\nProblem: One-Warehouse Multi-Retailer (OWMR) inventory management\nMethods:\n\nSequential allocation rule\n\nExperiments:\n\nShows the proportional allocation rule does not work well and the sequential allocation rule performs better"
+  },
+  {
+    "objectID": "blog/RL-OR-papers/index.html#rl-for-operations-research-problems",
+    "href": "blog/RL-OR-papers/index.html#rl-for-operations-research-problems",
+    "title": "Papers on Reinforcement Learning for Operations Research",
+    "section": "RL for operations research problems",
+    "text": "RL for operations research problems\n\nA. Ramanujam et al., “SafeOR-Gym: A benchmark suite for safe reinforcement learning algorithms on practical operations research problems,” arXiv [cs.LG], 02-June-2025. Code\n\nProblems: 9 OR environments\nMethods: Safe RL algorithms\n\nConstrained Markov Decision Process (CMDP)\nConstraints handling methods\nConstraint RL algorithms"
+  },
+  {
+    "objectID": "blog/welcome/index.html",
+    "href": "blog/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "blog/2026-02-22-VFRL/index.html",
+    "href": "blog/2026-02-22-VFRL/index.html",
+    "title": "Algorithms for Federated Reinforcement Learning",
+    "section": "",
+    "text": "H. Jin, Y. Peng, W. Yang, S. Wang, and Z. Zhang, “Federated Reinforcement Learning with environment heterogeneity,” arXiv [cs.LG], 2022.\n\n\n\n\\(n\\) agents located in \\(n\\) different environments.\nEach agent \\(i\\) has the same state space \\(\\mathcal{S}\\), action space \\(\\mathcal{A}\\), reward function \\(r\\), but different transition dynamics \\(P_i\\).\n\n\n\n\nLearn a uniformly good policy: QAvg and PAvg\nPersonalization: embedding-based method, applied to DQNAvg and DDPGAvg\n\n\nEach agent \\(i\\) in iteration \\(t\\) maintains a local Q-function \\(Q^t_i\\). Agents perform local updates using their own data. After local updates, agents communicate their Q-functions to get the average Q-function:\n\\[\n\\bar{Q}_t(s, a) \\leftarrow \\frac{1}{n} \\sum_{i=1}^n Q_t^i(s, a), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}\n\\]\nThen,\n\\[\nQ_{t}^i(s, a) \\leftarrow \\bar{Q}_t(s, a), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}, i = 1, \\ldots, n.\n\\]\n\n\n\nEach agent \\(i\\) repeats the local update for several iterations to get a local policy \\(\\pi_{t}^i(\\cdot|s)\\). Then, agents communicate their policies to get the average policy:\n\\[\n\\bar{\\pi}_t(a|s) \\leftarrow \\frac{1}{n} \\sum_{i=1}^n \\pi_t^i(a|s), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}\n\\]\nThen,\n\\[\n\\pi_{t}^i(a|s) \\leftarrow \\bar{\\pi}_t(a|s), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}, i = 1, \\ldots, n.\n\\]"
+  },
+  {
+    "objectID": "blog/2026-02-22-VFRL/index.html#federated-reinforcement-learning-with-environment-heterogeneity",
+    "href": "blog/2026-02-22-VFRL/index.html#federated-reinforcement-learning-with-environment-heterogeneity",
+    "title": "Algorithms for Federated Reinforcement Learning",
+    "section": "",
+    "text": "H. Jin, Y. Peng, W. Yang, S. Wang, and Z. Zhang, “Federated Reinforcement Learning with environment heterogeneity,” arXiv [cs.LG], 2022.\n\n\n\n\\(n\\) agents located in \\(n\\) different environments.\nEach agent \\(i\\) has the same state space \\(\\mathcal{S}\\), action space \\(\\mathcal{A}\\), reward function \\(r\\), but different transition dynamics \\(P_i\\).\n\n\n\n\nLearn a uniformly good policy: QAvg and PAvg\nPersonalization: embedding-based method, applied to DQNAvg and DDPGAvg\n\n\nEach agent \\(i\\) in iteration \\(t\\) maintains a local Q-function \\(Q^t_i\\). Agents perform local updates using their own data. After local updates, agents communicate their Q-functions to get the average Q-function:\n\\[\n\\bar{Q}_t(s, a) \\leftarrow \\frac{1}{n} \\sum_{i=1}^n Q_t^i(s, a), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}\n\\]\nThen,\n\\[\nQ_{t}^i(s, a) \\leftarrow \\bar{Q}_t(s, a), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}, i = 1, \\ldots, n.\n\\]\n\n\n\nEach agent \\(i\\) repeats the local update for several iterations to get a local policy \\(\\pi_{t}^i(\\cdot|s)\\). Then, agents communicate their policies to get the average policy:\n\\[\n\\bar{\\pi}_t(a|s) \\leftarrow \\frac{1}{n} \\sum_{i=1}^n \\pi_t^i(a|s), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}\n\\]\nThen,\n\\[\n\\pi_{t}^i(a|s) \\leftarrow \\bar{\\pi}_t(a|s), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}, i = 1, \\ldots, n.\n\\]"
   },
   {
     "objectID": "publications.html",

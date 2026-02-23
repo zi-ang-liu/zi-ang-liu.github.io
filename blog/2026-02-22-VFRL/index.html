@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ziang Liu">
-<meta name="dcterms.date" content="2026-02-11">
+<meta name="dcterms.date" content="2026-02-15">
 
-<title>Papers on Large Language Models for Optimization and Operations Research – Ziang Liu</title>
+<title>Algorithms for Federated Reinforcement Learning – Ziang Liu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,9 +72,38 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Papers on Large Language Models for Optimization and Operations Research – Ziang Liu">
+<meta property="og:title" content="Algorithms for Federated Reinforcement Learning – Ziang Liu">
 <meta property="og:description" content="Ziang Liu’s Personal Website">
 <meta property="og:site_name" content="Ziang Liu">
 </head>
@@ -142,9 +171,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Papers on Large Language Models for Optimization and Operations Research</h1>
+      <h1 class="title">Algorithms for Federated Reinforcement Learning</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">research</div>
+                <div class="quarto-category">reinforcement learning</div>
+                <div class="quarto-category">federated learning</div>
               </div>
                   </div>
   </div>
@@ -162,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 11, 2026</p>
+        <p class="date">February 15, 2026</p>
       </div>
     </div>
     
@@ -181,10 +212,49 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Recording of recent research papers related to large language models for optimization and operations research problems.</p>
-<!-- ![](thumbnail.jpg) -->
+<section id="federated-reinforcement-learning-with-environment-heterogeneity" class="level2">
+<h2 class="anchored" data-anchor-id="federated-reinforcement-learning-with-environment-heterogeneity">Federated Reinforcement Learning with Environment Heterogeneity</h2>
+<p>H. Jin, Y. Peng, W. Yang, S. Wang, and Z. Zhang, “Federated Reinforcement Learning with environment heterogeneity,” arXiv [cs.LG], 2022.</p>
+<section id="problem-setting" class="level3">
+<h3 class="anchored" data-anchor-id="problem-setting">Problem setting:</h3>
+<ul>
+<li><span class="math inline">\(n\)</span> agents located in <span class="math inline">\(n\)</span> different environments.</li>
+<li>Each agent <span class="math inline">\(i\)</span> has the same state space <span class="math inline">\(\mathcal{S}\)</span>, action space <span class="math inline">\(\mathcal{A}\)</span>, reward function <span class="math inline">\(r\)</span>, but different transition dynamics <span class="math inline">\(P_i\)</span>.</li>
+</ul>
+</section>
+<section id="algorithm" class="level3">
+<h3 class="anchored" data-anchor-id="algorithm">Algorithm:</h3>
+<p>Learn a uniformly good policy: <code>QAvg</code> and <code>PAvg</code></p>
+<p>Personalization: embedding-based method, applied to <code>DQNAvg</code> and <code>DDPGAvg</code></p>
+<section id="qavg" class="level4">
+<h4 class="anchored" data-anchor-id="qavg">QAvg</h4>
+<p>Each agent <span class="math inline">\(i\)</span> in iteration <span class="math inline">\(t\)</span> maintains a local Q-function <span class="math inline">\(Q^t_i\)</span>. Agents perform local updates using their own data. After local updates, agents communicate their Q-functions to get the average Q-function:</p>
+<p><span class="math display">\[
+\bar{Q}_t(s, a) \leftarrow \frac{1}{n} \sum_{i=1}^n Q_t^i(s, a), \quad \forall s \in \mathcal{S}, a \in \mathcal{A}
+\]</span></p>
+<p>Then,</p>
+<p><span class="math display">\[
+Q_{t}^i(s, a) \leftarrow \bar{Q}_t(s, a), \quad \forall s \in \mathcal{S}, a \in \mathcal{A}, i = 1, \ldots, n.
+\]</span></p>
+</section>
+<section id="pavg" class="level4">
+<h4 class="anchored" data-anchor-id="pavg">PAvg</h4>
+<p>Each agent <span class="math inline">\(i\)</span> repeats the local update for several iterations to get a local policy <span class="math inline">\(\pi_{t}^i(\cdot|s)\)</span>. Then, agents communicate their policies to get the average policy:</p>
+<p><span class="math display">\[
+\bar{\pi}_t(a|s) \leftarrow \frac{1}{n} \sum_{i=1}^n \pi_t^i(a|s), \quad \forall s \in \mathcal{S}, a \in \mathcal{A}
+\]</span></p>
+<p>Then,</p>
+<p><span class="math display">\[
+\pi_{t}^i(a|s) \leftarrow \bar{\pi}_t(a|s), \quad \forall s \in \mathcal{S}, a \in \mathcal{A}, i = 1, \ldots, n.
+\]</span></p>
+</section>
+</section>
+<section id="personalization" class="level3">
+<h3 class="anchored" data-anchor-id="personalization">Personalization</h3>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

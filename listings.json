@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/blog/2026-02-15-quarto-setting/index.html",
+      "/blog/2026-02-22-VFRL/index.html",
       "/blog/2026-02-13-number-run-length/index.html",
       "/blog/2026-02-12-allocation-rule/index.html",
       "/blog/RL-OR-papers/index.html",
@@ -16,5 +17,12 @@
   {
     "listing": "/teaching.html",
     "items": []
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/RL-XAI/index.html",
+      "/projects/Data-driven/index.html"
+    ]
   }
 ]
