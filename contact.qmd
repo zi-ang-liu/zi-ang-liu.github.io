@@ -11,12 +11,12 @@ title: "Contact"
 法政大学 理工学部 経営システム工学科
 ``` -->
 
-```
 Hosei University   
 3-7-2 Kajino-cho   
-Koganei-shi, Tokyo 184-8584 
+Koganei-shi,    
+Tokyo 184-8584   
 Japan
-```
+
 :::
 
 ::: {.column width="60%"}
