@@ -5,6 +5,10 @@ date: 2026-02-15
 categories: [research, reinforcement learning, federated learning]
 ---
 
+
+
+
+
 ## Federated Reinforcement Learning with Environment Heterogeneity
 
 H. Jin, Y. Peng, W. Yang, S. Wang, and Z. Zhang, “Federated Reinforcement Learning with environment heterogeneity,” arXiv [cs.LG], 2022. [code](https://github.com/pengyang7881187/FedRL)

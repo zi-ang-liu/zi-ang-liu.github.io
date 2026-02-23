@@ -17,23 +17,28 @@ about:
     - icon: mortarboard-fill
       text: Google Scholar
       href: https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl
+    - icon: book
+      text: Semantic Scholar
+      href: https://www.semanticscholar.org/author/Ziang-Liu/2117941724
+    - icon: caret-right-fill
+      text: researchmap
+      href: https://researchmap.jp/liu.ziang
     - icon: github
       text: Github
       href: https://github.com/zi-ang-liu
     - icon: envelope
       text: Email
       href: mailto:liu@hosei.ac.jp
-    - icon: caret-right-fill
-      text: researchmap
-      href: https://researchmap.jp/liu.ziang
     - text: Lab/研究室
       icon: house-fill
       href: https://isl-hosei.github.io/
     - text: ORCID
+      # icon: person-vcard
       href: https://orcid.org/0000-0002-1364-3502
     - text: KAKEN
       href: https://nrid.nii.ac.jp/ja/nrid/1000030908166/
     - text: ResearchGate
+      # icon: r-circle
       href: https://www.researchgate.net/profile/Ziang-Liu-4
 # format: 
 #   html:
