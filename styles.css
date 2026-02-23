@@ -1,1 +1,10 @@
 /* css styles */
+
+#hero-heading {
+    font-size: clamp(1rem, 0.95rem + 0.35vw, 1.2rem);
+    max-width: 60ch;
+}
+
+#listing-books .thumbnail-image.card-img {
+    height: auto !important;
+}
