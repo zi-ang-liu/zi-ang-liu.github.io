@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ziang Liu">
-<meta name="dcterms.date" content="2026-02-15">
+<meta name="dcterms.date" content="2026-02-25">
 
 <title>Algorithms for Federated Reinforcement Learning – Ziang Liu</title>
 <style>
@@ -193,7 +193,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 15, 2026</p>
+        <p class="date">February 25, 2026</p>
       </div>
     </div>
     
@@ -212,9 +212,14 @@ window.Quarto = {
 
 
 
+<p>Related concepts:</p>
+<ul>
+<li>Multi-agent reinforcement learning (MARL)</li>
+<li>Hierarchical reinforcement learning (HRL)</li>
+</ul>
 <section id="federated-reinforcement-learning-with-environment-heterogeneity" class="level2">
 <h2 class="anchored" data-anchor-id="federated-reinforcement-learning-with-environment-heterogeneity">Federated Reinforcement Learning with Environment Heterogeneity</h2>
-<p>H. Jin, Y. Peng, W. Yang, S. Wang, and Z. Zhang, “Federated Reinforcement Learning with environment heterogeneity,” arXiv [cs.LG], 2022.</p>
+<p>H. Jin, Y. Peng, W. Yang, S. Wang, and Z. Zhang, “Federated Reinforcement Learning with environment heterogeneity,” arXiv [cs.LG], 2022. <a href="https://github.com/pengyang7881187/FedRL">code</a></p>
 <section id="problem-setting" class="level3">
 <h3 class="anchored" data-anchor-id="problem-setting">Problem setting:</h3>
 <ul>
@@ -251,9 +256,14 @@ Q_{t}^i(s, a) \leftarrow \bar{Q}_t(s, a), \quad \forall s \in \mathcal{S}, a \in
 </section>
 <section id="personalization" class="level3">
 <h3 class="anchored" data-anchor-id="personalization">Personalization</h3>
-
-
+<p>Each environment is associated with a unique ID, and the ID is embedded into a vector. The embedding vector is concatenated with the state representation and fed into the Q-network or policy network.</p>
+<p>For never-seen-before environments, the vector is initialized as the average of the embedding vectors of the training environments.</p>
 </section>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+
+
 </section>
 
 </main> <!-- /main -->
