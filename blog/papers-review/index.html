@@ -237,13 +237,6 @@ window.Quarto = {
 <li>BO for heuristic policies;</li>
 </ul></li>
 </ul></li>
-<li>X. Liu, C. Alexopoulos, and Y. Peng, “A simulation-driven machine learning framework for large-scale inventory management,” Ann. Oper. Res., pp.&nbsp;1–27, Oct.&nbsp;2025. <a href="https://github.com/xiaotianliu01/DRL_Large_Scale_Inventory">Code</a>
-<ul>
-<li>Imitation learning with target heuristic policies</li>
-<li>Real data from JD.com (not public)</li>
-<li>Problem: Multi-product, single and multi-echelon</li>
-<li>Computational complexity; Optimiality proofs;</li>
-</ul></li>
 <li>T. Temizöz, C. Imdahl, R. Dijkman, D. Lamghari-Idrissi, and W. van Jaarsveld, “Deep controlled learning for inventory control,” Eur. J. Oper. Res., vol.&nbsp;324, no. 1, pp.&nbsp;104–117, July 2025. <a href="https://github.com/tarkantemizoz/DynaPlex">Code written in C++</a>
 <ul>
 <li>Problem: lost sales, perishable inventory, and random lead times</li>
@@ -316,9 +309,24 @@ window.Quarto = {
 <li>vertical federated LSTM model.</li>
 </ul></li>
 </ul>
-
-
 </section>
+</section>
+<section id="e2e" class="level2">
+<h2 class="anchored" data-anchor-id="e2e">E2E</h2>
+<ul>
+<li>M. Qi et al., “A practical end-to-end inventory management model with deep learning,” Manage. Sci., vol.&nbsp;69, no. 2, pp.&nbsp;759–773, Feb.&nbsp;2023. <a href="https://pubsonline.informs.org/doi/suppl/10.1287/mnsc.2022.4564">Code</a></li>
+<li>X. Liu, C. Alexopoulos, and Y. Peng, “A simulation-driven machine learning framework for large-scale inventory management,” Ann. Oper. Res., pp.&nbsp;1–27, Oct.&nbsp;2025. <a href="https://github.com/xiaotianliu01/DRL_Large_Scale_Inventory">Code</a>
+<ul>
+<li>Imitation learning with target heuristic policies</li>
+<li>Real data from JD.com (not public)</li>
+<li>Problem: Multi-product, single and multi-echelon</li>
+<li>Computational complexity; Optimiality proofs;</li>
+</ul></li>
+</ul>
+<p>Qi et al.&nbsp;(2023) propose an end-to-end model to directly map input features to replenishment decisions. They consider a multiperiod inventory management problem with infinite horizon where the demand and vendor lead time are stochastic. The closed-form optimal order quantity is derived given the demand and lead time at each period. Then, they use a neural network to learn the mapping from input features (e.g., features related to demand and VLT; general item-level features; review period; and initial stock level) to three outputs: the order quantity, the demand forecast, and the VLT forecast. A multiquantile RNN (MQRNN) is used in their model. The experiments are conducted on real data from JD.com.</p>
+<p>Liu et al.&nbsp;(2025) extend the end-to-end model by integrating deep reinforcement learning and deep learning.</p>
+
+
 </section>
 
 </main> <!-- /main -->
