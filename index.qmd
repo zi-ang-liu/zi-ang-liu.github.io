@@ -10,7 +10,7 @@ image: https://avatars.githubusercontent.com/u/50853393?s=96&v=4
 email-obfuscation: javascript
 about:
   id: hero-heading
-  image-width: 5em
+  image-width: 10em
   image-shape: rounded
   template: jolla
   links:
