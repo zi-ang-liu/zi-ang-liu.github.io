@@ -116,14 +116,14 @@
     "href": "blog/2026-02-12-allocation-rule/index.html#randomized-sequential-allocation-rule",
     "title": "Allocation rules in multi-echelon distribution systems",
     "section": "Randomized Sequential Allocation Rule",
-    "text": "Randomized Sequential Allocation Rule\nKaynov et al. (2024) proposed the randomized sequential allocation rule to address the limitations of the proportional rule. In this approach, the sequence of retailers is randomized in each period. The warehouse then allocates inventory to retailers in this random order until the available stock is exhausted.\nThe experimental results in Kaynov et al. (2024) demonstrate that the randomized sequential allocation rule leads to feasible actions.\nStranieri, Stella, and Kouki (2024) indicated that the last facilities in the allocation sequence may receive insufficient inventory under the randomized sequential allocation rule, resulting it difficult to recover from stockouts."
+    "text": "Randomized Sequential Allocation Rule\nKaynov et al. (2024) proposed the randomized sequential allocation rule to address the limitations of the proportional rule. In this approach, the sequence of retailers is randomized in each period. The warehouse then allocates inventory to retailers in this random order until the available stock is exhausted.\nThe experimental results in Kaynov et al. (2024) demonstrate that the randomized sequential allocation rule leads to feasible actions.\nStranieri et al. (2024) indicated that the last facilities in the allocation sequence may receive insufficient inventory under the randomized sequential allocation rule, resulting it difficult to recover from stockouts."
   },
   {
     "objectID": "blog/2026-02-12-allocation-rule/index.html#balanced-allocation-rule",
     "href": "blog/2026-02-12-allocation-rule/index.html#balanced-allocation-rule",
     "title": "Allocation rules in multi-echelon distribution systems",
     "section": "Balanced allocation rule",
-    "text": "Balanced allocation rule\nStranieri, Stella, and Kouki (2024) proposed the balanced allocation rule. This rule proceeds in three steps:\n\nrandomly select a retailer\nif the order quantity from the selected retailer is larger than 0, then decrease its order by 1 unit.\nrepeat steps 1 and 2 until the total order quantity matches the available inventory at the warehouse."
+    "text": "Balanced allocation rule\nStranieri et al. (2024) proposed the balanced allocation rule. This rule proceeds in three steps:\n\nrandomly select a retailer\nif the order quantity from the selected retailer is larger than 0, then decrease its order by 1 unit.\nrepeat steps 1 and 2 until the total order quantity matches the available inventory at the warehouse."
   },
   {
     "objectID": "projects.html",
@@ -200,7 +200,7 @@
     "href": "teaching.html#法政大学",
     "title": "Teaching",
     "section": "法政大学",
-    "text": "法政大学\n\n授業\n\n計算機実習A（1年生/春学期/水曜1限/W203）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n最適化アルゴリズム特論（大学院/秋学期/）"
+    "text": "法政大学\n\n学部\n\n計算機実習A（1年生/春学期/水曜1限/W305）\n\nリレーショナル・データベース（3年生/春学期/水曜2限/W305）\n社会システム（1年生/秋学期/金曜3限/W305）\nオペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）\n\n\n\n大学院\n\n最適化アルゴリズム特論（秋学期/）\n先進経営科学特論（秋学期/）"
   },
   {
     "objectID": "teaching.html#時間割小金井キャンパス",
