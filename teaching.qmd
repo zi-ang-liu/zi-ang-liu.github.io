@@ -4,7 +4,7 @@ date-modified: today
 listing:
     - id: books
       type: grid
-      grid-columns: 3
+      grid-columns: 5
       contents:
       - title: "Operations Research"
         image: https://zi-ang-liu.github.io/or-book/cover.png
@@ -40,13 +40,17 @@ listing:
 
 ## 法政大学
 
-### 授業
+### 学部
 
-- 計算機実習A（1年生/春学期/水曜1限/W203）  
-- リレーショナル・データベース（3年生/春学期/水曜2限/遠隔視聴覚室）
+- 計算機実習A（1年生/春学期/水曜1限/W305）  
+- リレーショナル・データベース（3年生/春学期/水曜2限/W305）
 - 社会システム（1年生/秋学期/金曜3限/W305）
 - オペレーションズ・リサーチB（2年生/秋学期/水曜2限/W202）
-- 最適化アルゴリズム特論（大学院/秋学期/）
+
+### 大学院
+
+- 最適化アルゴリズム特論（秋学期/）
+- 先進経営科学特論（秋学期/）
 
 <!-- ### ゼミナール・PBL等
 
