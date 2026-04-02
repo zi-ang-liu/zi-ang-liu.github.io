@@ -1,0 +1,9 @@
+---
+title: "Efficient Algorithm for MDI-EI"
+author: "Ziang Liu"
+date: 2026-04-02
+categories: [research, reinforcement learning, MDP]
+---
+
+## MDP-EI
+
