@@ -52,7 +52,6 @@ Associate Professor, Ph.D.
 :::
 
 
-
-
-
-
+::: {.text-center}
+[Join Us](https://isl-hosei.github.io/join.html){.btn .btn-primary role="button"}
+:::
