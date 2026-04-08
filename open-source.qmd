@@ -7,4 +7,15 @@ I actively develop and maintain several open-source projects. While most are sti
 ## Reinforcement Learning
 
 - [mdptools](https://github.com/zi-ang-liu/mdptools): A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning.
-- [inventory-gym](https://github.com/zi-ang-liu/inventory-gym): A suite of inventory control environments compatible with Gymnasium, Stable Baselines3, and mdptools.
+  
+<!-- - [inventory-gym](https://github.com/zi-ang-liu/inventory-gym): A suite of inventory control environments compatible with Gymnasium, Stable Baselines3, and mdptools. -->
+
+## Paper with Code
+
+- Liu, Ziang, and Tatsushi Nishi. "Inventory control with lateral transshipment using proximal policy optimization." 2023 5th International Conference on Data-driven Optimization of Complex Systems (DOCS). IEEE, 2023. [Code](https://github.com/zi-ang-liu/Inventory_control_with_lateral_transshipment)
+
+## Little projects
+
+- Exact method for perishable inventory control [Code](https://github.com/zi-ang-liu/perishable-inventory-control)
+- Reinforcement learning environments for traffic signal control [Code](https://github.com/zi-ang-liu/uxsim-env)
+- Implementation of Differential Evolution (DE) on the CEC 2014 test suite [Code](https://github.com/zi-ang-liu/DE_CEC2014)
