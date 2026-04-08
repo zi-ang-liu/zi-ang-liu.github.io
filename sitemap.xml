@@ -9,12 +9,8 @@
     <lastmod>2026-03-03T03:15:23.264Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/blog/2026-02-09-Tools-for-Literature-Review/index.html</loc>
-    <lastmod>2026-03-03T03:15:23.261Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/blog/welcome/index.html</loc>
-    <lastmod>2026-03-03T03:15:23.265Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/blog/2026-04-02-algorithm-for-MDP-EI/index.html</loc>
+    <lastmod>2026-04-02T01:23:49.433Z</lastmod>
   </url>
   <url>
     <loc>https://zi-ang-liu.github.io/blog/2026-02-07-china-university/index.html</loc>
@@ -25,47 +21,11 @@
     <lastmod>2026-03-03T03:15:23.264Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/index.html</loc>
-    <lastmod>2026-04-03T00:18:13.901Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/blog/2026-02-12-allocation-rule/index.html</loc>
+    <lastmod>2026-03-03T03:15:23.264Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/projects/Data-driven/index.html</loc>
-    <lastmod>2026-03-03T03:15:23.266Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/open-source.html</loc>
-    <lastmod>2026-03-03T03:15:23.265Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/posts/welcome/index.html</loc>
-    <lastmod>2026-03-03T03:15:23.266Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/posts/pipx/index.html</loc>
-    <lastmod>2026-03-03T03:15:23.266Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/contact.html</loc>
-    <lastmod>2026-03-03T03:15:59.953Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/teaching.html</loc>
-    <lastmod>2026-03-27T05:11:06.783Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/timetable.html</loc>
-    <lastmod>2026-03-03T03:15:23.267Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/posts/paper-prompt-evolution/index.html</loc>
-    <lastmod>2026-03-03T03:15:23.266Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/posts/overleaf/index.html</loc>
-    <lastmod>2026-03-03T03:15:23.266Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/posts/genai-tool/index.html</loc>
+    <loc>https://zi-ang-liu.github.io/projects.html</loc>
     <lastmod>2026-03-03T03:15:23.266Z</lastmod>
   </url>
   <url>
@@ -73,24 +33,60 @@
     <lastmod>2026-03-03T03:15:23.266Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/projects.html</loc>
+    <loc>https://zi-ang-liu.github.io/posts/genai-tool/index.html</loc>
     <lastmod>2026-03-03T03:15:23.266Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/blog/2026-02-12-allocation-rule/index.html</loc>
-    <lastmod>2026-03-03T03:15:23.264Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/posts/overleaf/index.html</loc>
+    <lastmod>2026-03-03T03:15:23.266Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/posts/paper-prompt-evolution/index.html</loc>
+    <lastmod>2026-03-03T03:15:23.266Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/timetable.html</loc>
+    <lastmod>2026-03-03T03:15:23.267Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/teaching.html</loc>
+    <lastmod>2026-03-27T05:11:06.783Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/contact.html</loc>
+    <lastmod>2026-03-03T03:15:59.953Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/posts/pipx/index.html</loc>
+    <lastmod>2026-03-03T03:15:23.266Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/posts/welcome/index.html</loc>
+    <lastmod>2026-03-03T03:15:23.266Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/open-source.html</loc>
+    <lastmod>2026-04-08T23:28:49.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/projects/Data-driven/index.html</loc>
+    <lastmod>2026-03-03T03:15:23.266Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/index.html</loc>
+    <lastmod>2026-04-03T00:18:13.901Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/blog/plan/index.html</loc>
+    <lastmod>2026-04-06T04:52:25.201Z</lastmod>
   </url>
   <url>
     <loc>https://zi-ang-liu.github.io/blog/2026-02-15-quarto-setting/index.html</loc>
     <lastmod>2026-03-03T03:15:23.264Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/blog/2026-02-13-subscription/index.html</loc>
-    <lastmod>2026-03-03T03:15:23.264Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/blog/2026-04-02-algorithm-for-MDP-EI/index.html</loc>
-    <lastmod>2026-04-02T01:23:49.433Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/blog/welcome/index.html</loc>
+    <lastmod>2026-03-03T03:15:23.265Z</lastmod>
   </url>
   <url>
     <loc>https://zi-ang-liu.github.io/blog/papers-review/index.html</loc>
