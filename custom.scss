@@ -1,8 +1,33 @@
 /*-- scss:defaults --*/
-// Base document colors
-// $body-bg: #181818;
-// $body-color: #ccc;
-// $link-color: #75AADB;
+// @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap");
+
+// Nordic-minimalist palette
+$body-bg: #f7f9f8;
+$body-color: #1f2933;
+$link-color: #2e8c87;
+$primary: #243746;
+$secondary: #6f8597;
+
+// Muted and borders
+// $gray-600: #5e6b76;
+// $gray-300: #d5dee3;
 
 // Code blocks
-// $code-block-bg-alpha: -.9;
+// $code-block-bg-alpha: -0.9;
+
+// /*-- scss:rules --*/
+// :root {
+//     --nordic-primary: #243746;
+//     --nordic-secondary: #6f8597;
+//     --nordic-accent: #2e8c87;
+//     --nordic-bg: #f7f9f8;
+//     --nordic-surface: #e9eff1;
+//     --nordic-text: #1f2933;
+//     --nordic-muted: #5e6b76;
+//     --nordic-border: #d5dee3;
+// }
+
+// body {
+//     font-size: 1rem;
+//     line-height: 1.75;
+// }
