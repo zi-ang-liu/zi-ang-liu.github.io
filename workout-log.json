@@ -1,0 +1,56 @@
+[
+    {
+        "date": "2026-04-01",
+        "plan": "push",
+        "exercises": [
+            {
+                "name": "benchpress",
+                "sets": 5,
+                "reps": 5,
+                "load": 80
+            },
+            {
+                "name": "squat",
+                "sets": 3,
+                "reps": 8,
+                "load": 100
+            }
+        ]
+    },
+    {
+        "date": "2026-04-03",
+        "plan": "pull",
+        "exercises": [
+            {
+                "name": "pullups",
+                "sets": 5,
+                "reps": 8,
+                "load": 20
+            },
+            {
+                "name": "benchpress",
+                "sets": 4,
+                "reps": 6,
+                "load": 77.5
+            }
+        ]
+    },
+    {
+        "date": "2026-04-06",
+        "plan": "legs",
+        "exercises": [
+            {
+                "name": "squat",
+                "sets": 5,
+                "reps": 5,
+                "load": 105
+            },
+            {
+                "name": "pullups",
+                "sets": 4,
+                "reps": 10,
+                "load": 15
+            }
+        ]
+    }
+]

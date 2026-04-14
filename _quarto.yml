@@ -22,6 +22,8 @@ website:
         href: blog.qmd
       - text: "Projects"
         href: projects.qmd
+      # - href: fit-dashboard.qmd
+      #   text: "Fit-Dashboard"
     right:
       - text: "Open Source"
         href: open-source.qmd

@@ -1,0 +1,200 @@
+---
+title: "Fitness Training Dashboard"
+author: "Your Name"
+format: dashboard
+---
+
+```{python}
+import json
+from pathlib import Path
+import pandas as pd
+import plotly.express as px
+
+WORKOUT_FILE = Path("workout-log.json")
+BODY_WEIGHT_FILE = Path("body-weight.json")
+
+
+def _read_json_list(path: Path):
+    if not path.exists():
+        return []
+    with path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+    return data if isinstance(data, list) else []
+
+
+def _write_json_list(path: Path, data):
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+
+
+def ex(name, sets, reps, load):
+    return {
+        "name": str(name),
+        "sets": int(sets),
+        "reps": int(reps),
+        "load": float(load),
+    }
+
+
+def record_workout(date, plan, exercises):
+    """Append one PPL workout session to workout-log.json."""
+    sessions = _read_json_list(WORKOUT_FILE)
+    sessions.append(
+        {
+            "date": str(date),
+            "plan": str(plan).lower(),
+            "exercises": exercises,
+        }
+    )
+    sessions.sort(key=lambda x: x.get("date", ""))
+    _write_json_list(WORKOUT_FILE, sessions)
+    return sessions[-1]
+
+
+def record_body_weight(date, body_weight):
+    """Upsert body weight by date in body-weight.json."""
+    weights = _read_json_list(BODY_WEIGHT_FILE)
+    date = str(date)
+    weights = [w for w in weights if w.get("date") != date]
+    weights.append({"date": date, "body_weight": float(body_weight)})
+    weights.sort(key=lambda x: x.get("date", ""))
+    _write_json_list(BODY_WEIGHT_FILE, weights)
+    return weights[-1]
+
+
+# Example input calls (run manually when you want to add data):
+# record_workout("2026-04-08", "push", [ex("benchpress", 5, 5, 82.5), ex("squat", 3, 8, 102.5)])
+# record_body_weight("2026-04-08", 69.7)
+
+sessions = _read_json_list(WORKOUT_FILE)
+body_weight_data = _read_json_list(BODY_WEIGHT_FILE)
+
+records = []
+for session in sessions:
+    for ex in session["exercises"]:
+        records.append(
+            {
+                "date": session["date"],
+                "plan": session["plan"],
+                "exercise": ex["name"],
+                "sets": ex["sets"],
+                "reps": ex["reps"],
+                "load": ex["load"],
+                "volume": ex["sets"] * ex["reps"] * ex["load"],
+            }
+        )
+
+df_ex = pd.DataFrame(records)
+if not df_ex.empty:
+    df_ex["date"] = pd.to_datetime(df_ex["date"])
+
+if not df_ex.empty:
+    df_ex_daily = df_ex.pivot_table(
+        index="date", columns="exercise", values="volume", aggfunc="sum", fill_value=0
+    ).reset_index()
+else:
+    df_ex_daily = pd.DataFrame(columns=["date", "squat", "benchpress", "pullups"])
+
+for col in ["squat", "benchpress", "pullups"]:
+    if col not in df_ex_daily.columns:
+        df_ex_daily[col] = 0
+
+df_ex_daily = df_ex_daily.rename(
+    columns={
+        "squat": "squat_total_volume",
+        "benchpress": "benchpress_total_volume",
+        "pullups": "pullups_total_volume",
+    }
+)
+
+df_session = pd.DataFrame([{"date": s["date"], "plan": s["plan"]} for s in sessions])
+if not df_session.empty:
+    df_session["date"] = pd.to_datetime(df_session["date"])
+else:
+    df_session = pd.DataFrame(columns=["date", "plan"])
+
+df_weight = pd.DataFrame(body_weight_data)
+if not df_weight.empty:
+    df_weight["date"] = pd.to_datetime(df_weight["date"])
+else:
+    df_weight = pd.DataFrame(columns=["date", "body_weight"])
+
+df = (
+    df_session.merge(df_ex_daily, on="date", how="left")
+    .merge(df_weight, on="date", how="left")
+    .sort_values("date")
+    .reset_index(drop=True)
+)
+
+exercise_cols = [
+    "squat_total_volume",
+    "benchpress_total_volume",
+    "pullups_total_volume",
+]
+df["total_training_volume"] = df[exercise_cols].sum(axis=1)
+```
+
+## Row {height=18%}
+
+```{python}
+#| title: Latest Body Weight (kg)
+latest_weight = df["body_weight"].iloc[-1]
+f"{latest_weight:.1f}"
+```
+
+```{python}
+#| title: Latest Squat Volume
+latest_squat = int(df["squat_total_volume"].iloc[-1])
+f"{latest_squat:,}"
+```
+
+```{python}
+#| title: Latest Bench Press Volume
+latest_bench = int(df["benchpress_total_volume"].iloc[-1])
+f"{latest_bench:,}"
+```
+
+```{python}
+#| title: Latest Pull-Ups Volume
+latest_pullups = int(df["pullups_total_volume"].iloc[-1])
+f"{latest_pullups:,}"
+```
+
+## Row {height=42%}
+
+```{python}
+#| title: Exercise Volume Trend
+long_df = df.melt(
+    id_vars=["date"],
+    value_vars=exercise_cols,
+    var_name="exercise",
+    value_name="total_volume",
+)
+
+label_map = {
+    "squat_total_volume": "Squat",
+    "benchpress_total_volume": "Bench Press",
+    "pullups_total_volume": "Pull-Ups",
+}
+long_df["exercise"] = long_df["exercise"].map(label_map)
+
+px.line(
+    long_df,
+    x="date",
+    y="total_volume",
+    color="exercise",
+    markers=True,
+)
+```
+
+## Row {height=40%}
+
+```{python}
+#| title: Body Weight Trend (kg)
+px.line(
+  df,
+  x="date",
+  y="body_weight",
+  markers=True,
+)
+```
