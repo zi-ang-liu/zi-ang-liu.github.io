@@ -1,17 +1,11 @@
 [
   {
     "listing": "/blog.html",
-    "items": [
-      "/blog/plan/index.html",
-      "/blog/2026-04-02-algorithm-for-MDP-EI/index.html",
-      "/blog/papers-review/index.html",
-      "/blog/2026-02-15-quarto-setting/index.html",
-      "/blog/2026-02-22-VFRL/index.html",
-      "/blog/2026-02-13-number-run-length/index.html",
-      "/blog/2026-02-12-allocation-rule/index.html",
-      "/blog/2026-02-07-china-university/index.html",
-      "/blog/welcome/index.html"
-    ]
+    "items": []
+  },
+  {
+    "listing": "/teaching.html",
+    "items": []
   },
   {
     "listing": "/projects.html",
@@ -19,9 +13,5 @@
       "/projects/RL-XAI/index.html",
       "/projects/Data-driven/index.html"
     ]
-  },
-  {
-    "listing": "/teaching.html",
-    "items": []
   }
 ]

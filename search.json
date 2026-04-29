@@ -4,105 +4,49 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "3-Month Recomposition Plan\n\n\n\n\n\n\n\n\n\n\n\nApr 6, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nEfficient Algorithm for MDI-EI\n\n\n\nresearch\n\nreinforcement learning\n\nMDP\n\n\n\n\n\n\n\n\n\nApr 2, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nPapers\n\n\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 23, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Configuration for Book\n\n\n\nquarto\n\n\n\n\n\n\n\n\n\nFeb 15, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nAlgorithms for Federated Reinforcement Learning\n\n\n\nresearch\n\nreinforcement learning\n\nfederated learning\n\n\n\n\n\n\n\n\n\nFeb 15, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nSelecting the Run-length for Simulation\n\n\n\nsimulation\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 13, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\nAllocation rules in multi-echelon distribution systems\n\n\n\ninventory management\n\nresearch\n\n\n\n\n\n\n\n\n\nFeb 12, 2026\n\n\nZiang Liu\n\n\n\n\n\n\n\n\n\n\n\n\n中国の大学ランキング\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 7, 2026\n\n\n劉子昂\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nZiang Liu\n\n\n\n\n\nNo matching items"
+    "text": "No matching items"
   },
   {
-    "objectID": "blog/2026-02-22-VFRL/index.html",
-    "href": "blog/2026-02-22-VFRL/index.html",
-    "title": "Algorithms for Federated Reinforcement Learning",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ziang Liu",
     "section": "",
-    "text": "H. Jin, Y. Peng, W. Yang, S. Wang, and Z. Zhang, “Federated Reinforcement Learning with environment heterogeneity,” arXiv [cs.LG], 2022. code\n\n\n\n\\(n\\) agents located in \\(n\\) different environments.\nEach agent \\(i\\) has the same state space \\(\\mathcal{S}\\), action space \\(\\mathcal{A}\\), reward function \\(r\\), but different transition dynamics \\(P_i\\).\n\n\n\n\nLearn a uniformly good policy: QAvg and PAvg\nPersonalization: embedding-based method, applied to DQNAvg and DDPGAvg\n\n\nEach agent \\(i\\) in iteration \\(t\\) maintains a local Q-function \\(Q^t_i\\). Agents perform local updates using their own data. After local updates, agents communicate their Q-functions to get the average Q-function:\n\\[\n\\bar{Q}_t(s, a) \\leftarrow \\frac{1}{n} \\sum_{i=1}^n Q_t^i(s, a), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}\n\\]\nThen,\n\\[\nQ_{t}^i(s, a) \\leftarrow \\bar{Q}_t(s, a), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}, i = 1, \\ldots, n.\n\\]\n\n\n\nEach agent \\(i\\) repeats the local update for several iterations to get a local policy \\(\\pi_{t}^i(\\cdot|s)\\). Then, agents communicate their policies to get the average policy:\n\\[\n\\bar{\\pi}_t(a|s) \\leftarrow \\frac{1}{n} \\sum_{i=1}^n \\pi_t^i(a|s), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}\n\\]\nThen,\n\\[\n\\pi_{t}^i(a|s) \\leftarrow \\bar{\\pi}_t(a|s), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}, i = 1, \\ldots, n.\n\\]\n\n\n\n\nEach environment is associated with a unique ID, and the ID is embedded into a vector. The embedding vector is concatenated with the state representation and fed into the Q-network or policy network.\nFor never-seen-before environments, the vector is initialized as the average of the embedding vectors of the training environments."
+    "text": "Associate Professor, Ph.D.\nDepartment of Industrial and Systems Engineering,\nHosei University\n \n  \n   \n  \n    \n     Google Scholar\n  \n  \n    \n     Semantic Scholar\n  \n  \n    \n     researchmap\n  \n  \n    \n     Github\n  \n  \n    \n     Email\n  \n  \n    \n     Lab/研究室\n  \n  \n     ORCID\n  \n  \n     KAKEN\n  \n  \n     ResearchGate\n  \n\n\n\n\nJoin Us"
   },
   {
-    "objectID": "blog/2026-02-22-VFRL/index.html#federated-reinforcement-learning-with-environment-heterogeneity",
-    "href": "blog/2026-02-22-VFRL/index.html#federated-reinforcement-learning-with-environment-heterogeneity",
-    "title": "Algorithms for Federated Reinforcement Learning",
+    "objectID": "projects/Data-driven/index.html",
+    "href": "projects/Data-driven/index.html",
+    "title": "動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築",
     "section": "",
-    "text": "H. Jin, Y. Peng, W. Yang, S. Wang, and Z. Zhang, “Federated Reinforcement Learning with environment heterogeneity,” arXiv [cs.LG], 2022. code\n\n\n\n\\(n\\) agents located in \\(n\\) different environments.\nEach agent \\(i\\) has the same state space \\(\\mathcal{S}\\), action space \\(\\mathcal{A}\\), reward function \\(r\\), but different transition dynamics \\(P_i\\).\n\n\n\n\nLearn a uniformly good policy: QAvg and PAvg\nPersonalization: embedding-based method, applied to DQNAvg and DDPGAvg\n\n\nEach agent \\(i\\) in iteration \\(t\\) maintains a local Q-function \\(Q^t_i\\). Agents perform local updates using their own data. After local updates, agents communicate their Q-functions to get the average Q-function:\n\\[\n\\bar{Q}_t(s, a) \\leftarrow \\frac{1}{n} \\sum_{i=1}^n Q_t^i(s, a), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}\n\\]\nThen,\n\\[\nQ_{t}^i(s, a) \\leftarrow \\bar{Q}_t(s, a), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}, i = 1, \\ldots, n.\n\\]\n\n\n\nEach agent \\(i\\) repeats the local update for several iterations to get a local policy \\(\\pi_{t}^i(\\cdot|s)\\). Then, agents communicate their policies to get the average policy:\n\\[\n\\bar{\\pi}_t(a|s) \\leftarrow \\frac{1}{n} \\sum_{i=1}^n \\pi_t^i(a|s), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}\n\\]\nThen,\n\\[\n\\pi_{t}^i(a|s) \\leftarrow \\bar{\\pi}_t(a|s), \\quad \\forall s \\in \\mathcal{S}, a \\in \\mathcal{A}, i = 1, \\ldots, n.\n\\]\n\n\n\n\nEach environment is associated with a unique ID, and the ID is embedded into a vector. The embedding vector is concatenated with the state representation and fed into the Q-network or policy network.\nFor never-seen-before environments, the vector is initialized as the average of the embedding vectors of the training environments."
+    "text": "研究課題: 23K22983\n研究代表者: 西 竜志\n研究分担者: 劉 子昂\n研究期間: 2024年4月1日 - 2026年3月31日"
   },
   {
-    "objectID": "blog/2026-02-07-china-university/index.html",
-    "href": "blog/2026-02-07-china-university/index.html",
-    "title": "中国の大学ランキング",
+    "objectID": "open-source.html",
+    "href": "open-source.html",
+    "title": "Open Source",
     "section": "",
-    "text": "本資料は大学教員を対象に，中国の大学ランキングについて解説するものである．"
+    "text": "I actively develop and maintain several open-source projects. While most are still in their early stages, I am continually improving them with the goal of contributing meaningful tools to the research community."
   },
   {
-    "objectID": "blog/2026-02-07-china-university/index.html#arwu世界大学学術ランキング",
-    "href": "blog/2026-02-07-china-university/index.html#arwu世界大学学術ランキング",
-    "title": "中国の大学ランキング",
-    "section": "ARWU（世界大学学術ランキング）",
-    "text": "ARWU（世界大学学術ランキング）\n世界大学ランキングには様々なものが存在するが，代表的なものとして以下の三つが挙げられる．\n\nQS世界大学ランキング\nTHE世界大学ランキング\n世界大学学術ランキング\n\nこのうち世界大学学術ランキング（ARWU）は，2003年に上海交通大学によって創始された指標である．他ランキングと比較して，論文引用数，Nature・Science誌論文数など，研究業績を用いて評価を行う点に特徴がある．"
+    "objectID": "open-source.html#reinforcement-learning",
+    "href": "open-source.html#reinforcement-learning",
+    "title": "Open Source",
+    "section": "Reinforcement Learning",
+    "text": "Reinforcement Learning\n\nmdptools: A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning."
   },
   {
-    "objectID": "blog/2026-02-07-china-university/index.html#大学ランキングの調べ方",
-    "href": "blog/2026-02-07-china-university/index.html#大学ランキングの調べ方",
-    "title": "中国の大学ランキング",
-    "section": "大学ランキングの調べ方",
-    "text": "大学ランキングの調べ方\nARWUの英語版サイトでは上位校のみの掲載に留まるが，中国語版サイトでは中国国内の大学を網羅した詳細なランキングが公表されている．中国語の正式名称で検索を行うことにより，各大学の正確な立ち位置を把握することが可能である．\n\nARWUの中国語版サイトにアクセス\n検索ボックス（请输入大学名称）に該当する大学名を入力\n検索結果よりランキングを確認\n\nステップ2において，大学名は「簡体字」で入力する必要がある点に注意されたい（例：「清華大学」→「清华大学」）．"
+    "objectID": "open-source.html#paper-with-code",
+    "href": "open-source.html#paper-with-code",
+    "title": "Open Source",
+    "section": "Paper with Code",
+    "text": "Paper with Code\n\nLiu, Ziang, and Tatsushi Nishi. “Inventory control with lateral transshipment using proximal policy optimization.” 2023 5th International Conference on Data-driven Optimization of Complex Systems (DOCS). IEEE, 2023. Code"
   },
   {
-    "objectID": "blog/2026-02-12-allocation-rule/index.html",
-    "href": "blog/2026-02-12-allocation-rule/index.html",
-    "title": "Allocation rules in multi-echelon distribution systems",
-    "section": "",
-    "text": "When the order quantity exceeds the available inventory at a warehouse, allocation rules determine how to distribute the limited stock among multiple downstream facilities. Different allocation rules can significantly impact the performance of a multi-echelon distribution system."
-  },
-  {
-    "objectID": "blog/2026-02-12-allocation-rule/index.html#proportional-allocation-rule",
-    "href": "blog/2026-02-12-allocation-rule/index.html#proportional-allocation-rule",
-    "title": "Allocation rules in multi-echelon distribution systems",
-    "section": "Proportional Allocation Rule",
-    "text": "Proportional Allocation Rule\nThe proportional allocation rule is widely used and intuitive. This rule scale down the orders from each retailer proportionally based on their original order quantities to match the available inventory at the warehouse.\nLet \\(q_i\\) be the order quantity from retailer \\(i\\), and \\(I\\) be the available inventory at the warehouse. The proportional allocation rule adjusts the order quantities as follows:\n\\[\nq_i \\leftarrow \\frac{q_i}{\\sum_{j} q_j} I\n\\]\nMy experiments and previous studies (Kaynov et al. 2024) have shown that the proportional allocation rule often fails to learn effective inventory policies in multi-echelon systems."
-  },
-  {
-    "objectID": "blog/2026-02-12-allocation-rule/index.html#randomized-sequential-allocation-rule",
-    "href": "blog/2026-02-12-allocation-rule/index.html#randomized-sequential-allocation-rule",
-    "title": "Allocation rules in multi-echelon distribution systems",
-    "section": "Randomized Sequential Allocation Rule",
-    "text": "Randomized Sequential Allocation Rule\nKaynov et al. (2024) proposed the randomized sequential allocation rule to address the limitations of the proportional rule. In this approach, the sequence of retailers is randomized in each period. The warehouse then allocates inventory to retailers in this random order until the available stock is exhausted.\nThe experimental results in Kaynov et al. (2024) demonstrate that the randomized sequential allocation rule leads to feasible actions.\nStranieri et al. (2024) indicated that the last facilities in the allocation sequence may receive insufficient inventory under the randomized sequential allocation rule, resulting it difficult to recover from stockouts."
-  },
-  {
-    "objectID": "blog/2026-02-12-allocation-rule/index.html#balanced-allocation-rule",
-    "href": "blog/2026-02-12-allocation-rule/index.html#balanced-allocation-rule",
-    "title": "Allocation rules in multi-echelon distribution systems",
-    "section": "Balanced allocation rule",
-    "text": "Balanced allocation rule\nStranieri et al. (2024) proposed the balanced allocation rule. This rule proceeds in three steps:\n\nrandomly select a retailer\nif the order quantity from the selected retailer is larger than 0, then decrease its order by 1 unit.\nrepeat steps 1 and 2 until the total order quantity matches the available inventory at the warehouse."
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム\n\n\n\nJSPS KAKENHI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築\n\n\n\nJSPS KAKENHI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects/RL-XAI/index.html",
-    "href": "projects/RL-XAI/index.html",
-    "title": "深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム",
-    "section": "",
-    "text": "研究課題: 23K13514\n研究代表者: 劉子昂\n研究期間: 2023年4月1日 -"
-  },
-  {
-    "objectID": "posts/genai-tool/index.html",
-    "href": "posts/genai-tool/index.html",
-    "title": "生成AI ツールまとめ",
-    "section": "",
-    "text": "NotebookLM\nP4Us\nhttps://www.nri.com/jp/knowledge/glossary/index.html\ncanvas"
-  },
-  {
-    "objectID": "posts/overleaf/index.html",
-    "href": "posts/overleaf/index.html",
-    "title": "Overleafで日本語を使う",
-    "section": "",
-    "text": "Overleafで日本語を使う方法を紹介します。\nhttps://ja.overleaf.com/learn/latex/Japanese\n\npLaTeXを使う\n論文のテンプレートがpLaTeXを使っている場合、以下のように設定する。\n\nMenu &gt; Compile &gt; LaTeX を選択する。\n「latexmkrc」ファイルを作成し、以下の内容を記述する。\n\n$latex = 'platex';\n$bibtex = 'pbibtex';\n$dvipdf = 'dvipdfmx %O -o %D %S';\n$makeindex = 'mendex %O -o %D %S';"
-  },
-  {
-    "objectID": "posts/paper-prompt-evolution/index.html",
-    "href": "posts/paper-prompt-evolution/index.html",
-    "title": "プロンプト進化",
-    "section": "",
-    "text": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning\nhttps://mp.weixin.qq.com/s/0-Opg-D5Eu_t0Gj_J4pcfg"
+    "objectID": "open-source.html#little-projects",
+    "href": "open-source.html#little-projects",
+    "title": "Open Source",
+    "section": "Little projects",
+    "text": "Little projects\n\nExact method for perishable inventory control Code\nReinforcement learning environments for traffic signal control Code\nImplementation of Differential Evolution (DE) on the CEC 2014 test suite Code"
   },
   {
     "objectID": "timetable.html",
@@ -168,165 +112,18 @@
     "text": "Hosei University\n3-7-2 Kajino-cho\nKoganei-shi,\nTokyo 184-8584\nJapan"
   },
   {
-    "objectID": "posts/pipx/index.html",
-    "href": "posts/pipx/index.html",
-    "title": "pipx を使ってみた",
+    "objectID": "projects/RL-XAI/index.html",
+    "href": "projects/RL-XAI/index.html",
+    "title": "深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム",
     "section": "",
-    "text": "pipx は python のアプリケーションを独立した環境でインストールし，実行できるツールである．\npip や conda と違い，アプリケーションごとに環境を分けるため，依存関係の衝突を避けることができる．"
+    "text": "研究課題: 23K13514\n研究代表者: 劉子昂\n研究期間: 2023年4月1日 -"
   },
   {
-    "objectID": "posts/pipx/index.html#インストール",
-    "href": "posts/pipx/index.html#インストール",
-    "title": "pipx を使ってみた",
-    "section": "インストール",
-    "text": "インストール\nMac の場合，Homebrew を使用してインストールできる．\nbrew install pipx\npipx ensurepath\n下記のコマンドでバーションを確認し，数字が表示されれば成功．\npipx --version"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "open-source.html",
-    "href": "open-source.html",
-    "title": "Open Source",
-    "section": "",
-    "text": "I actively develop and maintain several open-source projects. While most are still in their early stages, I am continually improving them with the goal of contributing meaningful tools to the research community."
-  },
-  {
-    "objectID": "open-source.html#reinforcement-learning",
-    "href": "open-source.html#reinforcement-learning",
-    "title": "Open Source",
-    "section": "Reinforcement Learning",
-    "text": "Reinforcement Learning\n\nmdptools: A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning."
-  },
-  {
-    "objectID": "open-source.html#paper-with-code",
-    "href": "open-source.html#paper-with-code",
-    "title": "Open Source",
-    "section": "Paper with Code",
-    "text": "Paper with Code\n\nLiu, Ziang, and Tatsushi Nishi. “Inventory control with lateral transshipment using proximal policy optimization.” 2023 5th International Conference on Data-driven Optimization of Complex Systems (DOCS). IEEE, 2023. Code"
-  },
-  {
-    "objectID": "open-source.html#little-projects",
-    "href": "open-source.html#little-projects",
-    "title": "Open Source",
-    "section": "Little projects",
-    "text": "Little projects\n\nExact method for perishable inventory control Code\nReinforcement learning environments for traffic signal control Code\nImplementation of Differential Evolution (DE) on the CEC 2014 test suite Code"
-  },
-  {
-    "objectID": "projects/Data-driven/index.html",
-    "href": "projects/Data-driven/index.html",
-    "title": "動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築",
-    "section": "",
-    "text": "研究課題: 23K22983\n研究代表者: 西 竜志\n研究分担者: 劉 子昂\n研究期間: 2024年4月1日 - 2026年3月31日"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ziang Liu",
-    "section": "",
-    "text": "Associate Professor, Ph.D.\nDepartment of Industrial and Systems Engineering,\nHosei University\n \n  \n   \n  \n    \n     Google Scholar\n  \n  \n    \n     Semantic Scholar\n  \n  \n    \n     researchmap\n  \n  \n    \n     Github\n  \n  \n    \n     Email\n  \n  \n    \n     Lab/研究室\n  \n  \n     ORCID\n  \n  \n     KAKEN\n  \n  \n     ResearchGate\n  \n\n\n\n\nJoin Us"
-  },
-  {
-    "objectID": "blog/plan/index.html",
-    "href": "blog/plan/index.html",
-    "title": "3-Month Recomposition Plan",
-    "section": "",
-    "text": "Metric\nCurrent\nTarget\n\n\n\n\n\nBody Weight\n70 kg\n67 kg\n\n\n\nBody Fat (est)\n22%\n17%\n\n\n\nFat Mass\n15.4 kg\n11 kg\n\n\n\nLean Mass\n54.6 kg\n55 kg\n\n\n\nBench\n60 kg × 8\n75 kg × 5\n\n\n\nSquat\n80 kg × 8\n100 kg × 5\n\n\n\nPull-up\n6 reps\n10-12 reps"
-  },
-  {
-    "objectID": "blog/plan/index.html#goal",
-    "href": "blog/plan/index.html#goal",
-    "title": "3-Month Recomposition Plan",
-    "section": "",
-    "text": "Metric\nCurrent\nTarget\n\n\n\n\n\nBody Weight\n70 kg\n67 kg\n\n\n\nBody Fat (est)\n22%\n17%\n\n\n\nFat Mass\n15.4 kg\n11 kg\n\n\n\nLean Mass\n54.6 kg\n55 kg\n\n\n\nBench\n60 kg × 8\n75 kg × 5\n\n\n\nSquat\n80 kg × 8\n100 kg × 5\n\n\n\nPull-up\n6 reps\n10-12 reps"
-  },
-  {
-    "objectID": "blog/plan/index.html#training-plan",
-    "href": "blog/plan/index.html#training-plan",
-    "title": "3-Month Recomposition Plan",
-    "section": "Training Plan",
-    "text": "Training Plan\n\n4-Day Upper/Lower Split\n\nLinear Progression: Increase weight by 2.5-5 kg when able to complete 3 sets.\n\n2 Cardio Sessions per Week (30 minutes each)"
-  },
-  {
-    "objectID": "blog/plan/index.html#nutrition-plan",
-    "href": "blog/plan/index.html#nutrition-plan",
-    "title": "3-Month Recomposition Plan",
-    "section": "Nutrition Plan",
-    "text": "Nutrition Plan\n\n2000 kcal/day\n\nProtein: 150 g\nFats: 60 g\nCarbs: 200 g"
-  },
-  {
-    "objectID": "blog/2026-02-15-quarto-setting/index.html",
-    "href": "blog/2026-02-15-quarto-setting/index.html",
-    "title": "Quarto Configuration for Book",
-    "section": "",
-    "text": "Quarto projects can be configured using a _quarto.yml file. A sample configuration is shown below:"
-  },
-  {
-    "objectID": "blog/2026-02-15-quarto-setting/index.html#freeze",
-    "href": "blog/2026-02-15-quarto-setting/index.html#freeze",
-    "title": "Quarto Configuration for Book",
-    "section": "freeze",
-    "text": "freeze\nWith the increasing content of the book, it may take a long time to render the entire book. To save time, setting freeze: auto will only render the changed files, which can significantly speed up the rendering process.\nexecute:\n  freeze: auto"
-  },
-  {
-    "objectID": "blog/2026-02-15-quarto-setting/index.html#pdf",
-    "href": "blog/2026-02-15-quarto-setting/index.html#pdf",
-    "title": "Quarto Configuration for Book",
-    "section": "pdf",
-    "text": "pdf\nThe following configuration can be used to generate a PDF version of the book using LuaLaTeX and the ltjbook document class, which is suitable for books with Japanese content.\nuse-rsvg-convert: true is required to render SVG images in the PDF output.\nformat:\n  pdf:\n    pdf-engine: lualatex\n    documentclass: ltjbook\n    toc: true\n    toc-depth: 1\n    use-rsvg-convert: true"
-  },
-  {
-    "objectID": "blog/2026-02-15-quarto-setting/index.html#pseudocode",
-    "href": "blog/2026-02-15-quarto-setting/index.html#pseudocode",
-    "title": "Quarto Configuration for Book",
-    "section": "pseudocode",
-    "text": "pseudocode\nfilters:\n  - pseudocode"
-  },
-  {
-    "objectID": "blog/welcome/index.html",
-    "href": "blog/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "blog/papers-review/index.html",
-    "href": "blog/papers-review/index.html",
-    "title": "Papers",
-    "section": "",
-    "text": "Recording of research papers that I have read, with a brief summary and my thoughts. I will update this page regularly as I read more papers."
-  },
-  {
-    "objectID": "blog/papers-review/index.html#table-of-contents",
-    "href": "blog/papers-review/index.html#table-of-contents",
-    "title": "Papers",
-    "section": "Table of contents",
-    "text": "Table of contents\n\nReinforcement learning\nFederated learning"
-  },
-  {
-    "objectID": "blog/papers-review/index.html#reinforcement-learning",
-    "href": "blog/papers-review/index.html#reinforcement-learning",
-    "title": "Papers",
-    "section": "Reinforcement learning",
-    "text": "Reinforcement learning\n\nRL for inventory management\n\nB. Rolf, I. Jackson, M. Müller, S. Lang, T. Reggelin, and D. Ivanov, “A review on reinforcement learning algorithms and applications in supply chain management,” Int. J. Prod. Res., vol. 61, no. 20, pp. 7151–7179, Oct. 2023.\n\nReview paper\n\nF. Stranieri, F. Stella, and C. Kouki, “Performance of deep reinforcement learning algorithms in two-echelon inventory control systems,” Int. J. Prod. Res., vol. 62, no. 17, pp. 6211–6226, Sept. 2024. Code\n\nProblem: two-echelon inventory control systems, seasonal demand, multi-products\nMethod:\n\nMDP formulation; DRL algorithms; Balance allocation rule;\nBO for heuristic policies;\n\n\nT. Temizöz, C. Imdahl, R. Dijkman, D. Lamghari-Idrissi, and W. van Jaarsveld, “Deep controlled learning for inventory control,” Eur. J. Oper. Res., vol. 324, no. 1, pp. 104–117, July 2025. Code written in C++\n\nProblem: lost sales, perishable inventory, and random lead times\nMethods:\n\nNew algorithm, Deep controlled learning, for Input-Driven MDPs\nRL as classification problem\n\n\nH. Dehaybe, D. Catanzaro, and P. Chevalier, “Deep Reinforcement Learning for inventory optimization with non-stationary uncertain demand,” Eur. J. Oper. Res., vol. 314, no. 2, pp. 433–445, Apr. 2024. Code\n\nProblem:\n\nSingle-Item Stochastic Lot-Sizing Problem (SISLSP) with non-stationary uncertain demand\n\nMethods:\n\nState Embedding of Forecast Windows\n\n\nI. Kaynov, M. van Knippenberg, V. Menkovski, A. van Breemen, and W. van Jaarsveld, “Deep Reinforcement Learning for One-Warehouse Multi-Retailer inventory management,” Int. J. Prod. Econ., vol. 267, no. 109088, p. 109088, Jan. 2024.\n\nProblem: One-Warehouse Multi-Retailer (OWMR) inventory management\nMethods:\n\nSequential allocation rule\n\nExperiments:\n\nShows the proportional allocation rule does not work well and the sequential allocation rule performs better\n\n\n\n\n\nRL for operations research problems\n\nA. Ramanujam et al., “SafeOR-Gym: A benchmark suite for safe reinforcement learning algorithms on practical operations research problems,” arXiv [cs.LG], 02-June-2025. Code\n\nProblems: 9 OR environments\nMethods: Safe RL algorithms\n\nConstrained Markov Decision Process (CMDP)\nConstraints handling methods\nConstraint RL algorithms"
-  },
-  {
-    "objectID": "blog/papers-review/index.html#federated-learning",
-    "href": "blog/papers-review/index.html#federated-learning",
-    "title": "Papers",
-    "section": "Federated learning",
-    "text": "Federated learning\n\nFederated reinforcement learning\n\nH. Jin, Y. Peng, W. Yang, S. Wang, and Z. Zhang, “Federated Reinforcement Learning with environment heterogeneity,” arXiv [cs.LG], 2022. code\n\nProblem setting: \\(n\\) agents located in \\(n\\) different environments, with the same state space, action space, reward function, but different transition dynamics.\nAlgorithm: Learn a uniformly good policy (QAvg and PAvg) and personalization (embedding-based method, applied to DQNAvg and DDPGAvg).\n\n\n\n\nFederated learning for supply chain management\n\nH. Wang, F. Xie, Q. Duan, and J. Li, “Federated learning for supply chain demand forecasting,” Math. Probl. Eng., vol. 2022, pp. 1–8, Nov. 2022. Code\n\nvertical federated LSTM model."
-  },
-  {
-    "objectID": "blog/papers-review/index.html#e2e",
-    "href": "blog/papers-review/index.html#e2e",
-    "title": "Papers",
-    "section": "E2E",
-    "text": "E2E\n\nM. Qi et al., “A practical end-to-end inventory management model with deep learning,” Manage. Sci., vol. 69, no. 2, pp. 759–773, Feb. 2023. Code\nX. Liu, C. Alexopoulos, and Y. Peng, “A simulation-driven machine learning framework for large-scale inventory management,” Ann. Oper. Res., pp. 1–27, Oct. 2025. Code\n\nImitation learning with target heuristic policies\nReal data from JD.com (not public)\nProblem: Multi-product, single and multi-echelon\nComputational complexity; Optimiality proofs;\n\n\nQi et al. (2023) propose an end-to-end model to directly map input features to replenishment decisions. They consider a multiperiod inventory management problem with infinite horizon where the demand and vendor lead time are stochastic. The closed-form optimal order quantity is derived given the demand and lead time at each period. Then, they use a neural network to learn the mapping from input features (e.g., features related to demand and VLT; general item-level features; review period; and initial stock level) to three outputs: the order quantity, the demand forecast, and the VLT forecast. A multiquantile RNN (MQRNN) is used in their model. The experiments are conducted on real data from JD.com.\nLiu et al. (2025) extend the end-to-end model by integrating deep reinforcement learning and deep learning."
+    "text": "深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム\n\n\n\nJSPS KAKENHI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築\n\n\n\nJSPS KAKENHI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "publications.html",
