@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="劉子昂">
+<meta name="dcterms.date" content="2025-10-10">
 
-<title>Contact – Ziang Liu</title>
+<title>Python 環境構築 – Ziang Liu</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,27 +25,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0193b0a3ae5c6acf9db290c779b52c17.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-31cd1deebe21c65c8d38049a31f7a541.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,8 +110,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Contact – Ziang Liu">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Python 環境構築 – Ziang Liu">
 <meta property="og:site_name" content="Ziang Liu">
 </head>
 
@@ -85,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Ziang Liu</span>
     </a>
   </div>
@@ -96,29 +133,29 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html"> 
+    <a class="nav-link" href="../../teaching.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html"> 
+    <a class="nav-link" href="../../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./contact.html" aria-current="page"> 
+    <a class="nav-link" href="../../contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./open-source.html"> 
+    <a class="nav-link" href="../../open-source.html"> 
 <span class="menu-text">Open Source</span></a>
   </li>  
   <li class="nav-item compact">
@@ -143,14 +180,29 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Contact</h1>
-</div>
+<h1 class="title">Python 環境構築</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>劉子昂 </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 10, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -160,33 +212,84 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="location" class="level2">
-<h2 class="anchored" data-anchor-id="location">📍Location</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<!-- ```
-〒184-8584 東京都小金井市梶野町3-7-2
-法政大学 理工学部 経営システム工学科
-``` -->
-<p>Hosei University<br>
-3-7-2 Kajino-cho<br>
-Koganei-shi,<br>
-Tokyo 184-8584<br>
-Japan</p>
-</div><div class="column" style="width:60%;">
-<div class="cell">
-<!-- Responsive Google Map -->
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1016.9049864746312!2d139.52284847612208!3d35.70947918364517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e589329d7c6f%3A0x1b9f01fa3c32d3b6!2z5rOV5pS_5aSn5a2m5bCP6YeR5LqV44Kt44Oj44Oz44OR44K5!5e0!3m2!1sen!2sjp!4v1756452075113!5m2!1sen!2sjp" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-</div>
-</div>
-</div>
-<!-- ## QR Code for Homepage
+<section id="uv-python-vscode" class="level2">
+<h2 class="anchored" data-anchor-id="uv-python-vscode">uv + python + VSCode</h2>
+<section id="uv-のインストール" class="level3">
+<h3 class="anchored" data-anchor-id="uv-のインストール">uv のインストール</h3>
+<p>Mac</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install uv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Windows</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>powershell <span class="op">-</span>ExecutionPolicy ByPass <span class="op">-</span>c <span class="st">"irm https://astral.sh/uv/install.ps1 | iex"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>インストール後、<code>uv</code> コマンドを実行して、以下のような表示がされれば成功です。</p>
+<pre><code>An extremely fast Python package manager.
 
-![](images/home-qrcode.png){width=150px} -->
+Usage: uv [OPTIONS] COMMAND [ARGS]...</code></pre>
+</section>
+<section id="python-のインストール" class="level3">
+<h3 class="anchored" data-anchor-id="python-のインストール">Python のインストール</h3>
+<p>最新の Python をインストールするには、以下のコマンドを実行します。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> install python</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>特定のバージョンをインストールするには、以下のようにバージョン番号を指定します。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> install python 3.12</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>最新の Python をインストールする場合、一部のライブラリが対応していない可能性があります。安定したバージョンを使用することをお勧めします。</p>
+</div>
+</div>
+</section>
+<section id="vscode-のインストールと設定" class="level3">
+<h3 class="anchored" data-anchor-id="vscode-のインストールと設定">VSCode のインストールと設定</h3>
+<p><a href="https://code.visualstudio.com/">VSCode の公式サイト</a>にアクセスし、VSCode をダウンロードしてインストールします。</p>
+<section id="vscode-の設定" class="level4">
+<h4 class="anchored" data-anchor-id="vscode-の設定">VSCode の設定</h4>
+<p>VSCode を起動し、「view」 &gt; 「Extensions」を選択します。検索バーに「Python」と入力し、Microsoft が提供する Python 拡張機能をインストールします。</p>
+</section>
+<section id="python-ファイルの作成" class="level4">
+<h4 class="anchored" data-anchor-id="python-ファイルの作成">Python ファイルの作成</h4>
+<p>VSCode を起動し、以下の手順で python のファイルを作成します。</p>
+<ol type="1">
+<li>「File」 &gt; 「New File」を選択します。</li>
+<li>ファイル名を <code>test.py</code> として保存します。</li>
+<li><code>print("Hello, World!")</code> と入力します。</li>
+<li>ファイルを保存します。</li>
+</ol>
+</section>
+<section id="python-ファイルの実行" class="level4">
+<h4 class="anchored" data-anchor-id="python-ファイルの実行">Python ファイルの実行</h4>
+<ol type="1">
+<li>「Terminal」 &gt; 「New Terminal」を選択します。</li>
+<li>ターミナルで以下のコマンドを実行します。</li>
+<li><code>python test.py</code> と入力して実行します。</li>
+<li><code>Hello, World!</code> と表示されれば成功です。</li>
+</ol>
+</section>
+</section>
+<section id="uv-でスクリプトの実行" class="level3">
+<h3 class="anchored" data-anchor-id="uv-でスクリプトの実行">uv でスクリプトの実行</h3>
+<p>ターミナルで以下のコマンドを実行すると、<code>test.py</code> を uv 経由で実行できます。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run test.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>以下のコードでは，Numpy というライブラリを使って配列を作成し，表示しています。それを実行するには，まず Numpy をインストールする必要があります。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>uv でこのスクリプトを実行するには，以下のコマンドを実行します。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run <span class="at">--with</span> numpy test.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="プロジェクト" class="level3">
+<h3 class="anchored" data-anchor-id="プロジェクト">プロジェクト</h3>
+<p>プロジェクトを作成するには，<a href="https://docs.astral.sh/uv/guides/projects/">こちら</a>を参照してください。</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

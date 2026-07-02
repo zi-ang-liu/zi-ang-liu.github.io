@@ -2,42 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zi-ang-liu.github.io/blog.html</loc>
-    <lastmod>2026-04-28T09:55:32.202Z</lastmod>
+    <lastmod>2026-07-02T12:17:23.223Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/index.html</loc>
-    <lastmod>2026-05-16T00:41:04.547Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/blog/26-07-01-Algorithm-Configuration/index.html</loc>
+    <lastmod>2026-07-02T12:28:32.927Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/projects/Data-driven/index.html</loc>
-    <lastmod>2026-04-28T09:55:32.208Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/projects.html</loc>
+    <lastmod>2026-07-02T13:13:20.716Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/projects/RL-XAI/index.html</loc>
+    <lastmod>2026-07-02T12:32:45.313Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/teaching.html</loc>
+    <lastmod>2026-07-02T12:22:49.442Z</lastmod>
   </url>
   <url>
     <loc>https://zi-ang-liu.github.io/open-source.html</loc>
     <lastmod>2026-04-28T09:55:32.208Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/timetable.html</loc>
-    <lastmod>2026-04-28T09:55:32.209Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/projects/Data-driven/index.html</loc>
+    <lastmod>2026-07-02T12:32:30.240Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/teaching.html</loc>
-    <lastmod>2026-04-28T09:55:32.209Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/contact.html</loc>
-    <lastmod>2026-04-29T01:11:05.606Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/projects/RL-XAI/index.html</loc>
-    <lastmod>2026-04-28T09:55:32.208Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/projects.html</loc>
-    <lastmod>2026-04-28T09:55:32.208Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/index.html</loc>
+    <lastmod>2026-07-02T13:24:53.893Z</lastmod>
   </url>
   <url>
     <loc>https://zi-ang-liu.github.io/publications.html</loc>
-    <lastmod>2026-05-16T00:40:40.178Z</lastmod>
+    <lastmod>2026-07-02T13:07:49.439Z</lastmod>
   </url>
 </urlset>

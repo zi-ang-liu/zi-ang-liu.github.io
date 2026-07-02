@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ziang Liu">
+<meta name="dcterms.date" content="2025-10-10">
 
-<title>Contact – Ziang Liu</title>
+<title>AC – Ziang Liu</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,27 +25,46 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0193b0a3ae5c6acf9db290c779b52c17.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-0193b0a3ae5c6acf9db290c779b52c17.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,9 +93,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Contact – Ziang Liu">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="AC – Ziang Liu">
+<meta property="og:description" content="Ziang Liu’s Personal Website">
 <meta property="og:site_name" content="Ziang Liu">
 </head>
 
@@ -85,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Ziang Liu</span>
     </a>
   </div>
@@ -96,35 +147,20 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html"> 
+    <a class="nav-link" href="../../teaching.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html"> 
+    <a class="nav-link" href="../../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./contact.html" aria-current="page"> 
-<span class="menu-text">Contact</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
-<span class="menu-text">Projects</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./open-source.html"> 
-<span class="menu-text">Open Source</span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/zi-ang-liu"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -143,14 +179,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Contact</h1>
+<h1 class="title">AC</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ziang Liu </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 10, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -160,36 +208,54 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="location" class="level2">
-<h2 class="anchored" data-anchor-id="location">📍Location</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<!-- ```
-〒184-8584 東京都小金井市梶野町3-7-2
-法政大学 理工学部 経営システム工学科
-``` -->
-<p>Hosei University<br>
-3-7-2 Kajino-cho<br>
-Koganei-shi,<br>
-Tokyo 184-8584<br>
-Japan</p>
-</div><div class="column" style="width:60%;">
-<div class="cell">
-<!-- Responsive Google Map -->
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1016.9049864746312!2d139.52284847612208!3d35.70947918364517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e589329d7c6f%3A0x1b9f01fa3c32d3b6!2z5rOV5pS_5aSn5a2m5bCP6YeR5LqV44Kt44Oj44Oz44OR44K5!5e0!3m2!1sen!2sjp!4v1756452075113!5m2!1sen!2sjp" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<section id="algorithm-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="algorithm-configuration">Algorithm Configuration</h2>
+<p>Let <span class="math inline">\(\mathcal{I}\)</span> be the set of problem instances, <span class="math inline">\(\mathcal{D}\)</span> be the probability distribution over <span class="math inline">\(\mathcal{I}\)</span>. Let <span class="math inline">\(\mathcal{A}\)</span> be the set of algorithms with parameters <span class="math inline">\(p_1, p_2, \ldots, p_k\)</span>. The domain of each parameter <span class="math inline">\(p_i\)</span> is denoted as <span class="math inline">\(\Theta_i\)</span>, and the parameter space is defined as <span class="math inline">\(\Theta = \Theta_1 \times \Theta_2 \times \ldots \times \Theta_k\)</span>.</p>
+<p>The objective of algorithm configuration is to find the optimal parameter configuration <span class="math inline">\(\theta^* \in \Theta\)</span> that minimizes the expected cost of the algorithm over the distribution of problem instances:</p>
+<p><span class="math display">\[
+\theta^* \in \arg\min_{\theta \in \Theta} \mathbb{E}_{i \sim \mathcal{D}}[c(\theta, i)]
+\]</span></p>
+<p>where <span class="math inline">\(c(\theta, i)\)</span> is the cost of running algorithm <span class="math inline">\(\mathcal{A}\)</span> with parameter configuration <span class="math inline">\(\theta\)</span> on problem instance <span class="math inline">\(i\)</span>.</p>
+<section id="dynamic-algorithm-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="dynamic-algorithm-configuration">Dynamic Algorithm Configuration</h3>
+</section>
+<section id="hyperparameter-optimization-in-reinforcement-learning" class="level3">
+<h3 class="anchored" data-anchor-id="hyperparameter-optimization-in-reinforcement-learning">Hyperparameter Optimization in Reinforcement Learning</h3>
+<p><span class="citation" data-cites="Eimer2023-kd">Eimer et al. (<a href="#ref-Eimer2023-kd" role="doc-biblioref">2023</a>)</span> discussed the hyperparameter optimization problem in the context of reinforcement learning (RL).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> They conducted a experimental study on the performance of various hyperparameter optimization methods, including random search, DEHB <span class="citation" data-cites="Awad2021-cb">(<a href="#ref-Awad2021-cb" role="doc-biblioref">Awad et al. 2021</a>)</span>,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and BGT <span class="citation" data-cites="Wan2022-hf">(<a href="#ref-Wan2022-hf" role="doc-biblioref">Wan et al. 2022</a>)</span>.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<ul>
+<li>Optuna <span class="citation" data-cites="Akiba2019-aj">(<a href="#ref-Akiba2019-aj" role="doc-biblioref">Akiba et al. 2019</a>)</span></li>
+</ul>
+</section>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Akiba2019-aj" class="csl-entry" role="listitem">
+Akiba, Takuya, Shotaro Sano, Toshihiko Yanase, Takeru Ohta, and Masanori Koyama. 2019. <span>“Optuna: A Next-Generation Hyperparameter Optimization Framework.”</span> <em>Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining</em> (New York, NY, USA), 2623–31. <a href="https://doi.org/10.1145/3292500.3330701">https://doi.org/10.1145/3292500.3330701</a>.
+</div>
+<div id="ref-Awad2021-cb" class="csl-entry" role="listitem">
+Awad, Noor, Neeratyoy Mallik, and Frank Hutter. 2021. <span>“<span>DEHB</span>: Evolutionary Hyberband for Scalable, Robust and Efficient Hyperparameter Optimization.”</span> <em>Proceedings of the Thirtieth International Joint Conference on Artificial Intelligence</em> (California). <a href="https://doi.org/10.24963/ijcai.2021/296">https://doi.org/10.24963/ijcai.2021/296</a>.
+</div>
+<div id="ref-Eimer2023-kd" class="csl-entry" role="listitem">
+Eimer, Theresa, Marius Lindauer, and Roberta Raileanu. 2023. <span>“Hyperparameters in Reinforcement Learning and How to Tune Them.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.2306.01324">https://doi.org/10.48550/arXiv.2306.01324</a>.
+</div>
+<div id="ref-Wan2022-hf" class="csl-entry" role="listitem">
+Wan, Xingchen, Cong Lu, Jack Parker-Holder, et al. 2022. <span>“Bayesian Generational Population-Based Training.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.2207.09405">https://doi.org/10.48550/arXiv.2207.09405</a>.
 </div>
 </div>
-</div>
-</div>
-<!-- ## QR Code for Homepage
-
-![](images/home-qrcode.png){width=150px} -->
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Source code: <a href="https://github.com/facebookresearch/how-to-autorl" class="uri">https://github.com/facebookresearch/how-to-autorl</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Source code: <a href="https://github.com/automl/DEHB" class="uri">https://github.com/automl/DEHB</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Source code: <a href="https://github.com/xingchenwan/bgpbt" class="uri">https://github.com/xingchenwan/bgpbt</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

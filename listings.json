@@ -1,17 +1,8 @@
 [
   {
     "listing": "/blog.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching.html",
-    "items": []
-  },
-  {
-    "listing": "/projects.html",
     "items": [
-      "/projects/RL-XAI/index.html",
-      "/projects/Data-driven/index.html"
+      "/blog/26-07-01-Algorithm-Configuration/index.html"
     ]
   }
 ]
