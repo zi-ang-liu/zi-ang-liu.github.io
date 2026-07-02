@@ -46,21 +46,28 @@
     "href": "teaching.html",
     "title": "Teaching",
     "section": "",
-    "text": "計算機実習A\n1年 春学期 水1 W305\n\n\nリレーショナル・データベース\n3年 春学期 水2 W305\n\n\n社会システム\n1年 秋学期 金3 W305\n\n\nオペレーションズ・リサーチB\n2年 秋学期 水2 W202\n\n\n\n\n\n\n\n最適化アルゴリズム特論\n秋学期\n\n\n先進経営科学特論\n秋学期\n\n\n\n\n\n\n\n1限 9:00–10:40\n\n\n2限 10:50–12:30\n\n\n3限 13:20–15:00\n\n\n4限 15:10–16:50\n\n\n5限 17:00–18:40"
+    "text": "計算機実習A\n 1年  春学期  水1  W305\n\n\nリレーショナル・データベース\n 3年  春学期  水2  W305\n\n\n社会システム\n 1年  秋学期  金3  W305\n\n\nオペレーションズ・リサーチB\n 2年  秋学期  水2  W202"
   },
   {
-    "objectID": "teaching.html#法政大学",
-    "href": "teaching.html#法政大学",
+    "objectID": "teaching.html#学部",
+    "href": "teaching.html#学部",
     "title": "Teaching",
     "section": "",
-    "text": "計算機実習A\n1年 春学期 水1 W305\n\n\nリレーショナル・データベース\n3年 春学期 水2 W305\n\n\n社会システム\n1年 秋学期 金3 W305\n\n\nオペレーションズ・リサーチB\n2年 秋学期 水2 W202\n\n\n\n\n\n\n\n最適化アルゴリズム特論\n秋学期\n\n\n先進経営科学特論\n秋学期\n\n\n\n\n\n\n\n1限 9:00–10:40\n\n\n2限 10:50–12:30\n\n\n3限 13:20–15:00\n\n\n4限 15:10–16:50\n\n\n5限 17:00–18:40"
+    "text": "計算機実習A\n 1年  春学期  水1  W305\n\n\nリレーショナル・データベース\n 3年  春学期  水2  W305\n\n\n社会システム\n 1年  秋学期  金3  W305\n\n\nオペレーションズ・リサーチB\n 2年  秋学期  水2  W202"
   },
   {
-    "objectID": "teaching.html#lecture-notes",
-    "href": "teaching.html#lecture-notes",
+    "objectID": "teaching.html#大学院",
+    "href": "teaching.html#大学院",
     "title": "Teaching",
-    "section": "Lecture Notes",
-    "text": "Lecture Notes\nOpen-access course notes I maintain — click a title to read online.\n\nOperations Research Data Science Database Systems Computer Literacy Reinforcement Learning"
+    "section": "大学院",
+    "text": "大学院\n\n\n最適化アルゴリズム特論\n 秋学期\n\n\n先進経営科学特論\n 秋学期"
+  },
+  {
+    "objectID": "teaching.html#時間割小金井キャンパス",
+    "href": "teaching.html#時間割小金井キャンパス",
+    "title": "Teaching",
+    "section": "時間割（小金井キャンパス）",
+    "text": "時間割（小金井キャンパス）\n\n\n1限 9:00–10:40\n\n\n2限 10:50–12:30\n\n\n3限 13:20–15:00\n\n\n4限 15:10–16:50\n\n\n5限 17:00–18:40"
   },
   {
     "objectID": "open-source.html",
@@ -102,7 +109,7 @@
     "href": "index.html",
     "title": "Ziang Liu",
     "section": "",
-    "text": "Ziang Liu\nAssociate Professor, Ph.D.\n\nDepartment of Industrial and Systems Engineering, Hosei University\n\n\n Google Scholar  GitHub\n\n\n\n\n\n Intelligent Systems Laboratory\nOur Laboratory researches operations research, machine learning, and optimization methods to improve decision-making for complex systems.\nVisit the lab · Join us\n\n\n Contact\nHosei University\n3-7-2 Kajino-cho  Koganei-shi\nTokyo 184-8584, Japan\nliu at hosei dot ac dot jp · Map"
+    "text": "Ziang Liu\nAssociate Professor, Ph.D.\n\nDepartment of Industrial and Systems Engineering, Hosei University\n\n\n Google Scholar  GitHub  researchmap\n\n\n\n\n\n Intelligent Systems Laboratory\nOur Laboratory researches operations research, machine learning, and optimization methods to improve decision-making for complex systems.\nVisit the lab · Join us\n\n\n Contact\nHosei University\n3-7-2 Kajino-cho  Koganei-shi\nTokyo 184-8584, Japan\nliu at hosei dot ac dot jp · Map"
   },
   {
     "objectID": "publications.html",
