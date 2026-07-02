@@ -12,7 +12,7 @@ Externally funded research projects.
 <div class="project-grid">
 
   <a class="project-card" href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23K22983/" target="_blank" rel="noopener">
-    <img class="project-img" src="projects/Data-driven/thumbnail.jpg" alt="Data-driven optimization for supply chains">
+    <img class="project-img" src="images/data-driven.jpg" alt="Data-driven optimization for supply chains">
     <div class="project-body">
       <span class="project-tag">JSPS KAKENHI</span>
       <div class="project-title">動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築</div>
@@ -22,7 +22,7 @@ Externally funded research projects.
   </a>
 
   <a class="project-card" href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23K13514/" target="_blank" rel="noopener">
-    <img class="project-img" src="projects/RL-XAI/thumbnail.jpg" alt="Explainable decision support for inventory management">
+    <img class="project-img" src="images/rl-xai.jpg" alt="Explainable decision support for inventory management">
     <div class="project-body">
       <span class="project-tag">JSPS KAKENHI</span>
       <div class="project-title">深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム</div>

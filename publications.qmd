@@ -1,12 +1,12 @@
 ---
 title: "Publications"
 bibliography: references.bib
-csl: ieee.csl
+csl: assets/ieee.csl
 nocite: |
   @*
 citeproc: false
 filters:
-  - group-refs.lua
+  - assets/group-refs.lua
 ---
 
 Peer-reviewed work, grouped by type and listed newest-first. 

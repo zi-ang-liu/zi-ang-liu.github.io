@@ -39,8 +39,8 @@ website:
 format:
   html:
     theme: 
-      dark: [litera, dark_custom.scss]
-      light: [litera, custom.scss]  
+      dark: [litera, scss/dark_custom.scss]
+      light: [litera, scss/custom.scss]
     css: styles.css
 
 
