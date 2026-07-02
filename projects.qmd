@@ -1,11 +1,35 @@
 ---
 title: "Projects"
-listing:
-  - id: projects
-    contents: 
-      - /projects
-    sort: "date desc"
-    type: grid
-    categories: true
-    grid-columns: 2
 ---
+
+Externally funded research projects. 
+
+::: {.profile-links}
+[<i class="bi bi-database"></i> KAKEN](https://nrid.nii.ac.jp/ja/nrid/1000030908166/){.profile-link}
+:::
+
+```{=html}
+<div class="project-grid">
+
+  <a class="project-card" href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23K22983/" target="_blank" rel="noopener">
+    <img class="project-img" src="projects/Data-driven/thumbnail.jpg" alt="Data-driven optimization for supply chains">
+    <div class="project-body">
+      <span class="project-tag">JSPS KAKENHI</span>
+      <div class="project-title">動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築</div>
+      <div class="project-subtitle">Development of Data-Driven Optimization Fundamentals for Supply Chains Using Dynamic Model Construction Platform</div>
+      <div class="project-meta">23K22983 ・ 研究分担者 ・ 2024–2026</div>
+    </div>
+  </a>
+
+  <a class="project-card" href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23K13514/" target="_blank" rel="noopener">
+    <img class="project-img" src="projects/RL-XAI/thumbnail.jpg" alt="Explainable decision support for inventory management">
+    <div class="project-body">
+      <span class="project-tag">JSPS KAKENHI</span>
+      <div class="project-title">深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム</div>
+      <div class="project-subtitle">Developing explainable decision support systems for inventory management using deep reinforcement learning</div>
+      <div class="project-meta">23K13514 ・ 研究代表者 ・ 2023–</div>
+    </div>
+  </a>
+
+</div>
+```

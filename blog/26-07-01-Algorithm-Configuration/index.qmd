@@ -1,0 +1,42 @@
+---
+title: "AC"
+author: "Ziang Liu"
+date: "2025-10-10"
+categories: [""]
+bibliography: ["references.bib"]
+page-layout: article
+draft: false
+---
+
+## Algorithm Configuration
+
+Let $\mathcal{I}$ be the set of problem instances, $\mathcal{D}$ be the probability distribution over $\mathcal{I}$. Let $\mathcal{A}$ be the set of algorithms with parameters $p_1, p_2, \ldots, p_k$. The domain of each parameter $p_i$ is denoted as $\Theta_i$, and the parameter space is defined as $\Theta = \Theta_1 \times \Theta_2 \times \ldots \times \Theta_k$. 
+
+The objective of algorithm configuration is to find the optimal parameter configuration $\theta^* \in \Theta$ that minimizes the expected cost of the algorithm over the distribution of problem instances:
+
+$$
+\theta^* \in \arg\min_{\theta \in \Theta} \mathbb{E}_{i \sim \mathcal{D}}[c(\theta, i)]
+$$
+
+where $c(\theta, i)$ is the cost of running algorithm $\mathcal{A}$ with parameter configuration $\theta$ on problem instance $i$.
+
+### Dynamic Algorithm Configuration
+
+
+### Hyperparameter Optimization in Reinforcement Learning
+
+
+@Eimer2023-kd discussed the hyperparameter optimization problem in the context of reinforcement learning (RL).[^AutoRL]
+They conducted a experimental study on the performance of various hyperparameter optimization methods, including random search, DEHB [@Awad2021-cb],[^dehb] and BGT [@Wan2022-hf].[^bgpbt] 
+
+[^AutoRL]: Source code: <https://github.com/facebookresearch/how-to-autorl>.
+[^dehb]: Source code: <https://github.com/automl/DEHB>.
+[^bgpbt]: Source code: <https://github.com/xingchenwan/bgpbt>.
+
+
+- Optuna [@Akiba2019-aj] 
+
+### References
+
+::: {#refs}
+:::

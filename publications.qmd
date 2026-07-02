@@ -4,16 +4,27 @@ bibliography: references.bib
 csl: ieee.csl
 nocite: |
   @*
+citeproc: false
+filters:
+  - group-refs.lua
 ---
+
+Peer-reviewed work, grouped by type and listed newest-first. 
+
+::: {.profile-links}
+[<i class="bi bi-mortarboard-fill"></i> Google Scholar](https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl){.profile-link}
+[<i class="bi bi-book-half"></i> Semantic Scholar](https://www.semanticscholar.org/author/Ziang-Liu/2117941724){.profile-link}
+[<i class="bi bi-person-badge"></i> ORCID](https://orcid.org/0000-0002-1364-3502){.profile-link}
+[<i class="bi bi-caret-right-fill"></i> researchmap](https://researchmap.jp/liu.ziang){.profile-link}
+[<i class="bi bi-journal-text"></i> ResearchGate](https://www.researchgate.net/profile/Ziang-Liu-4){.profile-link}
+:::
+
+
 
 
 <!-- ## Work in Progress
 
 ## Waiting for publication
-
-- Motion and Path Planning of Mobile Robot
-for Autonomous Navigation with A∗ and
-Q-learning Algorithms*
 
 ## Published Works -->
 

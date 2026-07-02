@@ -1,18 +1,34 @@
 /*-- scss:defaults --*/
-// Light-mode refinements layered on the Litera base theme.
-// Paired with dark_custom.scss — same structure, mirrored values.
-// Keeps Litera's identity (blue #4582ec primary, serif body, sans UI).
+// Dark-mode overrides layered on the Litera base theme.
+// Paired with custom.scss — same structure, mirrored values.
+// Keeps Litera's identity (blue #4582ec primary, serif body, sans UI)
+// but inverts the surfaces for comfortable dark reading.
 
-// Brand
-$blue:        #4582ec !default;
+// Brand — brighten the Litera blue slightly so it reads on dark
+$blue:        #5c93ee !default;
 $primary:     $blue !default;
-$link-color:  #2f6fd6 !default;
+$link-color:  #7cb0f2 !default;
 
 // Surfaces
-$body-bg:     #ffffff !default;
-$body-color:  #2b3138 !default;
+$body-bg:     #1a1d21 !default;
+$body-color:  #d7dbdf !default;
 
-// Grays — inherit Litera's defaults (light surfaces)
+// Grays — re-mapped for dark surfaces
+$gray-100: #24282e !default;
+$gray-200: #2c3138 !default;
+$gray-300: #3a4048 !default;
+$gray-400: #565d66 !default;
+$gray-500: #838d98 !default;
+$gray-600: #9aa4af !default;
+$gray-700: #c2c8cf !default;
+$gray-800: #d7dbdf !default;
+$gray-900: #eceff1 !default;
+
+$light:  #24282e !default;
+$dark:   #eceff1 !default;
+
+// Contrast floor (Litera relaxes this; keep it relaxed for dark too)
+$min-contrast-ratio:   1.85 !default;
 
 // Typography
 $font-size-base:       1.05rem !default;
@@ -21,12 +37,12 @@ $headings-font-weight: 700 !default;
 $headings-line-height: 1.25 !default;
 
 // Borders & tables
-$border-color:        rgba(0, 0, 0, .08) !default;
-$table-border-color:  rgba(0, 0, 0, .08) !default;
+$border-color:        rgba(255, 255, 255, .12) !default;
+$table-border-color:  rgba(255, 255, 255, .12) !default;
 
 // Code
-$code-color:          #d63384 !default;
-$code-bg:             rgba(0, 0, 0, .03) !default;
+$code-color:          #e685b5 !default;
+$code-bg:             #24282e !default;
 
 /*-- scss:rules --*/
 
@@ -53,16 +69,24 @@ a {
   transition: color 0.15s ease;
 
   &:hover {
-    color: shade-color($link-color, 20%);
+    color: tint-color($link-color, 20%);
   }
 }
 
 // Navbar
 .navbar {
+  background-color: $gray-100 !important;
   border-bottom: 1px solid $border-color;
 
+  .navbar-brand,
   .nav-link {
+    color: $gray-700 !important;
     transition: color 0.15s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: $gray-900 !important;
   }
 }
 
@@ -109,7 +133,7 @@ main.content {
   transition: transform 0.08s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 
   &:hover {
-    box-shadow: 0 2px 8px rgba(69, 130, 236, 0.25);
+    box-shadow: 0 2px 8px rgba(92, 147, 238, 0.3);
   }
 
   &:active {
@@ -121,12 +145,13 @@ main.content {
 .card,
 .quarto-grid-item,
 .list-group-item {
+  background-color: $gray-100;
   border: 1px solid $border-color;
   border-radius: 0.5rem;
   transition: box-shadow 0.15s ease, transform 0.15s ease;
 
   &:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
   }
 }
@@ -135,7 +160,7 @@ main.content {
 blockquote {
   border-left: 3px solid $primary;
   padding-left: 1rem;
-  color: $gray-700;
+  color: $gray-600;
 }
 
 // About page (jolla) social links
@@ -162,7 +187,7 @@ blockquote {
   transition: background-color 0.15s ease;
 
   &:hover {
-    background-color: rgba($primary, 0.06);
+    background-color: rgba($primary, 0.1);
   }
 
   a:not(.doi-btn) {
@@ -185,7 +210,7 @@ blockquote {
   font-weight: 600;
   letter-spacing: 0.02em;
   line-height: 1.5;
-  border: 1px solid rgba($primary, 0.4);
+  border: 1px solid rgba($primary, 0.5);
   border-radius: 1em;
   color: $primary;
   text-decoration: none;
@@ -196,7 +221,7 @@ blockquote {
   &:hover {
     background-color: $primary;
     border-color: $primary;
-    color: #fff;
+    color: $body-bg;
   }
 }
 
@@ -211,7 +236,7 @@ blockquote {
   background-color: $gray-100;
   border: 1px solid $border-color;
   border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero-avatar {
@@ -220,7 +245,7 @@ blockquote {
   border-radius: 1rem;
   object-fit: cover;
   border: 1px solid $border-color;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
   flex-shrink: 0;
 }
 
@@ -306,7 +331,7 @@ blockquote {
   &:hover {
     color: $primary;
     border-color: $primary;
-    background-color: rgba($primary, 0.06);
+    background-color: rgba($primary, 0.12);
     transform: translateY(-1px);
 
     i {
@@ -403,7 +428,7 @@ blockquote {
   &:hover {
     transform: translateY(-3px);
     border-color: $primary;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 
     .project-title {
       color: $primary;
@@ -432,7 +457,7 @@ blockquote {
   padding: 0.16em 0.7em;
   border-radius: 1em;
   color: $primary;
-  background-color: rgba($primary, 0.1);
+  background-color: rgba($primary, 0.16);
 }
 
 .project-title {
@@ -474,7 +499,7 @@ blockquote {
   transition: box-shadow 0.15s ease, transform 0.15s ease;
 
   &:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
 
     a.course-name {
@@ -526,7 +551,7 @@ blockquote {
   margin: 0.15rem 0.25rem 0 0;
   border-radius: 1em;
   color: $primary;
-  background-color: rgba($primary, 0.1);
+  background-color: rgba($primary, 0.16);
   white-space: nowrap;
 
   i {
@@ -538,13 +563,13 @@ blockquote {
 
 // Semester-coded tags
 .term-spring {
-  color: #0f766e;
-  background-color: rgba(15, 118, 110, 0.12);
+  color: #2dd4bf;
+  background-color: rgba(45, 212, 191, 0.15);
 }
 
 .term-fall {
-  color: #b45309;
-  background-color: rgba(180, 83, 9, 0.13);
+  color: #fbbf24;
+  background-color: rgba(251, 191, 36, 0.15);
 }
 
 // Class-period strip (teaching page)
@@ -610,7 +635,7 @@ blockquote {
     transform: translateY(-2px);
     color: $primary;
     border-color: $primary;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 
     &::after {
       opacity: 1;
@@ -623,13 +648,15 @@ blockquote {
 pre,
 pre.sourceCode,
 div.sourceCode {
+  background-color: $code-bg;
   border: 1px solid $border-color;
   border-radius: 0.5rem;
+  color: $body-color;
 }
 
 code:not(.sourceCode) {
   color: $code-color;
-  background-color: $code-bg;
+  background-color: rgba(255, 255, 255, .06);
   padding: 0.1em 0.35em;
   border-radius: 0.25rem;
 }
@@ -644,6 +671,7 @@ code:not(.sourceCode) {
 footer,
 .page-footer,
 .nav-footer {
+  background-color: $gray-100;
   border-top: 1px solid $border-color;
   color: $gray-600;
 }
@@ -657,9 +685,51 @@ hr {
 // Search / form fields
 .form-control,
 input {
+  background-color: $gray-100;
   border-color: $border-color;
+  color: $body-color;
 
   &:focus {
+    background-color: $gray-100;
     border-color: $primary;
+    color: $body-color;
   }
+}
+
+// --- Dark border correction --------------------------------------------
+// $border-color resolves to Bootstrap's light default (#dee2e6) under this
+// theme's layering, which reads as a too-bright outline on dark surfaces.
+// Re-apply a subtle light-on-dark border to the custom surfaces.
+$dark-border: rgba(255, 255, 255, 0.12);
+
+.hero,
+.card,
+.quarto-grid-item,
+.list-group-item,
+.project-card,
+.course-card,
+.period,
+.book-item,
+.info-card,
+.hero-link,
+.profile-link,
+.form-control,
+input,
+div.sourceCode,
+pre {
+  border-color: $dark-border;
+}
+
+.navbar {
+  border-bottom-color: $dark-border;
+}
+
+footer,
+.page-footer,
+.nav-footer {
+  border-top-color: $dark-border;
+}
+
+hr {
+  border-top-color: $dark-border;
 }

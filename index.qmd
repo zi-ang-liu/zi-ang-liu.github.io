@@ -1,57 +1,55 @@
 ---
-title: "Ziang Liu"
+pagetitle: "Ziang Liu"
 image: https://avatars.githubusercontent.com/u/50853393?s=96&v=4
-# image: images/liu.jpg
-# jolla
-# trestles
-# solana
-# marquee
-# broadside
 email-obfuscation: javascript
-about:
-  id: hero-heading
-  image-width: 10em
-  image-shape: rounded
-  template: jolla
-  links:
-    - icon: mortarboard-fill
-      text: Google Scholar
-      href: https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl
-    - icon: book
-      text: Semantic Scholar
-      href: https://www.semanticscholar.org/author/Ziang-Liu/2117941724
-    - icon: caret-right-fill
-      text: researchmap
-      href: https://researchmap.jp/liu.ziang
-    - icon: github
-      text: Github
-      href: https://github.com/zi-ang-liu
-    - icon: envelope
-      text: Email
-      href: mailto:liu@hosei.ac.jp
-    - text: Lab/研究室
-      icon: house-fill
-      href: https://isl-hosei.github.io/
-    - text: ORCID
-      # icon: person-vcard
-      href: https://orcid.org/0000-0002-1364-3502
-    - text: KAKEN
-      href: https://nrid.nii.ac.jp/ja/nrid/1000030908166/
-    - text: ResearchGate
-      # icon: r-circle
-      href: https://www.researchgate.net/profile/Ziang-Liu-4
-# format: 
-#   html:
-#     page-layout: full
+format:
+  html:
+    page-layout: article
 ---
 
-:::{#hero-heading}
-Associate Professor, Ph.D.   
-[Department of Industrial and Systems Engineering](https://ise-hp.ws.hosei.ac.jp/),    
-[Hosei University](https://www.hosei.ac.jp/)
+::: {.hero}
+
+<img class="hero-avatar" src="https://avatars.githubusercontent.com/u/50853393?s=240&v=4" alt="Ziang Liu">
+
+::: {.hero-content}
+
+[Ziang Liu]{.hero-name}
+
+[Associate Professor, Ph.D.]{.hero-role}
+
+::: {.hero-affil}
+[Department of Industrial and Systems Engineering](https://ise-hp.ws.hosei.ac.jp/), [Hosei University](https://www.hosei.ac.jp/)
 :::
 
+::: {.hero-links}
+[<i class="bi bi-mortarboard-fill"></i> Google Scholar](https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl){.hero-link}
+[<i class="bi bi-github"></i> GitHub](https://github.com/zi-ang-liu){.hero-link}
+[<i class="bi bi-caret-right-fill"></i> researchmap](https://researchmap.jp/liu.ziang){.profile-link}
+:::
 
-::: {.text-center}
-[Join Us](https://isl-hosei.github.io/join.html){.btn .btn-primary role="button"}
+:::
+
+:::
+
+::: {.info-grid}
+
+::: {.info-card}
+[<i class="bi bi-people-fill"></i> Intelligent Systems Laboratory]{.info-card-title}
+
+Our Laboratory researches operations research, machine learning, and optimization methods to improve decision-making for complex systems. 
+
+[Visit the lab](https://isl-hosei.github.io/){.info-link} · [Join us](https://isl-hosei.github.io/join.html){.info-link}
+:::
+
+::: {.info-card}
+[<i class="bi bi-geo-alt-fill"></i> Contact]{.info-card-title}
+
+Hosei University\
+3-7-2 Kajino-cho\ 
+Koganei-shi\
+Tokyo 184-8584, Japan
+
+[liu@hosei.ac.jp](mailto:liu@hosei.ac.jp){.info-link} · [Map](https://www.google.com/maps/search/?api=1&query=Hosei+University+Koganei+Campus){.info-link}
+:::
+
 :::
