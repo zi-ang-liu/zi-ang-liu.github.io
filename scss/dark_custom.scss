@@ -73,10 +73,15 @@ a {
   }
 }
 
-// Navbar
+// Navbar — match the page background (mirrors the light theme's navbar)
 .navbar {
-  background-color: $gray-100 !important;
+  background-color: $body-bg !important;
   border-bottom: 1px solid $border-color;
+
+  // Quarto computes a near-black navbar color; force light for tool icons
+  --bs-navbar-color: #{$gray-700};
+  --bs-navbar-hover-color: #{$gray-900};
+  --bs-navbar-active-color: #{$gray-900};
 
   .navbar-brand,
   .nav-link {
@@ -88,6 +93,32 @@ a {
   .nav-link.active {
     color: $gray-900 !important;
   }
+}
+
+// Search icon (an SVG driven by `color`) defaults to near-black — lighten it.
+.aa-DetachedSearchButton .aa-DetachedSearchButtonIcon,
+.aa-SubmitIcon,
+.quarto-navigation-tool {
+  color: $gray-700 !important;
+
+  &:hover {
+    color: $gray-900 !important;
+  }
+}
+
+// Dark-mode toggle is a background-image SVG with a dark fill baked in;
+// swap both states for light-fill versions.
+.quarto-color-scheme-toggle:not(.alternate) .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23c2c8cf" viewBox="0 0 16 16"><path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/></svg>') !important;
+}
+
+.quarto-color-scheme-toggle.alternate .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23c2c8cf" viewBox="0 0 16 16"><path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>') !important;
+}
+
+// Hamburger toggler (mobile) — light stroke variant
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(194,200,207,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 // Muted lead text (Litera uses $gray-600)
@@ -671,7 +702,7 @@ code:not(.sourceCode) {
 footer,
 .page-footer,
 .nav-footer {
-  background-color: $gray-100;
+  background-color: $body-bg;
   border-top: 1px solid $border-color;
   color: $gray-600;
 }

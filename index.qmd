@@ -44,9 +44,9 @@ Our Laboratory researches operations research, machine learning, and optimizatio
 ::: {.info-card}
 [<i class="bi bi-geo-alt-fill"></i> Contact]{.info-card-title}
 
-Hosei University\
-3-7-2 Kajino-cho\ 
-Koganei-shi\
+Hosei University,\
+3-7-2 Kajino-cho, \ 
+Koganei-shi,\
 Tokyo 184-8584, Japan
 
 [liu@hosei.ac.jp](mailto:liu@hosei.ac.jp){.info-link} · [Map](https://www.google.com/maps/search/?api=1&query=Hosei+University+Koganei+Campus){.info-link}
