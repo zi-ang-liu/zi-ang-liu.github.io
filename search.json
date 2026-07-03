@@ -35,13 +35,6 @@
     "text": "Externally funded research projects.\n\n KAKEN\n\n\n\n  \n    \n    \n      JSPS KAKENHI\n      動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築\n      Development of Data-Driven Optimization Fundamentals for Supply Chains Using Dynamic Model Construction Platform\n      23K22983 ・ 研究分担者 ・ 2024–2026\n    \n  \n\n  \n    \n    \n      JSPS KAKENHI\n      深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム\n      Developing explainable decision support systems for inventory management using deep reinforcement learning\n      23K13514 ・ 研究代表者 ・ 2023–"
   },
   {
-    "objectID": "projects/RL-XAI/index.html",
-    "href": "projects/RL-XAI/index.html",
-    "title": "深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム",
-    "section": "",
-    "text": "研究課題: 23K13514\n研究代表者: 劉子昂\n研究期間: 2023年4月1日 -"
-  },
-  {
     "objectID": "teaching.html",
     "href": "teaching.html",
     "title": "Teaching",
@@ -98,18 +91,11 @@
     "text": "Little projects\n\nExact method for perishable inventory control Code\nReinforcement learning environments for traffic signal control Code\nImplementation of Differential Evolution (DE) on the CEC 2014 test suite Code"
   },
   {
-    "objectID": "projects/Data-driven/index.html",
-    "href": "projects/Data-driven/index.html",
-    "title": "動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築",
-    "section": "",
-    "text": "研究課題: 23K22983\n研究代表者: 西 竜志\n研究分担者: 劉 子昂\n研究期間: 2024年4月1日 - 2026年3月31日"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Ziang Liu",
     "section": "",
-    "text": "Ziang Liu\nAssociate Professor, Ph.D.\n\nDepartment of Industrial and Systems Engineering, Hosei University\n\n\n Google Scholar  GitHub  researchmap\n\n\n\n\n\n Intelligent Systems Laboratory\nOur Laboratory researches operations research, machine learning, and optimization methods to improve decision-making for complex systems.\nVisit the lab · Join us\n\n\n Contact\nHosei University\n3-7-2 Kajino-cho  Koganei-shi\nTokyo 184-8584, Japan\nliu at hosei dot ac dot jp · Map"
+    "text": "Ziang Liu\nAssociate Professor, Ph.D.\n\nDepartment of Industrial and Systems Engineering, Hosei University\n\n\n Google Scholar  GitHub  researchmap\n\n\n\n\n\n Intelligent Systems Laboratory\nOur Laboratory researches operations research, machine learning, and optimization methods to improve decision-making for complex systems.\nVisit the lab · Join us\n\n\n Contact\nHosei University,\n3-7-2 Kajino-cho,   Koganei-shi,\nTokyo 184-8584, Japan\nliu at hosei dot ac dot jp · Map"
   },
   {
     "objectID": "publications.html",
