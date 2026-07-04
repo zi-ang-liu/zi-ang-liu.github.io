@@ -31,6 +31,22 @@ format:
 
 :::
 
+## Biography
+
+**Ziang Liu** is an Associate Professor of Industrial and Systems Engineering at Hosei University. He received his Ph.D. in Engineering from Osaka University in 2021. Before joining Hosei University in April 2025, he served as an Assistant Professor at Okayama University from 2021 to 2025.
+
+His research interests include operations research, optimization, and machine learning. He focuses on developing advanced algorithms to design autonomous decision-making systems, with particular emphasis on inventory, manufacturing, and supply chain management, where decisions are made in complex environments.
+
+## Career
+
+- 2021–2025: Assistant Professor, Okayama University
+- 2025–Present: Associate Professor, Hosei University
+
+## Awards
+
+- Distinguished Young IEOM Researcher Award, IEOM Society, 2024
+- Best Paper Award, IEEE IEEM, 2019
+
 ::: {.info-grid}
 
 ::: {.info-card}
@@ -53,3 +69,4 @@ Tokyo 184-8584, Japan
 :::
 
 :::
+

@@ -1,5 +1,5 @@
 ---
-title: "AC"
+title: "Algorithm Configuration"
 author: "Ziang Liu"
 date: "2025-10-10"
 categories: [""]
@@ -8,9 +8,7 @@ page-layout: article
 draft: false
 ---
 
-## Algorithm Configuration
-
-Let $\mathcal{I}$ be the set of problem instances, $\mathcal{D}$ be the probability distribution over $\mathcal{I}$. Let $\mathcal{A}$ be the set of algorithms with parameters $p_1, p_2, \ldots, p_k$. The domain of each parameter $p_i$ is denoted as $\Theta_i$, and the parameter space is defined as $\Theta = \Theta_1 \times \Theta_2 \times \ldots \times \Theta_k$. 
+Let $\mathcal{I}$ be the set of problem instances, $\mathcal{D}$ be the probability distribution over $\mathcal{I}$. Let $p_1, p_2, \ldots, p_k$ be the parameters of an algorithm. The domain of each parameter $p_i$ is denoted as $\Theta_i$, and the parameter space is defined as $\Theta = \Theta_1 \times \Theta_2 \times \ldots \times \Theta_k$. Note that the the domain of each parameter can be continuous, discrete, or categorical. The parameter configuration of the algorithm is denoted as $\theta = (p_1, p_2, \ldots, p_k) \in \Theta$.
 
 The objective of algorithm configuration is to find the optimal parameter configuration $\theta^* \in \Theta$ that minimizes the expected cost of the algorithm over the distribution of problem instances:
 
@@ -18,13 +16,32 @@ $$
 \theta^* \in \arg\min_{\theta \in \Theta} \mathbb{E}_{i \sim \mathcal{D}}[c(\theta, i)]
 $$
 
-where $c(\theta, i)$ is the cost of running algorithm $\mathcal{A}$ with parameter configuration $\theta$ on problem instance $i$.
+where $c(\theta, i)$ is the cost of the algorithm parameter configuration $\theta$ on problem instance $i$.
+
+Normally, the distribution $\mathcal{D}$ is unknown. Thus, arithmetic mean is often used as an estimator of the expected cost. The problem is then formulated as follows:
+
+$$
+\theta^* \in \arg\min_{\theta \in \Theta} \frac{1}{|\mathcal{I}|} \sum_{i \in \mathcal{I}} c(\theta, i)
+$$
+
+
+
+### AutoML
+
+### Neural Architecture Search
+
+### Hyperparameter Optimization
+
+Hyperparameter optimization (HPO) is a special case of algorithm configuration.
+
+
 
 ### Dynamic Algorithm Configuration
 
 
 ### Hyperparameter Optimization in Reinforcement Learning
 
+@Awad2021-cb proposed DEHB, a hyperparameter optimization method that combines differential evolution and Hyperband. Differential evolution (DE) is a classic evolutionary algorithm and Hyperband is a bandit-based method for hyperparameter optimization. 
 
 @Eimer2023-kd discussed the hyperparameter optimization problem in the context of reinforcement learning (RL).[^AutoRL]
 They conducted a experimental study on the performance of various hyperparameter optimization methods, including random search, DEHB [@Awad2021-cb],[^dehb] and BGT [@Wan2022-hf].[^bgpbt] 
@@ -33,7 +50,8 @@ They conducted a experimental study on the performance of various hyperparameter
 [^dehb]: Source code: <https://github.com/automl/DEHB>.
 [^bgpbt]: Source code: <https://github.com/xingchenwan/bgpbt>.
 
-
+- SMAC3 [@Lindauer2021-cy]
+- Population-based training (PBT) [@Jaderberg2017-el]
 - Optuna [@Akiba2019-aj] 
 
 ### References
