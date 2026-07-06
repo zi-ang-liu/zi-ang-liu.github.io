@@ -42,7 +42,13 @@ format:
       dark: [litera, scss/dark_custom.scss]
       light: [litera, scss/custom.scss]
     css: styles.css
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
 
+filters:
+  - pseudocode
 
 # default
 # cerulean

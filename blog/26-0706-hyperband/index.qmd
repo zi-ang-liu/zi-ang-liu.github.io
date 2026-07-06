@@ -1,0 +1,54 @@
+---
+title: "Bandit-Based Algorithm for Hyperparameter Optimization"
+author: "Ziang Liu"
+date: "2026-07-06"
+categories: [""]
+bibliography: ["references.bib"]
+page-layout: article
+draft: false
+---
+
+**Draft**
+
+Machine learning models often have hyperparameters that need to be tuned for optimal performance. When the number of hyperparameters is large, it can be difficult to find a good combination of hyperparameters manually. Hyperparameter optimization (HPO) is a method for automatically searching for hyperparameter combinations that improve model performance. 
+
+HPO can be classified into the following categories:
+
+- Bayesian optimization
+- Bandit-based optimization
+- Evolutionary optimization / Metaheuristics
+
+
+## Bandit-Based Optimization
+
+### Successive Halving
+
+@Jamieson2016-sg
+
+```pseudocode
+#| label: algo-successive-halving
+
+\begin{algorithm}
+\caption{Successive Halving}
+\begin{algorithmic}
+\For{$a = 1, 2, \dots, k$}
+  \State $Q(a) \leftarrow 0$
+  \State $N(a) \leftarrow 0$
+\EndFor
+\For{$t = 1, 2, \dots, T$}
+  \State Choose $A_t$ using the $\epsilon$-greedy policy based on $Q$
+  \State $R_t \leftarrow \texttt{bandit}(A_t)$
+  \State $N(A_t) \leftarrow N(A_t) + 1$
+  \State $Q(A_t) \leftarrow Q(A_t) + \frac{1}{N(A_t)} \left( R_t - Q(A_t) \right)$
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+```
+
+
+### Hyperband
+
+## References
+
+:::{#refs}
+:::
