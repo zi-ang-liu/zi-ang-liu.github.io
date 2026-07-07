@@ -23,7 +23,9 @@ HPO can be classified into the following categories:
 
 ### Successive Halving
 
-@Jamieson2016-sg
+Successive Halving was originally proposed by @Karnin2013-az. Later, @Jamieson2016-sg proposed to use this method for HPO.
+
+Successive Halving requires a budget $B$ and a number of configurations $n$. In this algorithm, $l_{i, r}$ denotes the loss of configuration $i$ after $r$ iterations. 
 
 ```pseudocode
 #| label: algo-successive-halving
@@ -31,22 +33,62 @@ HPO can be classified into the following categories:
 \begin{algorithm}
 \caption{Successive Halving}
 \begin{algorithmic}
-\For{$a = 1, 2, \dots, k$}
-  \State $Q(a) \leftarrow 0$
-  \State $N(a) \leftarrow 0$
-\EndFor
-\For{$t = 1, 2, \dots, T$}
-  \State Choose $A_t$ using the $\epsilon$-greedy policy based on $Q$
-  \State $R_t \leftarrow \texttt{bandit}(A_t)$
-  \State $N(A_t) \leftarrow N(A_t) + 1$
-  \State $Q(A_t) \leftarrow Q(A_t) + \frac{1}{N(A_t)} \left( R_t - Q(A_t) \right)$
+\Require Budget $B$, number of configurations $n$
+\State $S_0 \leftarrow \{1, 2, \dots, n\}$
+\For{$k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$}
+    \State $r_k \leftarrow \lfloor \frac{B}{|S_k| \lceil \log_2 n \rceil} \rfloor$
+    \State $R_k \leftarrow \sum_{j=0}^{k} r_j$
+    \State Run each configuration in $S_k$ for $r_k$ additional iterations
+    \State Get $l_{i, R_k}$ for each configuration $i \in S_k$
+    \State $S_{k+1} \leftarrow \left\{ i \in S_k : l_{i, R_k} \text{ is among the best } \lfloor |S_k| / 2 \rfloor \text{ losses} \right\}$
 \EndFor
 \end{algorithmic}
 \end{algorithm}
 ```
 
+$S_0 = \{1, 2, \dots, n\}$ be the set of configurations. 
+
+$|S_{k+1}| = \lfloor |S_k| / 2 \rfloor$ for $k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$. 
+
+It is clear that every iteration of the algorithm spends a budget of $|S_k| r_k$, which is roughly $B / \log_2 n$, a constant fraction of the total budget. 
+
+Let $B = 128$ and $n = 16$, so that $\lceil \log_2 n \rceil = 4$ and $k$ ranges over $0, 1, 2, 3$. At each round the worst half of the configurations is discarded, so $|S_4| = 1$ and $S_4$ contains the best configuration.
+
+| $k$ | $r_k$ | $R_k$ | $|S_k|$ | $|S_{k+1}|$ |
+|-----|-------|-------|--------|----|
+| 0   | 2     | 2     | 16     | 8      |
+| 1   | 4     | 6     | 8      | 4      |
+| 2   | 8     | 14    | 4      | 2      |
+| 3   | 16    | 30    | 2      | 1      |
+
+Each round spends $|S_k| \cdot r_k = 32$ iterations, so the total budget is $4 \times 32 = 128 = B$, as expected. Successive Halving thus allocates exponentially more resources to the fewer configurations that survive each round.
+
 
 ### Hyperband
+
+In the Successive Halving algorithm, it is required to specify $B$ and $n$ in advance. However, it is may be difficult to choose a good value for $n$ in practice. 
+Hyperband [@Li2016-fm] can be considered as a extension of Successive Halving. 
+
+```pseudocode
+#| label: algo-hyperband
+
+\begin{algorithm}
+\caption{Hyperband}
+\begin{algorithmic}
+\Require $R$, $\eta$ 
+\State $s_{max} \leftarrow \lfloor \log_\eta R \rfloor$
+\State $B \leftarrow (s_{max} + 1) R$
+\For{$s = s_{\max}, s_{\max} - 1, \dots, 0$}
+    \State $n \leftarrow \lceil \frac{B}{R} \frac{\eta^s}{s + 1} \rceil$
+    \State $r \leftarrow R \eta^{-s}$
+    \State Run Successive Halving with $n$ configurations, each with $r$ iterations, $1/\eta$ as the halving rate
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+```
+
+BOHB [@Falkner2018-vd] is a combination of Hyperband and Bayesian optimization. DEHB [@Awad2021-cb] is a combination of Hyperband and Differential Evolution.
+
 
 ## References
 
