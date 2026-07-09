@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ziang Liu">
+<meta name="dcterms.date" content="2026-07-06">
 
-<title>Open Source – Ziang Liu</title>
+<title>Bandit-Based Algorithm for Hyperparameter Optimization – Ziang Liu</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,31 +25,85 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-80fd16d30c9dca1872f4ce9dde22fc13.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-dcc5e88bf931a330dcb322bc79f0fce6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
-<link href="site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-80fd16d30c9dca1872f4ce9dde22fc13.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-dcc5e88bf931a330dcb322bc79f0fce6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
+<link href="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -94,9 +150,38 @@ ul.task-list li input[type="checkbox"] {
       </style>
     
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Open Source – Ziang Liu">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bandit-Based Algorithm for Hyperparameter Optimization – Ziang Liu">
 <meta property="og:description" content="Ziang Liu’s Personal Website">
 <meta property="og:site_name" content="Ziang Liu">
 </head>
@@ -268,7 +353,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Ziang Liu</span>
     </a>
   </div>
@@ -279,19 +364,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html"> 
+    <a class="nav-link" href="../../teaching.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html"> 
+    <a class="nav-link" href="../../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -313,14 +398,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Open Source</h1>
+<h1 class="title">Bandit-Based Algorithm for Hyperparameter Optimization</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ziang Liu </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 6, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -330,27 +427,148 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>I actively develop and maintain several open-source projects. While most are still in their early stages, I am continually improving them with the goal of contributing meaningful tools to the research community.</p>
-<section id="reinforcement-learning" class="level2">
-<h2 class="anchored" data-anchor-id="reinforcement-learning">Reinforcement Learning</h2>
+<p><strong>Draft</strong></p>
+<p>Machine learning models often have hyperparameters that need to be tuned for optimal performance. When the number of hyperparameters is large, it can be difficult to find a good combination of hyperparameters manually. Hyperparameter optimization (HPO) is a method for automatically searching for hyperparameter combinations that improve model performance.</p>
+<p>HPO can be classified into the following categories:</p>
 <ul>
-<li><a href="https://github.com/zi-ang-liu/mdptools">mdptools</a>: A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning.</li>
+<li>Bayesian optimization</li>
+<li>Bandit-based optimization</li>
+<li>Evolutionary optimization / Metaheuristics</li>
 </ul>
-<!-- - [inventory-gym](https://github.com/zi-ang-liu/inventory-gym): A suite of inventory control environments compatible with Gymnasium, Stable Baselines3, and mdptools. -->
+<section id="bandit-based-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="bandit-based-optimization">Bandit-Based Optimization</h2>
+<section id="successive-halving" class="level3">
+<h3 class="anchored" data-anchor-id="successive-halving">Successive Halving</h3>
+<p>Successive Halving was originally proposed by <span class="citation" data-cites="Karnin2013-az">Karnin et al. (<a href="#ref-Karnin2013-az" role="doc-biblioref">2013</a>)</span>. Later, <span class="citation" data-cites="Jamieson2016-sg">Jamieson and Talwalkar (<a href="#ref-Jamieson2016-sg" role="doc-biblioref">2016</a>)</span> proposed to use this method for HPO.</p>
+<p>Successive Halving requires a budget <span class="math inline">\(B\)</span> and a number of configurations <span class="math inline">\(n\)</span>. In the context of HPO for machine learning models, a configuration refers to a specific combination of hyperparameters. The budget <span class="math inline">\(B\)</span> can be defined as the total number of iterations that can be used. The performance of a configuration is evaluated by the loss function. In this algorithm, <span class="math inline">\(l_{i, r}\)</span> denotes the loss of configuration <span class="math inline">\(i\)</span> after <span class="math inline">\(r\)</span> iterations.</p>
+<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-comment-delimiter="//" data-line-number-punc=":" data-caption-prefix="Algorithm" data-pseudocode-number="1" data-line-number="true" data-no-end="false" data-indent-size="1.2em" data-indent-lines="false">
+<div class="pseudocode">
+\begin{algorithm} \caption{Successive Halving} \begin{algorithmic} \Require Budget $B$, number of configurations $n$ \State $S_0 \leftarrow \{1, 2, \dots, n\}$ \For{$k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$} \State $r_k \leftarrow \lfloor \frac{B}{|S_k| \lceil \log_2 n \rceil} \rfloor$ \State $R_k \leftarrow \sum_{j=0}^{k} r_j$ \State Run each configuration in $S_k$ for $r_k$ additional iterations \State Get $l_{i, R_k}$ for each configuration $i \in S_k$ \State $S_{k+1} \leftarrow \left\{ i \in S_k : l_{i, R_k} \text{ is among the best } \lfloor |S_k| / 2 \rfloor \text{ losses} \right\}$ \EndFor \end{algorithmic} \end{algorithm}
+</div>
+</div>
+<p>Let <span class="math inline">\(S_0 = \{1, 2, \dots, n\}\)</span> be the set of configurations. For each round <span class="math inline">\(k\)</span>, the number of configurations is halved, so that for <span class="math inline">\(k = 0, 1, \dots, \lceil \log_2 n \rceil - 1\)</span>, we have</p>
+<p><span class="math display">\[
+|S_{k+1}| = \lfloor |S_k| / 2 \rfloor,
+\]</span> and eventually <span class="math inline">\(|S_{\lceil \log_2 n \rceil}| = 1\)</span>.</p>
+<p>The budget that is spent on a configuration <span class="math inline">\(i\)</span> in round <span class="math inline">\(k\)</span> is <span class="math inline">\(r_k\)</span>, and the total budget spent on configuration <span class="math inline">\(i\)</span> is <span class="math inline">\(R_k = \sum_{j=0}^{k} r_j\)</span>. Since the number of configurations is given by <span class="math inline">\(|S_k|\)</span>, the total budget spent in round <span class="math inline">\(k\)</span> is <span class="math inline">\(|S_k| r_k\)</span>, which is approximately a constant value <span class="math inline">\(B / \lceil \log_2 n \rceil\)</span>.</p>
+<p>To illustrate the Successive Halving algorithm, consider the following example. Let <span class="math inline">\(B = 128\)</span> and <span class="math inline">\(n = 16\)</span>, so that <span class="math inline">\(\lceil \log_2 n \rceil = 4\)</span> and <span class="math inline">\(k\)</span> ranges over <span class="math inline">\(0, 1, 2, 3\)</span>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(k\)</span></th>
+<th><span class="math inline">\(r_k\)</span></th>
+<th><span class="math inline">\(R_k\)</span></th>
+<th><span class="math inline">\(|S_k|\)</span></th>
+<th><span class="math inline">\(|S_{k+1}|\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>16</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>8</td>
+<td>14</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>16</td>
+<td>30</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Each round spends <span class="math inline">\(|S_k| \cdot r_k = 32\)</span> iterations, so the total budget is <span class="math inline">\(4 \times 32 = 128 = B\)</span>, as expected.</p>
 </section>
-<section id="paper-with-code" class="level2">
-<h2 class="anchored" data-anchor-id="paper-with-code">Paper with Code</h2>
-<ul>
-<li>Liu, Ziang, and Tatsushi Nishi. “Inventory control with lateral transshipment using proximal policy optimization.” 2023 5th International Conference on Data-driven Optimization of Complex Systems (DOCS). IEEE, 2023. <a href="https://github.com/zi-ang-liu/Inventory_control_with_lateral_transshipment">Code</a></li>
-</ul>
+<section id="hyperband" class="level3">
+<h3 class="anchored" data-anchor-id="hyperband">Hyperband</h3>
+<p>In the Successive Halving algorithm, it is required to specify <span class="math inline">\(B\)</span> and <span class="math inline">\(n\)</span> in advance. However, it is may be difficult to choose a good value for <span class="math inline">\(n\)</span> in practice. Hyperband <span class="citation" data-cites="Li2016-fm">(<a href="#ref-Li2016-fm" role="doc-biblioref">Li et al. 2016</a>)</span> can be considered as a extension of Successive Halving.</p>
+<div id="algo-hyperband" class="pseudocode-container quarto-float" data-comment-delimiter="//" data-line-number-punc=":" data-caption-prefix="Algorithm" data-pseudocode-number="2" data-line-number="true" data-no-end="false" data-indent-size="1.2em" data-indent-lines="false">
+<div class="pseudocode">
+\begin{algorithm} \caption{Hyperband} \begin{algorithmic} \Require $R$, $\eta$ \State $s_{max} \leftarrow \lfloor \log_\eta R \rfloor$ \State $B \leftarrow (s_{max} + 1) R$ \For{$s = s_{\max}, s_{\max} - 1, \dots, 0$} \State $n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s$ \State $r \leftarrow R \eta^{-s}$ \For{$i = 0, 1, \dots, s$} \State $n_i \leftarrow \lfloor n \eta^{-i} \rfloor$ \State $r_i \leftarrow r \eta^i$ \State Run each configuration in $S_i$ for $r_i$ iterations \State Get $l_{i, r_i}$ for each configuration $i \in S_i$ \State $S_{i+1} \leftarrow \left\{ i \in S_i : l_{i, r_i} \text{ is among the best } \lfloor n_i / \eta \rfloor \text{ losses} \right\}$ \EndFor \EndFor \end{algorithmic} \end{algorithm}
+</div>
+</div>
+<p>Note that the original paper writes this step as <span class="math inline">\(n \leftarrow \lceil \frac{B}{R} \frac{\eta^s}{s + 1} \rceil\)</span>, rounding up only at the end; here we use <span class="math inline">\(n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s\)</span>, which floors the per-round budget first and matches the values in the paper’s Table 1 and its reference implementation.</p>
+<p>The following example is adapted from <span class="citation" data-cites="Li2016-fm">Li et al. (<a href="#ref-Li2016-fm" role="doc-biblioref">2016</a>)</span>. Let <span class="math inline">\(R = 81\)</span> and <span class="math inline">\(\eta = 3\)</span>, so that <span class="math inline">\(s_{max} = \lfloor \log_3 81 \rfloor = 4\)</span>. The following table shows the values of <span class="math inline">\(n\)</span> and <span class="math inline">\(r\)</span> for each value of <span class="math inline">\(s\)</span>.</p>
+<div id="e0a1232b" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hyperband(R, eta):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Return the (n_i, r_i) schedule for each bracket s."""</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    s_max <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> eta <span class="op">**</span> (s_max <span class="op">+</span> <span class="dv">1</span>) <span class="op">&lt;=</span> R:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        s_max <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    B <span class="op">=</span> (s_max <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> R</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    brackets <span class="op">=</span> {}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> s <span class="kw">in</span> <span class="bu">range</span>(s_max, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        n <span class="op">=</span> B <span class="op">//</span> R <span class="op">//</span> (s <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> eta<span class="op">**</span>s</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        r <span class="op">=</span> R <span class="op">//</span> eta<span class="op">**</span>s</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        brackets[s] <span class="op">=</span> [(n <span class="op">//</span> eta<span class="op">**</span>i, r <span class="op">*</span> eta<span class="op">**</span>i) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(s <span class="op">+</span> <span class="dv">1</span>)]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> brackets</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">81</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>eta <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>brackets <span class="op">=</span> hyperband(R, eta)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>s_max <span class="op">=</span> <span class="bu">max</span>(brackets)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"  i"</span> <span class="op">+</span> <span class="st">""</span>.join(<span class="ss">f"</span><span class="sc">{</span><span class="ss">f's = </span><span class="sc">{</span>s<span class="sc">}</span><span class="ss">'</span><span class="sc">:&gt;12}</span><span class="ss">"</span> <span class="cf">for</span> s <span class="kw">in</span> <span class="bu">range</span>(s_max, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>)))</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"   "</span> <span class="op">+</span> <span class="st">""</span>.join(<span class="ss">f"</span><span class="sc">{</span><span class="st">'n_i'</span><span class="sc">:&gt;6}{</span><span class="st">'r_i'</span><span class="sc">:&gt;6}</span><span class="ss">"</span> <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(s_max <span class="op">+</span> <span class="dv">1</span>)))</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(s_max <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    row <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>i<span class="sc">:&gt;3}</span><span class="ss">"</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> s <span class="kw">in</span> <span class="bu">range</span>(s_max, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">&lt;</span> <span class="bu">len</span>(brackets[s]):</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>            n_i, r_i <span class="op">=</span> brackets[s][i]</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>            row <span class="op">+=</span> <span class="ss">f"</span><span class="sc">{</span>n_i<span class="sc">:&gt;6}{</span>r_i<span class="sc">:&gt;6}</span><span class="ss">"</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>            row <span class="op">+=</span> <span class="st">" "</span> <span class="op">*</span> <span class="dv">12</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  i       s = 4       s = 3       s = 2       s = 1       s = 0
+      n_i   r_i   n_i   r_i   n_i   r_i   n_i   r_i   n_i   r_i
+  0    81     1    27     3     9     9     6    27     5    81
+  1    27     3     9     9     3    27     2    81            
+  2     9     9     3    27     1    81                        
+  3     3    27     1    81                                    
+  4     1    81                                                </code></pre>
+</div>
+</div>
+<p>BOHB <span class="citation" data-cites="Falkner2018-vd">(<a href="#ref-Falkner2018-vd" role="doc-biblioref">Falkner et al. 2018</a>)</span> is a combination of Hyperband and Bayesian optimization. DEHB <span class="citation" data-cites="Awad2021-cb">(<a href="#ref-Awad2021-cb" role="doc-biblioref">Awad et al. 2021</a>)</span> is a combination of Hyperband and Differential Evolution.</p>
 </section>
-<section id="little-projects" class="level2">
-<h2 class="anchored" data-anchor-id="little-projects">Little projects</h2>
-<ul>
-<li>Exact method for perishable inventory control <a href="https://github.com/zi-ang-liu/perishable-inventory-control">Code</a></li>
-<li>Reinforcement learning environments for traffic signal control <a href="https://github.com/zi-ang-liu/uxsim-env">Code</a></li>
-<li>Implementation of Differential Evolution (DE) on the CEC 2014 test suite <a href="https://github.com/zi-ang-liu/DE_CEC2014">Code</a></li>
-</ul>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Awad2021-cb" class="csl-entry" role="listitem">
+Awad, Noor, Neeratyoy Mallik, and Frank Hutter. 2021. <span>“<span>DEHB</span>: Evolutionary Hyberband for Scalable, Robust and Efficient Hyperparameter Optimization.”</span> <em>Proceedings of the Thirtieth International Joint Conference on Artificial Intelligence</em> (California). <a href="https://doi.org/10.24963/ijcai.2021/296">https://doi.org/10.24963/ijcai.2021/296</a>.
+</div>
+<div id="ref-Falkner2018-vd" class="csl-entry" role="listitem">
+Falkner, Stefan, Aaron Klein, and Frank Hutter. 2018. <span>“<span>BOHB</span>: Robust and Efficient Hyperparameter Optimization at Scale.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.1807.01774">https://doi.org/10.48550/arXiv.1807.01774</a>.
+</div>
+<div id="ref-Jamieson2016-sg" class="csl-entry" role="listitem">
+Jamieson, Kevin, and Ameet Talwalkar. 2016. <span>“Non-Stochastic Best Arm Identification and Hyperparameter Optimization.”</span> In <em>Proceedings of the 19th International Conference on Artificial Intelligence and Statistics</em>, edited by Arthur Gretton and Christian C Robert, vol. 51. Proceedings of Machine Learning Research. PMLR.
+</div>
+<div id="ref-Karnin2013-az" class="csl-entry" role="listitem">
+Karnin, Zohar S, Tomer Koren, and O Somekh. 2013. <span>“Almost Optimal Exploration in Multi-Armed Bandits.”</span> <em>International Conference on Machine Learning</em>, 1238–46.
+</div>
+<div id="ref-Li2016-fm" class="csl-entry" role="listitem">
+Li, Lisha, Kevin Jamieson, Giulia DeSalvo, Afshin Rostamizadeh, and Ameet Talwalkar. 2016. <span>“Hyperband: A Novel Bandit-Based Approach to Hyperparameter Optimization.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.1603.06560">https://doi.org/10.48550/arXiv.1603.06560</a>.
+</div>
+</div>
 
 
 </section>
