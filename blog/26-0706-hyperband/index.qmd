@@ -25,7 +25,8 @@ HPO can be classified into the following categories:
 
 Successive Halving was originally proposed by @Karnin2013-az. Later, @Jamieson2016-sg proposed to use this method for HPO.
 
-Successive Halving requires a budget $B$ and a number of configurations $n$. In this algorithm, $l_{i, r}$ denotes the loss of configuration $i$ after $r$ iterations. 
+Successive Halving requires a budget $B$ and a number of configurations $n$. In the context of HPO for machine learning models, a configuration refers to a specific combination of hyperparameters. The budget $B$ can be defined as the total number of iterations that can be used.
+The performance of a configuration is evaluated by the loss function. In this algorithm, $l_{i, r}$ denotes the loss of configuration $i$ after $r$ iterations. 
 
 ```pseudocode
 #| label: algo-successive-halving
@@ -46,13 +47,17 @@ Successive Halving requires a budget $B$ and a number of configurations $n$. In 
 \end{algorithm}
 ```
 
-$S_0 = \{1, 2, \dots, n\}$ be the set of configurations. 
+Let $S_0 = \{1, 2, \dots, n\}$ be the set of configurations. For each round $k$, the number of configurations is halved, so that for $k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$, we have
 
-$|S_{k+1}| = \lfloor |S_k| / 2 \rfloor$ for $k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$. 
+$$
+|S_{k+1}| = \lfloor |S_k| / 2 \rfloor,
+$$ 
+and eventually $|S_{\lceil \log_2 n \rceil}| = 1$. 
 
-It is clear that every iteration of the algorithm spends a budget of $|S_k| r_k$, which is roughly $B / \log_2 n$, a constant fraction of the total budget. 
+The budget that is spent on a configuration $i$ in round $k$ is $r_k$, and the total budget spent on configuration $i$ is $R_k = \sum_{j=0}^{k} r_j$. Since the number of configurations is given by $|S_k|$, the total budget spent in round $k$ is $|S_k| r_k$, which is approximately a constant value $B / \lceil \log_2 n \rceil$.
 
-Let $B = 128$ and $n = 16$, so that $\lceil \log_2 n \rceil = 4$ and $k$ ranges over $0, 1, 2, 3$. At each round the worst half of the configurations is discarded, so $|S_4| = 1$ and $S_4$ contains the best configuration.
+To illustrate the Successive Halving algorithm, consider the following example.
+Let $B = 128$ and $n = 16$, so that $\lceil \log_2 n \rceil = 4$ and $k$ ranges over $0, 1, 2, 3$. 
 
 | $k$ | $r_k$ | $R_k$ | $|S_k|$ | $|S_{k+1}|$ |
 |-----|-------|-------|--------|----|
@@ -61,8 +66,7 @@ Let $B = 128$ and $n = 16$, so that $\lceil \log_2 n \rceil = 4$ and $k$ ranges 
 | 2   | 8     | 14    | 4      | 2      |
 | 3   | 16    | 30    | 2      | 1      |
 
-Each round spends $|S_k| \cdot r_k = 32$ iterations, so the total budget is $4 \times 32 = 128 = B$, as expected. Successive Halving thus allocates exponentially more resources to the fewer configurations that survive each round.
-
+Each round spends $|S_k| \cdot r_k = 32$ iterations, so the total budget is $4 \times 32 = 128 = B$, as expected. 
 
 ### Hyperband
 
@@ -85,6 +89,28 @@ Hyperband [@Li2016-fm] can be considered as a extension of Successive Halving.
 \EndFor
 \end{algorithmic}
 \end{algorithm}
+```
+
+The following example is adapted from @Li2016-fm. 
+
+Let $R = 81$ and $\eta = 3$, so that $s_{max} = \lfloor \log_3 81 \rfloor = 4$.
+
+The following table shows the values of $n$ and $r$ for each value of $s$.
+
+```{python}
+import numpy as np
+
+R = 81
+eta = 3
+s_max = int(np.floor(np.log(R) / np.log(eta)))
+B = (s_max + 1) * R
+
+print(f"B = {B}, s_max = {s_max}")
+
+for s in range(s_max, -1, -1):
+    n = int(np.ceil((B / R) * (eta**s) / (s + 1)))
+    r = int(R * (eta ** (-s)))
+    print(f"| {s}   | {n}  | {r} |")
 ```
 
 BOHB [@Falkner2018-vd] is a combination of Hyperband and Bayesian optimization. DEHB [@Awad2021-cb] is a combination of Hyperband and Differential Evolution.
