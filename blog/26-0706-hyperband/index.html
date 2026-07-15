@@ -435,13 +435,14 @@ window.Quarto = {
 <li>Bandit-based optimization</li>
 <li>Evolutionary optimization / Metaheuristics</li>
 </ul>
+<p><span class="citation" data-cites="1390003825209053056">OZAKI et al. (<a href="#ref-1390003825209053056" role="doc-biblioref">2020</a>)</span> give a comprehensive review of HPO methods (the paper is written in Japanese). They also provide a guideline for selecting HPO methods based on the characteristics of the problem.</p>
 <section id="bandit-based-optimization" class="level2">
 <h2 class="anchored" data-anchor-id="bandit-based-optimization">Bandit-Based Optimization</h2>
 <section id="successive-halving" class="level3">
 <h3 class="anchored" data-anchor-id="successive-halving">Successive Halving</h3>
 <p>Successive Halving was originally proposed by <span class="citation" data-cites="Karnin2013-az">Karnin et al. (<a href="#ref-Karnin2013-az" role="doc-biblioref">2013</a>)</span>. Later, <span class="citation" data-cites="Jamieson2016-sg">Jamieson and Talwalkar (<a href="#ref-Jamieson2016-sg" role="doc-biblioref">2016</a>)</span> proposed to use this method for HPO.</p>
 <p>Successive Halving requires a budget <span class="math inline">\(B\)</span> and a number of configurations <span class="math inline">\(n\)</span>. In the context of HPO for machine learning models, a configuration refers to a specific combination of hyperparameters. The budget <span class="math inline">\(B\)</span> can be defined as the total number of iterations that can be used. The performance of a configuration is evaluated by the loss function. In this algorithm, <span class="math inline">\(l_{i, r}\)</span> denotes the loss of configuration <span class="math inline">\(i\)</span> after <span class="math inline">\(r\)</span> iterations.</p>
-<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-no-end="false" data-indent-lines="false" data-line-number-punc=":" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-line-number="true" data-comment-delimiter="//" data-pseudocode-number="1">
+<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-comment-delimiter="//" data-indent-lines="false" data-pseudocode-number="1" data-no-end="false" data-line-number-punc=":" data-line-number="true">
 <div class="pseudocode">
 \begin{algorithm} \caption{Successive Halving} \begin{algorithmic} \Require Budget $B$, number of configurations $n$ \State $S_0 \leftarrow \{1, 2, \dots, n\}$ \For{$k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$} \State $r_k \leftarrow \lfloor \frac{B}{|S_k| \lceil \log_2 n \rceil} \rfloor$ \State $R_k \leftarrow \sum_{j=0}^{k} r_j$ \State Run each configuration in $S_k$ for $r_k$ additional iterations \State Get $l_{i, R_k}$ for each configuration $i \in S_k$ \State $S_{k+1} \leftarrow \left\{ i \in S_k : l_{i, R_k} \text{ is among the best } \lfloor |S_k| / 2 \rfloor \text{ losses} \right\}$ \EndFor \end{algorithmic} \end{algorithm}
 </div>
@@ -498,14 +499,14 @@ window.Quarto = {
 <section id="hyperband" class="level3">
 <h3 class="anchored" data-anchor-id="hyperband">Hyperband</h3>
 <p>In the Successive Halving algorithm, it is required to specify <span class="math inline">\(B\)</span> and <span class="math inline">\(n\)</span> in advance. However, it is may be difficult to choose a good value for <span class="math inline">\(n\)</span> in practice. Hyperband <span class="citation" data-cites="Li2016-fm">(<a href="#ref-Li2016-fm" role="doc-biblioref">Li et al. 2016</a>)</span> can be considered as a extension of Successive Halving.</p>
-<div id="algo-hyperband" class="pseudocode-container quarto-float" data-no-end="false" data-indent-lines="false" data-line-number-punc=":" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-line-number="true" data-comment-delimiter="//" data-pseudocode-number="2">
+<div id="algo-hyperband" class="pseudocode-container quarto-float" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-comment-delimiter="//" data-indent-lines="false" data-pseudocode-number="2" data-no-end="false" data-line-number-punc=":" data-line-number="true">
 <div class="pseudocode">
 \begin{algorithm} \caption{Hyperband} \begin{algorithmic} \Require $R$, $\eta$ \State $s_{max} \leftarrow \lfloor \log_\eta R \rfloor$ \State $B \leftarrow (s_{max} + 1) R$ \For{$s = s_{\max}, s_{\max} - 1, \dots, 0$} \State $n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s$ \State $r \leftarrow R \eta^{-s}$ \For{$i = 0, 1, \dots, s$} \State $n_i \leftarrow \lfloor n \eta^{-i} \rfloor$ \State $r_i \leftarrow r \eta^i$ \State Run each configuration in $S_i$ for $r_i$ iterations \State Get $l_{i, r_i}$ for each configuration $i \in S_i$ \State $S_{i+1} \leftarrow \left\{ i \in S_i : l_{i, r_i} \text{ is among the best } \lfloor n_i / \eta \rfloor \text{ losses} \right\}$ \EndFor \EndFor \end{algorithmic} \end{algorithm}
 </div>
 </div>
 <p>Note that the original paper writes this step as <span class="math inline">\(n \leftarrow \lceil \frac{B}{R} \frac{\eta^s}{s + 1} \rceil\)</span>, rounding up only at the end; here we use <span class="math inline">\(n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s\)</span>, which floors the per-round budget first and matches the values in the paper’s Table 1 and its reference implementation.</p>
 <p>The following example is adapted from <span class="citation" data-cites="Li2016-fm">Li et al. (<a href="#ref-Li2016-fm" role="doc-biblioref">2016</a>)</span>. Let <span class="math inline">\(R = 81\)</span> and <span class="math inline">\(\eta = 3\)</span>, so that <span class="math inline">\(s_{max} = \lfloor \log_3 81 \rfloor = 4\)</span>. The following table shows the values of <span class="math inline">\(n\)</span> and <span class="math inline">\(r\)</span> for each value of <span class="math inline">\(s\)</span>.</p>
-<div id="55c4c29d" class="cell" data-execution_count="1">
+<div id="b0222859" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hyperband(R, eta):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Return the (n_i, r_i) schedule for each bracket s."""</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    s_max <span class="op">=</span> <span class="dv">0</span></span>
@@ -588,6 +589,9 @@ Karnin, Zohar S, Tomer Koren, and O Somekh. 2013. <span>“Almost Optimal Explor
 </div>
 <div id="ref-Li2016-fm" class="csl-entry" role="listitem">
 Li, Lisha, Kevin Jamieson, Giulia DeSalvo, Afshin Rostamizadeh, and Ameet Talwalkar. 2016. <span>“Hyperband: A Novel Bandit-Based Approach to Hyperparameter Optimization.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.1603.06560">https://doi.org/10.48550/arXiv.1603.06560</a>.
+</div>
+<div id="ref-1390003825209053056" class="csl-entry" role="listitem">
+OZAKI, Yoshihiko, Masahiro NOMURA, and Masaki ONISHI. 2020. <span>“Hyperparameter Optimization Methods: Overview and Characteristics.”</span> <em>電子情報通信学会論文誌d 情報・システム</em> J103-D (9): 615–31. <a href="https://doi.org/10.14923/transinfj.2019jdr0003">https://doi.org/10.14923/transinfj.2019jdr0003</a>.
 </div>
 </div>
 
