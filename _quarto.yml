@@ -20,8 +20,8 @@ website:
         href: blog.qmd
       # - text: "Contact"
       #   href: contact.qmd
-      - text: "Projects"
-        href: projects.qmd
+      # - text: "Projects"
+      #   href: projects.qmd
       # - href: fit-dashboard.qmd
       #   text: "Fit-Dashboard"
     # right:

@@ -39,20 +39,11 @@ Hyperparameter optimization (HPO) is a special case of algorithm configuration.
 ### Dynamic Algorithm Configuration
 
 
-### Hyperparameter Optimization in Reinforcement Learning
-
-@Awad2021-cb proposed DEHB, a hyperparameter optimization method that combines differential evolution and Hyperband. Differential evolution (DE) is a classic evolutionary algorithm and Hyperband is a bandit-based method for hyperparameter optimization. 
-
-@Eimer2023-kd discussed the hyperparameter optimization problem in the context of reinforcement learning (RL).[^AutoRL]
-They conducted a experimental study on the performance of various hyperparameter optimization methods, including random search, DEHB [@Awad2021-cb],[^dehb] and BGT [@Wan2022-hf].[^bgpbt] 
-
-[^AutoRL]: Source code: <https://github.com/facebookresearch/how-to-autorl>.
-[^dehb]: Source code: <https://github.com/automl/DEHB>.
-[^bgpbt]: Source code: <https://github.com/xingchenwan/bgpbt>.
-
 - SMAC3 [@Lindauer2021-cy]
 - Population-based training (PBT) [@Jaderberg2017-el]
 - Optuna [@Akiba2019-aj] 
+
+
 
 ### References
 

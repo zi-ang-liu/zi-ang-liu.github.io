@@ -83,38 +83,79 @@ Hyperband [@Li2016-fm] can be considered as a extension of Successive Halving.
 \State $s_{max} \leftarrow \lfloor \log_\eta R \rfloor$
 \State $B \leftarrow (s_{max} + 1) R$
 \For{$s = s_{\max}, s_{\max} - 1, \dots, 0$}
-    \State $n \leftarrow \lceil \frac{B}{R} \frac{\eta^s}{s + 1} \rceil$
+    \State $n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s$
     \State $r \leftarrow R \eta^{-s}$
-    \State Run Successive Halving with $n$ configurations, each with $r$ iterations, $1/\eta$ as the halving rate
+    \For{$i = 0, 1, \dots, s$}
+        \State $n_i \leftarrow \lfloor n \eta^{-i} \rfloor$
+        \State $r_i \leftarrow r \eta^i$
+        \State Run each configuration in $S_i$ for $r_i$ iterations
+        \State Get $l_{i, r_i}$ for each configuration $i \in S_i$
+        \State $S_{i+1} \leftarrow \left\{ i \in S_i : l_{i, r_i} \text{ is among the best } \lfloor n_i / \eta \rfloor \text{ losses} \right\}$
+    \EndFor
 \EndFor
 \end{algorithmic}
 \end{algorithm}
 ```
 
-The following example is adapted from @Li2016-fm. 
+Note that the original paper writes this step as $n \leftarrow \lceil \frac{B}{R} \frac{\eta^s}{s + 1} \rceil$, rounding up only at the end; here we use $n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s$, which floors the per-round budget first and matches the values in the paper's Table 1 and its reference implementation.
 
+The following example is adapted from @Li2016-fm.
 Let $R = 81$ and $\eta = 3$, so that $s_{max} = \lfloor \log_3 81 \rfloor = 4$.
-
 The following table shows the values of $n$ and $r$ for each value of $s$.
 
 ```{python}
-import numpy as np
+def hyperband(R, eta):
+    """Return the (n_i, r_i) schedule for each bracket s."""
+    s_max = 0
+    while eta ** (s_max + 1) <= R:
+        s_max += 1
+    B = (s_max + 1) * R
+
+    brackets = {}
+    for s in range(s_max, -1, -1):
+        n = B // R // (s + 1) * eta**s
+        r = R // eta**s
+        brackets[s] = [(n // eta**i, r * eta**i) for i in range(s + 1)]
+    return brackets
+
 
 R = 81
 eta = 3
-s_max = int(np.floor(np.log(R) / np.log(eta)))
-B = (s_max + 1) * R
+brackets = hyperband(R, eta)
 
-print(f"B = {B}, s_max = {s_max}")
-
-for s in range(s_max, -1, -1):
-    n = int(np.ceil((B / R) * (eta**s) / (s + 1)))
-    r = int(R * (eta ** (-s)))
-    print(f"| {s}   | {n}  | {r} |")
+s_max = max(brackets)
+print("  i" + "".join(f"{f's = {s}':>12}" for s in range(s_max, -1, -1)))
+print("   " + "".join(f"{'n_i':>6}{'r_i':>6}" for _ in range(s_max + 1)))
+for i in range(s_max + 1):
+    row = f"{i:>3}"
+    for s in range(s_max, -1, -1):
+        if i < len(brackets[s]):
+            n_i, r_i = brackets[s][i]
+            row += f"{n_i:>6}{r_i:>6}"
+        else:
+            row += " " * 12
+    print(row)
 ```
 
-BOHB [@Falkner2018-vd] is a combination of Hyperband and Bayesian optimization. DEHB [@Awad2021-cb] is a combination of Hyperband and Differential Evolution.
 
+
+### Hyperband Variants
+
+Later works have proposed several variants of Hyperband. There are two main directions for improving Hyperband. One direction is to combine Hyperband with metaheuristics. The other direction is to combine Hyperband with Bayesian optimization.
+
+@Awad2021-cb proposed DEHB, a hyperparameter optimization method that combines differential evolution and Hyperband. Differential evolution (DE) is a classic evolutionary algorithm and Hyperband is a bandit-based method for hyperparameter optimization. 
+
+DEHB has been shown to outperform other hyperparameter optimization methods on a variety of benchmark problems. @Eimer2023-kd discussed the hyperparameter optimization problem in the context of reinforcement learning (RL).
+They conducted a experimental study on the performance of various hyperparameter optimization methods, including random search, DEHB, and BGT. Their results show that DEHB has a good performance. @Eggensperger2021-kh developed a collection of multi-fidelity benchmark problems for HPO, called HPOBench. Their results also show that DEHB has a good performance.
+
+Another variant of Hyperband is BOHB [@Falkner2018-vd], which combines Hyperband with Bayesian optimization.  
+
+## Source Code
+
+- [AutoRL](https://github.com/facebookresearch/how-to-autorl)
+- [DEHB](https://github.com/automl/DEHB)
+- [BOHB](https://github.com/automl/BOHB)
+- [HPOBench](https://github.com/automl/HPOBench)
 
 ## References
 
