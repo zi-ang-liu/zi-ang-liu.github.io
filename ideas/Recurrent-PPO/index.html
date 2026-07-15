@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ziang Liu">
-<meta name="dcterms.date" content="2025-10-10">
+<meta name="dcterms.date" content="2026-07-06">
 
-<title>Algorithm Configuration – Ziang Liu</title>
+<title>Recurrent PPO – Ziang Liu</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -115,38 +115,9 @@ div.csl-indent {
       </style>
     
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Algorithm Configuration – Ziang Liu">
+<meta property="og:title" content="Recurrent PPO – Ziang Liu">
 <meta property="og:description" content="Ziang Liu’s Personal Website">
 <meta property="og:site_name" content="Ziang Liu">
 </head>
@@ -363,7 +334,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Algorithm Configuration</h1>
+<h1 class="title">Recurrent PPO</h1>
 </div>
 
 
@@ -380,7 +351,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 10, 2025</p>
+      <p class="date">July 6, 2026</p>
     </div>
   </div>
   
@@ -392,46 +363,13 @@ window.Quarto = {
 </header>
 
 
-<p>Let <span class="math inline">\(\mathcal{I}\)</span> be the set of problem instances, <span class="math inline">\(\mathcal{D}\)</span> be the probability distribution over <span class="math inline">\(\mathcal{I}\)</span>. Let <span class="math inline">\(p_1, p_2, \ldots, p_k\)</span> be the parameters of an algorithm. The domain of each parameter <span class="math inline">\(p_i\)</span> is denoted as <span class="math inline">\(\Theta_i\)</span>, and the parameter space is defined as <span class="math inline">\(\Theta = \Theta_1 \times \Theta_2 \times \ldots \times \Theta_k\)</span>. Note that the the domain of each parameter can be continuous, discrete, or categorical. The parameter configuration of the algorithm is denoted as <span class="math inline">\(\theta = (p_1, p_2, \ldots, p_k) \in \Theta\)</span>.</p>
-<p>The objective of algorithm configuration is to find the optimal parameter configuration <span class="math inline">\(\theta^* \in \Theta\)</span> that minimizes the expected cost of the algorithm over the distribution of problem instances:</p>
-<p><span class="math display">\[
-\theta^* \in \arg\min_{\theta \in \Theta} \mathbb{E}_{i \sim \mathcal{D}}[c(\theta, i)]
-\]</span></p>
-<p>where <span class="math inline">\(c(\theta, i)\)</span> is the cost of the algorithm parameter configuration <span class="math inline">\(\theta\)</span> on problem instance <span class="math inline">\(i\)</span>.</p>
-<p>Normally, the distribution <span class="math inline">\(\mathcal{D}\)</span> is unknown. Thus, arithmetic mean is often used as an estimator of the expected cost. The problem is then formulated as follows:</p>
-<p><span class="math display">\[
-\theta^* \in \arg\min_{\theta \in \Theta} \frac{1}{|\mathcal{I}|} \sum_{i \in \mathcal{I}} c(\theta, i)
-\]</span></p>
-<section id="automl" class="level3">
-<h3 class="anchored" data-anchor-id="automl">AutoML</h3>
-</section>
-<section id="neural-architecture-search" class="level3">
-<h3 class="anchored" data-anchor-id="neural-architecture-search">Neural Architecture Search</h3>
-</section>
-<section id="hyperparameter-optimization" class="level3">
-<h3 class="anchored" data-anchor-id="hyperparameter-optimization">Hyperparameter Optimization</h3>
-<p>Hyperparameter optimization (HPO) is a special case of algorithm configuration.</p>
-</section>
-<section id="dynamic-algorithm-configuration" class="level3">
-<h3 class="anchored" data-anchor-id="dynamic-algorithm-configuration">Dynamic Algorithm Configuration</h3>
-<ul>
-<li>SMAC3 <span class="citation" data-cites="Lindauer2021-cy">(<a href="#ref-Lindauer2021-cy" role="doc-biblioref">Lindauer et al. 2021</a>)</span></li>
-<li>Population-based training (PBT) <span class="citation" data-cites="Jaderberg2017-el">(<a href="#ref-Jaderberg2017-el" role="doc-biblioref">Jaderberg et al. 2017</a>)</span></li>
-<li>Optuna <span class="citation" data-cites="Akiba2019-aj">(<a href="#ref-Akiba2019-aj" role="doc-biblioref">Akiba et al. 2019</a>)</span></li>
-</ul>
-</section>
-<section id="references" class="level3">
-<h3 class="anchored" data-anchor-id="references">References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-Akiba2019-aj" class="csl-entry" role="listitem">
-Akiba, Takuya, Shotaro Sano, Toshihiko Yanase, Takeru Ohta, and Masanori Koyama. 2019. <span>“Optuna: A Next-Generation Hyperparameter Optimization Framework.”</span> <em>Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining</em> (New York, NY, USA), 2623–31. <a href="https://doi.org/10.1145/3292500.3330701">https://doi.org/10.1145/3292500.3330701</a>.
-</div>
-<div id="ref-Jaderberg2017-el" class="csl-entry" role="listitem">
-Jaderberg, Max, Valentin Dalibard, Simon Osindero, et al. 2017. <span>“Population Based Training of Neural Networks.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.1711.09846">https://doi.org/10.48550/arXiv.1711.09846</a>.
-</div>
-<div id="ref-Lindauer2021-cy" class="csl-entry" role="listitem">
-Lindauer, Marius, Katharina Eggensperger, Matthias Feurer, et al. 2021. <span>“<span>SMAC3</span>: A Versatile Bayesian Optimization Package for Hyperparameter Optimization.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.2109.09831">https://doi.org/10.48550/arXiv.2109.09831</a>.
-</div>
+<p><strong>Draft</strong></p>
+<p>https://sb3-contrib.readthedocs.io/en/master/modules/ppo_recurrent.html</p>
+<p>Recurrent PPO for inventory management. The recurrent policy is implemented using an LSTM network, which allows the agent to maintain a memory of past observations and actions. This is particularly useful in environments where the current state does not provide enough information to make optimal decisions.</p>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" role="list">
+
 </div>
 
 

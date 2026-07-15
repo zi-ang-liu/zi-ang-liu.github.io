@@ -441,7 +441,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="successive-halving">Successive Halving</h3>
 <p>Successive Halving was originally proposed by <span class="citation" data-cites="Karnin2013-az">Karnin et al. (<a href="#ref-Karnin2013-az" role="doc-biblioref">2013</a>)</span>. Later, <span class="citation" data-cites="Jamieson2016-sg">Jamieson and Talwalkar (<a href="#ref-Jamieson2016-sg" role="doc-biblioref">2016</a>)</span> proposed to use this method for HPO.</p>
 <p>Successive Halving requires a budget <span class="math inline">\(B\)</span> and a number of configurations <span class="math inline">\(n\)</span>. In the context of HPO for machine learning models, a configuration refers to a specific combination of hyperparameters. The budget <span class="math inline">\(B\)</span> can be defined as the total number of iterations that can be used. The performance of a configuration is evaluated by the loss function. In this algorithm, <span class="math inline">\(l_{i, r}\)</span> denotes the loss of configuration <span class="math inline">\(i\)</span> after <span class="math inline">\(r\)</span> iterations.</p>
-<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-comment-delimiter="//" data-line-number-punc=":" data-caption-prefix="Algorithm" data-pseudocode-number="1" data-line-number="true" data-no-end="false" data-indent-size="1.2em" data-indent-lines="false">
+<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-no-end="false" data-indent-lines="false" data-line-number-punc=":" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-line-number="true" data-comment-delimiter="//" data-pseudocode-number="1">
 <div class="pseudocode">
 \begin{algorithm} \caption{Successive Halving} \begin{algorithmic} \Require Budget $B$, number of configurations $n$ \State $S_0 \leftarrow \{1, 2, \dots, n\}$ \For{$k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$} \State $r_k \leftarrow \lfloor \frac{B}{|S_k| \lceil \log_2 n \rceil} \rfloor$ \State $R_k \leftarrow \sum_{j=0}^{k} r_j$ \State Run each configuration in $S_k$ for $r_k$ additional iterations \State Get $l_{i, R_k}$ for each configuration $i \in S_k$ \State $S_{k+1} \leftarrow \left\{ i \in S_k : l_{i, R_k} \text{ is among the best } \lfloor |S_k| / 2 \rfloor \text{ losses} \right\}$ \EndFor \end{algorithmic} \end{algorithm}
 </div>
@@ -498,14 +498,14 @@ window.Quarto = {
 <section id="hyperband" class="level3">
 <h3 class="anchored" data-anchor-id="hyperband">Hyperband</h3>
 <p>In the Successive Halving algorithm, it is required to specify <span class="math inline">\(B\)</span> and <span class="math inline">\(n\)</span> in advance. However, it is may be difficult to choose a good value for <span class="math inline">\(n\)</span> in practice. Hyperband <span class="citation" data-cites="Li2016-fm">(<a href="#ref-Li2016-fm" role="doc-biblioref">Li et al. 2016</a>)</span> can be considered as a extension of Successive Halving.</p>
-<div id="algo-hyperband" class="pseudocode-container quarto-float" data-comment-delimiter="//" data-line-number-punc=":" data-caption-prefix="Algorithm" data-pseudocode-number="2" data-line-number="true" data-no-end="false" data-indent-size="1.2em" data-indent-lines="false">
+<div id="algo-hyperband" class="pseudocode-container quarto-float" data-no-end="false" data-indent-lines="false" data-line-number-punc=":" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-line-number="true" data-comment-delimiter="//" data-pseudocode-number="2">
 <div class="pseudocode">
 \begin{algorithm} \caption{Hyperband} \begin{algorithmic} \Require $R$, $\eta$ \State $s_{max} \leftarrow \lfloor \log_\eta R \rfloor$ \State $B \leftarrow (s_{max} + 1) R$ \For{$s = s_{\max}, s_{\max} - 1, \dots, 0$} \State $n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s$ \State $r \leftarrow R \eta^{-s}$ \For{$i = 0, 1, \dots, s$} \State $n_i \leftarrow \lfloor n \eta^{-i} \rfloor$ \State $r_i \leftarrow r \eta^i$ \State Run each configuration in $S_i$ for $r_i$ iterations \State Get $l_{i, r_i}$ for each configuration $i \in S_i$ \State $S_{i+1} \leftarrow \left\{ i \in S_i : l_{i, r_i} \text{ is among the best } \lfloor n_i / \eta \rfloor \text{ losses} \right\}$ \EndFor \EndFor \end{algorithmic} \end{algorithm}
 </div>
 </div>
 <p>Note that the original paper writes this step as <span class="math inline">\(n \leftarrow \lceil \frac{B}{R} \frac{\eta^s}{s + 1} \rceil\)</span>, rounding up only at the end; here we use <span class="math inline">\(n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s\)</span>, which floors the per-round budget first and matches the values in the paper’s Table 1 and its reference implementation.</p>
 <p>The following example is adapted from <span class="citation" data-cites="Li2016-fm">Li et al. (<a href="#ref-Li2016-fm" role="doc-biblioref">2016</a>)</span>. Let <span class="math inline">\(R = 81\)</span> and <span class="math inline">\(\eta = 3\)</span>, so that <span class="math inline">\(s_{max} = \lfloor \log_3 81 \rfloor = 4\)</span>. The following table shows the values of <span class="math inline">\(n\)</span> and <span class="math inline">\(r\)</span> for each value of <span class="math inline">\(s\)</span>.</p>
-<div id="e0a1232b" class="cell" data-execution_count="1">
+<div id="55c4c29d" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hyperband(R, eta):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Return the (n_i, r_i) schedule for each bracket s."""</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    s_max <span class="op">=</span> <span class="dv">0</span></span>
@@ -547,14 +547,35 @@ window.Quarto = {
   4     1    81                                                </code></pre>
 </div>
 </div>
-<p>BOHB <span class="citation" data-cites="Falkner2018-vd">(<a href="#ref-Falkner2018-vd" role="doc-biblioref">Falkner et al. 2018</a>)</span> is a combination of Hyperband and Bayesian optimization. DEHB <span class="citation" data-cites="Awad2021-cb">(<a href="#ref-Awad2021-cb" role="doc-biblioref">Awad et al. 2021</a>)</span> is a combination of Hyperband and Differential Evolution.</p>
 </section>
+<section id="hyperband-variants" class="level3">
+<h3 class="anchored" data-anchor-id="hyperband-variants">Hyperband Variants</h3>
+<p>Later works have proposed several variants of Hyperband. There are two main directions for improving Hyperband. One direction is to combine Hyperband with metaheuristics. The other direction is to combine Hyperband with Bayesian optimization.</p>
+<p><span class="citation" data-cites="Awad2021-cb">Awad et al. (<a href="#ref-Awad2021-cb" role="doc-biblioref">2021</a>)</span> proposed DEHB, a hyperparameter optimization method that combines differential evolution and Hyperband. Differential evolution (DE) is a classic evolutionary algorithm and Hyperband is a bandit-based method for hyperparameter optimization.</p>
+<p>DEHB has been shown to outperform other hyperparameter optimization methods on a variety of benchmark problems. <span class="citation" data-cites="Eimer2023-kd">Eimer et al. (<a href="#ref-Eimer2023-kd" role="doc-biblioref">2023</a>)</span> discussed the hyperparameter optimization problem in the context of reinforcement learning (RL). They conducted a experimental study on the performance of various hyperparameter optimization methods, including random search, DEHB, and BGT. Their results show that DEHB has a good performance. <span class="citation" data-cites="Eggensperger2021-kh">Eggensperger et al. (<a href="#ref-Eggensperger2021-kh" role="doc-biblioref">2021</a>)</span> developed a collection of multi-fidelity benchmark problems for HPO, called HPOBench. Their results also show that DEHB has a good performance.</p>
+<p>Another variant of Hyperband is BOHB <span class="citation" data-cites="Falkner2018-vd">(<a href="#ref-Falkner2018-vd" role="doc-biblioref">Falkner et al. 2018</a>)</span>, which combines Hyperband with Bayesian optimization.</p>
+</section>
+</section>
+<section id="source-code" class="level2">
+<h2 class="anchored" data-anchor-id="source-code">Source Code</h2>
+<ul>
+<li><a href="https://github.com/facebookresearch/how-to-autorl">AutoRL</a></li>
+<li><a href="https://github.com/automl/DEHB">DEHB</a></li>
+<li><a href="https://github.com/automl/BOHB">BOHB</a></li>
+<li><a href="https://github.com/automl/HPOBench">HPOBench</a></li>
+</ul>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-Awad2021-cb" class="csl-entry" role="listitem">
 Awad, Noor, Neeratyoy Mallik, and Frank Hutter. 2021. <span>“<span>DEHB</span>: Evolutionary Hyberband for Scalable, Robust and Efficient Hyperparameter Optimization.”</span> <em>Proceedings of the Thirtieth International Joint Conference on Artificial Intelligence</em> (California). <a href="https://doi.org/10.24963/ijcai.2021/296">https://doi.org/10.24963/ijcai.2021/296</a>.
+</div>
+<div id="ref-Eggensperger2021-kh" class="csl-entry" role="listitem">
+Eggensperger, Katharina, Philipp Müller, Neeratyoy Mallik, et al. 2021. <span>“<span>HPOBench</span>: A Collection of Reproducible Multi-Fidelity Benchmark Problems for <span>HPO</span>.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.2109.06716">https://doi.org/10.48550/arXiv.2109.06716</a>.
+</div>
+<div id="ref-Eimer2023-kd" class="csl-entry" role="listitem">
+Eimer, Theresa, Marius Lindauer, and Roberta Raileanu. 2023. <span>“Hyperparameters in Reinforcement Learning and How to Tune Them.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.2306.01324">https://doi.org/10.48550/arXiv.2306.01324</a>.
 </div>
 <div id="ref-Falkner2018-vd" class="csl-entry" role="listitem">
 Falkner, Stefan, Aaron Klein, and Frank Hutter. 2018. <span>“<span>BOHB</span>: Robust and Efficient Hyperparameter Optimization at Scale.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.1807.01774">https://doi.org/10.48550/arXiv.1807.01774</a>.
