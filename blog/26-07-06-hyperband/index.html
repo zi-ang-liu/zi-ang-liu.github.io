@@ -100,8 +100,8 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-80fd16d30c9dca1872f4ce9dde22fc13.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-dcc5e88bf931a330dcb322bc79f0fce6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-143123181aca9e9bd573357f10276c5c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-cee96e249ae0b2c02c918f5c4e593d08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
 <link href="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -399,7 +399,11 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Bandit-Based Algorithm for Hyperparameter Optimization</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">Optimization</div>
+  </div>
+  </div>
 
 
 
@@ -427,7 +431,6 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Draft</strong></p>
 <p>Machine learning models often have hyperparameters that need to be tuned for optimal performance. When the number of hyperparameters is large, it can be difficult to find a good combination of hyperparameters manually. Hyperparameter optimization (HPO) is a method for automatically searching for hyperparameter combinations that improve model performance.</p>
 <p>HPO can be classified into the following categories:</p>
 <ul>
@@ -442,7 +445,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="successive-halving">Successive Halving</h3>
 <p>Successive Halving was originally proposed by <span class="citation" data-cites="Karnin2013-az">Karnin et al. (<a href="#ref-Karnin2013-az" role="doc-biblioref">2013</a>)</span>. Later, <span class="citation" data-cites="Jamieson2016-sg">Jamieson and Talwalkar (<a href="#ref-Jamieson2016-sg" role="doc-biblioref">2016</a>)</span> proposed to use this method for HPO.</p>
 <p>Successive Halving requires a budget <span class="math inline">\(B\)</span> and a number of configurations <span class="math inline">\(n\)</span>. In the context of HPO for machine learning models, a configuration refers to a specific combination of hyperparameters. The budget <span class="math inline">\(B\)</span> can be defined as the total number of iterations that can be used. The performance of a configuration is evaluated by the loss function. In this algorithm, <span class="math inline">\(l_{i, r}\)</span> denotes the loss of configuration <span class="math inline">\(i\)</span> after <span class="math inline">\(r\)</span> iterations.</p>
-<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-comment-delimiter="//" data-indent-lines="false" data-pseudocode-number="1" data-no-end="false" data-line-number-punc=":" data-line-number="true">
+<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-comment-delimiter="//" data-line-number="true" data-indent-size="1.2em" data-pseudocode-number="1" data-caption-prefix="Algorithm" data-line-number-punc=":" data-indent-lines="false" data-no-end="false">
 <div class="pseudocode">
 \begin{algorithm} \caption{Successive Halving} \begin{algorithmic} \Require Budget $B$, number of configurations $n$ \State $S_0 \leftarrow \{1, 2, \dots, n\}$ \For{$k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$} \State $r_k \leftarrow \lfloor \frac{B}{|S_k| \lceil \log_2 n \rceil} \rfloor$ \State $R_k \leftarrow \sum_{j=0}^{k} r_j$ \State Run each configuration in $S_k$ for $r_k$ additional iterations \State Get $l_{i, R_k}$ for each configuration $i \in S_k$ \State $S_{k+1} \leftarrow \left\{ i \in S_k : l_{i, R_k} \text{ is among the best } \lfloor |S_k| / 2 \rfloor \text{ losses} \right\}$ \EndFor \end{algorithmic} \end{algorithm}
 </div>
@@ -499,14 +502,14 @@ window.Quarto = {
 <section id="hyperband" class="level3">
 <h3 class="anchored" data-anchor-id="hyperband">Hyperband</h3>
 <p>In the Successive Halving algorithm, it is required to specify <span class="math inline">\(B\)</span> and <span class="math inline">\(n\)</span> in advance. However, it is may be difficult to choose a good value for <span class="math inline">\(n\)</span> in practice. Hyperband <span class="citation" data-cites="Li2016-fm">(<a href="#ref-Li2016-fm" role="doc-biblioref">Li et al. 2016</a>)</span> can be considered as a extension of Successive Halving.</p>
-<div id="algo-hyperband" class="pseudocode-container quarto-float" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-comment-delimiter="//" data-indent-lines="false" data-pseudocode-number="2" data-no-end="false" data-line-number-punc=":" data-line-number="true">
+<div id="algo-hyperband" class="pseudocode-container quarto-float" data-comment-delimiter="//" data-line-number="true" data-indent-size="1.2em" data-pseudocode-number="2" data-caption-prefix="Algorithm" data-line-number-punc=":" data-indent-lines="false" data-no-end="false">
 <div class="pseudocode">
 \begin{algorithm} \caption{Hyperband} \begin{algorithmic} \Require $R$, $\eta$ \State $s_{max} \leftarrow \lfloor \log_\eta R \rfloor$ \State $B \leftarrow (s_{max} + 1) R$ \For{$s = s_{\max}, s_{\max} - 1, \dots, 0$} \State $n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s$ \State $r \leftarrow R \eta^{-s}$ \For{$i = 0, 1, \dots, s$} \State $n_i \leftarrow \lfloor n \eta^{-i} \rfloor$ \State $r_i \leftarrow r \eta^i$ \State Run each configuration in $S_i$ for $r_i$ iterations \State Get $l_{i, r_i}$ for each configuration $i \in S_i$ \State $S_{i+1} \leftarrow \left\{ i \in S_i : l_{i, r_i} \text{ is among the best } \lfloor n_i / \eta \rfloor \text{ losses} \right\}$ \EndFor \EndFor \end{algorithmic} \end{algorithm}
 </div>
 </div>
 <p>Note that the original paper writes this step as <span class="math inline">\(n \leftarrow \lceil \frac{B}{R} \frac{\eta^s}{s + 1} \rceil\)</span>, rounding up only at the end; here we use <span class="math inline">\(n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s\)</span>, which floors the per-round budget first and matches the values in the paper’s Table 1 and its reference implementation.</p>
 <p>The following example is adapted from <span class="citation" data-cites="Li2016-fm">Li et al. (<a href="#ref-Li2016-fm" role="doc-biblioref">2016</a>)</span>. Let <span class="math inline">\(R = 81\)</span> and <span class="math inline">\(\eta = 3\)</span>, so that <span class="math inline">\(s_{max} = \lfloor \log_3 81 \rfloor = 4\)</span>. The following table shows the values of <span class="math inline">\(n\)</span> and <span class="math inline">\(r\)</span> for each value of <span class="math inline">\(s\)</span>.</p>
-<div id="b0222859" class="cell" data-execution_count="1">
+<div id="1e35b4de" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hyperband(R, eta):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Return the (n_i, r_i) schedule for each bracket s."""</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    s_max <span class="op">=</span> <span class="dv">0</span></span>

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zi-ang-liu.github.io/blog.html</loc>
-    <lastmod>2026-07-07T02:43:50.391Z</lastmod>
+    <lastmod>2026-07-19T23:26:06.023Z</lastmod>
   </url>
   <url>
     <loc>https://zi-ang-liu.github.io/ideas/JADE-SHADE-HB-HPO/index.html</loc>
@@ -17,28 +17,32 @@
     <lastmod>2026-07-02T14:21:33.182Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/blog/26-0706-hyperband/index.html</loc>
-    <lastmod>2026-07-15T05:26:03.110Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/projects.html</loc>
-    <lastmod>2026-07-02T14:21:47.669Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/teaching.html</loc>
-    <lastmod>2026-07-02T14:01:57.787Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/open-source.html</loc>
-    <lastmod>2026-04-28T09:55:32.208Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/blog/26-07-01-Algorithm-Configuration/index.html</loc>
+    <lastmod>2026-07-19T23:25:42.975Z</lastmod>
   </url>
   <url>
     <loc>https://zi-ang-liu.github.io/index.html</loc>
     <lastmod>2026-07-09T03:05:53.877Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/blog/26-07-01-Algorithm-Configuration/index.html</loc>
-    <lastmod>2026-07-10T05:03:24.473Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/open-source.html</loc>
+    <lastmod>2026-04-28T09:55:32.208Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/teaching.html</loc>
+    <lastmod>2026-07-02T14:01:57.787Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/projects.html</loc>
+    <lastmod>2026-07-02T14:21:47.669Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/blog/26-07-20-data-driven-newsvendor/index.html</loc>
+    <lastmod>2026-07-20T04:49:52.142Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/blog/26-07-06-hyperband/index.html</loc>
+    <lastmod>2026-07-19T23:25:29.378Z</lastmod>
   </url>
   <url>
     <loc>https://zi-ang-liu.github.io/ideas/Recurrent-PPO/index.html</loc>
