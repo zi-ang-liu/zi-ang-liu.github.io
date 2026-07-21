@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Hello! I share my learning notes on this blog.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nData-Driven Newsvendor Problems\n\n\n\nOperations Research\n\nMachine Learning\n\n\n\n\n\n\nJul 20, 2026\n\n\nZiang Liu\n\n5 min\n\n\n\n\n\n\n\n\n\n\n\nBandit-Based Algorithm for Hyperparameter Optimization\n\n\n\nMachine Learning\n\nOptimization\n\n\n\n\n\n\nJul 6, 2026\n\n\nZiang Liu\n\n7 min\n\n\n\n\n\n\n\n\n\n\n\nAlgorithm Configuration\n\n\n\nOptimization\n\n\n\n\n\n\nOct 10, 2025\n\n\nZiang Liu\n\n1 min\n\n\n\n\nNo matching items"
+    "text": "Hello! I share my learning notes on this blog.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nReinforcement Learning for Job Shop Scheduling Problem\n\n\n\nOperations Research\n\nMachine Learning\n\n\n\n\n\n\nJul 20, 2026\n\n\nZiang Liu\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nData-Driven Newsvendor Problems\n\n\n\nOperations Research\n\nMachine Learning\n\n\n\n\n\n\nJul 20, 2026\n\n\nZiang Liu\n\n5 min\n\n\n\n\n\n\n\n\n\n\n\nBandit-Based Algorithm for Hyperparameter Optimization\n\n\n\nMachine Learning\n\nOptimization\n\n\n\n\n\n\nJul 6, 2026\n\n\nZiang Liu\n\n7 min\n\n\n\n\n\n\n\n\n\n\n\nAlgorithm Configuration\n\n\n\nOptimization\n\n\n\n\n\n\nOct 10, 2025\n\n\nZiang Liu\n\n1 min\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "ideas/JADE-SHADE-HB-HPO/index.html",
@@ -35,60 +35,25 @@
     "text": "Let \\(\\mathcal{I}\\) be the set of problem instances, \\(\\mathcal{D}\\) be the probability distribution over \\(\\mathcal{I}\\). Let \\(p_1, p_2, \\ldots, p_k\\) be the parameters of an algorithm. The domain of each parameter \\(p_i\\) is denoted as \\(\\Theta_i\\), and the parameter space is defined as \\(\\Theta = \\Theta_1 \\times \\Theta_2 \\times \\ldots \\times \\Theta_k\\). Note that the the domain of each parameter can be continuous, discrete, or categorical. The parameter configuration of the algorithm is denoted as \\(\\theta = (p_1, p_2, \\ldots, p_k) \\in \\Theta\\).\nThe objective of algorithm configuration is to find the optimal parameter configuration \\(\\theta^* \\in \\Theta\\) that minimizes the expected cost of the algorithm over the distribution of problem instances:\n\\[\n\\theta^* \\in \\arg\\min_{\\theta \\in \\Theta} \\mathbb{E}_{i \\sim \\mathcal{D}}[c(\\theta, i)]\n\\]\nwhere \\(c(\\theta, i)\\) is the cost of the algorithm parameter configuration \\(\\theta\\) on problem instance \\(i\\).\nNormally, the distribution \\(\\mathcal{D}\\) is unknown. Thus, arithmetic mean is often used as an estimator of the expected cost. The problem is then formulated as follows:\n\\[\n\\theta^* \\in \\arg\\min_{\\theta \\in \\Theta} \\frac{1}{|\\mathcal{I}|} \\sum_{i \\in \\mathcal{I}} c(\\theta, i)\n\\]\n\nAutoML\n\n\nNeural Architecture Search\n\n\nHyperparameter Optimization\nHyperparameter optimization (HPO) is a special case of algorithm configuration.\n\n\nDynamic Algorithm Configuration\n\nSMAC3 (Lindauer et al. 2021)\nPopulation-based training (PBT) (Jaderberg et al. 2017)\nOptuna (Akiba et al. 2019)\n\n\n\nReferences\n\n\nAkiba, Takuya, Shotaro Sano, Toshihiko Yanase, Takeru Ohta, and Masanori Koyama. 2019. “Optuna: A Next-Generation Hyperparameter Optimization Framework.” Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining (New York, NY, USA), 2623–31. https://doi.org/10.1145/3292500.3330701.\n\n\nJaderberg, Max, Valentin Dalibard, Simon Osindero, et al. 2017. “Population Based Training of Neural Networks.” arXiv [Cs.LG], ahead of print. https://doi.org/10.48550/arXiv.1711.09846.\n\n\nLindauer, Marius, Katharina Eggensperger, Matthias Feurer, et al. 2021. “SMAC3: A Versatile Bayesian Optimization Package for Hyperparameter Optimization.” arXiv [Cs.LG], ahead of print. https://doi.org/10.48550/arXiv.2109.09831."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ziang Liu",
+    "objectID": "blog/26-07-21-RL-JSSP/index.html",
+    "href": "blog/26-07-21-RL-JSSP/index.html",
+    "title": "Reinforcement Learning for Job Shop Scheduling Problem",
     "section": "",
-    "text": "Ziang Liu\nAssociate Professor, Ph.D.\n\nDepartment of Industrial and Systems Engineering, Hosei University\n\n\n Google Scholar  GitHub  researchmap"
+    "text": "Ho et al. (2024), Park et al. (2021), Yuan et al. (2024)\ngifflar and thompson algorithm\ntaillard benchmark"
   },
   {
-    "objectID": "index.html#biography",
-    "href": "index.html#biography",
-    "title": "Ziang Liu",
-    "section": "Biography",
-    "text": "Biography\nZiang Liu is an Associate Professor of Industrial and Systems Engineering at Hosei University. He received his Ph.D. in Engineering from Osaka University in 2021. Before joining Hosei University in April 2025, he served as an Assistant Professor at Okayama University from 2021 to 2025.\nHis research interests include operations research, optimization, and machine learning. He focuses on developing advanced algorithms to design autonomous decision-making systems, with particular emphasis on inventory, manufacturing, and supply chain management, where decisions are made in complex environments."
+    "objectID": "blog/26-07-21-RL-JSSP/index.html#references",
+    "href": "blog/26-07-21-RL-JSSP/index.html#references",
+    "title": "Reinforcement Learning for Job Shop Scheduling Problem",
+    "section": "References",
+    "text": "References\n\n\nHo, Kuo-Hao, Jui-Yu Cheng, Ji-Han Wu, et al. 2024. “Residual Scheduling: A New Reinforcement Learning Approach to Solving Job Shop Scheduling Problem.” IEEE Access: Practical Innovations, Open Solutions 12: 14703–18. https://doi.org/10.1109/access.2024.3357969.\n\n\nPark, Junyoung, Sanjar Bakhtiyar, and Jinkyoo Park. 2021. “ScheduleNet: Learn to Solve Multi-Agent Scheduling Problems with Reinforcement Learning.” arXiv [Cs.LG], ahead of print. https://doi.org/10.48550/arXiv.2106.03051.\n\n\nYuan, Erdong, Liejun Wang, Shuli Cheng, Shiji Song, Wei Fan, and Yongming Li. 2024. “Solving Flexible Job Shop Scheduling Problems via Deep Reinforcement Learning.” Expert Systems With Applications 245 (123019): 123019. https://doi.org/10.1016/j.eswa.2023.123019."
   },
   {
-    "objectID": "index.html#career",
-    "href": "index.html#career",
-    "title": "Ziang Liu",
-    "section": "Career",
-    "text": "Career\n\n2021–2025: Assistant Professor, Okayama University\n2025–Present: Associate Professor, Hosei University"
-  },
-  {
-    "objectID": "index.html#awards",
-    "href": "index.html#awards",
-    "title": "Ziang Liu",
-    "section": "Awards",
-    "text": "Awards\n\nDistinguished Young IEOM Researcher Award, IEOM Society, 2024\nBest Paper Award, IEEE IEEM, 2019\n\n\n\n Intelligent Systems Laboratory\nOur Laboratory researches operations research, machine learning, and optimization methods to improve decision-making for complex systems.\nVisit the lab · Join us\n\n\n Contact\nHosei University,\n3-7-2 Kajino-cho,   Koganei-shi,\nTokyo 184-8584, Japan\nliu at hosei dot ac dot jp · Map"
-  },
-  {
-    "objectID": "open-source.html",
-    "href": "open-source.html",
-    "title": "Open Source",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "I actively develop and maintain several open-source projects. While most are still in their early stages, I am continually improving them with the goal of contributing meaningful tools to the research community."
-  },
-  {
-    "objectID": "open-source.html#reinforcement-learning",
-    "href": "open-source.html#reinforcement-learning",
-    "title": "Open Source",
-    "section": "Reinforcement Learning",
-    "text": "Reinforcement Learning\n\nmdptools: A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning."
-  },
-  {
-    "objectID": "open-source.html#paper-with-code",
-    "href": "open-source.html#paper-with-code",
-    "title": "Open Source",
-    "section": "Paper with Code",
-    "text": "Paper with Code\n\nLiu, Ziang, and Tatsushi Nishi. “Inventory control with lateral transshipment using proximal policy optimization.” 2023 5th International Conference on Data-driven Optimization of Complex Systems (DOCS). IEEE, 2023. Code"
-  },
-  {
-    "objectID": "open-source.html#little-projects",
-    "href": "open-source.html#little-projects",
-    "title": "Open Source",
-    "section": "Little projects",
-    "text": "Little projects\n\nExact method for perishable inventory control Code\nReinforcement learning environments for traffic signal control Code\nImplementation of Differential Evolution (DE) on the CEC 2014 test suite Code"
+    "text": "Externally funded research projects.\n\n KAKEN\n\n\n\n  \n    \n    \n      JSPS KAKENHI\n      動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築\n      Development of Data-Driven Optimization Fundamentals for Supply Chains Using Dynamic Model Construction Platform\n      23K22983 ・ 研究分担者 ・ 2024–2026\n    \n  \n\n  \n    \n    \n      JSPS KAKENHI\n      深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム\n      Developing explainable decision support systems for inventory management using deep reinforcement learning\n      23K13514 ・ 研究代表者 ・ 2023–"
   },
   {
     "objectID": "teaching.html",
@@ -119,11 +84,60 @@
     "text": "時間割（小金井キャンパス）\n\n\n1限 9:00–10:40\n\n\n2限 10:50–12:30\n\n\n3限 13:20–15:00\n\n\n4限 15:10–16:50\n\n\n5限 17:00–18:40"
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
+    "objectID": "open-source.html",
+    "href": "open-source.html",
+    "title": "Open Source",
     "section": "",
-    "text": "Externally funded research projects.\n\n KAKEN\n\n\n\n  \n    \n    \n      JSPS KAKENHI\n      動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築\n      Development of Data-Driven Optimization Fundamentals for Supply Chains Using Dynamic Model Construction Platform\n      23K22983 ・ 研究分担者 ・ 2024–2026\n    \n  \n\n  \n    \n    \n      JSPS KAKENHI\n      深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム\n      Developing explainable decision support systems for inventory management using deep reinforcement learning\n      23K13514 ・ 研究代表者 ・ 2023–"
+    "text": "I actively develop and maintain several open-source projects. While most are still in their early stages, I am continually improving them with the goal of contributing meaningful tools to the research community."
+  },
+  {
+    "objectID": "open-source.html#reinforcement-learning",
+    "href": "open-source.html#reinforcement-learning",
+    "title": "Open Source",
+    "section": "Reinforcement Learning",
+    "text": "Reinforcement Learning\n\nmdptools: A Python library for solveing Markov Decision Processes (MDPs) using various algorithms, including value iteration, policy iteration, and Q-learning."
+  },
+  {
+    "objectID": "open-source.html#paper-with-code",
+    "href": "open-source.html#paper-with-code",
+    "title": "Open Source",
+    "section": "Paper with Code",
+    "text": "Paper with Code\n\nLiu, Ziang, and Tatsushi Nishi. “Inventory control with lateral transshipment using proximal policy optimization.” 2023 5th International Conference on Data-driven Optimization of Complex Systems (DOCS). IEEE, 2023. Code"
+  },
+  {
+    "objectID": "open-source.html#little-projects",
+    "href": "open-source.html#little-projects",
+    "title": "Open Source",
+    "section": "Little projects",
+    "text": "Little projects\n\nExact method for perishable inventory control Code\nReinforcement learning environments for traffic signal control Code\nImplementation of Differential Evolution (DE) on the CEC 2014 test suite Code"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ziang Liu",
+    "section": "",
+    "text": "Ziang Liu\nAssociate Professor, Ph.D.\n\nDepartment of Industrial and Systems Engineering, Hosei University\n\n\n Google Scholar  GitHub  researchmap"
+  },
+  {
+    "objectID": "index.html#biography",
+    "href": "index.html#biography",
+    "title": "Ziang Liu",
+    "section": "Biography",
+    "text": "Biography\nZiang Liu is an Associate Professor of Industrial and Systems Engineering at Hosei University. He received his Ph.D. in Engineering from Osaka University in 2021. Before joining Hosei University in April 2025, he served as an Assistant Professor at Okayama University from 2021 to 2025.\nHis research interests include operations research, optimization, and machine learning. He focuses on developing advanced algorithms to design autonomous decision-making systems, with particular emphasis on inventory, manufacturing, and supply chain management, where decisions are made in complex environments."
+  },
+  {
+    "objectID": "index.html#career",
+    "href": "index.html#career",
+    "title": "Ziang Liu",
+    "section": "Career",
+    "text": "Career\n\n2021–2025: Assistant Professor, Okayama University\n2025–Present: Associate Professor, Hosei University"
+  },
+  {
+    "objectID": "index.html#awards",
+    "href": "index.html#awards",
+    "title": "Ziang Liu",
+    "section": "Awards",
+    "text": "Awards\n\nDistinguished Young IEOM Researcher Award, IEOM Society, 2024\nBest Paper Award, IEEE IEEM, 2019\n\n\n\n Intelligent Systems Laboratory\nOur Laboratory researches operations research, machine learning, and optimization methods to improve decision-making for complex systems.\nVisit the lab · Join us\n\n\n Contact\nHosei University,\n3-7-2 Kajino-cho,   Koganei-shi,\nTokyo 184-8584, Japan\nliu at hosei dot ac dot jp · Map"
   },
   {
     "objectID": "blog/26-07-20-data-driven-newsvendor/index.html",
@@ -137,21 +151,21 @@
     "href": "blog/26-07-20-data-driven-newsvendor/index.html#the-newsvendor-problem",
     "title": "Data-Driven Newsvendor Problems",
     "section": "The Newsvendor Problem",
-    "text": "The Newsvendor Problem\nConsider a single-period inventory problem where a retailer has to decide how many units of a product to order before knowing the actual demand. The objective is to minimize the expected cost\n\\[\n\\min_{q \\geq 0} \\mathbb{E}[C(q, D)],\n\\]\nwhere \\(q\\) is the order quantity, \\(D\\) is the random demand,\n\\[\nC(q, D) = h (q - D)^+ + p (D - q)^+\n\\]\nis the cost function, \\(h\\) is the holding cost per unit, and \\(p\\) is the penalty cost per unit of unsatisfied demand.\nIf the cumulative distribution function (CDF) of the demand \\(F\\) is known, the optimal order quantity \\(q^*\\) can be derived as\n\\[\nq^* = \\inf \\{q : F(q) \\geq \\frac{p}{h + p}\\}.\n\\]"
+    "text": "The Newsvendor Problem\nConsider a single-period inventory problem where a retailer has to decide how many units of a product to order before knowing the actual demand. The objective is to minimize the expected cost\n\\[\n\\min_{q \\geq 0} \\mathbb{E}[C(q, D)],\n\\]\nwhere \\(q\\) is the order quantity, \\(D\\) is the random demand,\n\\[\nC(q, D) = h (q - D)^+ + b (D - q)^+\n\\]\nis the cost function, \\(h\\) is the holding cost per unit, and \\(b\\) is the penalty cost per unit of unsatisfied demand.\nIf the cumulative distribution function (CDF) of the demand \\(F\\) is known, the optimal order quantity \\(q^*\\) can be derived as\n\\[\nq^* = \\inf \\{q : F(q) \\geq \\frac{b}{h + b}\\}.\n\\]"
   },
   {
     "objectID": "blog/26-07-20-data-driven-newsvendor/index.html#sample-average-approximation",
     "href": "blog/26-07-20-data-driven-newsvendor/index.html#sample-average-approximation",
     "title": "Data-Driven Newsvendor Problems",
     "section": "Sample Average Approximation",
-    "text": "Sample Average Approximation\nIn practice, the true distribution of demand is often unknown, and we may only have access to historical demand data. In such cases, we can use the Sample Average Approximation (SAA) method to estimate the optimal order quantity.\nGiven a set of historical demand samples \\(\\{d_1, d_2, \\ldots, d_n\\}\\), we can formulate the SAA problem as\n\\[\n\\min_{q \\geq 0} \\hat{C}(q) = \\frac{1}{n} \\sum_{i=1}^{n} [h (q - d_i)^+ + p (d_i - q)^+].\n\\]\nThe empirical CDF \\(\\hat{F}\\) can be defined as\n\\[\n\\hat{F}(q) = \\frac{1}{n} \\sum_{i=1}^{n} \\mathbf{1}_{\\{d_i \\leq q\\}},\n\\]\nand the SAA optimal order quantity \\(\\hat{q}^*\\) is given by\n\\[\n\\hat{q}^* = \\inf \\{q : \\hat{F}(q) \\geq \\frac{p}{h + p}\\}.\n\\]\n\nExample 1 (SAA for Newsvendor Problem) Suppose the holding cost is \\(h = 1\\) and the penalty cost is \\(p = 3\\), so the critical ratio is\n\\[\n\\frac{p}{h + p} = \\frac{3}{1 + 3} = 0.75.\n\\]\nThe retailer has \\(n = 8\\) historical demand observations:\n\\[\n\\{42, 55, 48, 60, 38, 52, 45, 58\\}.\n\\]\nSorting the samples in ascending order gives\n\\[\nd_{(1)} = 38, \\; d_{(2)} = 42, \\; d_{(3)} = 45, \\; d_{(4)} = 48, \\; d_{(5)} = 52, \\; d_{(6)} = 55, \\; d_{(7)} = 58, \\; d_{(8)} = 60.\n\\]\nThe empirical CDF jumps by \\(1/8\\) at each sorted sample, i.e., \\(\\hat{F}(d_{(i)}) = i/8\\). The SAA optimal order quantity is the smallest sample at which the empirical CDF reaches the critical ratio:\n\\[\n\\hat{q}^* = \\inf \\{q : \\hat{F}(q) \\geq 0.75\\} = d_{(6)} = 55,\n\\]\nsince \\(\\hat{F}(d_{(6)}) = 6/8 = 0.75 \\geq 0.75\\), while \\(\\hat{F}(d_{(5)}) = 5/8 = 0.625 &lt; 0.75\\).\nIn general, the SAA solution is the \\(\\lceil n \\cdot \\frac{p}{h+p} \\rceil\\)-th order statistic of the demand samples, i.e., \\(\\hat{q}^* = d_{(\\lceil n p / (h + p) \\rceil)}\\). Here, \\(\\lceil 8 \\times 0.75 \\rceil = 6\\), confirming that \\(\\hat{q}^* = d_{(6)} = 55\\)."
+    "text": "Sample Average Approximation\nIn practice, the true distribution of demand is often unknown, and we may only have access to historical demand data. In such cases, we can use the Sample Average Approximation (SAA) method to estimate the optimal order quantity.\nGiven a set of historical demand samples \\(\\{d_1, d_2, \\ldots, d_n\\}\\), we can formulate the SAA problem as\n\\[\n\\min_{q \\geq 0} \\hat{C}(q) = \\frac{1}{n} \\sum_{i=1}^{n} [h (q - d_i)^+ + b (d_i - q)^+].\n\\]\nThe empirical CDF \\(\\hat{F}\\) can be defined as\n\\[\n\\hat{F}(q) = \\frac{1}{n} \\sum_{i=1}^{n} \\mathbf{1}_{\\{d_i \\leq q\\}},\n\\]\nand the SAA optimal order quantity \\(\\hat{q}^*\\) is given by\n\\[\n\\hat{q}^* = \\inf \\{q : \\hat{F}(q) \\geq \\frac{b}{h + b}\\}.\n\\]\n\nExample 1 (SAA for Newsvendor Problem) Suppose the holding cost is \\(h = 1\\) and the penalty cost is \\(b = 3\\), so the critical ratio is\n\\[\n\\frac{b}{h + b} = \\frac{3}{1 + 3} = 0.75.\n\\]\nThe retailer has \\(n = 8\\) historical demand observations:\n\\[\n\\{42, 55, 48, 60, 38, 52, 45, 58\\}.\n\\]\nSorting the samples in ascending order gives\n\\[\nd_{(1)} = 38, \\; d_{(2)} = 42, \\; d_{(3)} = 45, \\; d_{(4)} = 48, \\; d_{(5)} = 52, \\; d_{(6)} = 55, \\; d_{(7)} = 58, \\; d_{(8)} = 60.\n\\]\nThe empirical CDF jumps by \\(1/8\\) at each sorted sample, i.e., \\(\\hat{F}(d_{(i)}) = i/8\\). The SAA optimal order quantity is the smallest sample at which the empirical CDF reaches the critical ratio:\n\\[\n\\hat{q}^* = \\inf \\{q : \\hat{F}(q) \\geq 0.75\\} = d_{(6)} = 55,\n\\]\nsince \\(\\hat{F}(d_{(6)}) = 6/8 = 0.75 \\geq 0.75\\), while \\(\\hat{F}(d_{(5)}) = 5/8 = 0.625 &lt; 0.75\\).\nIn general, the SAA solution is the \\(\\lceil n \\cdot \\frac{b}{h+b} \\rceil\\)-th order statistic of the demand samples, i.e., \\(\\hat{q}^* = d_{(\\lceil n b / (h + b) \\rceil)}\\). Here, \\(\\lceil 8 \\times 0.75 \\rceil = 6\\), confirming that \\(\\hat{q}^* = d_{(6)} = 55\\)."
   },
   {
     "objectID": "blog/26-07-20-data-driven-newsvendor/index.html#the-feature-based-newsvendor-problem",
     "href": "blog/26-07-20-data-driven-newsvendor/index.html#the-feature-based-newsvendor-problem",
     "title": "Data-Driven Newsvendor Problems",
     "section": "The Feature-Based Newsvendor Problem",
-    "text": "The Feature-Based Newsvendor Problem\nIn many real-world scenarios, the demand may depend on certain features. For example, the demand for a product may vary based on the day of the week, weather conditions, or promotional activities. In such cases, the data can be represented as pairs of features and demand observations \\(\\{(\\mathbb{x}_1, d_1), (\\mathbb{x}_2, d_2), \\ldots, (\\mathbb{x}_n, d_n)\\}\\), where \\(\\mathbb{x}_i \\in \\mathbb{R}^m\\) is the feature vector associated with the \\(i\\)-th observation.\nNote that we assume that the features \\(\\mathbb{x}\\) can be observed before the order quantity is decided, while the demand \\(d\\) is unknown at the time of ordering.\n\nMachine Learning Models\nThe objective is to learn a function \\(q(\\mathbb{x}; \\theta)\\) that maps the feature vector \\(\\mathbb{x}\\) to an order quantity, parameterized by \\(\\theta\\). The optimization problem can be formulated as\n\\[\n\\min_{\\theta} \\frac{1}{n} \\sum_{i=1}^{n} [h (q(\\mathbb{x}_i; \\theta) - d_i)^+ + p (d_i - q(\\mathbb{x}_i; \\theta))^+],\n\\]\nLet \\(u_i\\) and \\(v_i\\) be the underage and overage for the \\(i\\)-th observation, respectively. The optimization problem can be rewritten as\n\\[\n\\begin{align*}\n\\min_{\\theta} & \\frac{1}{n} \\sum_{i=1}^{n} [h u_i + p v_i] \\\\\n\\text{s.t. } & u_i \\geq d_i - q(\\mathbb{x}_i; \\theta), &\\quad i = 1, \\ldots, n, \\\\\n& v_i \\geq q(\\mathbb{x}_i; \\theta) - d_i, &\\quad i = 1, \\ldots, n, \\\\\n& u_i, v_i \\geq 0, &\\quad i = 1, \\ldots, n.\n\\end{align*}\n\\]\n\n\nReformulation as Quantile Regression\nLet \\(\\tau \\in (0, 1)\\) be the quantile level. Let \\(y_i\\) and \\(\\hat{y}_i\\) be the actual and predicted values for the \\(i\\)-th observation, respectively. The quantile loss function is defined as\n\\[\nL_\\tau(y_i, \\hat{y}_i) = \\tau (y_i - \\hat{y}_i)^+ + (1 - \\tau) (\\hat{y}_i - y_i)^+.\n\\]\nIn the newsvendor problem, the critical ratio \\(\\frac{p}{h + p}\\) corresponds to the quantile level \\(\\tau\\). Therefore, we can use quantile regression to estimate the conditional quantile of demand given the features. The optimization problem can be formulated as\n\\[\n\\min_{\\theta} \\frac{1}{n} \\sum_{i=1}^{n} L_\\tau(d_i, q(\\mathbb{x}_i; \\theta)).\n\\]\nThis is equivalent to minimizing the newsvendor cost, as shown below:\n\\[\n\\begin{align*}\n\\sum_{i=1}^{n} L_\\tau(d_i, q(\\mathbb{x}_i; \\theta)) &= \\sum_{i=1}^{n} \\left[\\tau (d_i - q(\\mathbb{x}_i; \\theta))^+ + (1 - \\tau) (q(\\mathbb{x}_i; \\theta) - d_i)^+\\right] \\\\\n&= \\sum_{i=1}^{n} \\left[\\frac{p}{h + p} (d_i - q(\\mathbb{x}_i; \\theta))^+ + \\frac{h}{h + p} (q(\\mathbb{x}_i; \\theta) - d_i)^+\\right] \\\\\n&= \\frac{1}{h + p} \\sum_{i=1}^{n} \\left[h (q(\\mathbb{x}_i; \\theta) - d_i)^+ + p (d_i - q(\\mathbb{x}_i; \\theta))^+\\right],\n\\end{align*}\n\\]\nwhich is the newsvendor objective scaled by the constant \\(\\frac{1}{h + p}\\). Hence minimizing the quantile loss with \\(\\tau = \\frac{p}{h+p}\\) is equivalent to minimizing the newsvendor cost."
+    "text": "The Feature-Based Newsvendor Problem\nIn many real-world scenarios, the demand may depend on certain features. For example, the demand for a product may vary based on the day of the week, weather conditions, or promotional activities. In such cases, the data can be represented as pairs of features and demand observations \\(\\{(\\mathbf{x}_1, d_1), (\\mathbf{x}_2, d_2), \\ldots, (\\mathbf{x}_n, d_n)\\}\\), where \\(\\mathbf{x}_i \\in \\mathbf{R}^m\\) is the feature vector associated with the \\(i\\)-th observation.\nNote that we assume that the features \\(\\mathbf{x}\\) can be observed before the order quantity is decided, while the demand \\(d\\) is unknown at the time of ordering.\n\nEmpirical Risk Minimization\nThe objective is to learn a function \\(q(\\mathbf{x}; \\theta)\\) that maps the feature vector \\(\\mathbf{x}\\) to an order quantity, parameterized by \\(\\theta\\). The optimization problem can be formulated as\n\\[\n\\min_{\\theta} \\frac{1}{n} \\sum_{i=1}^{n} [h (q(\\mathbf{x}_i; \\theta) - d_i)^+ + b (d_i - q(\\mathbf{x}_i; \\theta))^+],\n\\]\nLet \\(u_i\\) and \\(v_i\\) be the underage and overage for the \\(i\\)-th observation, respectively. The optimization problem can be rewritten as\n\\[\n\\begin{align*}\n\\min_{\\theta} & \\frac{1}{n} \\sum_{i=1}^{n} [h u_i + b v_i] \\\\\n\\text{s.t. } & u_i \\geq d_i - q(\\mathbf{x}_i; \\theta), &\\quad i = 1, \\ldots, n, \\\\\n& v_i \\geq q(\\mathbf{x}_i; \\theta) - d_i, &\\quad i = 1, \\ldots, n, \\\\\n& u_i, v_i \\geq 0, &\\quad i = 1, \\ldots, n.\n\\end{align*}\n\\]\n\n\nQuantile Regression\nLet \\(\\tau \\in (0, 1)\\) be the quantile level. Let \\(y_i\\) and \\(\\hat{y}_i\\) be the actual and predicted values for the \\(i\\)-th observation, respectively. The quantile loss function is defined as\n\\[\nL_\\tau(y_i, \\hat{y}_i) = \\tau (y_i - \\hat{y}_i)^+ + (1 - \\tau) (\\hat{y}_i - y_i)^+.\n\\]\nIn the newsvendor problem, the critical ratio \\(\\frac{p}{h + p}\\) corresponds to the quantile level \\(\\tau\\). Therefore, we can use quantile regression to estimate the conditional quantile of demand given the features. The optimization problem can be formulated as\n\\[\n\\min_{\\theta} \\frac{1}{n} \\sum_{i=1}^{n} L_\\tau(d_i, q(\\mathbf{x}_i; \\theta)).\n\\]\nThis is equivalent to minimizing the newsvendor cost, as shown below:\n\\[\n\\begin{align*}\n\\sum_{i=1}^{n} L_\\tau(d_i, q(\\mathbf{x}_i; \\theta)) &= \\sum_{i=1}^{n} \\left[\\tau (d_i - q(\\mathbf{x}_i; \\theta))^+ + (1 - \\tau) (q(\\mathbf{x}_i; \\theta) - d_i)^+\\right] \\\\\n&= \\sum_{i=1}^{n} \\left[\\frac{b}{h + b} (d_i - q(\\mathbf{x}_i; \\theta))^+ + \\frac{h}{h + b} (q(\\mathbf{x}_i; \\theta) - d_i)^+\\right] \\\\\n&= \\frac{1}{h + b} \\sum_{i=1}^{n} \\left[h (q(\\mathbf{x}_i; \\theta) - d_i)^+ + b (d_i - q(\\mathbf{x}_i; \\theta))^+\\right],\n\\end{align*}\n\\]\nwhich is the newsvendor objective scaled by the constant \\(\\frac{1}{h + b}\\). Hence minimizing the quantile loss with \\(\\tau = \\frac{b}{h+b}\\) is equivalent to minimizing the newsvendor cost."
   },
   {
     "objectID": "blog/26-07-20-data-driven-newsvendor/index.html#references",
