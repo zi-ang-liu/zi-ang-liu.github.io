@@ -422,7 +422,7 @@ q^* = \inf \{q : F(q) \geq \frac{b}{h + b}\}.
 </section>
 <section id="sample-average-approximation" class="level2">
 <h2 class="anchored" data-anchor-id="sample-average-approximation">Sample Average Approximation</h2>
-<p>In practice, the true distribution of demand is often unknown, and we may only have access to historical demand data. In such cases, we can use the Sample Average Approximation (SAA) method to estimate the optimal order quantity.</p>
+<p>In practice, the true distribution of demand is often unknown, and we may only have access to historical demand data. In such cases, we can use the Sample Average Approximation (SAA) method to estimate the optimal order quantity. <span class="citation" data-cites="Levi2015-di">Levi et al. (<a href="#ref-Levi2015-di" role="doc-biblioref">2015</a>)</span> analyze the SAA approach for the data-driven newsvendor problem.</p>
 <p>Given a set of historical demand samples <span class="math inline">\(\{d_1, d_2, \ldots, d_n\}\)</span>, we can formulate the SAA problem as</p>
 <p><span class="math display">\[
 \min_{q \geq 0} \hat{C}(q) = \frac{1}{n} \sum_{i=1}^{n} [h (q - d_i)^+ + b (d_i - q)^+].
@@ -462,11 +462,12 @@ d_{(1)} = 38, \; d_{(2)} = 42, \; d_{(3)} = 45, \; d_{(4)} = 48, \; d_{(5)} = 52
 <p>Note that we assume that the features <span class="math inline">\(\mathbf{x}\)</span> can be observed before the order quantity is decided, while the demand <span class="math inline">\(d\)</span> is unknown at the time of ordering.</p>
 <section id="empirical-risk-minimization" class="level3">
 <h3 class="anchored" data-anchor-id="empirical-risk-minimization">Empirical Risk Minimization</h3>
+<p><span class="citation" data-cites="Ban2019-uz">Ban and Rudin (<a href="#ref-Ban2019-uz" role="doc-biblioref">2019</a>)</span> provide the formulation of the feature-based newsvendor problem as an empirical risk minimization (ERM) problem.</p>
 <p>The objective is to learn a function <span class="math inline">\(q(\mathbf{x}; \theta)\)</span> that maps the feature vector <span class="math inline">\(\mathbf{x}\)</span> to an order quantity, parameterized by <span class="math inline">\(\theta\)</span>. The optimization problem can be formulated as</p>
 <p><span class="math display">\[
 \min_{\theta} \frac{1}{n} \sum_{i=1}^{n} [h (q(\mathbf{x}_i; \theta) - d_i)^+ + b (d_i - q(\mathbf{x}_i; \theta))^+],
 \]</span></p>
-<p>Let <span class="math inline">\(u_i\)</span> and <span class="math inline">\(v_i\)</span> be the underage and overage for the <span class="math inline">\(i\)</span>-th observation, respectively. The optimization problem can be rewritten as</p>
+<p>This objective is called the empirical risk. Let <span class="math inline">\(u_i\)</span> and <span class="math inline">\(v_i\)</span> be the underage and overage for the <span class="math inline">\(i\)</span>-th observation, respectively. The optimization problem can be rewritten as</p>
 <p><span class="math display">\[
 \begin{align*}
 \min_{\theta} &amp; \frac{1}{n} \sum_{i=1}^{n} [h u_i + b v_i] \\
@@ -478,7 +479,8 @@ d_{(1)} = 38, \; d_{(2)} = 42, \; d_{(3)} = 45, \; d_{(4)} = 48, \; d_{(5)} = 52
 </section>
 <section id="quantile-regression" class="level3">
 <h3 class="anchored" data-anchor-id="quantile-regression">Quantile Regression</h3>
-<p>Let <span class="math inline">\(\tau \in (0, 1)\)</span> be the quantile level. Let <span class="math inline">\(y_i\)</span> and <span class="math inline">\(\hat{y}_i\)</span> be the actual and predicted values for the <span class="math inline">\(i\)</span>-th observation, respectively. The quantile loss function is defined as</p>
+<p>It is well-known that the newsvendor problem is closely related to a quantile of the demand distribution, called the critical ratio.</p>
+<p><span class="citation" data-cites="Huber2019-ek">Huber et al. (<a href="#ref-Huber2019-ek" role="doc-biblioref">2019</a>)</span> show that the ERM problem is equivalent to a quantile regression problem. Let <span class="math inline">\(\tau \in (0, 1)\)</span> be the quantile level. Let <span class="math inline">\(y_i\)</span> and <span class="math inline">\(\hat{y}_i\)</span> be the actual and predicted values for the <span class="math inline">\(i\)</span>-th observation, respectively. The quantile loss function is defined as</p>
 <p><span class="math display">\[
 L_\tau(y_i, \hat{y}_i) = \tau (y_i - \hat{y}_i)^+ + (1 - \tau) (\hat{y}_i - y_i)^+.
 \]</span></p>
@@ -499,8 +501,16 @@ L_\tau(y_i, \hat{y}_i) = \tau (y_i - \hat{y}_i)^+ + (1 - \tau) (\hat{y}_i - y_i)
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-<div id="refs" role="list">
-
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Ban2019-uz" class="csl-entry" role="listitem">
+Ban, Gah-Yi, and Cynthia Rudin. 2019. <span>“The Big Data Newsvendor: Practical Insights from Machine Learning.”</span> <em>Operations Research</em> 67 (1): 90–108. <a href="https://doi.org/10.1287/opre.2018.1757">https://doi.org/10.1287/opre.2018.1757</a>.
+</div>
+<div id="ref-Huber2019-ek" class="csl-entry" role="listitem">
+Huber, Jakob, Sebastian Müller, Moritz Fleischmann, and Heiner Stuckenschmidt. 2019. <span>“A Data-Driven Newsvendor Problem: From Data to Decision.”</span> <em>European Journal of Operational Research</em> 278 (3): 904–15. <a href="https://doi.org/10.1016/j.ejor.2019.04.043">https://doi.org/10.1016/j.ejor.2019.04.043</a>.
+</div>
+<div id="ref-Levi2015-di" class="csl-entry" role="listitem">
+Levi, Retsef, Georgia Perakis, and Joline Uichanco. 2015. <span>“The Data-Driven Newsvendor Problem: New Bounds and Insights.”</span> <em>Operations Research</em> 63 (6): 1294–306. <a href="https://doi.org/10.1287/opre.2015.1422">https://doi.org/10.1287/opre.2015.1422</a>.
+</div>
 </div>
 
 
