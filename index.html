@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -33,19 +36,21 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./images/favicon.ico" rel="icon">
+<link href="./images/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-959295b59630de3d8499169efe1922db.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9ea784db1b961033bdcdcd70a6641b98.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-959295b59630de3d8499169efe1922db.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-143123181aca9e9bd573357f10276c5c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-cee96e249ae0b2c02c918f5c4e593d08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d8643b3d41fe08f7008f876e067afa06.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8c1e462d1ca2a99a805b92b883570c33.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d8643b3d41fe08f7008f876e067afa06.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
 <link href="site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -75,8 +80,68 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<!-- Injected into <head> on every page (see include-in-header in _quarto.yml). -->
+
+<!--
+  The icons `favicon:` cannot declare — it only ever emits one <link>, and that
+  one is the SVG. Paths are root-absolute because this file is copied verbatim
+  into every page, including blog posts a directory down where a relative path
+  would miss.
+-->
+<link rel="icon" href="./images/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+<!--
+  KaTeX, loaded synchronously.
+
+  Quarto's own KaTeX tag (from html-math-method) carries `defer`, but the
+  pseudocode filter injects an after-body script that needs a global `katex`
+  the moment it runs — deferred, it arrives too late and every algorithm block
+  fails with "No math backend found". Same pinned URL as Quarto's copy, so this
+  costs one cache hit rather than a second download.
+-->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"></script>
+
+<!--
+  Follow the visitor's OS light/dark preference.
+
+  Quarto picks the first theme listed under `theme:` for everyone and only ever
+  changes it when someone clicks the toggle — it reads localStorage and never
+  consults prefers-color-scheme. This seeds that same localStorage key from the
+  media query, early enough that Quarto's inline script reads the seeded value
+  and the correct stylesheet wins the first paint (no flash).
+
+  "default" = the first theme listed (light), "alternate" = the second (dark).
+
+  The AUTO flag records that *we* set the value rather than the visitor. While
+  it is present we keep re-syncing to the OS on each load; the moment someone
+  uses the toggle we drop it and never override their choice again.
+-->
+<script>
+  (function () {
+    var KEY = "quarto-color-scheme";
+    var AUTO = "quarto-color-scheme-auto";
+    try {
+      if (localStorage.getItem(KEY) === null || localStorage.getItem(AUTO) === "1") {
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        localStorage.setItem(KEY, prefersDark ? "alternate" : "default");
+        localStorage.setItem(AUTO, "1");
+      }
+    } catch (e) {
+      /* private mode / storage disabled — fall back to Quarto's default */
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggles = document.querySelectorAll(".quarto-color-scheme-toggle");
+      for (var i = 0; i < toggles.length; i++) {
+        toggles[i].addEventListener("click", function () {
+          try {
+            localStorage.removeItem(AUTO);
+          } catch (e) {}
+        });
+      }
+    });
+  })();
+</script>
     <style type="text/css">
     .ps-root .ps-algorithm {
       border-top: 2px solid;
@@ -98,11 +163,19 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Ziang Liu">
 <meta property="og:description" content="Ziang Liu’s Personal Website">
-<meta property="og:image" content="https://avatars.githubusercontent.com/u/50853393?s=96&amp;v=4">
+<meta property="og:image" content="https://zi-ang-liu.github.io/images/og-card.png">
 <meta property="og:site_name" content="Ziang Liu">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta name="twitter:title" content="Ziang Liu">
+<meta name="twitter:description" content="Ziang Liu’s Personal Website">
+<meta name="twitter:image" content="https://zi-ang-liu.github.io/images/og-card.png">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -244,8 +317,10 @@ ul.task-list li input[type="checkbox"] {
         changeGiscusTheme();
       }
     };
-    const authorPrefersDark = true;
+    const authorPrefersDark = false;
     const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
@@ -284,16 +359,31 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html"> 
-<span class="menu-text">Teaching</span></a>
+    <a class="nav-link" href="./research.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./teaching.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/zi-ang-liu"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -323,48 +413,90 @@ ul.task-list li input[type="checkbox"] {
 <div class="hero-affil">
 <p><a href="https://ise-hp.ws.hosei.ac.jp/">Department of Industrial and Systems Engineering</a>, <a href="https://www.hosei.ac.jp/">Hosei University</a></p>
 </div>
-<div class="hero-links">
-<p><a href="https://scholar.google.com/citations?user=dRuC1OoAAAAJ&amp;hl" class="hero-link"><i class="bi bi-mortarboard-fill"></i> Google Scholar</a> <a href="https://github.com/zi-ang-liu" class="hero-link"><i class="bi bi-github"></i> GitHub</a> <a href="https://researchmap.jp/liu.ziang" class="profile-link"><i class="bi bi-caret-right-fill"></i> researchmap</a></p>
-</div>
-</div>
-</div>
-<section id="biography" class="level2">
-<h2 class="anchored" data-anchor-id="biography">Biography</h2>
-<p><strong>Ziang Liu</strong> is an Associate Professor of Industrial and Systems Engineering at Hosei University. He received his Ph.D.&nbsp;in Engineering from Osaka University in 2021. Before joining Hosei University in April 2025, he served as an Assistant Professor at Okayama University from 2021 to 2025.</p>
-<p>His research interests include operations research, optimization, and machine learning. He focuses on developing advanced algorithms to design autonomous decision-making systems, with particular emphasis on inventory, manufacturing, and supply chain management, where decisions are made in complex environments.</p>
-</section>
-<section id="career" class="level2">
-<h2 class="anchored" data-anchor-id="career">Career</h2>
-<ul>
-<li>2021–2025: Assistant Professor, Okayama University</li>
-<li>2025–Present: Associate Professor, Hosei University</li>
-</ul>
-</section>
-<section id="awards" class="level2">
-<h2 class="anchored" data-anchor-id="awards">Awards</h2>
-<ul>
-<li>Distinguished Young IEOM Researcher Award, IEOM Society, 2024</li>
-<li>Best Paper Award, IEEE IEEM, 2019</li>
-</ul>
-<div class="info-grid">
-<div class="info-card">
-<p><span class="info-card-title"><i class="bi bi-people-fill"></i> Intelligent Systems Laboratory</span></p>
-<p>Our Laboratory researches operations research, machine learning, and optimization methods to improve decision-making for complex systems.</p>
-<p><a href="https://isl-hosei.github.io/" class="info-link">Visit the lab</a> · <a href="https://isl-hosei.github.io/join.html" class="info-link">Join us</a></p>
-</div>
-<div class="info-card">
-<p><span class="info-card-title"><i class="bi bi-geo-alt-fill"></i> Contact</span></p>
-<p>Hosei University,<br>
-3-7-2 Kajino-cho, &nbsp; Koganei-shi,<br>
-Tokyo 184-8584, Japan</p>
-<p><script type="text/javascript">
+<div class="hero-email">
+<p><i class="bi bi-envelope-fill"></i> <script type="text/javascript">
 <!--
 h='&#104;&#x6f;&#x73;&#x65;&#x69;&#46;&#x61;&#x63;&#46;&#106;&#112;';a='&#64;';n='&#108;&#x69;&#x75;';e=n+a+h;
-document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail info-link">'+e+'<\/'+'a'+'>');
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
 // -->
-</script><noscript>liu at hosei dot ac dot jp</noscript> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Hosei+University+Koganei+Campus" class="info-link">Map</a></p>
+</script><noscript>liu at hosei dot ac dot jp</noscript></p>
 </div>
 </div>
+<!-- Deliberately a sibling of .hero-content, not a child of it: as a child the
+     links shared the ~400px text column beside the avatar and wrapped onto two
+     rows. Here they form their own full-width row under both, where all three
+     fit on one line.
+
+     GitHub used to be the middle pill and is gone: the navbar carries a GitHub
+     icon on every page, so on this screen it was the second route to the same
+     destination. The two that remain are the ones the navbar does not have. -->
+<div class="hero-links">
+<p><a href="https://scholar.google.com/citations?user=dRuC1OoAAAAJ&amp;hl" class="hero-link"><i class="bi bi-mortarboard-fill"></i> Google Scholar</a> <a href="https://researchmap.jp/liu.ziang" class="hero-link"><i class="bi bi-caret-right-fill"></i> researchmap</a></p>
+</div>
+</div>
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">About</h2>
+<!-- Deliberately does NOT open with the name, title, and department: the hero
+     immediately above carries all three, and this section used to restate them
+     as its first sentence — the first thing a reader hit told them nothing they
+     had not just read. The work leads now; the background follows it. -->
+<p>I work on operations research, optimization, and machine learning — algorithms that let complex systems decide for themselves, in settings where the environment is uncertain and the decision has to be made anyway. Most of the applications come from inventory, manufacturing, and supply chains.</p>
+<!-- Three named directions rather than one dense paragraph, and the same three
+     that research.qmd carries: one line each here, a paragraph each there. The
+     lab site uses the same summary-then-detail split between its home page
+     cards and the research sub-pages. -->
+<!-- **Data-driven optimization for supply chains** — multi-echelon inventory control
+that learns from data instead of an assumed demand distribution.
+
+**Optimization for robotic manufacturing** — scheduling and control for flexible
+automation, where the configuration is itself part of what gets optimized.
+
+**Explainable reinforcement learning** — learned policies whose decisions the
+people relying on them can actually interpret. -->
+<p>I received my Ph.D.&nbsp;in Engineering from Osaka University in 2021, and was an Assistant Professor at Okayama University before joining Hosei in April 2025.</p>
+<!-- The lab used to be a fourth link here as well as having its own section
+     below and two links inside it — three routes to the same page on one
+     screen. It keeps the section; this row is for the site's own pages. -->
+<p><a href="./research.html" class="info-link">Research</a> · <a href="./publications.html" class="info-link">Publications</a> · <a href="./cv.html" class="info-link">Full CV</a></p>
+</section>
+<section id="news" class="level2">
+<h2 class="anchored" data-anchor-id="news">News</h2>
+<!-- Newest first; add new entries at the top.
+
+     Month + year throughout. This is a news feed, so a bare year reads as
+     vague, and mixing the two granularities made the list look unmaintained.
+     The award months are the ones recorded on researchmap:
+     https://researchmap.jp/liu.ziang
+
+     The CV keeps the same entries at year granularity — that is a CV
+     convention, and every list on that page follows it. Consistency is within
+     a list, not across the site. -->
+<div class="news-list">
+<p><span class="news-date">Jul 2026</span> Received the Young Investigator Award at ISFA 2026.</p>
+<p><span class="news-date">Apr 2025</span> Joined Hosei University as Associate Professor of Industrial and Systems Engineering.</p>
+<p><span class="news-date">Sep 2024</span> Received the Distinguished Young IEOM Researcher Award from the IEOM Society.</p>
+</div>
+<!-- Every other section on this page ends with somewhere to go next; this one
+     used to just stop. The full award and appointment history is on the CV. -->
+<p><a href="./cv.html" class="info-link">Full history on the CV</a></p>
+<!-- Awards used to be listed here, but News already carries the two most recent
+     ones a few hundred pixels above. The full list lives on cv.qmd.
+
+     The Lab and Contact cards that used to sit here were nested inside the News
+     <section>, so the page outline read them as part of News. Their contents
+     have been split by how they are actually used: the email is now in the hero
+     (most-wanted detail, visible immediately), the lab has its own section
+     below, and the postal address moved to the site footer, where it shows on
+     every page instead of only this one. -->
+</section>
+<section id="research-group" class="level2">
+<h2 class="anchored" data-anchor-id="research-group">Research Group</h2>
+<!-- Says whose lab it is, which the previous wording left to inference — it
+     described the lab in the third person on a personal home page. The topic
+     list it used to repeat is the same one stated under About, so it is gone;
+     what belongs here is the relationship and the two routes in. -->
+<p>I lead the <a href="https://isl-hosei.github.io/">Intelligent Systems Laboratory</a> at Hosei, where students work on the problems above. Prospective students should start with the lab’s Join Us page.</p>
+<p><a href="https://isl-hosei.github.io/" class="info-link">Visit the lab</a> · <a href="https://isl-hosei.github.io/join.html" class="info-link">Join us</a></p>
 
 
 </section>
@@ -787,14 +919,14 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail info-lin
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p><a href="https://ise-hp.ws.hosei.ac.jp/">Department of Industrial and Systems Engineering</a>, <a href="https://www.hosei.ac.jp/">Hosei University</a><br> 3-7-2 Kajino-cho, Koganei-shi, Tokyo 184-8584, Japan · <a href="https://www.google.com/maps/search/?api=1&amp;query=Hosei+University+Koganei+Campus">Map</a></p>
+</div>   
     <div class="nav-footer-center">
-<p>Copyright 2025, Ziang Liu</p>
-</div>
-    <div class="nav-footer-right">
       &nbsp;
     </div>
+    <div class="nav-footer-right">
+<p>© 2026 Ziang Liu</p>
+</div>
   </div>
 </footer>
     <script type="text/javascript">

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -33,19 +36,21 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./images/favicon.ico" rel="icon">
+<link href="./images/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-959295b59630de3d8499169efe1922db.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9ea784db1b961033bdcdcd70a6641b98.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-959295b59630de3d8499169efe1922db.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-143123181aca9e9bd573357f10276c5c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-cee96e249ae0b2c02c918f5c4e593d08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d8643b3d41fe08f7008f876e067afa06.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8c1e462d1ca2a99a805b92b883570c33.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d8643b3d41fe08f7008f876e067afa06.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
 <link href="site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -62,21 +67,81 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "一致なし",
+    "search-matching-documents-text": "一致した文書",
+    "search-copy-link-title": "検索へのリンクをコピー",
+    "search-hide-matches-text": "追加の検索結果を非表示",
+    "search-more-match-text": "追加の検索結果",
+    "search-more-matches-text": "追加の検索結果",
+    "search-clear-button-title": "消去",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "検索",
+    "search-label": "サーチ"
   }
 }</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<!-- Injected into <head> on every page (see include-in-header in _quarto.yml). -->
+
+<!--
+  The icons `favicon:` cannot declare — it only ever emits one <link>, and that
+  one is the SVG. Paths are root-absolute because this file is copied verbatim
+  into every page, including blog posts a directory down where a relative path
+  would miss.
+-->
+<link rel="icon" href="./images/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+<!--
+  KaTeX, loaded synchronously.
+
+  Quarto's own KaTeX tag (from html-math-method) carries `defer`, but the
+  pseudocode filter injects an after-body script that needs a global `katex`
+  the moment it runs — deferred, it arrives too late and every algorithm block
+  fails with "No math backend found". Same pinned URL as Quarto's copy, so this
+  costs one cache hit rather than a second download.
+-->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"></script>
+
+<!--
+  Follow the visitor's OS light/dark preference.
+
+  Quarto picks the first theme listed under `theme:` for everyone and only ever
+  changes it when someone clicks the toggle — it reads localStorage and never
+  consults prefers-color-scheme. This seeds that same localStorage key from the
+  media query, early enough that Quarto's inline script reads the seeded value
+  and the correct stylesheet wins the first paint (no flash).
+
+  "default" = the first theme listed (light), "alternate" = the second (dark).
+
+  The AUTO flag records that *we* set the value rather than the visitor. While
+  it is present we keep re-syncing to the OS on each load; the moment someone
+  uses the toggle we drop it and never override their choice again.
+-->
+<script>
+  (function () {
+    var KEY = "quarto-color-scheme";
+    var AUTO = "quarto-color-scheme-auto";
+    try {
+      if (localStorage.getItem(KEY) === null || localStorage.getItem(AUTO) === "1") {
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        localStorage.setItem(KEY, prefersDark ? "alternate" : "default");
+        localStorage.setItem(AUTO, "1");
+      }
+    } catch (e) {
+      /* private mode / storage disabled — fall back to Quarto's default */
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggles = document.querySelectorAll(".quarto-color-scheme-toggle");
+      for (var i = 0; i < toggles.length; i++) {
+        toggles[i].addEventListener("click", function () {
+          try {
+            localStorage.removeItem(AUTO);
+          } catch (e) {}
+        });
+      }
+    });
+  })();
+</script>
     <style type="text/css">
     .ps-root .ps-algorithm {
       border-top: 2px solid;
@@ -97,10 +162,20 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Teaching – Ziang Liu">
+<meta property="og:description" content="Ziang Liu’s Personal Website">
+<meta property="og:image" content="https://zi-ang-liu.github.io/images/og-card.png">
 <meta property="og:site_name" content="Ziang Liu">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta name="twitter:title" content="Teaching – Ziang Liu">
+<meta name="twitter:description" content="Ziang Liu’s Personal Website">
+<meta name="twitter:image" content="https://zi-ang-liu.github.io/images/og-card.png">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -242,8 +317,10 @@ ul.task-list li input[type="checkbox"] {
         changeGiscusTheme();
       }
     };
-    const authorPrefersDark = true;
+    const authorPrefersDark = false;
     const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
@@ -271,8 +348,8 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Ziang Liu</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="サーチ"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="ナビゲーションを切り替える" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -282,21 +359,36 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./teaching.html" aria-current="page"> 
-<span class="menu-text">Teaching</span></a>
+    <a class="nav-link" href="./research.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link active" href="./teaching.html" aria-current="page"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/zi-ang-liu"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="ダークモードの切り替え"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -329,43 +421,52 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- ## 法政大学 -->
+<!-- Every other page on this site opens with a sentence that says what the page
+     is; this one used to start straight on a bare `## 学部`, so a reader landed
+     on a grid of course cards with no frame around it.
+
+     Punctuation follows the lab site's STYLE.md: full-width 「，」 and 「．」,
+     not 「、」 and 「。」. This is the first Japanese prose on the site, so it
+     sets the convention — keep new Japanese text consistent with it. -->
+<p>法政大学 経営システム工学科で担当している科目です．講義ノートを公開している科目は， 科目名から直接開けます．</p>
+<!-- The courses were a grid of bordered cards, each carrying up to four chips
+     (年・学期・時限・教室). Between the two grids, the period strip and the
+     lecture-note cards, the page held fourteen outlined boxes and sixteen
+     chips — a lot of ornament for what is really a six-row list of facts, and
+     the teal/amber semester chips were the loudest colour on the site.
+
+     The rows below are the `.news-list` / `.cv-list` device instead: the term
+     moves into the fixed left label column, because that is what a reader
+     groups courses by, and everything else is one muted line of plain text.
+     Term order within a section is 春 then 秋.
+
+     The `\` at the end of the first line of each row is load-bearing — a bare
+     newline is joined, and the meta line has to be a line of its own. -->
 <section id="学部" class="level2">
 <h2 class="anchored" data-anchor-id="学部">学部</h2>
-<div class="course-grid">
-<div class="course-card is-linked">
-<p><a href="https://zi-ang-liu.github.io/computer-literacy-book/" class="course-name stretched-link">計算機実習A</a></p>
-<p><span class="tag"><i class="bi bi-mortarboard"></i> 1年</span> <span class="tag term-spring"><i class="bi bi-calendar-event"></i> 春学期</span> <span class="tag"><i class="bi bi-clock"></i> 水1</span> <span class="tag"><i class="bi bi-geo-alt"></i> W305</span></p>
-</div>
-<div class="course-card is-linked">
-<p><a href="https://zi-ang-liu.github.io/database-book/" class="course-name stretched-link">リレーショナル・データベース</a></p>
-<p><span class="tag"><i class="bi bi-mortarboard"></i> 3年</span> <span class="tag term-spring"><i class="bi bi-calendar-event"></i> 春学期</span> <span class="tag"><i class="bi bi-clock"></i> 水2</span> <span class="tag"><i class="bi bi-geo-alt"></i> W305</span></p>
-</div>
-<div class="course-card is-linked">
-<p><a href="https://zi-ang-liu.github.io/data-science-book/" class="course-name stretched-link">社会システム</a></p>
-<p><span class="tag"><i class="bi bi-mortarboard"></i> 1年</span> <span class="tag term-fall"><i class="bi bi-calendar-event"></i> 秋学期</span> <span class="tag"><i class="bi bi-clock"></i> 金3</span> <span class="tag"><i class="bi bi-geo-alt"></i> W305</span></p>
-</div>
-<div class="course-card is-linked">
-<p><a href="https://zi-ang-liu.github.io/or-book/" class="course-name stretched-link">オペレーションズ・リサーチB</a></p>
-<p><span class="tag"><i class="bi bi-mortarboard"></i> 2年</span> <span class="tag term-fall"><i class="bi bi-calendar-event"></i> 秋学期</span> <span class="tag"><i class="bi bi-clock"></i> 水2</span> <span class="tag"><i class="bi bi-geo-alt"></i> W202</span></p>
-</div>
+<div class="course-list">
+<p><span class="course-term">春学期</span> <a href="https://zi-ang-liu.github.io/computer-literacy-book/" class="course-name">計算機実習A</a><br>
+<span class="course-meta">1年・水1・W305</span></p>
+<p><span class="course-term">春学期</span> <a href="https://zi-ang-liu.github.io/database-book/" class="course-name">リレーショナル・データベース</a><br>
+<span class="course-meta">3年・水2・W305</span></p>
+<p><span class="course-term">秋学期</span> <a href="https://zi-ang-liu.github.io/data-science-book/" class="course-name">社会システム</a><br>
+<span class="course-meta">1年・金3・W305</span></p>
+<p><span class="course-term">秋学期</span> <a href="https://zi-ang-liu.github.io/or-book/" class="course-name">オペレーションズ・リサーチB</a><br>
+<span class="course-meta">2年・水2・W202</span></p>
 </div>
 </section>
 <section id="大学院" class="level2">
 <h2 class="anchored" data-anchor-id="大学院">大学院</h2>
-<div class="course-grid">
-<div class="course-card">
-<p><span class="course-name">最適化アルゴリズム特論</span></p>
-<p><span class="tag term-fall"><i class="bi bi-calendar-event"></i> 秋学期</span></p>
-</div>
-<div class="course-card">
-<p><span class="course-name">先進経営科学特論</span></p>
-<p><span class="tag term-fall"><i class="bi bi-calendar-event"></i> 秋学期</span></p>
-</div>
+<div class="course-list">
+<p><span class="course-term">秋学期</span> <span class="course-name">最適化アルゴリズム特論</span></p>
+<p><span class="course-term">秋学期</span> <span class="course-name">先進経営科学特論</span></p>
 </div>
 </section>
 <section id="時間割小金井キャンパス" class="level2">
 <h2 class="anchored" data-anchor-id="時間割小金井キャンパス">時間割（小金井キャンパス）</h2>
+<!-- The strip was unexplained: it lists period times, but nothing said that the
+     「水1」「金3」 in the rows above refer to them. -->
+<p>上の一覧の「水1」「金3」などは，曜日と下の時限を表します．</p>
 <div class="period-grid">
 <div class="period">
 <p><strong>1限</strong> 9:00–10:40</p>
@@ -383,17 +484,28 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>5限</strong> 17:00–18:40</p>
 </div>
 </div>
-<!-- ## Lecture Notes
+</section>
+<section id="講義ノート" class="level2">
+<h2 class="anchored" data-anchor-id="講義ノート">講義ノート</h2>
+<!-- Restored from a comment. Two reasons it earns its place rather than
+     duplicating the course list:
 
-Open-access course notes I maintain — click a title to read online.
+     1. The Reinforcement Learning notes are tied to no course, so while this
+        section was commented out they were unreachable from the site at all.
+     2. It is a different way in. The rows above are indexed by course — you
+        use them if you are enrolled. This list is indexed by subject, for
+        someone who wants the notes and is not in the class.
 
-::: {.book-links}
-[Operations Research](https://zi-ang-liu.github.io/or-book/){.book-item}
-[Data Science](https://zi-ang-liu.github.io/data-science-book/){.book-item}
-[Database Systems](https://zi-ang-liu.github.io/database-book/){.book-item}
-[Computer Literacy](https://zi-ang-liu.github.io/computer-literacy-book/){.book-item}
-[Reinforcement Learning](https://zi-ang-liu.github.io/rl-book/){.book-item}
-::: -->
+     Pills rather than cards: the section is a short row of links, and after
+     the course rows above the page does not need a third stack of boxes.
+
+     The .book-item links must stay on consecutive lines with no blank line
+     between them: `.book-links p` is the row, and Pandoc only wraps them in
+     one <p> if they form a single paragraph. -->
+<p>オープンアクセスで公開している講義ノートです．担当科目に対応するものは， 上の一覧からも開けます．</p>
+<div class="book-links">
+<p><a href="https://zi-ang-liu.github.io/or-book/" class="book-item">Operations Research</a> <a href="https://zi-ang-liu.github.io/data-science-book/" class="book-item">Data Science</a> <a href="https://zi-ang-liu.github.io/database-book/" class="book-item">Database Systems</a> <a href="https://zi-ang-liu.github.io/computer-literacy-book/" class="book-item">Computer Literacy</a> <a href="https://zi-ang-liu.github.io/rl-book/" class="book-item">Reinforcement Learning</a></p>
+</div>
 
 
 </section>
@@ -437,12 +549,12 @@ Open-access course notes I maintain — click a title to read online.
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "コピーしました");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "コピーしました");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -816,14 +928,14 @@ Open-access course notes I maintain — click a title to read online.
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p><a href="https://ise-hp.ws.hosei.ac.jp/">Department of Industrial and Systems Engineering</a>, <a href="https://www.hosei.ac.jp/">Hosei University</a><br> 3-7-2 Kajino-cho, Koganei-shi, Tokyo 184-8584, Japan · <a href="https://www.google.com/maps/search/?api=1&amp;query=Hosei+University+Koganei+Campus">Map</a></p>
+</div>   
     <div class="nav-footer-center">
-<p>Copyright 2025, Ziang Liu</p>
-</div>
-    <div class="nav-footer-right">
       &nbsp;
     </div>
+    <div class="nav-footer-right">
+<p>© 2026 Ziang Liu</p>
+</div>
   </div>
 </footer>
     <script type="text/javascript">

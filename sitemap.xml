@@ -1,63 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zi-ang-liu.github.io/blog.html</loc>
-    <lastmod>2026-07-19T23:26:06.023Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/DESIGN.html</loc>
+    <lastmod>2026-08-17T01:57:53.362Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/ideas/JADE-SHADE-HB-HPO/index.html</loc>
-    <lastmod>2026-07-10T04:53:59.652Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/ideas/ideas.html</loc>
-    <lastmod>2026-07-10T04:51:45.195Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/publications.html</loc>
-    <lastmod>2026-07-02T14:21:33.182Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/blog/26-07-01-Algorithm-Configuration/index.html</loc>
-    <lastmod>2026-07-19T23:25:42.975Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/blog/26-07-21-RL-JSSP/index.html</loc>
-    <lastmod>2026-07-21T02:25:44.468Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/projects.html</loc>
-    <lastmod>2026-07-02T14:21:47.669Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/teaching.html</loc>
-    <lastmod>2026-07-02T14:01:57.787Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/open-source.html</loc>
-    <lastmod>2026-04-28T09:55:32.208Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/research.html</loc>
+    <lastmod>2026-08-17T01:43:41.253Z</lastmod>
   </url>
   <url>
     <loc>https://zi-ang-liu.github.io/index.html</loc>
-    <lastmod>2026-07-09T03:05:53.877Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zi-ang-liu.github.io/blog/26-07-20-data-driven-newsvendor/index.html</loc>
-    <lastmod>2026-07-21T07:33:44.656Z</lastmod>
+    <lastmod>2026-08-17T01:41:30.788Z</lastmod>
   </url>
   <url>
     <loc>https://zi-ang-liu.github.io/blog/26-07-06-hyperband/index.html</loc>
     <lastmod>2026-07-19T23:25:29.378Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/ideas/Recurrent-PPO/index.html</loc>
-    <lastmod>2026-07-10T00:50:16.535Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/blog.html</loc>
+    <lastmod>2026-08-16T03:52:08.689Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/ideas/best-bandit-for-inventory-policy-opt/index.html</loc>
-    <lastmod>2026-07-10T04:52:10.643Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/blog/26-07-01-Algorithm-Configuration/index.html</loc>
+    <lastmod>2026-07-23T00:40:23.163Z</lastmod>
   </url>
   <url>
-    <loc>https://zi-ang-liu.github.io/bio.html</loc>
-    <lastmod>2026-07-04T02:10:34.376Z</lastmod>
+    <loc>https://zi-ang-liu.github.io/blog/26-07-20-data-driven-newsvendor/index.html</loc>
+    <lastmod>2026-07-23T00:23:21.752Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/cv.html</loc>
+    <lastmod>2026-08-16T04:50:27.037Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/publications.html</loc>
+    <lastmod>2026-07-02T14:21:33.182Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zi-ang-liu.github.io/teaching.html</loc>
+    <lastmod>2026-08-17T02:00:44.884Z</lastmod>
   </url>
 </urlset>

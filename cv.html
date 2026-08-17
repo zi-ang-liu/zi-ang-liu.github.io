@@ -2,22 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Ziang Liu">
-<meta name="dcterms.date" content="2026-07-06">
 
-<title>Best Banditg Identification Algorithm for Inventory Policy Optimization – Ziang Liu</title>
+<title>CV — Ziang Liu – Ziang Liu</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -25,50 +26,33 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../images/favicon.ico" rel="icon">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-143123181aca9e9bd573357f10276c5c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-cee96e249ae0b2c02c918f5c4e593d08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
-<link href="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./images/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-959295b59630de3d8499169efe1922db.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-9ea784db1b961033bdcdcd70a6641b98.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-959295b59630de3d8499169efe1922db.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-d8643b3d41fe08f7008f876e067afa06.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8c1e462d1ca2a99a805b92b883570c33.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d8643b3d41fe08f7008f876e067afa06.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
+<link href="site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -96,8 +80,68 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<!-- Injected into <head> on every page (see include-in-header in _quarto.yml). -->
+
+<!--
+  The icons `favicon:` cannot declare — it only ever emits one <link>, and that
+  one is the SVG. Paths are root-absolute because this file is copied verbatim
+  into every page, including blog posts a directory down where a relative path
+  would miss.
+-->
+<link rel="icon" href="./images/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+<!--
+  KaTeX, loaded synchronously.
+
+  Quarto's own KaTeX tag (from html-math-method) carries `defer`, but the
+  pseudocode filter injects an after-body script that needs a global `katex`
+  the moment it runs — deferred, it arrives too late and every algorithm block
+  fails with "No math backend found". Same pinned URL as Quarto's copy, so this
+  costs one cache hit rather than a second download.
+-->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"></script>
+
+<!--
+  Follow the visitor's OS light/dark preference.
+
+  Quarto picks the first theme listed under `theme:` for everyone and only ever
+  changes it when someone clicks the toggle — it reads localStorage and never
+  consults prefers-color-scheme. This seeds that same localStorage key from the
+  media query, early enough that Quarto's inline script reads the seeded value
+  and the correct stylesheet wins the first paint (no flash).
+
+  "default" = the first theme listed (light), "alternate" = the second (dark).
+
+  The AUTO flag records that *we* set the value rather than the visitor. While
+  it is present we keep re-syncing to the OS on each load; the moment someone
+  uses the toggle we drop it and never override their choice again.
+-->
+<script>
+  (function () {
+    var KEY = "quarto-color-scheme";
+    var AUTO = "quarto-color-scheme-auto";
+    try {
+      if (localStorage.getItem(KEY) === null || localStorage.getItem(AUTO) === "1") {
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        localStorage.setItem(KEY, prefersDark ? "alternate" : "default");
+        localStorage.setItem(AUTO, "1");
+      }
+    } catch (e) {
+      /* private mode / storage disabled — fall back to Quarto's default */
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggles = document.querySelectorAll(".quarto-color-scheme-toggle");
+      for (var i = 0; i < toggles.length; i++) {
+        toggles[i].addEventListener("click", function () {
+          try {
+            localStorage.removeItem(AUTO);
+          } catch (e) {}
+        });
+      }
+    });
+  })();
+</script>
     <style type="text/css">
     .ps-root .ps-algorithm {
       border-top: 2px solid;
@@ -116,13 +160,22 @@ div.csl-indent {
     
 
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Best Banditg Identification Algorithm for Inventory Policy Optimization – Ziang Liu">
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="CV — Ziang Liu">
 <meta property="og:description" content="Ziang Liu’s Personal Website">
+<meta property="og:image" content="https://zi-ang-liu.github.io/images/og-card.png">
 <meta property="og:site_name" content="Ziang Liu">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta name="twitter:title" content="CV — Ziang Liu">
+<meta name="twitter:description" content="Ziang Liu’s Personal Website">
+<meta name="twitter:image" content="https://zi-ang-liu.github.io/images/og-card.png">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -264,8 +317,10 @@ div.csl-indent {
         changeGiscusTheme();
       }
     };
-    const authorPrefersDark = true;
+    const authorPrefersDark = false;
     const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
@@ -289,7 +344,7 @@ div.csl-indent {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Ziang Liu</span>
     </a>
   </div>
@@ -300,20 +355,35 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../teaching.html"> 
-<span class="menu-text">Teaching</span></a>
+    <a class="nav-link" href="./research.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publications.html"> 
+    <a class="nav-link" href="./publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
+    <a class="nav-link" href="./teaching.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./cv.html" aria-current="page"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/zi-ang-liu"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -334,26 +404,14 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Best Banditg Identification Algorithm for Inventory Policy Optimization</h1>
+<h1 class="title">Curriculum Vitae</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Ziang Liu </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 6, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -363,19 +421,105 @@ div.csl-indent {
 </header>
 
 
-<p><strong>Draft</strong></p>
-<p>Stochastic</p>
-<p>Non-stochastic</p>
-<p>same random seed</p>
-<p>papers</p>
-<ul>
-<li>Bandit-based inventory optimisation: Reinforcement learning in multi-echelon supply chains</li>
-</ul>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<div id="refs" role="list">
+<!-- This used to open with "Associate Professor, Department of Industrial and
+     Systems Engineering, Hosei University · liu@hosei.ac.jp" — a run of three
+     differently-weighted blue links and a mailto in one sentence, which broke
+     across two lines with the "·" left dangling at the end of the first. It
+     also restated the Appointments row a few hundred pixels below it word for
+     word, and every other page on the site opens by saying what the page *is*
+     (DESIGN.md §1). The affiliation stays where it belongs, in Appointments;
+     the email moved into the pill row below, where it gets the same treatment
+     as the other contact links instead of competing with them. -->
+<p>Appointments, education, awards, grants, and service, newest first. Publications are listed separately on the <a href="./publications.html" class="info-link">Publications</a> page.</p>
+<!-- One pill, not the five-link profile row this page used to carry. That row
+     was a copy of the one on publications.qmd — Google Scholar, ORCID and
+     researchmap each appeared on three different pages, and GitHub is in the
+     navbar of every page already. A pill row earns its place only where the
+     links are the page's own subject: the bibliographic profiles belong on
+     publications.qmd, KAKEN on research.qmd, and what belongs here is the way
+     to reach the person whose CV this is.
 
+     No inline `<i>` on this one, unlike those rows: `email-obfuscation:
+     javascript` (in the front matter) rebuilds this link with document.write and
+     entity-escapes the link text, so an icon written here renders as the literal
+     string `<i class="bi bi-envelope-fill"></i>`. Quarto tags the generated link
+     `class="email profile-link"`; the envelope comes from CSS off that hook —
+     see `.profile-link.email::before` in scss/_shared.scss. -->
+<div class="profile-links">
+<p><script type="text/javascript">
+<!--
+h='&#104;&#x6f;&#x73;&#x65;&#x69;&#46;&#x61;&#x63;&#46;&#106;&#112;';a='&#64;';n='&#108;&#x69;&#x75;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail profile-link">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>liu at hosei dot ac dot jp</noscript></p>
 </div>
+<section id="appointments" class="level2">
+<h2 class="anchored" data-anchor-id="appointments">Appointments</h2>
+<div class="cv-list">
+<p><span class="cv-when">2025–</span> <strong>Associate Professor</strong>, Department of Industrial and Systems Engineering, Hosei University</p>
+<p><span class="cv-when">2021–2025</span> <strong>Assistant Professor</strong>, Okayama University</p>
+</div>
+</section>
+<section id="education" class="level2">
+<h2 class="anchored" data-anchor-id="education">Education</h2>
+<div class="cv-list">
+<p><span class="cv-when">2021</span> <strong>Ph.D.&nbsp;in Engineering</strong>, Osaka University</p>
+</div>
+</section>
+<section id="research-interests" class="level2">
+<h2 class="anchored" data-anchor-id="research-interests">Research Interests</h2>
+<p>Operations research, optimization, and machine learning — in particular, algorithms for autonomous decision-making in inventory, manufacturing, and supply chain systems. Current work covers data-driven optimization for multi-echelon supply chains under uncertainty, optimization for robotic manufacturing systems, and reinforcement learning with an emphasis on explainability and human-centric, trustworthy decision support.</p>
+</section>
+<section id="awards" class="level2">
+<h2 class="anchored" data-anchor-id="awards">Awards</h2>
+<div class="cv-list">
+<p><span class="cv-when">2026</span> <strong>Young Investigator Award</strong>, ISFA 2026</p>
+<p><span class="cv-when">2024</span> <strong>Distinguished Young IEOM Researcher Award</strong>, IEOM Society</p>
+<p><span class="cv-when">2019</span> <strong>Best Paper Award</strong>, IEEE IEEM</p>
+</div>
+</section>
+<section id="grants" class="level2">
+<h2 class="anchored" data-anchor-id="grants">Grants</h2>
+<div class="cv-list">
+<p><span class="cv-when">2023–2026</span> <strong>Grant-in-Aid for Early-Career Scientists</strong>, JSPS — Principal Investigator (<a href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23K13514/">23K13514</a>)</p>
+<p><span class="cv-when">2022–2026</span> <strong>Grant-in-Aid for Scientific Research (B)</strong>, JSPS — Co-Investigator (<a href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23K22983/">23K22983</a>)</p>
+</div>
+<p>Project details on the <a href="./research.html" class="info-link">Research</a> page.</p>
+</section>
+<section id="professional-service" class="level2">
+<h2 class="anchored" data-anchor-id="professional-service">Professional Service</h2>
+<!-- Source of record for this section: the 学術貢献活動 / 社会貢献活動 /
+     所属学協会 blocks on https://researchmap.jp/liu.ziang. Committee roles get
+     a dated row; the one-off session-chair and reviewing duties are inline
+     rows below, because a .cv-list row per session chair would outweigh the
+     appointments at the top of the page. Year granularity throughout, like
+     every other list here. -->
+<div class="cv-list">
+<p><span class="cv-when">2021–</span> <strong>Secretary</strong>, Cyber-Physical Flexible Automation (CyFA) research committee</p>
+<p><span class="cv-when">2026</span> <strong>Executive Committee</strong>, International Symposium on Flexible Automation (ISFA) 2026</p>
+<p><span class="cv-when">2025</span> <strong>Program Committee</strong>, 44th IFIP WG 5.7 International Conference on Advances in Production Management Systems (APMS 2025)</p>
+<p><span class="cv-when">2023</span> <strong>Organizing Committee</strong>, 67th Annual Conference of the Institute of Systems, Control and Information Engineers (SCI’23)</p>
+<p><span class="cv-when">2021</span> <strong>Organizing Committee</strong>, 65th Annual Conference of the Institute of Systems, Control and Information Engineers (SCI’21)</p>
+</div>
+<section id="session-chair" class="level3">
+<h3 class="anchored" data-anchor-id="session-chair">Session Chair</h3>
+<p><em>Annual Conference of the Institute of Systems, Control and Information Engineers</em> (2022, 2024) · <em>JSME Manufacturing Systems Division Conference</em> (MSD2024) · <em>Scheduling Symposium</em> (2023)</p>
+</section>
+<section id="reviewing" class="level3">
+<h3 class="anchored" data-anchor-id="reviewing">Reviewing</h3>
+<p><em>IEEE Transactions on Automation Science and Engineering</em> · <em>Engineering Applications of Artificial Intelligence</em> · <em>Expert Systems with Applications</em></p>
+</section>
+<section id="memberships" class="level3">
+<h3 class="anchored" data-anchor-id="memberships">Memberships</h3>
+<!-- researchmap records IEEE as 2024年3月–2025年3月, i.e. lapsed; listed with
+     its range rather than silently dropped or shown as current. -->
+<p>Institute of Systems, Control and Information Engineers (2021–) · Japan Society of Mechanical Engineers (2020–) · IEEE (2024–2025)</p>
+</section>
+</section>
+<section id="publications" class="level2">
+<h2 class="anchored" data-anchor-id="publications">Publications</h2>
+<p>Peer-reviewed articles in journals including <em>Expert Systems with Applications</em>, <em>Information Sciences</em>, and <em>Applied Artificial Intelligence</em>.</p>
+<p><a href="./publications.html" class="info-link">See the full list</a></p>
 
 
 </section>
@@ -798,14 +942,14 @@ div.csl-indent {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p><a href="https://ise-hp.ws.hosei.ac.jp/">Department of Industrial and Systems Engineering</a>, <a href="https://www.hosei.ac.jp/">Hosei University</a><br> 3-7-2 Kajino-cho, Koganei-shi, Tokyo 184-8584, Japan · <a href="https://www.google.com/maps/search/?api=1&amp;query=Hosei+University+Koganei+Campus">Map</a></p>
+</div>   
     <div class="nav-footer-center">
-<p>Copyright 2025, Ziang Liu</p>
-</div>
-    <div class="nav-footer-right">
       &nbsp;
     </div>
+    <div class="nav-footer-right">
+<p>© 2026 Ziang Liu</p>
+</div>
   </div>
 </footer>
     <script type="text/javascript">

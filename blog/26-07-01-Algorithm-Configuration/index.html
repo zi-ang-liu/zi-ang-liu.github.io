@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -54,19 +57,21 @@ div.csl-indent {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../images/favicon.ico" rel="icon">
+<link href="../../images/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-959295b59630de3d8499169efe1922db.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-9ea784db1b961033bdcdcd70a6641b98.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-959295b59630de3d8499169efe1922db.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-143123181aca9e9bd573357f10276c5c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-cee96e249ae0b2c02c918f5c4e593d08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-d8643b3d41fe08f7008f876e067afa06.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-8c1e462d1ca2a99a805b92b883570c33.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-d8643b3d41fe08f7008f876e067afa06.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
 <link href="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -96,8 +101,68 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<!-- Injected into <head> on every page (see include-in-header in _quarto.yml). -->
+
+<!--
+  The icons `favicon:` cannot declare — it only ever emits one <link>, and that
+  one is the SVG. Paths are root-absolute because this file is copied verbatim
+  into every page, including blog posts a directory down where a relative path
+  would miss.
+-->
+<link rel="icon" href="../../images/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+
+<!--
+  KaTeX, loaded synchronously.
+
+  Quarto's own KaTeX tag (from html-math-method) carries `defer`, but the
+  pseudocode filter injects an after-body script that needs a global `katex`
+  the moment it runs — deferred, it arrives too late and every algorithm block
+  fails with "No math backend found". Same pinned URL as Quarto's copy, so this
+  costs one cache hit rather than a second download.
+-->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"></script>
+
+<!--
+  Follow the visitor's OS light/dark preference.
+
+  Quarto picks the first theme listed under `theme:` for everyone and only ever
+  changes it when someone clicks the toggle — it reads localStorage and never
+  consults prefers-color-scheme. This seeds that same localStorage key from the
+  media query, early enough that Quarto's inline script reads the seeded value
+  and the correct stylesheet wins the first paint (no flash).
+
+  "default" = the first theme listed (light), "alternate" = the second (dark).
+
+  The AUTO flag records that *we* set the value rather than the visitor. While
+  it is present we keep re-syncing to the OS on each load; the moment someone
+  uses the toggle we drop it and never override their choice again.
+-->
+<script>
+  (function () {
+    var KEY = "quarto-color-scheme";
+    var AUTO = "quarto-color-scheme-auto";
+    try {
+      if (localStorage.getItem(KEY) === null || localStorage.getItem(AUTO) === "1") {
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        localStorage.setItem(KEY, prefersDark ? "alternate" : "default");
+        localStorage.setItem(AUTO, "1");
+      }
+    } catch (e) {
+      /* private mode / storage disabled — fall back to Quarto's default */
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggles = document.querySelectorAll(".quarto-color-scheme-toggle");
+      for (var i = 0; i < toggles.length; i++) {
+        toggles[i].addEventListener("click", function () {
+          try {
+            localStorage.removeItem(AUTO);
+          } catch (e) {}
+        });
+      }
+    });
+  })();
+</script>
     <style type="text/css">
     .ps-root .ps-algorithm {
       border-top: 2px solid;
@@ -115,8 +180,22 @@ div.csl-indent {
       </style>
     
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css">
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -148,10 +227,15 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Algorithm Configuration – Ziang Liu">
 <meta property="og:description" content="Ziang Liu’s Personal Website">
+<meta property="og:image" content="https://zi-ang-liu.github.io/blog/26-07-01-Algorithm-Configuration/images/og-card.png">
 <meta property="og:site_name" content="Ziang Liu">
+<meta name="twitter:title" content="Algorithm Configuration – Ziang Liu">
+<meta name="twitter:description" content="Ziang Liu’s Personal Website">
+<meta name="twitter:image" content="https://zi-ang-liu.github.io/blog/26-07-01-Algorithm-Configuration/images/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -293,8 +377,10 @@ window.Quarto = {
         changeGiscusTheme();
       }
     };
-    const authorPrefersDark = true;
+    const authorPrefersDark = false;
     const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
@@ -333,16 +419,31 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../teaching.html"> 
-<span class="menu-text">Teaching</span></a>
+    <a class="nav-link" href="../../research.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../teaching.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/zi-ang-liu"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -395,16 +496,16 @@ window.Quarto = {
 </header>
 
 
-<p>Let <span class="math inline">\(\mathcal{I}\)</span> be the set of problem instances, <span class="math inline">\(\mathcal{D}\)</span> be the probability distribution over <span class="math inline">\(\mathcal{I}\)</span>. Let <span class="math inline">\(p_1, p_2, \ldots, p_k\)</span> be the parameters of an algorithm. The domain of each parameter <span class="math inline">\(p_i\)</span> is denoted as <span class="math inline">\(\Theta_i\)</span>, and the parameter space is defined as <span class="math inline">\(\Theta = \Theta_1 \times \Theta_2 \times \ldots \times \Theta_k\)</span>. Note that the the domain of each parameter can be continuous, discrete, or categorical. The parameter configuration of the algorithm is denoted as <span class="math inline">\(\theta = (p_1, p_2, \ldots, p_k) \in \Theta\)</span>.</p>
-<p>The objective of algorithm configuration is to find the optimal parameter configuration <span class="math inline">\(\theta^* \in \Theta\)</span> that minimizes the expected cost of the algorithm over the distribution of problem instances:</p>
-<p><span class="math display">\[
+<p>Let <span class="math inline">\mathcal{I}</span> be the set of problem instances, <span class="math inline">\mathcal{D}</span> be the probability distribution over <span class="math inline">\mathcal{I}</span>. Let <span class="math inline">p_1, p_2, \ldots, p_k</span> be the parameters of an algorithm. The domain of each parameter <span class="math inline">p_i</span> is denoted as <span class="math inline">\Theta_i</span>, and the parameter space is defined as <span class="math inline">\Theta = \Theta_1 \times \Theta_2 \times \ldots \times \Theta_k</span>. Note that the the domain of each parameter can be continuous, discrete, or categorical. The parameter configuration of the algorithm is denoted as <span class="math inline">\theta = (p_1, p_2, \ldots, p_k) \in \Theta</span>.</p>
+<p>The objective of algorithm configuration is to find the optimal parameter configuration <span class="math inline">\theta^* \in \Theta</span> that minimizes the expected cost of the algorithm over the distribution of problem instances:</p>
+<p><span class="math display">
 \theta^* \in \arg\min_{\theta \in \Theta} \mathbb{E}_{i \sim \mathcal{D}}[c(\theta, i)]
-\]</span></p>
-<p>where <span class="math inline">\(c(\theta, i)\)</span> is the cost of the algorithm parameter configuration <span class="math inline">\(\theta\)</span> on problem instance <span class="math inline">\(i\)</span>.</p>
-<p>Normally, the distribution <span class="math inline">\(\mathcal{D}\)</span> is unknown. Thus, arithmetic mean is often used as an estimator of the expected cost. The problem is then formulated as follows:</p>
-<p><span class="math display">\[
+</span></p>
+<p>where <span class="math inline">c(\theta, i)</span> is the cost of the algorithm parameter configuration <span class="math inline">\theta</span> on problem instance <span class="math inline">i</span>.</p>
+<p>Normally, the distribution <span class="math inline">\mathcal{D}</span> is unknown. Thus, arithmetic mean is often used as an estimator of the expected cost. The problem is then formulated as follows:</p>
+<p><span class="math display">
 \theta^* \in \arg\min_{\theta \in \Theta} \frac{1}{|\mathcal{I}|} \sum_{i \in \mathcal{I}} c(\theta, i)
-\]</span></p>
+</span></p>
 <section id="automl" class="level3">
 <h3 class="anchored" data-anchor-id="automl">AutoML</h3>
 </section>
@@ -419,7 +520,10 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="dynamic-algorithm-configuration">Dynamic Algorithm Configuration</h3>
 <ul>
 <li>SMAC3 <span class="citation" data-cites="Lindauer2021-cy">(<a href="#ref-Lindauer2021-cy" role="doc-biblioref">Lindauer et al. 2021</a>)</span></li>
-<li>Population-based training (PBT) <span class="citation" data-cites="Jaderberg2017-el">(<a href="#ref-Jaderberg2017-el" role="doc-biblioref">Jaderberg et al. 2017</a>)</span></li>
+<li>Population-based training (PBT) <span class="citation" data-cites="Jaderberg2017-el">(<a href="#ref-Jaderberg2017-el" role="doc-biblioref">Jaderberg et al. 2017</a>)</span>
+<ul>
+<li>https://deepmind.google/blog/population-based-training-of-neural-networks/</li>
+</ul></li>
 <li>Optuna <span class="citation" data-cites="Akiba2019-aj">(<a href="#ref-Akiba2019-aj" role="doc-biblioref">Akiba et al. 2019</a>)</span></li>
 </ul>
 </section>
@@ -858,14 +962,14 @@ Lindauer, Marius, Katharina Eggensperger, Matthias Feurer, et al. 2021. <span>�
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p><a href="https://ise-hp.ws.hosei.ac.jp/">Department of Industrial and Systems Engineering</a>, <a href="https://www.hosei.ac.jp/">Hosei University</a><br> 3-7-2 Kajino-cho, Koganei-shi, Tokyo 184-8584, Japan · <a href="https://www.google.com/maps/search/?api=1&amp;query=Hosei+University+Koganei+Campus">Map</a></p>
+</div>   
     <div class="nav-footer-center">
-<p>Copyright 2025, Ziang Liu</p>
-</div>
-    <div class="nav-footer-right">
       &nbsp;
     </div>
+    <div class="nav-footer-right">
+<p>© 2026 Ziang Liu</p>
+</div>
   </div>
 </footer>
     <script type="text/javascript">

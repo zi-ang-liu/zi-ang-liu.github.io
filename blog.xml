@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Ziang Liu</title>
+<link>https://zi-ang-liu.github.io/blog.html</link>
+<atom:link href="https://zi-ang-liu.github.io/blog.xml" rel="self" type="application/rss+xml"/>
+<description>Ziang Liu&#39;s Personal Website</description>
+<image>
+<url>https://zi-ang-liu.github.io/images/og-card.png</url>
+<title>Ziang Liu</title>
+<link>https://zi-ang-liu.github.io/blog.html</link>
+<height>76</height>
+<width>144</width>
+</image>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Sun, 19 Jul 2026 15:00:00 GMT</lastBuildDate>
+<item>
+  <title>Data-Driven Newsvendor Problems</title>
+  <dc:creator>Ziang Liu</dc:creator>
+  <link>https://zi-ang-liu.github.io/blog/26-07-20-data-driven-newsvendor/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>The newsvendor problem is a classic model in operations research. Imagine a newsboy who has to decide how many newspapers to buy each morning before knowing the actual demand. If he buys too many, he incurs a holding cost for unsold newspapers; if he buys too few, he incurs a penalty cost for lost sales. The objective is to find the optimal order quantity that minimizes the expected total cost.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zi-ang-liu.github.io/blog/26-07-20-data-driven-newsvendor/Buying_a_newspaper._The_spirit_of_the_Ghetto.1902.jpg" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption><em>Buying a newspaper</em>, illustration by Jacob Epstein from Hutchins Hapgood’s <em>The Spirit of the Ghetto</em> (1902). Public domain, via <a href="https://commons.wikimedia.org/wiki/File:Buying_a_newspaper._The_spirit_of_the_Ghetto.1902.jpg">Wikimedia Commons</a>.</figcaption>
+</figure>
+</div>
+<section id="the-newsvendor-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-newsvendor-problem">The Newsvendor Problem</h2>
+<p>Consider a single-period inventory problem where a retailer has to decide how many units of a product to order before knowing the actual demand. The objective is to minimize the expected cost</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmin_%7Bq%20%5Cgeq%200%7D%20%5Cmathbb%7BE%7D%5BC(q,%20D)%5D,%0A"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?q"> is the order quantity, <img src="https://latex.codecogs.com/png.latex?D"> is the random demand,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AC(q,%20D)%20=%20h%20(q%20-%20D)%5E+%20+%20b%20(D%20-%20q)%5E+%0A"></p>
+<p>is the cost function, <img src="https://latex.codecogs.com/png.latex?h"> is the holding cost per unit, and <img src="https://latex.codecogs.com/png.latex?b"> is the penalty cost per unit of unsatisfied demand.</p>
+<p>If the cumulative distribution function (CDF) of the demand <img src="https://latex.codecogs.com/png.latex?F"> is known, the optimal order quantity <img src="https://latex.codecogs.com/png.latex?q%5E*"> can be derived as</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Aq%5E*%20=%20%5Cinf%20%5C%7Bq%20:%20F(q)%20%5Cgeq%20%5Cfrac%7Bb%7D%7Bh%20+%20b%7D%5C%7D.%0A"></p>
+</section>
+<section id="sample-average-approximation" class="level2">
+<h2 class="anchored" data-anchor-id="sample-average-approximation">Sample Average Approximation</h2>
+<p>In practice, the true distribution of demand is often unknown, and we may only have access to historical demand data. In such cases, we can use the Sample Average Approximation (SAA) method to estimate the optimal order quantity. <span class="citation" data-cites="Levi2015-di">Levi et al. (2015)</span> analyze the SAA approach for the data-driven newsvendor problem.</p>
+<p>Given a set of historical demand samples <img src="https://latex.codecogs.com/png.latex?%5C%7Bd_1,%20d_2,%20%5Cldots,%20d_n%5C%7D">, we can formulate the SAA problem as</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmin_%7Bq%20%5Cgeq%200%7D%20%5Chat%7BC%7D(q)%20=%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%20%5Bh%20(q%20-%20d_i)%5E+%20+%20b%20(d_i%20-%20q)%5E+%5D.%0A"></p>
+<p>The empirical CDF <img src="https://latex.codecogs.com/png.latex?%5Chat%7BF%7D"> can be defined as</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%7BF%7D(q)%20=%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%20%5Cmathbf%7B1%7D_%7B%5C%7Bd_i%20%5Cleq%20q%5C%7D%7D,%0A"></p>
+<p>and the SAA optimal order quantity <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bq%7D%5E*"> is given by</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%7Bq%7D%5E*%20=%20%5Cinf%20%5C%7Bq%20:%20%5Chat%7BF%7D(q)%20%5Cgeq%20%5Cfrac%7Bb%7D%7Bh%20+%20b%7D%5C%7D.%0A"></p>
+<div id="exm-saa" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (SAA for Newsvendor Problem)</strong></span> Suppose the holding cost is <img src="https://latex.codecogs.com/png.latex?h%20=%201"> and the penalty cost is <img src="https://latex.codecogs.com/png.latex?b%20=%203">, so the critical ratio is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7Bb%7D%7Bh%20+%20b%7D%20=%20%5Cfrac%7B3%7D%7B1%20+%203%7D%20=%200.75.%0A"></p>
+<p>The retailer has <img src="https://latex.codecogs.com/png.latex?n%20=%208"> historical demand observations:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5C%7B42,%2055,%2048,%2060,%2038,%2052,%2045,%2058%5C%7D.%0A"></p>
+<p>Sorting the samples in ascending order gives</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ad_%7B(1)%7D%20=%2038,%20%5C;%20d_%7B(2)%7D%20=%2042,%20%5C;%20d_%7B(3)%7D%20=%2045,%20%5C;%20d_%7B(4)%7D%20=%2048,%20%5C;%20d_%7B(5)%7D%20=%2052,%20%5C;%20d_%7B(6)%7D%20=%2055,%20%5C;%20d_%7B(7)%7D%20=%2058,%20%5C;%20d_%7B(8)%7D%20=%2060.%0A"></p>
+<p>The empirical CDF jumps by <img src="https://latex.codecogs.com/png.latex?1/8"> at each sorted sample, i.e., <img src="https://latex.codecogs.com/png.latex?%5Chat%7BF%7D(d_%7B(i)%7D)%20=%20i/8">. The SAA optimal order quantity is the smallest sample at which the empirical CDF reaches the critical ratio:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%7Bq%7D%5E*%20=%20%5Cinf%20%5C%7Bq%20:%20%5Chat%7BF%7D(q)%20%5Cgeq%200.75%5C%7D%20=%20d_%7B(6)%7D%20=%2055,%0A"></p>
+<p>since <img src="https://latex.codecogs.com/png.latex?%5Chat%7BF%7D(d_%7B(6)%7D)%20=%206/8%20=%200.75%20%5Cgeq%200.75">, while <img src="https://latex.codecogs.com/png.latex?%5Chat%7BF%7D(d_%7B(5)%7D)%20=%205/8%20=%200.625%20%3C%200.75">.</p>
+<p>In general, the SAA solution is the <img src="https://latex.codecogs.com/png.latex?%5Clceil%20n%20%5Ccdot%20%5Cfrac%7Bb%7D%7Bh+b%7D%20%5Crceil">-th order statistic of the demand samples, i.e., <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bq%7D%5E*%20=%20d_%7B(%5Clceil%20n%20b%20/%20(h%20+%20b)%20%5Crceil)%7D">. Here, <img src="https://latex.codecogs.com/png.latex?%5Clceil%208%20%5Ctimes%200.75%20%5Crceil%20=%206">, confirming that <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bq%7D%5E*%20=%20d_%7B(6)%7D%20=%2055">.</p>
+</div>
+</section>
+<section id="the-feature-based-newsvendor-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-feature-based-newsvendor-problem">The Feature-Based Newsvendor Problem</h2>
+<p>In many real-world scenarios, the demand may depend on certain features. For example, the demand for a product may vary based on the day of the week, weather conditions, or promotional activities. In such cases, the data can be represented as pairs of features and demand observations <img src="https://latex.codecogs.com/png.latex?%5C%7B(%5Cmathbf%7Bx%7D_1,%20d_1),%20(%5Cmathbf%7Bx%7D_2,%20d_2),%20%5Cldots,%20(%5Cmathbf%7Bx%7D_n,%20d_n)%5C%7D">, where <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_i%20%5Cin%20%5Cmathbf%7BR%7D%5Em"> is the feature vector associated with the <img src="https://latex.codecogs.com/png.latex?i">-th observation.</p>
+<p>Note that we assume that the features <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D"> can be observed before the order quantity is decided, while the demand <img src="https://latex.codecogs.com/png.latex?d"> is unknown at the time of ordering.</p>
+</section>
+<section id="clustering" class="level2">
+<h2 class="anchored" data-anchor-id="clustering">Clustering</h2>
+<section id="empirical-risk-minimization" class="level3">
+<h3 class="anchored" data-anchor-id="empirical-risk-minimization">Empirical Risk Minimization</h3>
+<p><span class="citation" data-cites="Ban2019-uz">Ban and Rudin (2019)</span> provide the formulation of the feature-based newsvendor problem as an empirical risk minimization (ERM) problem.</p>
+<p>The objective is to learn a function <img src="https://latex.codecogs.com/png.latex?q(%5Cmathbf%7Bx%7D;%20%5Ctheta)"> that maps the feature vector <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D"> to an order quantity, parameterized by <img src="https://latex.codecogs.com/png.latex?%5Ctheta">. The optimization problem can be formulated as</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmin_%7B%5Ctheta%7D%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%20%5Bh%20(q(%5Cmathbf%7Bx%7D_i;%20%5Ctheta)%20-%20d_i)%5E+%20+%20b%20(d_i%20-%20q(%5Cmathbf%7Bx%7D_i;%20%5Ctheta))%5E+%5D,%0A"></p>
+<p>This objective is called the empirical risk. Let <img src="https://latex.codecogs.com/png.latex?u_i"> and <img src="https://latex.codecogs.com/png.latex?v_i"> be the underage and overage for the <img src="https://latex.codecogs.com/png.latex?i">-th observation, respectively. The optimization problem can be rewritten as</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Balign*%7D%0A%5Cmin_%7B%5Ctheta%7D%20&amp;%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%20%5Bh%20u_i%20+%20b%20v_i%5D%20%5C%5C%0A%5Ctext%7Bs.t.%20%7D%20&amp;%20u_i%20%5Cgeq%20d_i%20-%20q(%5Cmathbf%7Bx%7D_i;%20%5Ctheta),%20&amp;%5Cquad%20i%20=%201,%20%5Cldots,%20n,%20%5C%5C%0A&amp;%20v_i%20%5Cgeq%20q(%5Cmathbf%7Bx%7D_i;%20%5Ctheta)%20-%20d_i,%20&amp;%5Cquad%20i%20=%201,%20%5Cldots,%20n,%20%5C%5C%0A&amp;%20u_i,%20v_i%20%5Cgeq%200,%20&amp;%5Cquad%20i%20=%201,%20%5Cldots,%20n.%0A%5Cend%7Balign*%7D%0A"></p>
+</section>
+<section id="quantile-regression" class="level3">
+<h3 class="anchored" data-anchor-id="quantile-regression">Quantile Regression</h3>
+<p>It is well-known that the newsvendor problem is closely related to a quantile of the demand distribution, called the critical ratio.</p>
+<p><span class="citation" data-cites="Huber2019-ek">Huber et al. (2019)</span> show that the ERM problem is equivalent to a quantile regression problem. Let <img src="https://latex.codecogs.com/png.latex?%5Ctau%20%5Cin%20(0,%201)"> be the quantile level. Let <img src="https://latex.codecogs.com/png.latex?y_i"> and <img src="https://latex.codecogs.com/png.latex?%5Chat%7By%7D_i"> be the actual and predicted values for the <img src="https://latex.codecogs.com/png.latex?i">-th observation, respectively. The quantile loss function is defined as</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AL_%5Ctau(y_i,%20%5Chat%7By%7D_i)%20=%20%5Ctau%20(y_i%20-%20%5Chat%7By%7D_i)%5E+%20+%20(1%20-%20%5Ctau)%20(%5Chat%7By%7D_i%20-%20y_i)%5E+.%0A"></p>
+<p>In the newsvendor problem, the critical ratio <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bp%7D%7Bh%20+%20p%7D"> corresponds to the quantile level <img src="https://latex.codecogs.com/png.latex?%5Ctau">. Therefore, we can use quantile regression to estimate the conditional quantile of demand given the features. The optimization problem can be formulated as</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmin_%7B%5Ctheta%7D%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%20L_%5Ctau(d_i,%20q(%5Cmathbf%7Bx%7D_i;%20%5Ctheta)).%0A"></p>
+<p>This is equivalent to minimizing the newsvendor cost, as shown below:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Balign*%7D%0A&amp;%5Csum_%7Bi=1%7D%5E%7Bn%7D%20L_%5Ctau(d_i,%20q(%5Cmathbf%7Bx%7D_i;%20%5Ctheta))%5C%5C%0A=&amp;%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%20%5Cleft%5B%5Ctau%20(d_i%20-%20q(%5Cmathbf%7Bx%7D_i;%20%5Ctheta))%5E+%20+%20(1%20-%20%5Ctau)%20(q(%5Cmathbf%7Bx%7D_i;%20%5Ctheta)%20-%20d_i)%5E+%5Cright%5D%20%5C%5C%0A=&amp;%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%20%5Cleft%5B%5Cfrac%7Bb%7D%7Bh%20+%20b%7D%20(d_i%20-%20q(%5Cmathbf%7Bx%7D_i;%20%5Ctheta))%5E+%20+%20%5Cfrac%7Bh%7D%7Bh%20+%20b%7D%20(q(%5Cmathbf%7Bx%7D_i;%20%5Ctheta)%20-%20d_i)%5E+%5Cright%5D%20%5C%5C%0A=&amp;%20%5Cfrac%7B1%7D%7Bh%20+%20b%7D%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%20%5Cleft%5Bh%20(q(%5Cmathbf%7Bx%7D_i;%20%5Ctheta)%20-%20d_i)%5E+%20+%20b%20(d_i%20-%20q(%5Cmathbf%7Bx%7D_i;%20%5Ctheta))%5E+%5Cright%5D,%0A%5Cend%7Balign*%7D%0A"></p>
+<p>which is the newsvendor objective scaled by the constant <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7Bh%20+%20b%7D">. Hence minimizing the quantile loss with <img src="https://latex.codecogs.com/png.latex?%5Ctau%20=%20%5Cfrac%7Bb%7D%7Bh+b%7D"> is equivalent to minimizing the newsvendor cost.</p>
+</section>
+</section>
+<section id="censored-demand" class="level2">
+<h2 class="anchored" data-anchor-id="censored-demand">Censored Demand</h2>
+<p>For an inventory system without backorders, when the demand exceeds the available inventory, the observed demand is censored at the inventory level. An important topic in the data-driven newsvendor problem is how to compute the optimal order quantity with censored demand data.</p>
+<p><span class="citation" data-cites="Sachs2014-br">Sachs and Minner (2014)</span></p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Ban2019-uz" class="csl-entry">
+Ban, Gah-Yi, and Cynthia Rudin. 2019. <span>“The Big Data Newsvendor: Practical Insights from Machine Learning.”</span> <em>Operations Research</em> 67 (1): 90–108. <a href="https://doi.org/10.1287/opre.2018.1757">https://doi.org/10.1287/opre.2018.1757</a>.
+</div>
+<div id="ref-Huber2019-ek" class="csl-entry">
+Huber, Jakob, Sebastian Müller, Moritz Fleischmann, and Heiner Stuckenschmidt. 2019. <span>“A Data-Driven Newsvendor Problem: From Data to Decision.”</span> <em>European Journal of Operational Research</em> 278 (3): 904–15. <a href="https://doi.org/10.1016/j.ejor.2019.04.043">https://doi.org/10.1016/j.ejor.2019.04.043</a>.
+</div>
+<div id="ref-Levi2015-di" class="csl-entry">
+Levi, Retsef, Georgia Perakis, and Joline Uichanco. 2015. <span>“The Data-Driven Newsvendor Problem: New Bounds and Insights.”</span> <em>Operations Research</em> 63 (6): 1294–306. <a href="https://doi.org/10.1287/opre.2015.1422">https://doi.org/10.1287/opre.2015.1422</a>.
+</div>
+<div id="ref-Sachs2014-br" class="csl-entry">
+Sachs, Anna-Lena, and Stefan Minner. 2014. <span>“The Data-Driven Newsvendor with Censored Demand Observations.”</span> <em>International Journal of Production Economics</em> 149: 28–36. <a href="https://doi.org/10.1016/j.ijpe.2013.04.039">https://doi.org/10.1016/j.ijpe.2013.04.039</a>.
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Operations Research</category>
+  <category>Machine Learning</category>
+  <guid>https://zi-ang-liu.github.io/blog/26-07-20-data-driven-newsvendor/</guid>
+  <pubDate>Sun, 19 Jul 2026 15:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Bandit-Based Algorithm for Hyperparameter Optimization</title>
+  <dc:creator>Ziang Liu</dc:creator>
+  <link>https://zi-ang-liu.github.io/blog/26-07-06-hyperband/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Machine learning models often have hyperparameters that need to be tuned for optimal performance. When the number of hyperparameters is large, it can be difficult to find a good combination of hyperparameters manually. Hyperparameter optimization (HPO) is a method for automatically searching for hyperparameter combinations that improve model performance.</p>
+<p>HPO can be classified into the following categories:</p>
+<ul>
+<li>Bayesian optimization</li>
+<li>Bandit-based optimization</li>
+<li>Evolutionary optimization / Metaheuristics</li>
+</ul>
+<p><span class="citation" data-cites="1390003825209053056">OZAKI et al. (2020)</span> give a comprehensive review of HPO methods (the paper is written in Japanese). They also provide a guideline for selecting HPO methods based on the characteristics of the problem.</p>
+<section id="bandit-based-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="bandit-based-optimization">Bandit-Based Optimization</h2>
+<section id="successive-halving" class="level3">
+<h3 class="anchored" data-anchor-id="successive-halving">Successive Halving</h3>
+<p>Successive Halving was originally proposed by <span class="citation" data-cites="Karnin2013-az">Karnin et al. (2013)</span>. Later, <span class="citation" data-cites="Jamieson2016-sg">Jamieson and Talwalkar (2016)</span> proposed to use this method for HPO.</p>
+<p>Successive Halving requires a budget <img src="https://latex.codecogs.com/png.latex?B"> and a number of configurations <img src="https://latex.codecogs.com/png.latex?n">. In the context of HPO for machine learning models, a configuration refers to a specific combination of hyperparameters. The budget <img src="https://latex.codecogs.com/png.latex?B"> can be defined as the total number of iterations that can be used. The performance of a configuration is evaluated by the loss function. In this algorithm, <img src="https://latex.codecogs.com/png.latex?l_%7Bi,%20r%7D"> denotes the loss of configuration <img src="https://latex.codecogs.com/png.latex?i"> after <img src="https://latex.codecogs.com/png.latex?r"> iterations.</p>
+<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-no-end="false" data-caption-prefix="Algorithm" data-pseudocode-number="1" data-indent-size="1.2em" data-indent-lines="false" data-line-number-punc=":" data-line-number="true" data-comment-delimiter="//">
+<div class="pseudocode">
+\begin{algorithm} \caption{Successive Halving} \begin{algorithmic} \Require Budget $B$, number of configurations $n$ \State $S_0 \leftarrow \{1, 2, \dots, n\}$ \For{$k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$} \State $r_k \leftarrow \lfloor \frac{B}{|S_k| \lceil \log_2 n \rceil} \rfloor$ \State $R_k \leftarrow \sum_{j=0}^{k} r_j$ \State Run each configuration in $S_k$ for $r_k$ additional iterations \State Get $l_{i, R_k}$ for each configuration $i \in S_k$ \State $S_{k+1} \leftarrow \left\{ i \in S_k : l_{i, R_k} \text{ is among the best } \lfloor |S_k| / 2 \rfloor \text{ losses} \right\}$ \EndFor \end{algorithmic} \end{algorithm}
+</div>
+</div>
+<p>Let <img src="https://latex.codecogs.com/png.latex?S_0%20=%20%5C%7B1,%202,%20%5Cdots,%20n%5C%7D"> be the set of configurations. For each round <img src="https://latex.codecogs.com/png.latex?k">, the number of configurations is halved, so that for <img src="https://latex.codecogs.com/png.latex?k%20=%200,%201,%20%5Cdots,%20%5Clceil%20%5Clog_2%20n%20%5Crceil%20-%201">, we have</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%7CS_%7Bk+1%7D%7C%20=%20%5Clfloor%20%7CS_k%7C%20/%202%20%5Crfloor,%0A"> and eventually <img src="https://latex.codecogs.com/png.latex?%7CS_%7B%5Clceil%20%5Clog_2%20n%20%5Crceil%7D%7C%20=%201">.</p>
+<p>The budget that is spent on a configuration <img src="https://latex.codecogs.com/png.latex?i"> in round <img src="https://latex.codecogs.com/png.latex?k"> is <img src="https://latex.codecogs.com/png.latex?r_k">, and the total budget spent on configuration <img src="https://latex.codecogs.com/png.latex?i"> is <img src="https://latex.codecogs.com/png.latex?R_k%20=%20%5Csum_%7Bj=0%7D%5E%7Bk%7D%20r_j">. Since the number of configurations is given by <img src="https://latex.codecogs.com/png.latex?%7CS_k%7C">, the total budget spent in round <img src="https://latex.codecogs.com/png.latex?k"> is <img src="https://latex.codecogs.com/png.latex?%7CS_k%7C%20r_k">, which is approximately a constant value <img src="https://latex.codecogs.com/png.latex?B%20/%20%5Clceil%20%5Clog_2%20n%20%5Crceil">.</p>
+<p>To illustrate the Successive Halving algorithm, consider the following example. Let <img src="https://latex.codecogs.com/png.latex?B%20=%20128"> and <img src="https://latex.codecogs.com/png.latex?n%20=%2016">, so that <img src="https://latex.codecogs.com/png.latex?%5Clceil%20%5Clog_2%20n%20%5Crceil%20=%204"> and <img src="https://latex.codecogs.com/png.latex?k"> ranges over <img src="https://latex.codecogs.com/png.latex?0,%201,%202,%203">.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><img src="https://latex.codecogs.com/png.latex?k"></th>
+<th><img src="https://latex.codecogs.com/png.latex?r_k"></th>
+<th><img src="https://latex.codecogs.com/png.latex?R_k"></th>
+<th><img src="https://latex.codecogs.com/png.latex?%7CS_k%7C"></th>
+<th><img src="https://latex.codecogs.com/png.latex?%7CS_%7Bk+1%7D%7C"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>16</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>8</td>
+<td>14</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>16</td>
+<td>30</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Each round spends <img src="https://latex.codecogs.com/png.latex?%7CS_k%7C%20%5Ccdot%20r_k%20=%2032"> iterations, so the total budget is <img src="https://latex.codecogs.com/png.latex?4%20%5Ctimes%2032%20=%20128%20=%20B">, as expected.</p>
+</section>
+<section id="hyperband" class="level3">
+<h3 class="anchored" data-anchor-id="hyperband">Hyperband</h3>
+<p>In the Successive Halving algorithm, it is required to specify <img src="https://latex.codecogs.com/png.latex?B"> and <img src="https://latex.codecogs.com/png.latex?n"> in advance. However, it is may be difficult to choose a good value for <img src="https://latex.codecogs.com/png.latex?n"> in practice. Hyperband <span class="citation" data-cites="Li2016-fm">(Li et al. 2016)</span> can be considered as a extension of Successive Halving.</p>
+<div id="algo-hyperband" class="pseudocode-container quarto-float" data-no-end="false" data-caption-prefix="Algorithm" data-pseudocode-number="2" data-indent-size="1.2em" data-indent-lines="false" data-line-number-punc=":" data-line-number="true" data-comment-delimiter="//">
+<div class="pseudocode">
+\begin{algorithm} \caption{Hyperband} \begin{algorithmic} \Require $R$, $\eta$ \State $s_{max} \leftarrow \lfloor \log_\eta R \rfloor$ \State $B \leftarrow (s_{max} + 1) R$ \For{$s = s_{\max}, s_{\max} - 1, \dots, 0$} \State $n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s$ \State $r \leftarrow R \eta^{-s}$ \For{$i = 0, 1, \dots, s$} \State $n_i \leftarrow \lfloor n \eta^{-i} \rfloor$ \State $r_i \leftarrow r \eta^i$ \State Run each configuration in $S_i$ for $r_i$ iterations \State Get $l_{i, r_i}$ for each configuration $i \in S_i$ \State $S_{i+1} \leftarrow \left\{ i \in S_i : l_{i, r_i} \text{ is among the best } \lfloor n_i / \eta \rfloor \text{ losses} \right\}$ \EndFor \EndFor \end{algorithmic} \end{algorithm}
+</div>
+</div>
+<p>Note that the original paper writes this step as <img src="https://latex.codecogs.com/png.latex?n%20%5Cleftarrow%20%5Clceil%20%5Cfrac%7BB%7D%7BR%7D%20%5Cfrac%7B%5Ceta%5Es%7D%7Bs%20+%201%7D%20%5Crceil">, rounding up only at the end; here we use <img src="https://latex.codecogs.com/png.latex?n%20%5Cleftarrow%20%5Clfloor%20%5Cfrac%7BB%7D%7BR%20(s%20+%201)%7D%20%5Crfloor%20%5Ceta%5Es">, which floors the per-round budget first and matches the values in the paper’s Table 1 and its reference implementation.</p>
+<p>The following example is adapted from <span class="citation" data-cites="Li2016-fm">Li et al. (2016)</span>. Let <img src="https://latex.codecogs.com/png.latex?R%20=%2081"> and <img src="https://latex.codecogs.com/png.latex?%5Ceta%20=%203">, so that <img src="https://latex.codecogs.com/png.latex?s_%7Bmax%7D%20=%20%5Clfloor%20%5Clog_3%2081%20%5Crfloor%20=%204">. The following table shows the values of <img src="https://latex.codecogs.com/png.latex?n"> and <img src="https://latex.codecogs.com/png.latex?r"> for each value of <img src="https://latex.codecogs.com/png.latex?s">.</p>
+<div id="f01e5319" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> hyperband(R, eta):</span>
+<span id="cb1-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""Return the (n_i, r_i) schedule for each bracket s."""</span></span>
+<span id="cb1-3">    s_max <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb1-4">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">while</span> eta <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span> (s_max <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;=</span> R:</span>
+<span id="cb1-5">        s_max <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb1-6">    B <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (s_max <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> R</span>
+<span id="cb1-7"></span>
+<span id="cb1-8">    brackets <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {}</span>
+<span id="cb1-9">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> s <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(s_max, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb1-10">        n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> B <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span> R <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span> (s <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> eta<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span>s</span>
+<span id="cb1-11">        r <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> R <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span> eta<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span>s</span>
+<span id="cb1-12">        brackets[s] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [(n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span> eta<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span>i, r <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> eta<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span>i) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(s <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)]</span>
+<span id="cb1-13">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> brackets</span>
+<span id="cb1-14"></span>
+<span id="cb1-15"></span>
+<span id="cb1-16">R <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">81</span></span>
+<span id="cb1-17">eta <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span></span>
+<span id="cb1-18">brackets <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> hyperband(R, eta)</span>
+<span id="cb1-19"></span>
+<span id="cb1-20">s_max <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">max</span>(brackets)</span>
+<span id="cb1-21"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"  i"</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span>.join(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f's = </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>s<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:&gt;12}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> s <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(s_max, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)))</span>
+<span id="cb1-22"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"   "</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span>.join(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'n_i'</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:&gt;6}{</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'r_i'</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:&gt;6}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> _ <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(s_max <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)))</span>
+<span id="cb1-23"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(s_max <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb1-24">    row <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>i<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:&gt;3}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-25">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> s <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(s_max, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb1-26">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(brackets[s]):</span>
+<span id="cb1-27">            n_i, r_i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> brackets[s][i]</span>
+<span id="cb1-28">            row <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>n_i<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:&gt;6}{</span>r_i<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:&gt;6}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span>
+<span id="cb1-29">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">else</span>:</span>
+<span id="cb1-30">            row <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span></span>
+<span id="cb1-31">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(row)</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  i       s = 4       s = 3       s = 2       s = 1       s = 0
+      n_i   r_i   n_i   r_i   n_i   r_i   n_i   r_i   n_i   r_i
+  0    81     1    27     3     9     9     6    27     5    81
+  1    27     3     9     9     3    27     2    81            
+  2     9     9     3    27     1    81                        
+  3     3    27     1    81                                    
+  4     1    81                                                </code></pre>
+</div>
+</div>
+</section>
+<section id="hyperband-variants" class="level3">
+<h3 class="anchored" data-anchor-id="hyperband-variants">Hyperband Variants</h3>
+<p>Later works have proposed several variants of Hyperband. There are two main directions for improving Hyperband. One direction is to combine Hyperband with metaheuristics. The other direction is to combine Hyperband with Bayesian optimization.</p>
+<p><span class="citation" data-cites="Awad2021-cb">Awad et al. (2021)</span> proposed DEHB, a hyperparameter optimization method that combines differential evolution and Hyperband. Differential evolution (DE) is a classic evolutionary algorithm and Hyperband is a bandit-based method for hyperparameter optimization.</p>
+<p>DEHB has been shown to outperform other hyperparameter optimization methods on a variety of benchmark problems. <span class="citation" data-cites="Eimer2023-kd">Eimer et al. (2023)</span> discussed the hyperparameter optimization problem in the context of reinforcement learning (RL). They conducted a experimental study on the performance of various hyperparameter optimization methods, including random search, DEHB, and BGT. Their results show that DEHB has a good performance. <span class="citation" data-cites="Eggensperger2021-kh">Eggensperger et al. (2021)</span> developed a collection of multi-fidelity benchmark problems for HPO, called HPOBench. Their results also show that DEHB has a good performance.</p>
+<p>Another variant of Hyperband is BOHB <span class="citation" data-cites="Falkner2018-vd">(Falkner et al. 2018)</span>, which combines Hyperband with Bayesian optimization.</p>
+</section>
+</section>
+<section id="source-code" class="level2">
+<h2 class="anchored" data-anchor-id="source-code">Source Code</h2>
+<ul>
+<li><a href="https://github.com/facebookresearch/how-to-autorl">AutoRL</a></li>
+<li><a href="https://github.com/automl/DEHB">DEHB</a></li>
+<li><a href="https://github.com/automl/BOHB">BOHB</a></li>
+<li><a href="https://github.com/automl/HPOBench">HPOBench</a></li>
+</ul>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Awad2021-cb" class="csl-entry">
+Awad, Noor, Neeratyoy Mallik, and Frank Hutter. 2021. <span>“<span>DEHB</span>: Evolutionary Hyberband for Scalable, Robust and Efficient Hyperparameter Optimization.”</span> <em>Proceedings of the Thirtieth International Joint Conference on Artificial Intelligence</em> (California). <a href="https://doi.org/10.24963/ijcai.2021/296">https://doi.org/10.24963/ijcai.2021/296</a>.
+</div>
+<div id="ref-Eggensperger2021-kh" class="csl-entry">
+Eggensperger, Katharina, Philipp Müller, Neeratyoy Mallik, et al. 2021. <span>“<span>HPOBench</span>: A Collection of Reproducible Multi-Fidelity Benchmark Problems for <span>HPO</span>.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.2109.06716">https://doi.org/10.48550/arXiv.2109.06716</a>.
+</div>
+<div id="ref-Eimer2023-kd" class="csl-entry">
+Eimer, Theresa, Marius Lindauer, and Roberta Raileanu. 2023. <span>“Hyperparameters in Reinforcement Learning and How to Tune Them.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.2306.01324">https://doi.org/10.48550/arXiv.2306.01324</a>.
+</div>
+<div id="ref-Falkner2018-vd" class="csl-entry">
+Falkner, Stefan, Aaron Klein, and Frank Hutter. 2018. <span>“<span>BOHB</span>: Robust and Efficient Hyperparameter Optimization at Scale.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.1807.01774">https://doi.org/10.48550/arXiv.1807.01774</a>.
+</div>
+<div id="ref-Jamieson2016-sg" class="csl-entry">
+Jamieson, Kevin, and Ameet Talwalkar. 2016. <span>“Non-Stochastic Best Arm Identification and Hyperparameter Optimization.”</span> In <em>Proceedings of the 19th International Conference on Artificial Intelligence and Statistics</em>, edited by Arthur Gretton and Christian C Robert, vol. 51. Proceedings of Machine Learning Research. PMLR.
+</div>
+<div id="ref-Karnin2013-az" class="csl-entry">
+Karnin, Zohar S, Tomer Koren, and O Somekh. 2013. <span>“Almost Optimal Exploration in Multi-Armed Bandits.”</span> <em>International Conference on Machine Learning</em>, 1238–46.
+</div>
+<div id="ref-Li2016-fm" class="csl-entry">
+Li, Lisha, Kevin Jamieson, Giulia DeSalvo, Afshin Rostamizadeh, and Ameet Talwalkar. 2016. <span>“Hyperband: A Novel Bandit-Based Approach to Hyperparameter Optimization.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.1603.06560">https://doi.org/10.48550/arXiv.1603.06560</a>.
+</div>
+<div id="ref-1390003825209053056" class="csl-entry">
+OZAKI, Yoshihiko, Masahiro NOMURA, and Masaki ONISHI. 2020. <span>“Hyperparameter Optimization Methods: Overview and Characteristics.”</span> <em>電子情報通信学会論文誌d 情報・システム</em> J103-D (9): 615–31. <a href="https://doi.org/10.14923/transinfj.2019jdr0003">https://doi.org/10.14923/transinfj.2019jdr0003</a>.
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Machine Learning</category>
+  <category>Optimization</category>
+  <guid>https://zi-ang-liu.github.io/blog/26-07-06-hyperband/</guid>
+  <pubDate>Sun, 05 Jul 2026 15:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Algorithm Configuration</title>
+  <dc:creator>Ziang Liu</dc:creator>
+  <link>https://zi-ang-liu.github.io/blog/26-07-01-Algorithm-Configuration/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Let <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BI%7D"> be the set of problem instances, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BD%7D"> be the probability distribution over <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BI%7D">. Let <img src="https://latex.codecogs.com/png.latex?p_1,%20p_2,%20%5Cldots,%20p_k"> be the parameters of an algorithm. The domain of each parameter <img src="https://latex.codecogs.com/png.latex?p_i"> is denoted as <img src="https://latex.codecogs.com/png.latex?%5CTheta_i">, and the parameter space is defined as <img src="https://latex.codecogs.com/png.latex?%5CTheta%20=%20%5CTheta_1%20%5Ctimes%20%5CTheta_2%20%5Ctimes%20%5Cldots%20%5Ctimes%20%5CTheta_k">. Note that the the domain of each parameter can be continuous, discrete, or categorical. The parameter configuration of the algorithm is denoted as <img src="https://latex.codecogs.com/png.latex?%5Ctheta%20=%20(p_1,%20p_2,%20%5Cldots,%20p_k)%20%5Cin%20%5CTheta">.</p>
+<p>The objective of algorithm configuration is to find the optimal parameter configuration <img src="https://latex.codecogs.com/png.latex?%5Ctheta%5E*%20%5Cin%20%5CTheta"> that minimizes the expected cost of the algorithm over the distribution of problem instances:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctheta%5E*%20%5Cin%20%5Carg%5Cmin_%7B%5Ctheta%20%5Cin%20%5CTheta%7D%20%5Cmathbb%7BE%7D_%7Bi%20%5Csim%20%5Cmathcal%7BD%7D%7D%5Bc(%5Ctheta,%20i)%5D%0A"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?c(%5Ctheta,%20i)"> is the cost of the algorithm parameter configuration <img src="https://latex.codecogs.com/png.latex?%5Ctheta"> on problem instance <img src="https://latex.codecogs.com/png.latex?i">.</p>
+<p>Normally, the distribution <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BD%7D"> is unknown. Thus, arithmetic mean is often used as an estimator of the expected cost. The problem is then formulated as follows:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctheta%5E*%20%5Cin%20%5Carg%5Cmin_%7B%5Ctheta%20%5Cin%20%5CTheta%7D%20%5Cfrac%7B1%7D%7B%7C%5Cmathcal%7BI%7D%7C%7D%20%5Csum_%7Bi%20%5Cin%20%5Cmathcal%7BI%7D%7D%20c(%5Ctheta,%20i)%0A"></p>
+<section id="automl" class="level3">
+<h3 class="anchored" data-anchor-id="automl">AutoML</h3>
+</section>
+<section id="neural-architecture-search" class="level3">
+<h3 class="anchored" data-anchor-id="neural-architecture-search">Neural Architecture Search</h3>
+</section>
+<section id="hyperparameter-optimization" class="level3">
+<h3 class="anchored" data-anchor-id="hyperparameter-optimization">Hyperparameter Optimization</h3>
+<p>Hyperparameter optimization (HPO) is a special case of algorithm configuration.</p>
+</section>
+<section id="dynamic-algorithm-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="dynamic-algorithm-configuration">Dynamic Algorithm Configuration</h3>
+<ul>
+<li>SMAC3 <span class="citation" data-cites="Lindauer2021-cy">(Lindauer et al. 2021)</span></li>
+<li>Population-based training (PBT) <span class="citation" data-cites="Jaderberg2017-el">(Jaderberg et al. 2017)</span>
+<ul>
+<li>https://deepmind.google/blog/population-based-training-of-neural-networks/</li>
+</ul></li>
+<li>Optuna <span class="citation" data-cites="Akiba2019-aj">(Akiba et al. 2019)</span></li>
+</ul>
+</section>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Akiba2019-aj" class="csl-entry">
+Akiba, Takuya, Shotaro Sano, Toshihiko Yanase, Takeru Ohta, and Masanori Koyama. 2019. <span>“Optuna: A Next-Generation Hyperparameter Optimization Framework.”</span> <em>Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining</em> (New York, NY, USA), 2623–31. <a href="https://doi.org/10.1145/3292500.3330701">https://doi.org/10.1145/3292500.3330701</a>.
+</div>
+<div id="ref-Jaderberg2017-el" class="csl-entry">
+Jaderberg, Max, Valentin Dalibard, Simon Osindero, et al. 2017. <span>“Population Based Training of Neural Networks.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.1711.09846">https://doi.org/10.48550/arXiv.1711.09846</a>.
+</div>
+<div id="ref-Lindauer2021-cy" class="csl-entry">
+Lindauer, Marius, Katharina Eggensperger, Matthias Feurer, et al. 2021. <span>“<span>SMAC3</span>: A Versatile Bayesian Optimization Package for Hyperparameter Optimization.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.2109.09831">https://doi.org/10.48550/arXiv.2109.09831</a>.
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Optimization</category>
+  <guid>https://zi-ang-liu.github.io/blog/26-07-01-Algorithm-Configuration/</guid>
+  <pubDate>Thu, 09 Oct 2025 15:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
