@@ -1,0 +1,86 @@
+---
+title: "Research"
+# projects.html and open-source.html were both live and unlinked; their content
+# now lives here, so redirect the old URLs rather than breaking them.
+aliases:
+  - /projects.html
+  - /open-source.html
+---
+
+I work on operations research, optimization, and machine learning — building
+algorithms that let complex systems make good decisions on their own. Most of
+the applications come from inventory, manufacturing, and supply chain
+management, where the environment is uncertain and the decision has to be made
+anyway.
+
+<!-- ## Research Directions
+
+**Data-driven optimization for supply chains.** Multi-echelon inventory systems
+have to be controlled under demand and lead-time uncertainty. I develop
+optimization methods that learn directly from data rather than from an assumed
+demand distribution.
+
+**Optimization for robotic manufacturing.** Scheduling and control problems in
+flexible automation, where the system configuration itself is part of what gets
+optimized.
+
+**Explainable reinforcement learning.** Learned policies tend to be opaque, which
+is a problem when a person has to act on their recommendations. I work on
+reinforcement learning methods whose decisions can be interpreted — and
+therefore trusted — by the people who use them. -->
+
+## Funded Projects
+
+::: {.profile-links}
+[<i class="bi bi-database"></i> KAKEN profile](https://nrid.nii.ac.jp/ja/nrid/1000030908166/){.profile-link}
+:::
+
+<!-- The two cards used to carry images/rl-xai.jpg and images/data-driven.jpg,
+     which are byte-identical files — the same stock photo of a laptop and a
+     coffee mug on both projects. That reads as filler, so the cards are now
+     text-only. Add `<img class="project-img" src="..." alt="...">` back as the
+     first child of a card once there is a real, distinct figure for it. -->
+
+```{=html}
+<div class="project-grid">
+
+  <a class="project-card" href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23K13514/" target="_blank" rel="noopener">
+    <div class="project-body">
+      <span class="project-tag">JSPS KAKENHI</span>
+      <div class="project-title">深層強化学習を用いた在庫管理のための説明可能な意思決定支援システム</div>
+      <div class="project-subtitle">Developing explainable decision support systems for inventory management using deep reinforcement learning</div>
+      <div class="project-meta">23K13514 ・ 研究代表者 ・ 2023–</div>
+    </div>
+  </a>
+
+  <a class="project-card" href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23K22983/" target="_blank" rel="noopener">
+    <div class="project-body">
+      <span class="project-tag">JSPS KAKENHI</span>
+      <div class="project-title">動的モデル構成基盤によるサプライチェーンを対象としたデータ駆動最適化基盤の構築</div>
+      <div class="project-subtitle">Development of Data-Driven Optimization Fundamentals for Supply Chains Using Dynamic Model Construction Platform</div>
+      <div class="project-meta">23K22983 ・ 研究分担者 ・ 2022–2026</div>
+    </div>
+  </a>
+
+</div>
+```
+
+<!-- ## Software
+
+I develop and maintain several open-source projects. Most are still early-stage,
+but I keep improving them with the aim of contributing useful tools back to the
+research community.
+
+**Libraries**
+
+- [mdptools](https://github.com/zi-ang-liu/mdptools) — a Python library for solving Markov Decision Processes with value iteration, policy iteration, and Q-learning.
+
+**Code accompanying papers**
+
+- Liu, Ziang, and Tatsushi Nishi. "Inventory control with lateral transshipment using proximal policy optimization." *2023 5th International Conference on Data-driven Optimization of Complex Systems (DOCS)*, IEEE, 2023. [Code](https://github.com/zi-ang-liu/Inventory_control_with_lateral_transshipment)
+
+**Smaller projects**
+
+- [Exact method for perishable inventory control](https://github.com/zi-ang-liu/perishable-inventory-control)
+- [Reinforcement learning environments for traffic signal control](https://github.com/zi-ang-liu/uxsim-env)
+- [Differential Evolution on the CEC 2014 test suite](https://github.com/zi-ang-liu/DE_CEC2014) -->

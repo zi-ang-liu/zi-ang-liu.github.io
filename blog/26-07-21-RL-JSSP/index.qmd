@@ -1,0 +1,20 @@
+---
+title: "Reinforcement Learning for Job Shop Scheduling Problem"
+author: "Ziang Liu"
+date: "2026-07-20"
+categories: ["Operations Research", "Machine Learning"]
+bibliography: ["references.bib"]
+page-layout: article
+draft: true
+---
+
+@Ho2024-hr, @Park2021-qt, @Yuan2024-ri
+
+gifflar and thompson algorithm
+
+taillard benchmark
+
+## References
+
+:::{#refs}
+:::

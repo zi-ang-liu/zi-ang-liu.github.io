@@ -1,0 +1,116 @@
+---
+title: "Teaching"
+lang: ja  # page content is Japanese; without this it inherits the site's lang="en"
+# title-block-style: "plain"
+# title-block-banner: true
+---
+
+<!-- Every other page on this site opens with a sentence that says what the page
+     is; this one used to start straight on a bare `## 学部`, so a reader landed
+     on a grid of course cards with no frame around it.
+
+     Punctuation follows the lab site's STYLE.md: full-width 「，」 and 「．」,
+     not 「、」 and 「。」. This is the first Japanese prose on the site, so it
+     sets the convention — keep new Japanese text consistent with it. -->
+
+法政大学 経営システム工学科で担当している科目です．講義ノートを公開している科目は，
+科目名から直接開けます．
+
+<!-- The courses were a grid of bordered cards, each carrying up to four chips
+     (年・学期・時限・教室). Between the two grids, the period strip and the
+     lecture-note cards, the page held fourteen outlined boxes and sixteen
+     chips — a lot of ornament for what is really a six-row list of facts, and
+     the teal/amber semester chips were the loudest colour on the site.
+
+     The rows below are the `.news-list` / `.cv-list` device instead: the term
+     moves into the fixed left label column, because that is what a reader
+     groups courses by, and everything else is one muted line of plain text.
+     Term order within a section is 春 then 秋.
+
+     The `\` at the end of the first line of each row is load-bearing — a bare
+     newline is joined, and the meta line has to be a line of its own. -->
+
+## 学部
+
+::: {.course-list}
+[春学期]{.course-term} [計算機実習A](https://zi-ang-liu.github.io/computer-literacy-book/){.course-name}\
+[1年・水1・W305]{.course-meta}
+
+[春学期]{.course-term} [リレーショナル・データベース](https://zi-ang-liu.github.io/database-book/){.course-name}\
+[3年・水2・W305]{.course-meta}
+
+[秋学期]{.course-term} [社会システム](https://zi-ang-liu.github.io/data-science-book/){.course-name}\
+[1年・金3・W305]{.course-meta}
+
+[秋学期]{.course-term} [オペレーションズ・リサーチB](https://zi-ang-liu.github.io/or-book/){.course-name}\
+[2年・水2・W202]{.course-meta}
+:::
+
+## 大学院
+
+::: {.course-list}
+[秋学期]{.course-term} [最適化アルゴリズム特論]{.course-name}\
+[木2・W201]{.course-meta}
+
+[秋学期]{.course-term} [先進経営科学特論]{.course-name}\
+[金2・小南館ゼミ室5]{.course-meta}
+:::
+
+## 時間割（小金井キャンパス）
+
+<!-- The strip was unexplained: it lists period times, but nothing said that the
+     「水1」「金3」 in the rows above refer to them. -->
+
+上の一覧の「水1」「金3」などは，曜日と下の時限を表します．
+
+:::::: {.period-grid}
+::: {.period}
+**1限**
+9:00–10:40
+:::
+::: {.period}
+**2限**
+10:50–12:30
+:::
+::: {.period}
+**3限**
+13:20–15:00
+:::
+::: {.period}
+**4限**
+15:10–16:50
+:::
+::: {.period}
+**5限**
+17:00–18:40
+:::
+::::::
+
+## 講義ノート
+
+<!-- Restored from a comment. Two reasons it earns its place rather than
+     duplicating the course list:
+
+     1. The Reinforcement Learning notes are tied to no course, so while this
+        section was commented out they were unreachable from the site at all.
+     2. It is a different way in. The rows above are indexed by course — you
+        use them if you are enrolled. This list is indexed by subject, for
+        someone who wants the notes and is not in the class.
+
+     Pills rather than cards: the section is a short row of links, and after
+     the course rows above the page does not need a third stack of boxes.
+
+     The .book-item links must stay on consecutive lines with no blank line
+     between them: `.book-links p` is the row, and Pandoc only wraps them in
+     one <p> if they form a single paragraph. -->
+
+オープンアクセスで公開している講義ノートです．担当科目に対応するものは，
+上の一覧からも開けます．
+
+::: {.book-links}
+[Operations Research](https://zi-ang-liu.github.io/or-book/){.book-item}
+[Data Science](https://zi-ang-liu.github.io/data-science-book/){.book-item}
+[Database Systems](https://zi-ang-liu.github.io/database-book/){.book-item}
+[Computer Literacy](https://zi-ang-liu.github.io/computer-literacy-book/){.book-item}
+[Reinforcement Learning](https://zi-ang-liu.github.io/rl-book/){.book-item}
+:::

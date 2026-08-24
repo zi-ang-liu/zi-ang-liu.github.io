@@ -1,0 +1,62 @@
+<!-- Injected into <head> on every page (see include-in-header in _quarto.yml). -->
+
+<!--
+  The icons `favicon:` cannot declare — it only ever emits one <link>, and that
+  one is the SVG. Paths are root-absolute because this file is copied verbatim
+  into every page, including blog posts a directory down where a relative path
+  would miss.
+-->
+<link rel="icon" href="/images/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+<!--
+  KaTeX, loaded synchronously.
+
+  Quarto's own KaTeX tag (from html-math-method) carries `defer`, but the
+  pseudocode filter injects an after-body script that needs a global `katex`
+  the moment it runs — deferred, it arrives too late and every algorithm block
+  fails with "No math backend found". Same pinned URL as Quarto's copy, so this
+  costs one cache hit rather than a second download.
+-->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"></script>
+
+<!--
+  Follow the visitor's OS light/dark preference.
+
+  Quarto picks the first theme listed under `theme:` for everyone and only ever
+  changes it when someone clicks the toggle — it reads localStorage and never
+  consults prefers-color-scheme. This seeds that same localStorage key from the
+  media query, early enough that Quarto's inline script reads the seeded value
+  and the correct stylesheet wins the first paint (no flash).
+
+  "default" = the first theme listed (light), "alternate" = the second (dark).
+
+  The AUTO flag records that *we* set the value rather than the visitor. While
+  it is present we keep re-syncing to the OS on each load; the moment someone
+  uses the toggle we drop it and never override their choice again.
+-->
+<script>
+  (function () {
+    var KEY = "quarto-color-scheme";
+    var AUTO = "quarto-color-scheme-auto";
+    try {
+      if (localStorage.getItem(KEY) === null || localStorage.getItem(AUTO) === "1") {
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        localStorage.setItem(KEY, prefersDark ? "alternate" : "default");
+        localStorage.setItem(AUTO, "1");
+      }
+    } catch (e) {
+      /* private mode / storage disabled — fall back to Quarto's default */
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggles = document.querySelectorAll(".quarto-color-scheme-toggle");
+      for (var i = 0; i < toggles.length; i++) {
+        toggles[i].addEventListener("click", function () {
+          try {
+            localStorage.removeItem(AUTO);
+          } catch (e) {}
+        });
+      }
+    });
+  })();
+</script>

@@ -1,0 +1,90 @@
+# ---------------------------------------------------------------------------
+# Quarto build outputs
+# ---------------------------------------------------------------------------
+/_site/
+/.quarto/
+# Render cache. Safe to ignore because the site is published with
+# `quarto publish gh-pages` (rendered locally). If you ever move to a GitHub
+# Actions workflow that renders without a Python env, commit _freeze instead.
+/_freeze/
+# Jupyter engine intermediates from python code chunks
+**/*.quarto_ipynb
+# Supporting-file dirs from standalone `quarto render <file>.qmd`
+**/*_files/
+/.luarc.json
+
+# MyST build outputs
+_build/
+
+# ---------------------------------------------------------------------------
+# Drafts / private notes (not published)
+# ---------------------------------------------------------------------------
+/ideas/
+
+# ---------------------------------------------------------------------------
+# Python (blog posts with python code chunks)
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.python-version
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
+# ---------------------------------------------------------------------------
+# R (in case a post ever uses the knitr engine)
+# ---------------------------------------------------------------------------
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# ---------------------------------------------------------------------------
+# Node (only if a tooling step is ever added)
+# ---------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+
+# ---------------------------------------------------------------------------
+# Secrets — never commit
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---------------------------------------------------------------------------
+# Editors / tooling
+# ---------------------------------------------------------------------------
+# Keep shared editor config, ignore per-machine state
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+.claude/settings.local.json
+*.swp
+*~
+
+# ---------------------------------------------------------------------------
+# OS cruft
+# ---------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------------------
+# Misc
+# ---------------------------------------------------------------------------
+*.log
+*.tmp
+.cache/

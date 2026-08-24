@@ -1,0 +1,122 @@
+---
+title: "Curriculum Vitae"
+pagetitle: "CV — Ziang Liu"
+email-obfuscation: javascript
+---
+
+<!-- This used to open with "Associate Professor, Department of Industrial and
+     Systems Engineering, Hosei University · liu@hosei.ac.jp" — a run of three
+     differently-weighted blue links and a mailto in one sentence, which broke
+     across two lines with the "·" left dangling at the end of the first. It
+     also restated the Appointments row a few hundred pixels below it word for
+     word, and every other page on the site opens by saying what the page *is*
+     (DESIGN.md §1). The affiliation stays where it belongs, in Appointments;
+     the email moved into the pill row below, where it gets the same treatment
+     as the other contact links instead of competing with them. -->
+
+Appointments, education, awards, grants, and service, newest first. Publications
+are listed separately on the [Publications](publications.qmd){.info-link} page.
+
+<!-- One pill, not the five-link profile row this page used to carry. That row
+     was a copy of the one on publications.qmd — Google Scholar, ORCID and
+     researchmap each appeared on three different pages, and GitHub is in the
+     navbar of every page already. A pill row earns its place only where the
+     links are the page's own subject: the bibliographic profiles belong on
+     publications.qmd, KAKEN on research.qmd, and what belongs here is the way
+     to reach the person whose CV this is.
+
+     No inline `<i>` on this one, unlike those rows: `email-obfuscation:
+     javascript` (in the front matter) rebuilds this link with document.write and
+     entity-escapes the link text, so an icon written here renders as the literal
+     string `<i class="bi bi-envelope-fill"></i>`. Quarto tags the generated link
+     `class="email profile-link"`; the envelope comes from CSS off that hook —
+     see `.profile-link.email::before` in scss/_shared.scss. -->
+::: {.profile-links}
+[liu@hosei.ac.jp](mailto:liu@hosei.ac.jp){.profile-link}
+:::
+
+## Appointments
+
+::: {.cv-list}
+[2025–]{.cv-when} **Associate Professor**, Department of Industrial and Systems Engineering, Hosei University
+
+[2021–2025]{.cv-when} **Assistant Professor**, Okayama University
+:::
+
+## Education
+
+::: {.cv-list}
+[2021]{.cv-when} **Ph.D. in Engineering**, Osaka University
+:::
+
+## Research Interests
+
+Operations research, optimization, and machine learning — in particular, algorithms
+for autonomous decision-making in inventory, manufacturing, and supply chain
+systems. Current work covers data-driven optimization for multi-echelon supply
+chains under uncertainty, optimization for robotic manufacturing systems, and
+reinforcement learning with an emphasis on explainability and human-centric,
+trustworthy decision support.
+
+## Awards
+
+::: {.cv-list}
+[2026]{.cv-when} **Young Investigator Award**, ISFA 2026
+
+[2024]{.cv-when} **Distinguished Young IEOM Researcher Award**, IEOM Society
+
+[2019]{.cv-when} **Best Paper Award**, IEEE IEEM
+:::
+
+## Grants
+
+::: {.cv-list}
+[2023–2026]{.cv-when} **Grant-in-Aid for Early-Career Scientists**, JSPS — Principal Investigator ([23K13514](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23K13514/))
+
+[2022–2026]{.cv-when} **Grant-in-Aid for Scientific Research (B)**, JSPS — Co-Investigator ([23K22983](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-23K22983/))
+:::
+
+Project details on the [Research](research.qmd){.info-link} page.
+
+## Professional Service
+
+<!-- Source of record for this section: the 学術貢献活動 / 社会貢献活動 /
+     所属学協会 blocks on https://researchmap.jp/liu.ziang. Committee roles get
+     a dated row; the one-off session-chair and reviewing duties are inline
+     rows below, because a .cv-list row per session chair would outweigh the
+     appointments at the top of the page. Year granularity throughout, like
+     every other list here. -->
+
+::: {.cv-list}
+[2021–]{.cv-when} **Secretary**, Cyber-Physical Flexible Automation (CyFA) research committee
+
+[2026]{.cv-when} **Executive Committee**, International Symposium on Flexible Automation (ISFA) 2026
+
+[2025]{.cv-when} **Program Committee**, 44th IFIP WG 5.7 International Conference on Advances in Production Management Systems (APMS 2025)
+
+[2023]{.cv-when} **Organizing Committee**, 67th Annual Conference of the Institute of Systems, Control and Information Engineers (SCI'23)
+
+[2021]{.cv-when} **Organizing Committee**, 65th Annual Conference of the Institute of Systems, Control and Information Engineers (SCI'21)
+:::
+
+### Session Chair
+
+*Annual Conference of the Institute of Systems, Control and Information Engineers* (2022, 2024) · *JSME Manufacturing Systems Division Conference* (MSD2024) · *Scheduling Symposium* (2023)
+
+### Reviewing
+
+*IEEE Transactions on Automation Science and Engineering* · *Engineering Applications of Artificial Intelligence* · *Expert Systems with Applications*
+
+### Memberships
+
+<!-- researchmap records IEEE as 2024年3月–2025年3月, i.e. lapsed; listed with
+     its range rather than silently dropped or shown as current. -->
+
+Institute of Systems, Control and Information Engineers (2021–) · Japan Society of Mechanical Engineers (2020–) · IEEE (2024–2025)
+
+## Publications
+
+Peer-reviewed articles in journals including *Expert Systems with Applications*,
+*Information Sciences*, and *Applied Artificial Intelligence*.
+
+[See the full list](publications.qmd){.info-link}

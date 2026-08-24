@@ -1,0 +1,126 @@
+---
+pagetitle: "Ziang Liu"
+image: images/og-card.png
+email-obfuscation: javascript
+format:
+  html:
+    page-layout: article
+---
+
+::: {.hero}
+
+<img class="hero-avatar" src="https://avatars.githubusercontent.com/u/50853393?s=240&v=4" alt="Ziang Liu">
+
+::: {.hero-content}
+
+[Ziang Liu]{.hero-name}
+
+[Associate Professor, Ph.D.]{.hero-role}
+
+::: {.hero-affil}
+[Department of Industrial and Systems Engineering](https://ise-hp.ws.hosei.ac.jp/), [Hosei University](https://www.hosei.ac.jp/)
+:::
+
+::: {.hero-email}
+<i class="bi bi-envelope-fill"></i> [liu@hosei.ac.jp](mailto:liu@hosei.ac.jp)
+:::
+
+:::
+
+<!-- Deliberately a sibling of .hero-content, not a child of it: as a child the
+     links shared the ~400px text column beside the avatar and wrapped onto two
+     rows. Here they form their own full-width row under both, where all three
+     fit on one line.
+
+     GitHub used to be the middle pill and is gone: the navbar carries a GitHub
+     icon on every page, so on this screen it was the second route to the same
+     destination. The two that remain are the ones the navbar does not have. -->
+::: {.hero-links}
+[<i class="bi bi-mortarboard-fill"></i> Google Scholar](https://scholar.google.com/citations?user=dRuC1OoAAAAJ&hl){.hero-link}
+[<i class="bi bi-caret-right-fill"></i> researchmap](https://researchmap.jp/liu.ziang){.hero-link}
+:::
+
+:::
+
+## About
+
+<!-- Deliberately does NOT open with the name, title, and department: the hero
+     immediately above carries all three, and this section used to restate them
+     as its first sentence — the first thing a reader hit told them nothing they
+     had not just read. The work leads now; the background follows it. -->
+
+I work on operations research, optimization, and machine learning — algorithms
+that let complex systems decide for themselves, in settings where the
+environment is uncertain and the decision has to be made anyway. Most of the
+applications come from inventory, manufacturing, and supply chains.
+
+<!-- Three named directions rather than one dense paragraph, and the same three
+     that research.qmd carries: one line each here, a paragraph each there. The
+     lab site uses the same summary-then-detail split between its home page
+     cards and the research sub-pages. -->
+
+<!-- **Data-driven optimization for supply chains** — multi-echelon inventory control
+that learns from data instead of an assumed demand distribution.
+
+**Optimization for robotic manufacturing** — scheduling and control for flexible
+automation, where the configuration is itself part of what gets optimized.
+
+**Explainable reinforcement learning** — learned policies whose decisions the
+people relying on them can actually interpret. -->
+
+I received my Ph.D. in Engineering from Osaka University in 2021, and was an
+Assistant Professor at Okayama University before joining Hosei in April 2025.
+
+<!-- The lab used to be a fourth link here as well as having its own section
+     below and two links inside it — three routes to the same page on one
+     screen. It keeps the section; this row is for the site's own pages. -->
+[Research](research.qmd){.info-link} · [Publications](publications.qmd){.info-link} · [Full CV](cv.qmd){.info-link}
+
+## News
+
+<!-- Newest first; add new entries at the top.
+
+     Month + year throughout. This is a news feed, so a bare year reads as
+     vague, and mixing the two granularities made the list look unmaintained.
+     The award months are the ones recorded on researchmap:
+     https://researchmap.jp/liu.ziang
+
+     The CV keeps the same entries at year granularity — that is a CV
+     convention, and every list on that page follows it. Consistency is within
+     a list, not across the site. -->
+
+::: {.news-list}
+[Jul 2026]{.news-date} Received the Young Investigator Award at ISFA 2026.
+
+[Apr 2025]{.news-date} Joined Hosei University as Associate Professor of Industrial and Systems Engineering.
+
+[Sep 2024]{.news-date} Received the Distinguished Young IEOM Researcher Award from the IEOM Society.
+:::
+
+<!-- Every other section on this page ends with somewhere to go next; this one
+     used to just stop. The full award and appointment history is on the CV. -->
+[Full history on the CV](cv.qmd){.info-link}
+
+<!-- Awards used to be listed here, but News already carries the two most recent
+     ones a few hundred pixels above. The full list lives on cv.qmd.
+
+     The Lab and Contact cards that used to sit here were nested inside the News
+     <section>, so the page outline read them as part of News. Their contents
+     have been split by how they are actually used: the email is now in the hero
+     (most-wanted detail, visible immediately), the lab has its own section
+     below, and the postal address moved to the site footer, where it shows on
+     every page instead of only this one. -->
+
+## Research Group
+
+<!-- Says whose lab it is, which the previous wording left to inference — it
+     described the lab in the third person on a personal home page. The topic
+     list it used to repeat is the same one stated under About, so it is gone;
+     what belongs here is the relationship and the two routes in. -->
+
+I lead the [Intelligent Systems Laboratory](https://isl-hosei.github.io/) at
+Hosei, where students work on the problems above. Prospective students should
+start with the lab's Join Us page.
+
+[Visit the lab](https://isl-hosei.github.io/){.info-link} · [Join us](https://isl-hosei.github.io/join.html){.info-link}
+

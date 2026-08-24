@@ -1,0 +1,126 @@
+project:
+  type: website
+  # `.gitignore`-ing ideas/ only keeps the sources off the main branch — Quarto
+  # still rendered them and `quarto publish` pushed them live to gh-pages, where
+  # they were publicly reachable and indexed in search.json + sitemap.xml.
+  # Excluding them here is what actually keeps them unpublished.
+  render:
+    - "*.qmd"
+    - "*.md"
+    - "blog/**/*.qmd"
+    - "!ideas/"
+    # bio.md is a working file — the text pasted into conference bio forms — and
+    # rendered to an unlinked, publicly reachable bio.html. Not a site page.
+    - "!bio.md"
+
+website:
+  title: "Ziang Liu"
+  # The vector copy, which stays sharp on every display. The .ico fallback for
+  # older Safari and for Windows pinned-tab surfaces is declared alongside it in
+  # assets/head-includes.html — `favicon:` only ever emits one <link>.
+  favicon: images/favicon.svg
+  site-url: https://zi-ang-liu.github.io
+  description: "Ziang Liu's Personal Website"
+  open-graph: true
+  twitter-card: true
+  # Default social-share card. Must be >=1200x630 — the GitHub avatar previously
+  # used here was 96x96 and rendered as a blurry crop on Twitter/LinkedIn/Slack.
+  image: images/og-card.png
+  navbar:
+    search: true
+    left:
+      # Ordered by what a visitor most likely came for. Research absorbed the
+      # former Projects and Open Source pages, which were rendered and live but
+      # had no link pointing at them from anywhere on the site.
+      - text: "Home"
+        href: index.qmd
+      - text: "Research"
+        href: research.qmd
+      - text: "Publications"
+        href: publications.qmd
+      - text: "Teaching"
+        href: teaching.qmd
+      - text: "Blog"
+        href: blog.qmd
+      - text: "CV"
+        href: cv.qmd
+    right:
+      - icon: github
+        href: https://github.com/zi-ang-liu
+        aria-label: GitHub
+  page-footer:
+    # The postal address used to sit in a card on the home page only. It is
+    # reference information rather than something anyone reads once, so it
+    # belongs here, where it is reachable from every page.
+    left: |
+      [Department of Industrial and Systems Engineering](https://ise-hp.ws.hosei.ac.jp/), [Hosei University](https://www.hosei.ac.jp/)<br>
+      3-7-2 Kajino-cho, Koganei-shi, Tokyo 184-8584, Japan · [Map](https://www.google.com/maps/search/?api=1&query=Hosei+University+Koganei+Campus)
+    right: "© 2026 Ziang Liu"
+    # right: |
+    #   [法政大学](https://www.hosei.ac.jp/)
+    #   [経営システム工学科](https://ise-hp.ws.hosei.ac.jp/)
+    #   [知能システム研究室](https://isl-hosei.github.io/)
+    border: true
+format:
+  html:
+    # Order matters: Quarto treats the FIRST entry as the unconditional default
+    # and ignores prefers-color-scheme. With dark first, a visitor on a light
+    # system still got the dark site. Light first restores system-following.
+    theme:
+      light: [litera, scss/custom.scss]
+      dark: [litera, scss/dark_custom.scss]
+    css: styles.css
+    # One column width for the whole site. Quarto emits the body column as
+    # `minmax(500px, calc(body-width + 50px - 3em))`, and 3em ≈ 50px at the
+    # 1.05rem base size, so the rendered content column is ≈ body-width: ~640px,
+    # about 73 characters — a comfortable reading measure. (Quarto's own default
+    # is 800px, which is ~90 characters of prose.)
+    #
+    # The width lives here rather than as a `max-width` on paragraphs (which is
+    # what the SCSS used to do) because only the column itself is shared by
+    # every kind of block. Capping prose alone left the paragraphs ~200px short
+    # of the hero, the cards, the tables, and the section rules on every page.
+    grid:
+      body-width: 640px
+    # KaTeX (not MathJax): ~280KB vs MathJax's ~1MB tex-chtml-full, and one
+    # library covers both the equations and the pseudocode blocks.
+    # The URL is pinned; Quarto's default is katex@latest, which lets an upstream
+    # release silently change how every equation on the site renders.
+    # Trailing slash is required — Quarto concatenates the filename without one.
+    html-math-method:
+      method: katex
+      url: "https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/"
+    # Blocking KaTeX (for pseudocode.js) + OS light/dark following. See the
+    # comments in that file for why each is needed.
+    include-in-header:
+      file: assets/head-includes.html
+
+filters:
+  - pseudocode
+
+# default
+# cerulean
+# cosmo
+# cyborg
+# darkly
+# flatly
+# journal
+# litera
+# lumen
+# lux
+# materia
+# minty
+# morph
+# pulse
+# quartz
+# sandstone
+# simplex
+# sketchy
+# slate
+# solar
+# spacelab
+# superhero
+# united
+# vapor
+# yeti
+# zephyr

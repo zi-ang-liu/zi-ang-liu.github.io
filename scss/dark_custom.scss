@@ -1,0 +1,222 @@
+/*-- scss:defaults --*/
+// Dark theme, layered on the Litera base.
+// Paired with custom.scss — same structure, mirrored values, with the
+// surfaces inverted for comfortable dark reading.
+// Shared rules live in _shared.scss and are imported below.
+
+// --- Brand -----------------------------------------------------------
+// The light theme's indigo, lifted for legibility on a dark surface. Keep
+// these in sync with $brand-indigo / $link-color in custom.scss; the alternate
+// palettes are documented there.
+//
+// See custom.scss on why $primary is simply bound to $accent here: this site
+// has no separate chrome colour, unlike the lab site the naming comes from.
+$brand-indigo: #8f9dee !default;
+
+$accent:      $brand-indigo !default;
+$primary:     $accent !default;
+// Text on an $accent fill. Repeats $body-bg's literal value for the same
+// reason $navbar-bg does below — $body-bg is not declared until further down.
+$on-accent:   #1a1d21 !default;
+$link-color:  #a6b2f2 !default;
+
+// See the note in custom.scss: Quarto's Litera rule paints the navbar in
+// $primary as soon as the brand colour stops being Litera's stock #4582ec.
+// Pinning it to the page background keeps the navbar flush with the page.
+// Must repeat $body-bg's literal value — this line is evaluated before the
+// `!default` block below, where $body-bg is declared.
+$navbar-bg:   #1a1d21;
+
+// --- Surfaces --------------------------------------------------------
+$body-bg:     #1a1d21 !default;
+$body-color:  #d7dbdf !default;
+
+// Raised panels — same value as $gray-100 below, named separately for the
+// reason given in custom.scss.
+$surface:     #24282e !default;
+
+// Grays — re-mapped for dark surfaces
+$gray-100: #24282e !default;
+$gray-200: #2c3138 !default;
+$gray-300: #3a4048 !default;
+$gray-400: #565d66 !default;
+$gray-500: #838d98 !default;
+$gray-600: #9aa4af !default;
+$gray-700: #c2c8cf !default;
+$gray-800: #d7dbdf !default;
+$gray-900: #eceff1 !default;
+
+$light:  #24282e !default;
+$dark:   #eceff1 !default;
+
+// Muted text — mirrors $muted-color in custom.scss. This value already clears
+// WCAG AA on the dark card surface (5.9:1), so it matches $gray-600 above.
+$muted-color:         #9aa4af;
+
+// Contrast floor (Litera relaxes this; keep it relaxed for dark too)
+$min-contrast-ratio:   1.85 !default;
+
+// --- Typography ------------------------------------------------------
+// Must mirror custom.scss exactly — see the note there on the font stacks and
+// on why the families carry no `!default`.
+$font-family-sans-serif: "Source Sans 3 Variable", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial,
+  "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "Yu Gothic",
+  "Noto Sans JP", Meiryo, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-serif: Georgia, Cambria, "Times New Roman",
+  "Hiragino Mincho ProN", "Yu Mincho", serif;
+$font-family-monospace: "JetBrains Mono Variable", ui-monospace, SFMono-Regular,
+  Menlo, Consolas, "Liberation Mono", monospace;
+
+$font-size-base:       1.05rem !default;
+$line-height-base:     1.7 !default;
+$headings-font-weight: 700 !default;
+$headings-line-height: 1.25 !default;
+
+// --- Borders & tables ------------------------------------------------
+// NOTE: no `!default` here. Quarto assigns $border-color in an earlier SASS
+// layer, so a `!default` override is silently ignored and borders fall back to
+// Bootstrap's $gray-300 (#dee2e6) — a glaring light outline on dark surfaces.
+$border-soft:         rgba(255, 255, 255, .12);
+$border-color:        $border-soft;
+$table-border-color:  $border-soft;
+
+// --- Code ------------------------------------------------------------
+$code-color:          #e685b5 !default;
+$code-bg:             #24282e !default;
+$inline-code-bg:      rgba(255, 255, 255, 0.06) !default;
+
+// --- Shadows ---------------------------------------------------------
+// Far more opacity than the light theme's: on a dark ground those values are
+// effectively invisible.
+$shadow-ambient: 0 4px 20px rgba(0, 0, 0, 0.3) !default;  // hero, at rest
+$shadow-hover:   0 6px 20px rgba(0, 0, 0, 0.4) !default;  // cards, on hover
+$shadow-lift:    0 8px 24px rgba(0, 0, 0, 0.45) !default; // project cards
+$shadow-btn:     0 2px 8px rgba($accent, 0.3) !default;
+
+// --- Accent tints ----------------------------------------------------
+// Weakest to strongest, and hotter than the light theme's throughout: the dark
+// $accent is a lighter indigo, so a given alpha shows less contrast against
+// the surface behind it.
+$tint-panel:     rgba($accent, 0.08) !default;  // theorem block fill
+$tint-row:       rgba($accent, 0.1) !default;   // publication row hover
+$tint-pill:      rgba($accent, 0.12) !default;  // hero / profile link hover
+$tint-panel-bd:  rgba($accent, 0.25) !default;  // theorem block border
+$tint-outline:   rgba($accent, 0.5) !default;   // DOI button border
+
+// The $term-spring-* / $term-fall-* tokens that used to close this block are
+// gone with the semester chips — see the note in custom.scss.
+
+/*-- scss:rules --*/
+
+// Computed here rather than in the defaults block — see the note in
+// custom.scss. tint-color() rather than shade-color(): this hover has to get
+// lighter, not darker.
+$link-hover: tint-color($link-color, 20%);
+
+@import "shared";
+
+// =====================================================================
+// Dark-only rules.
+//
+// These have no light-theme counterpart. They either undo chrome that Quarto
+// and Bootstrap ship with a dark fill baked in, or add a surface where the
+// light theme is content with the page background. They extend the shared
+// rules above, so they have to stay after the @import.
+// =====================================================================
+
+// --- Navbar ----------------------------------------------------------
+// Match the page background (mirrors the light theme's navbar). The hairline
+// underneath comes from _shared.scss.
+
+.navbar {
+  background-color: $body-bg !important;
+
+  // Quarto computes a near-black navbar color; force light for tool icons
+  --bs-navbar-color: #{$gray-700};
+  --bs-navbar-hover-color: #{$gray-900};
+  --bs-navbar-active-color: #{$gray-900};
+
+  .navbar-brand,
+  .nav-link {
+    color: $gray-700 !important;
+    // _shared.scss transitions .nav-link only; the brand needs it too
+    transition: color 0.15s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: $gray-900 !important;
+  }
+}
+
+// Search icon (an SVG driven by `color`) defaults to near-black — lighten it.
+.aa-DetachedSearchButton .aa-DetachedSearchButtonIcon,
+.aa-SubmitIcon,
+.quarto-navigation-tool {
+  color: $gray-700 !important;
+
+  &:hover {
+    color: $gray-900 !important;
+  }
+}
+
+// Dark-mode toggle is a background-image SVG with a dark fill baked in;
+// swap both states for light-fill versions.
+.quarto-color-scheme-toggle:not(.alternate) .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23c2c8cf" viewBox="0 0 16 16"><path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/></svg>') !important;
+}
+
+.quarto-color-scheme-toggle.alternate .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23c2c8cf" viewBox="0 0 16 16"><path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>') !important;
+}
+
+// Hamburger toggler (mobile) — light stroke variant
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(194,200,207,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+// --- Raised surfaces --------------------------------------------------
+// Quarto's own cards need the panel fill spelled out. The site's hand-built
+// panels (.hero, .project-card) already take $surface in _shared.scss, and the
+// teaching page's period strip deliberately takes $body-bg instead; in light
+// these keep Bootstrap's own white.
+
+.card,
+.quarto-grid-item,
+.list-group-item {
+  background-color: $surface;
+}
+
+// --- Code -------------------------------------------------------------
+
+pre,
+pre.sourceCode,
+div.sourceCode {
+  background-color: $code-bg;
+  color: $body-color;
+}
+
+// --- Footer -----------------------------------------------------------
+// The footer bar and the page background are the same value here; the
+// hairline from _shared.scss is what keeps the seam visible.
+
+footer,
+.page-footer,
+.nav-footer {
+  background-color: $body-bg;
+}
+
+// --- Search / form fields ---------------------------------------------
+
+.form-control,
+input {
+  background-color: $surface;
+  color: $body-color;
+
+  &:focus {
+    background-color: $surface;
+    color: $body-color;
+  }
+}

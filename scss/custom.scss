@@ -1,0 +1,142 @@
+/*-- scss:defaults --*/
+// Light theme, layered on the Litera base.
+// Paired with dark_custom.scss — same structure, mirrored values.
+// Shared rules live in _shared.scss and are imported below.
+
+// --- Brand -----------------------------------------------------------
+// A deep indigo, replacing Litera's #4582ec (which is Bootstrap's own default
+// blue, and reads as "generic Bootstrap site" on sight). Indigo keeps the cool,
+// scholarly register while being distinctly the site's own, and it sits well
+// beside the teal/amber semester chips on the Teaching page rather than
+// competing with them the way a teal or green accent would.
+//
+// Alternates, if this reads too cool — swap both values, light and dark:
+//   burgundy   light #8f2d41  dark #e08a99
+//   deep blue  light #2c5fb8  dark #6fa3f0   (a restrained take on the original)
+// Every option here clears WCAG AA on its background: indigo is 7.5:1 on white
+// and 6.6:1 on the dark surface.
+//
+// $accent is the lab site's name for "the one saturated brand colour", and
+// _shared.scss is written against it. That site also keeps $primary as a
+// separate near-black chrome colour; this one does not — the indigo carries
+// both roles, so $primary is bound to $accent rather than given its own value.
+$brand-indigo: #3b4d9e !default;
+
+$accent:      $brand-indigo !default;
+$primary:     $accent !default;
+$on-accent:   #ffffff !default; // text placed on top of an $accent fill
+$link-color:  #35448f !default;
+
+// Must be set explicitly. Quarto ships a Litera-specific rule —
+//   litera: (navbar-bg: if($default == #4582ec, $white, $default))
+// — which keeps the navbar white only while $primary is Litera's stock blue,
+// and otherwise paints the navbar in $primary. Changing the brand colour above
+// therefore flips the navbar to a solid colour bar as a side effect.
+//
+// No `!default`, because Quarto assigns $navbar-bg in an earlier layer. That
+// also means this line is evaluated before the `!default` block below, so it
+// has to repeat $body-bg's literal value rather than reference the variable —
+// referencing it fails the build with "Undefined variable".
+$navbar-bg:   #ffffff;
+
+// --- Surfaces --------------------------------------------------------
+$body-bg:     #ffffff !default;
+$body-color:  #2b3138 !default;
+
+// Raised panels: the hero, project and course cards, the period strip, the
+// lecture-note cards. Same value as Bootstrap's $gray-100, but named on its
+// own because it is a design token rather than a step on the gray ramp — the
+// lab site names it the same way.
+$surface:     #f8f9fa !default;
+
+// Grays — inherit Litera's defaults (light surfaces)
+
+// Muted text. Bootstrap's $gray-600 (#6c757d) only reaches 4.45:1 on the
+// $surface card background — below the 4.5:1 WCAG AA floor, and worse on the
+// sub-1rem labels that use it. #5a6169 gives 5.9:1 on cards, 6.3:1 on white.
+// The lab site now carries the same token, borrowed from here.
+$muted-color:         #5a6169;
+
+// --- Typography ------------------------------------------------------
+//
+// The Latin faces are self-hosted variable fonts — see the @font-face block in
+// styles.css. No `!default` on the families, for the same reason as
+// $border-color below: Quarto assigns them in an earlier SASS layer, where a
+// `!default` override is silently dropped.
+//
+// There is deliberately no Japanese webfont. Each stack instead falls through
+// to the platform's own CJK face — Gothic behind the sans, Mincho behind the
+// serif. A full Noto Sans JP is several megabytes, and every OS that reads the
+// Japanese pages here already ships a well-hinted CJK family.
+$font-family-sans-serif: "Source Sans 3 Variable", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial,
+  "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "Yu Gothic",
+  "Noto Sans JP", Meiryo, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+// One typeface across the whole site: headings, reading column, nav, and cards
+// are all Source Sans 3. There is no serif webfont — this stack exists only
+// because Litera sets `p { font-family: $font-family-serif }`, which the rule
+// in _shared.scss overrides anyway.
+$font-family-serif: Georgia, Cambria, "Times New Roman",
+  "Hiragino Mincho ProN", "Yu Mincho", serif;
+$font-family-monospace: "JetBrains Mono Variable", ui-monospace, SFMono-Regular,
+  Menlo, Consolas, "Liberation Mono", monospace;
+
+$font-size-base:       1.05rem !default;
+$line-height-base:     1.7 !default;
+$headings-font-weight: 700 !default;
+$headings-line-height: 1.25 !default;
+
+// --- Borders & tables ------------------------------------------------
+// $border-soft is the hairline token _shared.scss is written against; the two
+// Bootstrap variables are pointed at it so components we don't style directly
+// pick up the same weight.
+//
+// NOTE: no `!default` here. Quarto assigns $border-color in an earlier SASS
+// layer, so a `!default` override is silently ignored and borders fall back to
+// Bootstrap's $gray-300 (#dee2e6) — much heavier than intended.
+$border-soft:         rgba(0, 0, 0, .08);
+$border-color:        $border-soft;
+$table-border-color:  $border-soft;
+
+// --- Code ------------------------------------------------------------
+$code-color:          #d63384 !default;
+$code-bg:             rgba(0, 0, 0, .03) !default;
+$inline-code-bg:      $code-bg !default;
+
+// --- Shadows ---------------------------------------------------------
+// The dark theme mirrors these at 4-6x the opacity: the alpha that reads as a
+// soft lift on white is invisible on a dark ground.
+$shadow-ambient: 0 4px 20px rgba(0, 0, 0, 0.05) !default; // hero, at rest
+$shadow-hover:   0 6px 20px rgba(0, 0, 0, 0.08) !default; // cards, on hover
+$shadow-lift:    0 8px 24px rgba(0, 0, 0, 0.1) !default;  // project cards
+$shadow-btn:     0 2px 8px rgba($accent, 0.25) !default;
+
+// --- Accent tints ----------------------------------------------------
+// Weakest to strongest. The dark theme runs every one of these hotter, because
+// its $accent is a lighter indigo and shows less contrast at a given alpha.
+$tint-panel:     rgba($accent, 0.05) !default;  // theorem block fill
+$tint-row:       rgba($accent, 0.06) !default;  // publication row hover
+$tint-pill:      rgba($accent, 0.06) !default;  // hero / profile link hover
+$tint-panel-bd:  rgba($accent, 0.15) !default;  // theorem block border
+$tint-outline:   rgba($accent, 0.4) !default;   // DOI button border
+
+// There were teal/amber $term-spring-* / $term-fall-* tokens here, for the
+// semester chips on the teaching page. They were the only colour on the site
+// outside the indigo, they appeared six times on one page, and they coded
+// something — spring vs autumn — that a reader never has to compare at a
+// glance. The terms are plain muted labels now; the site is one hue again.
+
+/*-- scss:rules --*/
+
+// $link-hover is computed here rather than in the defaults block above:
+// shade-color() is a Bootstrap function, and Quarto only loads those into the
+// layer this section sits in. (The lab site writes its hover colour as a
+// literal for exactly this reason; deriving it keeps it tied to $link-color.)
+$link-hover: shade-color($link-color, 20%);
+
+@import "shared";
+
+// The light theme has no rules of its own. Every rule it used to carry is in
+// _shared.scss now, expressed through the tokens above — which is the point:
+// the light theme is the baseline the dark one is stated as a delta from.

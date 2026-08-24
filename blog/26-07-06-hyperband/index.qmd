@@ -1,0 +1,162 @@
+---
+title: "Bandit-Based Algorithm for Hyperparameter Optimization"
+author: "Ziang Liu"
+date: "2026-07-06"
+categories: ["Machine Learning", "Optimization"]
+bibliography: ["references.bib"]
+page-layout: article
+draft: false
+---
+
+Machine learning models often have hyperparameters that need to be tuned for optimal performance. When the number of hyperparameters is large, it can be difficult to find a good combination of hyperparameters manually. Hyperparameter optimization (HPO) is a method for automatically searching for hyperparameter combinations that improve model performance. 
+
+HPO can be classified into the following categories:
+
+- Bayesian optimization
+- Bandit-based optimization
+- Evolutionary optimization / Metaheuristics
+
+@1390003825209053056 give a comprehensive review of HPO methods (the paper is written in Japanese). They also provide a guideline for selecting HPO methods based on the characteristics of the problem. 
+
+## Bandit-Based Optimization
+
+### Successive Halving
+
+Successive Halving was originally proposed by @Karnin2013-az. Later, @Jamieson2016-sg proposed to use this method for HPO.
+
+Successive Halving requires a budget $B$ and a number of configurations $n$. In the context of HPO for machine learning models, a configuration refers to a specific combination of hyperparameters. The budget $B$ can be defined as the total number of iterations that can be used.
+The performance of a configuration is evaluated by the loss function. In this algorithm, $l_{i, r}$ denotes the loss of configuration $i$ after $r$ iterations. 
+
+```pseudocode
+#| label: algo-successive-halving
+
+\begin{algorithm}
+\caption{Successive Halving}
+\begin{algorithmic}
+\Require Budget $B$, number of configurations $n$
+\State $S_0 \leftarrow \{1, 2, \dots, n\}$
+\For{$k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$}
+    \State $r_k \leftarrow \lfloor \frac{B}{|S_k| \lceil \log_2 n \rceil} \rfloor$
+    \State $R_k \leftarrow \sum_{j=0}^{k} r_j$
+    \State Run each configuration in $S_k$ for $r_k$ additional iterations
+    \State Get $l_{i, R_k}$ for each configuration $i \in S_k$
+    \State $S_{k+1} \leftarrow \left\{ i \in S_k : l_{i, R_k} \text{ is among the best } \lfloor |S_k| / 2 \rfloor \text{ losses} \right\}$
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+```
+
+Let $S_0 = \{1, 2, \dots, n\}$ be the set of configurations. For each round $k$, the number of configurations is halved, so that for $k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$, we have
+
+$$
+|S_{k+1}| = \lfloor |S_k| / 2 \rfloor,
+$$ 
+and eventually $|S_{\lceil \log_2 n \rceil}| = 1$. 
+
+The budget that is spent on a configuration $i$ in round $k$ is $r_k$, and the total budget spent on configuration $i$ is $R_k = \sum_{j=0}^{k} r_j$. Since the number of configurations is given by $|S_k|$, the total budget spent in round $k$ is $|S_k| r_k$, which is approximately a constant value $B / \lceil \log_2 n \rceil$.
+
+To illustrate the Successive Halving algorithm, consider the following example.
+Let $B = 128$ and $n = 16$, so that $\lceil \log_2 n \rceil = 4$ and $k$ ranges over $0, 1, 2, 3$. 
+
+| $k$ | $r_k$ | $R_k$ | $|S_k|$ | $|S_{k+1}|$ |
+|-----|-------|-------|--------|----|
+| 0   | 2     | 2     | 16     | 8      |
+| 1   | 4     | 6     | 8      | 4      |
+| 2   | 8     | 14    | 4      | 2      |
+| 3   | 16    | 30    | 2      | 1      |
+
+Each round spends $|S_k| \cdot r_k = 32$ iterations, so the total budget is $4 \times 32 = 128 = B$, as expected. 
+
+### Hyperband
+
+In the Successive Halving algorithm, it is required to specify $B$ and $n$ in advance. However, it is may be difficult to choose a good value for $n$ in practice. 
+Hyperband [@Li2016-fm] can be considered as a extension of Successive Halving. 
+
+```pseudocode
+#| label: algo-hyperband
+
+\begin{algorithm}
+\caption{Hyperband}
+\begin{algorithmic}
+\Require $R$, $\eta$ 
+\State $s_{max} \leftarrow \lfloor \log_\eta R \rfloor$
+\State $B \leftarrow (s_{max} + 1) R$
+\For{$s = s_{\max}, s_{\max} - 1, \dots, 0$}
+    \State $n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s$
+    \State $r \leftarrow R \eta^{-s}$
+    \For{$i = 0, 1, \dots, s$}
+        \State $n_i \leftarrow \lfloor n \eta^{-i} \rfloor$
+        \State $r_i \leftarrow r \eta^i$
+        \State Run each configuration in $S_i$ for $r_i$ iterations
+        \State Get $l_{i, r_i}$ for each configuration $i \in S_i$
+        \State $S_{i+1} \leftarrow \left\{ i \in S_i : l_{i, r_i} \text{ is among the best } \lfloor n_i / \eta \rfloor \text{ losses} \right\}$
+    \EndFor
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+```
+
+Note that the original paper writes this step as $n \leftarrow \lceil \frac{B}{R} \frac{\eta^s}{s + 1} \rceil$, rounding up only at the end; here we use $n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s$, which floors the per-round budget first and matches the values in the paper's Table 1 and its reference implementation.
+
+The following example is adapted from @Li2016-fm.
+Let $R = 81$ and $\eta = 3$, so that $s_{max} = \lfloor \log_3 81 \rfloor = 4$.
+The following table shows the values of $n$ and $r$ for each value of $s$.
+
+```{python}
+def hyperband(R, eta):
+    """Return the (n_i, r_i) schedule for each bracket s."""
+    s_max = 0
+    while eta ** (s_max + 1) <= R:
+        s_max += 1
+    B = (s_max + 1) * R
+
+    brackets = {}
+    for s in range(s_max, -1, -1):
+        n = B // R // (s + 1) * eta**s
+        r = R // eta**s
+        brackets[s] = [(n // eta**i, r * eta**i) for i in range(s + 1)]
+    return brackets
+
+
+R = 81
+eta = 3
+brackets = hyperband(R, eta)
+
+s_max = max(brackets)
+print("  i" + "".join(f"{f's = {s}':>12}" for s in range(s_max, -1, -1)))
+print("   " + "".join(f"{'n_i':>6}{'r_i':>6}" for _ in range(s_max + 1)))
+for i in range(s_max + 1):
+    row = f"{i:>3}"
+    for s in range(s_max, -1, -1):
+        if i < len(brackets[s]):
+            n_i, r_i = brackets[s][i]
+            row += f"{n_i:>6}{r_i:>6}"
+        else:
+            row += " " * 12
+    print(row)
+```
+
+
+
+### Hyperband Variants
+
+Later works have proposed several variants of Hyperband. There are two main directions for improving Hyperband. One direction is to combine Hyperband with metaheuristics. The other direction is to combine Hyperband with Bayesian optimization.
+
+@Awad2021-cb proposed DEHB, a hyperparameter optimization method that combines differential evolution and Hyperband. Differential evolution (DE) is a classic evolutionary algorithm and Hyperband is a bandit-based method for hyperparameter optimization. 
+
+DEHB has been shown to outperform other hyperparameter optimization methods on a variety of benchmark problems. @Eimer2023-kd discussed the hyperparameter optimization problem in the context of reinforcement learning (RL).
+They conducted a experimental study on the performance of various hyperparameter optimization methods, including random search, DEHB, and BGT. Their results show that DEHB has a good performance. @Eggensperger2021-kh developed a collection of multi-fidelity benchmark problems for HPO, called HPOBench. Their results also show that DEHB has a good performance.
+
+Another variant of Hyperband is BOHB [@Falkner2018-vd], which combines Hyperband with Bayesian optimization.  
+
+## Source Code
+
+- [AutoRL](https://github.com/facebookresearch/how-to-autorl)
+- [DEHB](https://github.com/automl/DEHB)
+- [BOHB](https://github.com/automl/BOHB)
+- [HPOBench](https://github.com/automl/HPOBench)
+
+## References
+
+:::{#refs}
+:::

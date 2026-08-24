@@ -1,0 +1,26 @@
+<!-- ZL monogram. Keeps the initials the old images/favicon.ico carried, redrawn
+     as outlines so the mark is the same on every platform — the letterforms are
+     paths, not a font the renderer has to substitute.
+
+     Geometric sans rather than the old serif: at 16px a serif's brackets and
+     thin strokes land below one pixel and grey out, which is what made the
+     previous icon soft. Cap height is 28 of 64 (44%) — large enough for the
+     two letters to stay apart at tab size, short enough to keep the tile from
+     looking crowded at 180px.
+
+     The gradient is centred on $brand-indigo (#3b4d9e) from scss/custom.scss.
+     After editing, regenerate favicon.ico and apple-touch-icon.png with
+     _tools/make-favicon.sh — they are built from this file, not drawn. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ziang Liu">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#33418f" />
+      <stop offset="100%" stop-color="#4557ad" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)" />
+  <g fill="#ffffff">
+    <path d="M10 18 H33 L18.2 39.4 H33 V46 H10 L24.8 24.6 H10 Z" />
+    <path d="M39 18 H45.6 V39.4 H54 V46 H39 Z" />
+  </g>
+</svg>

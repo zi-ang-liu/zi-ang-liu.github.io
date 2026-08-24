@@ -1,0 +1,1155 @@
+// =====================================================================
+// Shared rules for both themes.
+//
+// Imported by custom.scss (light) and dark_custom.scss (dark) at the top
+// of their /*-- scss:rules --*/ sections. Everything here is written
+// against tokens each theme defines in its own defaults block or just
+// above its @import.
+//
+// The vocabulary below is deliberately the same as the lab site's
+// (isl-hosei.github.io/scss/_shared.scss), which is the reference for
+// naming whenever the two sites disagree. Same names, different values:
+// this site is indigo, the lab site is cyan.
+//
+//   $accent         the one saturated brand colour
+//   $on-accent      text placed on an $accent fill
+//   $surface        raised panel background
+//   $border-soft    hairline border
+//   $shadow-hover   lifted card shadow
+//   $shadow-btn     button hover shadow
+//   $link-hover     link hover colour
+//
+// This site adds tokens the lab site has no counterpart for:
+//
+//   $muted-color    muted text — see the note in custom.scss. Now shared
+//                   vocabulary: the lab site adopted this token from here.
+//   $shadow-ambient resting card shadow      $shadow-lift    project-card hover
+//   $tint-row       list-row hover fill      $tint-pill      pill hover fill
+//   $tint-panel     theorem panel fill       $tint-panel-bd  theorem panel border
+//   $tint-outline   outlined-button border   $inline-code-bg inline `code` fill
+//
+// The tint and shadow tokens exist because dark surfaces need markedly more
+// opacity than light ones to show the same fill, so the values genuinely
+// cannot be hard-coded here.
+//
+// Anything that differs in *structure* between light and dark (navbar
+// colours, the SVG icon fills, code-block and form backgrounds) stays in
+// the theme file, after the @import.
+// =====================================================================
+
+// --- Shared devices --------------------------------------------------
+// Two shapes carry every small label and standalone link on the site. The
+// first matches the lab site's device of the same name:
+//
+//   chip   marks an attribute — a project's funder, a topic. Not a link.
+//   pill   a standalone outlined link — external profiles, lecture notes
+//
+// The chip's default fill is $accent; pass a colour for a neutral or coded
+// chip. Reach for these rather than hand-rolling a lookalike: the two shapes
+// are how the site says "label" and "link you can go to", and a third shape
+// in between reads as a fourth kind of thing.
+
+@mixin chip($fg: $accent) {
+  display: inline-block;
+  margin: 0;
+  padding: 0.16em 0.72em;
+  border: 0;
+  border-radius: 1em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: none; // Quarto uppercases some of these; wrong for Japanese
+  color: $fg;
+  background-color: rgba($fg, 0.12);
+}
+
+.chip {
+  @include chip;
+}
+
+// Quiet at rest — a hairline outline and body-coloured text, so a row of these
+// does not read as a block of colour. The accent arrives on hover, where it
+// signals the interaction rather than decorating the page.
+@mixin pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.32em 0.85em;
+  border: 1px solid $border-soft;
+  border-radius: 1em;
+  color: $body-color;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    color: $accent;
+    border-color: $accent;
+    background-color: $tint-pill;
+    transform: translateY(-1px);
+  }
+}
+
+// --- Typography ------------------------------------------------------
+
+// Litera sets paragraphs in its serif stack; the site is uniformly sans.
+p {
+  font-family: $font-family-sans-serif;
+}
+
+// Reading column
+//
+// There is deliberately no `max-width` here. The measure is set once, for the
+// whole site, by `grid: body-width` in _quarto.yml — see the note there. A
+// second cap on the prose alone is what made paragraphs stop short of
+// everything else in the column.
+//
+// Prose is justified. At ~73 characters the measure is long enough for the
+// browser to space a line without visible rivers, and `hyphens: auto` (which
+// needs the <html lang> Quarto already emits) keeps the worst gaps out of the
+// English text.
+main.content,
+#quarto-document-content {
+  p,
+  li {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    // Keep the breaks conservative: only words of 8+ characters, and only where
+    // a good chunk is left on each line. Unlimited, Chrome splits "inventory"
+    // as "invento-ry" and hyphenates several consecutive lines. (Measured, not
+    // assumed: Chrome honours these one character loosely than the spec reads,
+    // so the trailing fragment lands at 4+ characters rather than 5.)
+    hyphenate-limit-chars: 8 5 5;
+  }
+
+  // Structured blocks keep a ragged right. Their lines are short — a date entry,
+  // a card subtitle, a caption — and justifying a two-word line stretches it
+  // across the full column. `inherit` rather than `left` so the centred hero on
+  // narrow screens stays centred.
+  .hero p,
+  .news-list p,
+  .cv-list p,
+  .csl-entry,
+  .project-body p,
+  .course-list p,
+  .book-links p,
+  .period,
+  figcaption,
+  .quarto-figure p {
+    text-align: inherit;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+  }
+}
+
+// --- Links -----------------------------------------------------------
+
+// Subtle underline + smooth hover (Litera leaves these plain)
+a {
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 0.06em;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+// --- Navbar ----------------------------------------------------------
+// The dark theme adds its own colour block after the @import; only the
+// hairline and the hover transition are common to both.
+
+.navbar {
+  border-bottom: 1px solid $border-soft;
+
+  .nav-link {
+    transition: color 0.15s ease;
+  }
+}
+
+// --- Headings --------------------------------------------------------
+
+// Muted lead text (Litera uses $gray-600)
+.lead {
+  color: $muted-color;
+}
+
+// Headings breathe a little more
+h1,
+h2,
+h3 {
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+// Section headings — a short accent bar marks the sections.
+//
+// This site carried the bar on h2 only for a while, on the grounds that at two
+// levels the accent repeated too often to read as an accent. The lab site
+// settled on h2 + h3, and that is the shared device now: the bar marks
+// structure, and an h3 is structure. In practice the site has twelve h3s in
+// total, so the repetition the earlier note worried about does not arise.
+main.content {
+  h2,
+  // Listing item titles are also h3, but they are not section headings —
+  // the accent bar marks structure, not every bold line on the page.
+  h3:not(.listing-title) {
+    position: relative;
+    padding-left: 0.85rem;
+    padding-bottom: 0; // drop Quarto's default underline spacing
+    border-bottom: none; // replace the full-width underline with the accent bar
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.12em;
+      bottom: 0.12em;
+      width: 4px;
+      border-radius: 2px;
+      background-color: $accent;
+    }
+  }
+}
+
+// --- Buttons ---------------------------------------------------------
+
+// Pill buttons (Litera uses rounded buttons) — refine spacing/hover
+.btn {
+  transition: transform 0.08s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    box-shadow: $shadow-btn;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+// --- Cards & listings ------------------------------------------------
+// The dark theme fills these with $surface after the @import; in light they
+// keep Bootstrap's own card background.
+
+.card,
+.quarto-grid-item,
+.list-group-item {
+  border: 1px solid $border-soft;
+  border-radius: 0.5rem;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    box-shadow: $shadow-hover;
+    transform: translateY(-2px);
+  }
+}
+
+// --- Blockquotes -----------------------------------------------------
+
+// Litera italicizes these — add an accent rule.
+// $gray-700 rather than $muted-color, matching the lab site: quoted prose is
+// body text, so it should not be as recessive as the metadata labels.
+blockquote {
+  border-left: 3px solid $accent;
+  padding-left: 1rem;
+  color: $gray-700;
+}
+
+// --- About page (jolla) social links ---------------------------------
+
+.about-links .about-link {
+  transition: color 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+// --- Publications list -----------------------------------------------
+
+.pub-count {
+  font-weight: 400;
+  font-size: 0.7em;
+  color: $muted-color;
+  vertical-align: middle;
+}
+
+.csl-entry {
+  padding: 0.45rem 0.6rem;
+  margin-bottom: 0.2rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: $tint-row;
+  }
+
+  a:not(.doi-btn) {
+    word-break: break-word;
+  }
+}
+
+// Keep hanging indent inside the padded background (author-date CSLs use
+// margin-left, which would shrink/offset the hover box) by using padding.
+.hanging-indent div.csl-entry {
+  margin-left: 0;
+  padding-left: calc(0.6rem + 1.5em);
+  text-indent: -1.5em;
+}
+
+.doi-btn {
+  display: inline-block;
+  padding: 0.05rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  border: 1px solid $tint-outline;
+  border-radius: 1em;
+  color: $accent;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: 0.08em;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    background-color: $accent;
+    border-color: $accent;
+    color: $on-accent;
+  }
+}
+
+// --- Home hero -------------------------------------------------------
+//
+// Two rows inside one card, both filling the shared column width:
+//   [avatar] [name / role / affiliation / email]
+//   [------------- profile links -------------]
+// The links are a direct child of .hero (see index.qmd) with a 100% flex basis,
+// which forces the break. Beside the avatar they only had ~400px and wrapped
+// onto two lines of their own.
+.hero {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 1.75rem;
+  row-gap: 1.15rem;
+  margin: 1rem 0 2.5rem;
+  padding: 1.9rem 2.1rem;
+  background-color: $surface;
+  border: 1px solid $border-soft;
+  border-radius: 1rem;
+  box-shadow: $shadow-ambient;
+
+  // Pandoc wraps the bare <img> in a paragraph, whose bottom margin would add
+  // to the row gap.
+  > p {
+    margin: 0;
+  }
+}
+
+.hero-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 1rem;
+  object-fit: cover;
+  border: 1px solid $border-soft;
+  // Was its own $shadow-avatar token, identical to $shadow-hover in light but
+  // drifted to a different alpha in dark. One "raised" step, used by both.
+  box-shadow: $shadow-hover;
+  flex-shrink: 0;
+}
+
+.hero-content {
+  flex: 1 1 280px;
+  min-width: 240px;
+}
+
+// The links row: full width of the card, on its own line under avatar + text.
+// The hairline makes that break read as structure rather than as an overflow.
+// `width` rather than `flex-basis`, so the rule still means "full width" in the
+// column-direction hero used below 576px.
+.hero-links {
+  width: 100%;
+  padding-top: 1.05rem;
+  border-top: 1px solid $border-soft;
+}
+
+.hero-name {
+  display: block;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero-role {
+  display: block;
+  font-size: 1.05rem;
+  color: $muted-color;
+  margin-top: 0.35rem;
+}
+
+.hero-affil {
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
+
+.hero-email {
+  margin-top: 0.55rem;
+
+  p {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  // Muted at rest, like the other decorative icons; the link's tinted underline
+  // carries the emphasis here.
+  i {
+    color: $muted-color;
+  }
+
+  a {
+    color: $body-color;
+    text-decoration: none;
+    border-bottom: 1px solid rgba($accent, 0.35);
+    transition: color 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      color: $accent;
+      border-bottom-color: $accent;
+    }
+  }
+}
+
+.hero-links p,
+.profile-links p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.2rem 0;
+}
+
+// Inside the hero the row's spacing comes from the card's row-gap and the
+// hairline above it.
+.hero-links p {
+  margin: 0;
+}
+
+.hero-link,
+.profile-link {
+  @include pill;
+
+  // Muted at rest — these icons label the link, they don't need to shout.
+  // The accent arrives on hover, with the rest of the pill.
+  i {
+    color: $muted-color;
+    transition: color 0.15s ease;
+  }
+
+  &:hover i {
+    color: $accent;
+  }
+}
+
+// The email pill cannot carry its icon in the markup. Quarto's
+// `email-obfuscation: javascript` rewrites a mailto link with document.write and
+// entity-escapes the link *text*, so an `<i>` written inside it comes out as the
+// visible string `<i class="bi bi-envelope-fill"></i>`. The obfuscated link is
+// emitted as `class="email profile-link"`, which is the hook used here.
+// The pill is `display: inline-flex`, so ::before is a flex item and picks up the
+// row's gap on its own — no extra margin needed.
+.profile-link.email::before {
+  content: "\f32c"; // bi-envelope-fill
+  font-family: "bootstrap-icons";
+  font-weight: normal;
+  line-height: 1;
+  color: $muted-color;
+  transition: color 0.15s ease;
+}
+
+.profile-link.email:hover::before {
+  color: $accent;
+}
+
+@media (max-width: 575.98px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.75rem 1.5rem;
+  }
+
+  // Once the card stacks, flex-basis is a *height*: the 280px below would sit
+  // under the text as empty space before the links row.
+  .hero-content {
+    flex: 0 1 auto;
+  }
+
+  .hero-links p {
+    justify-content: center;
+  }
+}
+
+// --- Inline info links -----------------------------------------------
+// Used for the "Research · Publications · Full CV" style rows.
+// (The .info-grid / .info-card rules that used to live here went with the Lab
+// and Contact cards on the home page — see the note in index.qmd.)
+
+.info-link {
+  font-weight: 500;
+  text-decoration: none;
+  color: $link-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// --- Dated entry lists -----------------------------------------------
+// News on the home page, every section of the CV page.
+// Each markdown paragraph becomes one row: the date label sits in a fixed left
+// column, the entry text in the second, so the dates form a clean vertical rule.
+// NOTE: deliberately *not* `display: grid` on the paragraph. Grid promotes every
+// child to a grid item, so an entry like "<span>2021</span> <strong>Title</strong>,
+// Okayama University" yields three items and the trailing text wraps back into
+// the date column. Absolute-positioning the label is immune to how much inline
+// markup an entry happens to contain.
+
+.news-list,
+.cv-list {
+  margin: 1.1rem 0 1.75rem;
+
+  p {
+    position: relative;
+    padding-left: 8.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  // Below ~576px there isn't room for a label column; stack the date above.
+  @media (max-width: 575.98px) {
+    p {
+      padding-left: 0;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Deliberately muted rather than accent-coloured: the dates are scaffolding,
+// not the point, and the site already leans hard on $accent elsewhere.
+.news-date,
+.cv-when {
+  position: absolute;
+  left: 0;
+  top: 0.3em; // optically align with the first line of the entry text
+  width: 7rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  // These sit in a fixed-width label column, so the digits should line up
+  // between rows — proportional figures make "2021" and "2025–" ragged.
+  // (Borrowed from the lab site's listing dates.)
+  font-variant-numeric: tabular-nums;
+  color: $muted-color;
+
+  @media (max-width: 575.98px) {
+    position: static;
+    display: block;
+    width: auto;
+    margin-bottom: 0.15rem;
+  }
+}
+
+// --- Blog listing ----------------------------------------------------
+// Quarto's `type: default` listing, restyled from boxed cards into a dated
+// list — the same treatment the lab site gives its news feed, and worth
+// borrowing here because the stock card grid has the same three problems on
+// this site: it leaves ragged empty cells whenever the post count is not a
+// multiple of the column count, stretches every row to the tallest card, and
+// buries the date at the bottom in small grey type.
+//
+// A list is also the honest shape for this site specifically: the hand-built
+// .news-list and .cv-list above are already dated lists, so the blog index now
+// reads as the same kind of object rather than as a third layout.
+
+.quarto-listing-default {
+  border-top: 1px solid $border-soft;
+}
+
+// Quarto ends the default listing with `margin-right: 2em` — 35.7px here — so
+// the post rules and the filter box stopped that far short of the h1 and the
+// intro line above them. The page grid already spaces the listing from the
+// category sidebar, so nothing needs this margin.
+.quarto-listing-container-default {
+  margin-right: 0;
+}
+
+// Quarto's own listing rules are written as `div.quarto-post ...`, so every
+// override below has to carry at least that much specificity — a bare
+// `.quarto-post` loses to it regardless of source order.
+div.quarto-post {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin-bottom: 0; // Quarto adds 1.5em; the row padding spaces these instead
+  padding: 1.35rem 0;
+  border-bottom: 1px solid $border-soft;
+
+  // Quarto emits thumbnail → body → metadata; the date leads here instead
+  .metadata {
+    order: 1;
+    padding-bottom: 0;
+  }
+  .body {
+    order: 2;
+  }
+  .thumbnail {
+    order: 3;
+  }
+
+  @media (min-width: 640px) {
+    grid-template-columns: 6.5rem 1fr 9rem;
+    align-items: start;
+    gap: 0 1.6rem;
+  }
+
+  // The whole metadata column is wrapped in one <a> by Quarto
+  .metadata a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .metadata .listing-date {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    // Matches .news-date / .cv-when — these are the same kind of label
+    font-variant-numeric: tabular-nums;
+    line-height: 1.6;
+    color: $muted-color;
+    white-space: nowrap;
+
+    @media (min-width: 640px) {
+      padding-top: 0.25rem;
+    }
+  }
+
+  // Author and reading time are secondary to the date; quieter and smaller.
+  // The author is the same person on every post, so it earns very little.
+  .metadata .listing-author,
+  .metadata .listing-reading-time {
+    font-size: 0.76rem;
+    line-height: 1.55;
+    color: $muted-color;
+  }
+
+  .metadata .listing-author {
+    display: none; // single-author site: the byline is noise on every row
+  }
+
+  .body .listing-title {
+    margin: 0 0 0.45rem;
+    // The accent bar belongs to section headings; listing titles opt out via
+    // h3:not(.listing-title), so no padding-left correction is needed here.
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.5;
+
+    a {
+      color: $body-color;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+  }
+
+  .body .listing-description {
+    margin-bottom: 0;
+    font-size: 0.89rem;
+    line-height: 1.7;
+    color: $muted-color;
+    // Two lines keeps every row the same shape however long the post is
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    // Descriptions are short; a ragged right beats a stretched two-word line
+    text-align: inherit;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  .thumbnail p {
+    margin: 0;
+  }
+
+  .thumbnail img {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border: 1px solid $border-soft;
+    border-radius: 0.5rem;
+  }
+
+  &:hover .body .listing-title a {
+    color: $accent;
+  }
+
+  .listing-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.55rem;
+    padding-bottom: 0;
+  }
+
+  .listing-categories .listing-category {
+    @include chip;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+
+    &:hover {
+      background-color: rgba($accent, 0.22);
+    }
+  }
+}
+
+// On narrow screens the thumbnail would otherwise run the full column width
+@media (max-width: 639.98px) {
+  div.quarto-post .thumbnail img {
+    max-width: 11rem;
+  }
+}
+
+// Category filter in the margin sidebar
+.quarto-listing-category-title {
+  position: relative;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $body-color;
+
+  // The accent bar turned horizontal — same device as the section headings
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 26px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $accent;
+  }
+}
+
+.quarto-listing-category .category {
+  padding: 0.2rem 0;
+  font-size: 0.86rem;
+  color: $muted-color;
+  cursor: pointer;
+  transition: color 0.15s ease;
+
+  &:hover,
+  &.active {
+    color: $accent;
+  }
+
+  .quarto-category-count {
+    font-variant-numeric: tabular-nums;
+    color: $gray-500;
+  }
+}
+
+// --- Project cards (clickable link cards) ----------------------------
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $border-soft;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: $surface;
+  color: $body-color;
+  text-decoration: none;
+  transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: $accent;
+    box-shadow: $shadow-lift;
+
+    .project-title {
+      color: $accent;
+    }
+  }
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1rem 1.1rem 1.2rem;
+
+  // Cards without a .project-img need the extra breathing room at the top that
+  // the image would otherwise have provided.
+  .project-img + & {
+    padding-top: 1rem;
+  }
+
+  &:first-child {
+    padding-top: 1.25rem;
+  }
+}
+
+.project-tag {
+  @include chip;
+  align-self: flex-start; // the card body is a flex column
+}
+
+.project-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.35;
+  transition: color 0.15s ease;
+}
+
+.project-subtitle {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: $muted-color;
+}
+
+.project-meta {
+  font-size: 0.78rem;
+  color: $muted-color;
+}
+
+// --- Course list (teaching page) -------------------------------------
+//
+// Courses were a two-column grid of bordered cards, each carrying up to four
+// chips. With the card grids, the period strip and the lecture-note cards, the
+// teaching page held fourteen outlined boxes and sixteen chips at once — a lot
+// of ornament for what is really a six-row list of facts, and the teal/amber
+// semester chips were the loudest colour anywhere on the site.
+//
+// So this is the same device as .news-list / .cv-list above rather than a
+// third card component: a fixed left label column, the entry to its right, and
+// hairlines between rows instead of a border around every one. The label holds
+// the term, which is what a reader groups courses by; year, period and room
+// are one muted line under the title, since nobody scans those — they read
+// them once they have found the course.
+//
+// Same caveat as .news-list on the absolute label: `display: grid` on the row
+// would promote the title, the <br> and the meta span to grid items.
+
+.course-list {
+  margin: 1.1rem 0 1.75rem;
+  border-bottom: 1px solid $border-soft;
+
+  p {
+    position: relative;
+    padding: 0.7rem 0 0.7rem 5.4rem;
+    margin-bottom: 0;
+    border-top: 1px solid $border-soft;
+  }
+
+  // Below ~576px there isn't room for a label column; stack the term above.
+  @media (max-width: 575.98px) {
+    p {
+      padding-left: 0;
+    }
+  }
+}
+
+// Scaffolding, like .news-date — muted, not accent-coloured. The `top` offset
+// optically aligns it with the title's first line: it clears the row's 0.7rem
+// padding, plus half the difference between the two line boxes.
+.course-term {
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 4.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: $muted-color;
+
+  @media (max-width: 575.98px) {
+    position: static;
+    display: block;
+    width: auto;
+    margin-bottom: 0.1rem;
+  }
+}
+
+.course-name {
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.4;
+}
+
+// Courses whose lecture notes are published carry a real link, and the link
+// colour is the whole affordance — no ↗, no card lift. The graduate courses
+// have no notes, so their titles stay body-coloured spans, which is also what
+// tells the two apart at a glance.
+a.course-name {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover;
+    text-decoration: underline;
+  }
+}
+
+.course-meta {
+  font-size: 0.82rem;
+  color: $muted-color;
+}
+
+// --- Class-period strip (teaching page) ------------------------------
+// One object with hairline dividers, not five separate cards: the strip is a
+// single reference table, and five bordered boxes said otherwise.
+//
+// The dividers are the 1px grid gaps showing the container's background
+// through, so they never double up the way five separate bordered cells would.
+// The cells therefore need an *opaque* fill, and take $body-bg rather than
+// $surface — the strip is reference material, not a raised panel.
+//
+// `grid-auto-flow: column` rather than `repeat(auto-fit, minmax(...))`: auto-fit
+// wraps, and a wrapped row leaves empty tracks, which under this divider trick
+// show up as a solid grey block rather than as nothing. The columns instead
+// stay on one line at any width and become full-width rows below 576px, where
+// five columns would be unreadable anyway.
+
+.period-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 1px;
+  background-color: $border-soft;
+  border: 1px solid $border-soft;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 1.25rem 0 1.75rem;
+
+  @media (max-width: 575.98px) {
+    grid-auto-flow: row;
+  }
+}
+
+.period {
+  padding: 0.6rem 0.5rem;
+  text-align: center;
+  background-color: $body-bg;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: $muted-color;
+
+  // Stacked, each period is one wide row, so the number and the time read
+  // better side by side than one above the other.
+  @media (max-width: 575.98px) {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 0.9rem;
+    text-align: left;
+
+    > p {
+      display: contents; // dissolve Pandoc's wrapper so strong is a flex item
+    }
+
+    strong {
+      display: inline;
+    }
+  }
+
+  // Each cell's content is a Pandoc paragraph, and Bootstrap's 1rem of
+  // paragraph margin lands *inside* the cell as dead space above the divider.
+  p {
+    margin-bottom: 0;
+  }
+
+  // Period numbers carry no link or action — weight is enough to separate them
+  // from the times below without spending the accent colour on them.
+  strong {
+    display: block;
+    font-size: 0.9rem;
+    color: $body-color;
+  }
+}
+
+// --- Lecture-note links (teaching page) ------------------------------
+// Pills, not cards. The section is five short titles and nothing else; as
+// bordered cards they were the third stack of boxes on one page, and the row
+// reads as what it is — a short list of places to go.
+
+.book-item {
+  @include pill;
+}
+
+.book-links p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.1rem 0 1.75rem;
+}
+
+// --- Theorem-type blocks ---------------------------------------------
+// (:::{#exm-...}, #thm-, #def-, ...) — tinted card
+// (no left accent bar: that's reserved for section headings)
+
+div.theorem {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background-color: $tint-panel;
+  border: 1px solid $tint-panel-bd;
+  border-radius: 0.5rem;
+
+  .theorem-title {
+    color: $accent;
+  }
+
+  > p:last-child,
+  > :last-child p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// --- Code ------------------------------------------------------------
+// The dark theme adds the block background and text colour after the @import.
+
+pre,
+pre.sourceCode,
+div.sourceCode {
+  border: 1px solid $border-soft;
+  border-radius: 0.5rem;
+}
+
+code:not(.sourceCode) {
+  color: $code-color;
+  background-color: $inline-code-bg;
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+}
+
+// --- Tables ----------------------------------------------------------
+
+.table {
+  --bs-table-color: #{$body-color};
+  --bs-table-border-color: #{$border-soft};
+}
+
+// --- Footer ----------------------------------------------------------
+// The dark theme adds the background fill after the @import.
+
+footer,
+.page-footer,
+.nav-footer {
+  border-top: 1px solid $border-soft;
+  color: $muted-color;
+}
+
+// Quarto's footer bar is full-bleed with 1em of side padding, and it divides
+// itself into three equal flex columns. Both defaults work against this site:
+//
+//   * the address block sat 15.6px from the window edge — roughly 390px to the
+//     left of the column every other line on the page occupies, and not even
+//     level with the navbar brand, which starts at ~29px;
+//   * a third of the bar is narrower than the address between 768px and about
+//     1000px, so its two lines wrapped into four while the rest of the bar sat
+//     empty.
+//
+// Cap the row at the reading measure (`grid: body-width` in _quarto.yml, which
+// renders as a ~636px column) and let each block take the width it needs.
+footer.footer .nav-footer {
+  // The padding is added on top of the measure, not taken out of it, so the
+  // address starts on the same line as the prose above it rather than 1.5rem
+  // inside it.
+  max-width: calc(640px + 3rem);
+  margin-inline: auto;
+  // Quarto's 0.5rem wedged the two lines between the hairline above and the
+  // bottom of the window.
+  padding: 1.25rem 1.5rem;
+  gap: 0.5rem 2rem;
+}
+
+// Between 768px and 992px Quarto narrows its own body column from 636px to
+// 586px — the margin columns of its grid change size there but `body-width`
+// does not. Follow it, or the bar would sit 27px wider than the text on either
+// side for the whole tablet range.
+@media (min-width: 768px) and (max-width: 991.98px) {
+  footer.footer .nav-footer {
+    max-width: calc(586px + 3rem);
+  }
+}
+
+// Only above 768px, where Quarto imposes the equal thirds. The stacked
+// single-column layout it switches to below 576px is right as it is.
+@media (min-width: 768px) {
+  .nav-footer .nav-footer-left,
+  .nav-footer .nav-footer-right {
+    flex: 0 1 auto;
+  }
+}
+
+// Quarto emits .nav-footer-center on every page and fills it with `&nbsp;`
+// when the config has no `center:` block — so `:empty` never matches it. Below
+// 768px it takes `flex: 100%` on top of a 3em min-height and a 3em top margin,
+// which added ~100px of blank bar to a footer with nothing to put there.
+// Delete this rule if `page-footer.center` is ever filled in _quarto.yml.
+.nav-footer .nav-footer-center {
+  display: none;
+}
+
+// --- Horizontal rules ------------------------------------------------
+
+hr {
+  border-top-color: $border-soft;
+  opacity: 1;
+}
+
+// --- Search / form fields --------------------------------------------
+// The dark theme adds the field background and text colour after the @import.
+
+.form-control,
+input {
+  border-color: $border-soft;
+
+  &:focus {
+    border-color: $accent;
+  }
+}
