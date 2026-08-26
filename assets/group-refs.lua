@@ -23,10 +23,14 @@ local function cat_of(reftype)
   reftype = (reftype or ""):lower()
   if reftype == "article-journal" or reftype == "article" then
     return 1
-  elseif reftype == "paper-conference" then
+  elseif reftype == "paper-conference" or reftype == "chapter" then
+    -- "chapter" lands here because every @incollection in references.bib is an
+    -- IFIP AICT (APMS) paper -- a proceedings volume in a book series, like
+    -- LNCS -- not an invited book chapter. Move it back to 3 if a real chapter
+    -- is ever added; the Book Chapters section reappears on its own.
     return 2
   else
-    return 3 -- chapter, book, entry, ...
+    return 3 -- book, entry, ...
   end
 end
 
