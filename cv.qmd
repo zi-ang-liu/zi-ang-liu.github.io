@@ -99,6 +99,12 @@ Project details on the [Research](research.qmd){.info-link} page.
 [2021]{.cv-when} **Organizing Committee**, 65th Annual Conference of the Institute of Systems, Control and Information Engineers (SCI'21)
 :::
 
+<!-- 
+2026/8/22~ 第71回 システム制御情報学会 研究発表講演会 プログラムオーガナイザー 
+2026/8/28~ International Symposium on Scheduling 2027 現地実行委員
+2027年7月にスケジューリング学会の国際シンポジウムを立命館大学大阪いばらきキャンパス
+-->
+
 ### Session Chair
 
 *Annual Conference of the Institute of Systems, Control and Information Engineers* (2022, 2024) · *JSME Manufacturing Systems Division Conference* (MSD2024) · *Scheduling Symposium* (2023)
