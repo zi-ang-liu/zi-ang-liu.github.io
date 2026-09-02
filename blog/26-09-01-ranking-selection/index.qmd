@@ -1,0 +1,31 @@
+---
+title: "Ranking and Selection"
+author: "Ziang Liu"
+date: "2026-07-20"
+categories: ["Operations Research", "Simulation"]
+bibliography: ["references.bib"]
+page-layout: article
+draft: true
+---
+
+@Kim2001-vv proposed the fully sequential, indifference-zone selection procedure.
+
+```pseudocode
+#| label: algo-indifference-zone-selection
+
+\begin{algorithm}
+\caption{Fully Sequential, Indifference-Zone Selection Procedure}
+\begin{algorithmic}
+\Require indifference zone $\delta$, first-stage  sample  size $n_0$, confidence level $1-\alpha$
+\State $\eta = \frac{1}{2} \left[ \left( \frac{2\alpha}{k-1} \right)^{-2/(n_0-1)} - 1 \right]$
+\State $t^2 = 2 \eta (n_0 - 1)$
+\State Obtain $n_0$ observations $Y_j (\mathbf{x}_i)$
+
+\end{algorithmic}
+\end{algorithm}
+```
+
+## References
+
+:::{#refs}
+:::
