@@ -103,6 +103,21 @@ ul.task-list li input[type="checkbox"] {
 <script src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"></script>
 
 <!--
+  KaTeX's stylesheet, unconditionally.
+
+  Quarto only emits its KaTeX <link>/<script> pair when pandoc finds math in the
+  document, and math written *inside* a ```pseudocode block is a code block to
+  pandoc — invisible to that check. On a page whose only math lives in an
+  algorithm, Quarto therefore ships no KaTeX at all: pseudocode.js still calls
+  katex.renderToString (the script above), but the unstyled output collapses —
+  fractions stack as plain digits, \left(...\right) delimiters lose their size,
+  and the MathML fallback shows up as duplicated text. Loading the CSS here
+  covers that case; on pages that do have prose math it is the same pinned URL
+  as Quarto's own link, so it costs a cache hit rather than a second download.
+-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css">
+
+<!--
   Follow the visitor's OS light/dark preference.
 
   Quarto picks the first theme listed under `theme:` for everyone and only ever
@@ -501,6 +516,11 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail profile-
 <p><span class="cv-when">2023</span> <strong>Organizing Committee</strong>, 67th Annual Conference of the Institute of Systems, Control and Information Engineers (SCI’23)</p>
 <p><span class="cv-when">2021</span> <strong>Organizing Committee</strong>, 65th Annual Conference of the Institute of Systems, Control and Information Engineers (SCI’21)</p>
 </div>
+<!-- 
+2026/8/22~ 第71回 システム制御情報学会 研究発表講演会 プログラムオーガナイザー 
+2026/8/28~ International Symposium on Scheduling 2027 現地実行委員
+2027年7月にスケジューリング学会の国際シンポジウムを立命館大学大阪いばらきキャンパス
+-->
 <section id="session-chair" class="level3">
 <h3 class="anchored" data-anchor-id="session-chair">Session Chair</h3>
 <p><em>Annual Conference of the Institute of Systems, Control and Information Engineers</em> (2022, 2024) · <em>JSME Manufacturing Systems Division Conference</em> (MSD2024) · <em>Scheduling Symposium</em> (2023)</p>

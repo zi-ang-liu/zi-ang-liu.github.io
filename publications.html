@@ -122,6 +122,21 @@ div.csl-indent {
 <script src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"></script>
 
 <!--
+  KaTeX's stylesheet, unconditionally.
+
+  Quarto only emits its KaTeX <link>/<script> pair when pandoc finds math in the
+  document, and math written *inside* a ```pseudocode block is a code block to
+  pandoc — invisible to that check. On a page whose only math lives in an
+  algorithm, Quarto therefore ships no KaTeX at all: pseudocode.js still calls
+  katex.renderToString (the script above), but the unstyled output collapses —
+  fractions stack as plain digits, \left(...\right) delimiters lose their size,
+  and the MathML fallback shows up as duplicated text. Loading the CSS here
+  covers that case; on pages that do have prose math it is the same pinned URL
+  as Quarto's own link, so it costs a cache hit rather than a second download.
+-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css">
+
+<!--
   Follow the visitor's OS light/dark preference.
 
   Quarto picks the first theme listed under `theme:` for everyone and only ever
