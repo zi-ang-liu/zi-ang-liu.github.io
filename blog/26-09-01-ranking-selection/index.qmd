@@ -5,25 +5,51 @@ date: "2026-07-20"
 categories: ["Operations Research", "Simulation"]
 bibliography: ["references.bib"]
 page-layout: article
-draft: true
+draft: false
 ---
 
-@Kim2001-vv proposed the fully sequential, indifference-zone selection procedure.
+## Fully Sequential, Indifference-Zone Selection Procedure
+
+@Kim2001-vv proposed the fully sequential, indifference-zone selection procedure shown in @algo-indifference-zone-selection.
+The presentation below follows @Nelson2021-fs, in which the best alternative $\mathbf{x}_B$ is the one with the *smallest* expected performance, $\theta(\mathbf{x}_B) = \min_i \theta(\mathbf{x}_i)$.
+@Kim2001-vv state the procedure for maximization, where the screening inequality is reversed.
 
 ```pseudocode
 #| label: algo-indifference-zone-selection
+#| html-indent-lines: true
 
 \begin{algorithm}
 \caption{Fully Sequential, Indifference-Zone Selection Procedure}
 \begin{algorithmic}
-\Require indifference zone $\delta$, first-stage  sample  size $n_0$, confidence level $1-\alpha$
-\State $\eta = \frac{1}{2} \left[ \left( \frac{2\alpha}{k-1} \right)^{-2/(n_0-1)} - 1 \right]$
-\State $t^2 = 2 \eta (n_0 - 1)$
-\State Obtain $n_0$ observations $Y_j (\mathbf{x}_i)$
+\Require alternatives $\mathbf{x}_1, \ldots, \mathbf{x}_k$, indifference zone $\delta$, first-stage sample size $n_0 \geq 2$, confidence level $1-\alpha$
+\Ensure $\hat{\mathbf{x}}_B$, the selected best alternative
+
+\State $\eta \leftarrow \frac{1}{2} \left[ \left( \frac{2\alpha}{k-1} \right)^{-2/(n_0-1)} - 1 \right]$
+\State $t^2 \leftarrow 2 \eta (n_0 - 1)$
+\State $I \leftarrow \{\mathbf{x}_1, \ldots, \mathbf{x}_k\}$, $\quad r \leftarrow n_0$
+\State Obtain $Y_j (\mathbf{x}_i)$ for $j = 1, \ldots, n_0$ and $i = 1, \ldots, k$
+\State $S_{ih}^2 \leftarrow \frac{1}{n_0 - 1} \sum_{j=1}^{n_0} \left( Y_j (\mathbf{x}_i) - Y_j (\mathbf{x}_h) - \left[ \bar{Y} (\mathbf{x}_i;n_0) - \bar{Y} (\mathbf{x}_h;n_0) \right] \right)^2$ for all $i \neq h$
+
+\Repeat
+    \State $I_\text{old} \leftarrow I$
+    \State $W_{ih}(r) \leftarrow \max \left\{ 0, \frac{\delta}{2r} \left[ \frac{t^2 S_{ih}^2}{\delta^2} - r \right] \right\}$ for all $\mathbf{x}_i, \mathbf{x}_h \in I_\text{old}$ with $i \neq h$
+    \State $I \leftarrow \left\{ \mathbf{x}_i \in I_\text{old} : \bar{Y} (\mathbf{x}_i;r) \leq \bar{Y} (\mathbf{x}_h;r) + W_{ih}(r) \ \ \forall \mathbf{x}_h \in I_\text{old} \setminus \{\mathbf{x}_i\} \right\}$
+    \If{$|I| > 1$}
+        \State Obtain $Y_{r+1} (\mathbf{x}_i)$ and update $\bar{Y} (\mathbf{x}_i;r+1)$ for all $\mathbf{x}_i \in I$
+        \State $r \leftarrow r + 1$
+    \EndIf
+\Until{$|I| = 1$}
+\Return $\hat{\mathbf{x}}_B$, the single alternative in $I$
 
 \end{algorithmic}
 \end{algorithm}
 ```
+
+Both $t^2$ and $S_{ih}^2$ are computed once in the first stage and are never updated as more observations arrive; only the sample means $\bar{Y} (\mathbf{x}_i;r)$ and the counter $r$ change from one screening to the next.
+
+As the algorithm proceeds, $r$ increases and $W_{ih}(r)$ decreases, reaching $0$ once $r \geq \frac{t^2 S_{ih}^2}{\delta^2}$. Once every pair has reached that point, that is, once $r \geq \max_{i \neq h} \frac{t^2 S_{ih}^2}{\delta^2}$, screening simply compares the sample means of the remaining alternatives, and all but the one with the smallest sample mean are eliminated. This bounds the run length: @Kim2001-vv show that the procedure stops by $r = \max_i N_i + 1$, where $N_i = \max_{h \neq i} \lfloor t^2 S_{ih}^2 / \delta^2 \rfloor$.
+
+
 
 ## References
 
