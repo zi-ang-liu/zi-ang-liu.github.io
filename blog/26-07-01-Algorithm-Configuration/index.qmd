@@ -5,7 +5,7 @@ date: "2025-10-10"
 categories: ["Optimization"]
 bibliography: ["references.bib"]
 page-layout: article
-draft: false
+draft: true
 ---
 
 Let $\mathcal{I}$ be the set of problem instances, $\mathcal{D}$ be the probability distribution over $\mathcal{I}$. Let $p_1, p_2, \ldots, p_k$ be the parameters of an algorithm. The domain of each parameter $p_i$ is denoted as $\Theta_i$, and the parameter space is defined as $\Theta = \Theta_1 \times \Theta_2 \times \ldots \times \Theta_k$. Note that the the domain of each parameter can be continuous, discrete, or categorical. The parameter configuration of the algorithm is denoted as $\theta = (p_1, p_2, \ldots, p_k) \in \Theta$.
