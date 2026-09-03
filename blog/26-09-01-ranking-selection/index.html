@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ziang Liu">
-<meta name="dcterms.date" content="2026-07-20">
+<meta name="dcterms.date" content="2026-09-01">
 
 <title>Ranking and Selection – Ziang Liu</title>
 <style>
@@ -69,9 +69,9 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-959295b59630de3d8499169efe1922db.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5773259e2de0835fadf102871d8df01a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-ce0177deb5993836365736f0395fdb73.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-5773259e2de0835fadf102871d8df01a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-367d22c62e5ccfa04f52880034e9663c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-9633fa659ac178616663c1a607ab2eee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-367d22c62e5ccfa04f52880034e9663c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
 <link href="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -500,7 +500,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 20, 2026</p>
+      <p class="date">September 1, 2026</p>
     </div>
   </div>
   
@@ -515,7 +515,7 @@ window.Quarto = {
 <section id="fully-sequential-indifference-zone-selection-procedure" class="level2">
 <h2 class="anchored" data-anchor-id="fully-sequential-indifference-zone-selection-procedure">Fully Sequential, Indifference-Zone Selection Procedure</h2>
 <p><span class="citation" data-cites="Kim2001-vv">Kim and Nelson (<a href="#ref-Kim2001-vv" role="doc-biblioref">2001</a>)</span> proposed the fully sequential, indifference-zone selection procedure shown in <a href="#algo-indifference-zone-selection" class="quarto-xref">Algorithm 1</a>. The presentation below follows <span class="citation" data-cites="Nelson2021-fs">Nelson and Pei (<a href="#ref-Nelson2021-fs" role="doc-biblioref">2021</a>)</span>, in which the best alternative <span class="math inline">\mathbf{x}_B</span> is the one with the <em>smallest</em> expected performance, <span class="math inline">\theta(\mathbf{x}_B) = \min_i \theta(\mathbf{x}_i)</span>. <span class="citation" data-cites="Kim2001-vv">Kim and Nelson (<a href="#ref-Kim2001-vv" role="doc-biblioref">2001</a>)</span> state the procedure for maximization, where the screening inequality is reversed.</p>
-<div id="algo-indifference-zone-selection" class="pseudocode-container quarto-float" data-pseudocode-number="1" data-line-number="true" data-comment-delimiter="//" data-line-number-punc=":" data-no-end="false" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-indent-lines="true">
+<div id="algo-indifference-zone-selection" class="pseudocode-container quarto-float" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-pseudocode-number="1" data-no-end="false" data-line-number-punc=":" data-line-number="true" data-indent-lines="true" data-indent-size="1.2em">
 <div class="pseudocode">
 \begin{algorithm} \caption{Fully Sequential, Indifference-Zone Selection Procedure} \begin{algorithmic} \Require alternatives $\mathbf{x}_1, \ldots, \mathbf{x}_k$, indifference zone $\delta$, first-stage sample size $n_0 \geq 2$, confidence level $1-\alpha$ \Ensure $\hat{\mathbf{x}}_B$, the selected best alternative \State $\eta \leftarrow \frac{1}{2} \left[ \left( \frac{2\alpha}{k-1} \right)^{-2/(n_0-1)} - 1 \right]$ \State $t^2 \leftarrow 2 \eta (n_0 - 1)$ \State $I \leftarrow \{\mathbf{x}_1, \ldots, \mathbf{x}_k\}$, $\quad r \leftarrow n_0$ \State Obtain $Y_j (\mathbf{x}_i)$ for $j = 1, \ldots, n_0$ and $i = 1, \ldots, k$ \State $S_{ih}^2 \leftarrow \frac{1}{n_0 - 1} \sum_{j=1}^{n_0} \left( Y_j (\mathbf{x}_i) - Y_j (\mathbf{x}_h) - \left[ \bar{Y} (\mathbf{x}_i;n_0) - \bar{Y} (\mathbf{x}_h;n_0) \right] \right)^2$ for all $i \neq h$ \Repeat \State $I_\text{old} \leftarrow I$ \State $W_{ih}(r) \leftarrow \max \left\{ 0, \frac{\delta}{2r} \left[ \frac{t^2 S_{ih}^2}{\delta^2} - r \right] \right\}$ for all $\mathbf{x}_i, \mathbf{x}_h \in I_\text{old}$ with $i \neq h$ \State $I \leftarrow \left\{ \mathbf{x}_i \in I_\text{old} : \bar{Y} (\mathbf{x}_i;r) \leq \bar{Y} (\mathbf{x}_h;r) + W_{ih}(r) \ \ \forall \mathbf{x}_h \in I_\text{old} \setminus \{\mathbf{x}_i\} \right\}$ \If{$|I| &gt; 1$} \State Obtain $Y_{r+1} (\mathbf{x}_i)$ and update $\bar{Y} (\mathbf{x}_i;r+1)$ for all $\mathbf{x}_i \in I$ \State $r \leftarrow r + 1$ \EndIf \Until{$|I| = 1$} \Return $\hat{\mathbf{x}}_B$, the single alternative in $I$ \end{algorithmic} \end{algorithm}
 </div>
