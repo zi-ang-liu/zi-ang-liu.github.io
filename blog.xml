@@ -126,6 +126,47 @@ Sachs, Anna-Lena, and Stefan Minner. 2014. <span>“The Data-Driven Newsvendor w
   <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Ranking and Selection</title>
+  <dc:creator>Ziang Liu</dc:creator>
+  <link>https://zi-ang-liu.github.io/blog/26-09-01-ranking-selection/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="fully-sequential-indifference-zone-selection-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="fully-sequential-indifference-zone-selection-procedure">Fully Sequential, Indifference-Zone Selection Procedure</h2>
+<p><span class="citation" data-cites="Kim2001-vv">Kim and Nelson (2001)</span> proposed the fully sequential, indifference-zone selection procedure shown in Algorithm 1. The presentation below follows <span class="citation" data-cites="Nelson2021-fs">Nelson and Pei (2021)</span>, in which the best alternative <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_B"> is the one with the <em>smallest</em> expected performance, <img src="https://latex.codecogs.com/png.latex?%5Ctheta(%5Cmathbf%7Bx%7D_B)%20=%20%5Cmin_i%20%5Ctheta(%5Cmathbf%7Bx%7D_i)">. <span class="citation" data-cites="Kim2001-vv">Kim and Nelson (2001)</span> state the procedure for maximization, where the screening inequality is reversed.</p>
+<div id="algo-indifference-zone-selection" class="pseudocode-container quarto-float" data-pseudocode-number="1" data-line-number="true" data-comment-delimiter="//" data-line-number-punc=":" data-no-end="false" data-indent-size="1.2em" data-caption-prefix="Algorithm" data-indent-lines="true">
+<div class="pseudocode">
+\begin{algorithm} \caption{Fully Sequential, Indifference-Zone Selection Procedure} \begin{algorithmic} \Require alternatives $\mathbf{x}_1, \ldots, \mathbf{x}_k$, indifference zone $\delta$, first-stage sample size $n_0 \geq 2$, confidence level $1-\alpha$ \Ensure $\hat{\mathbf{x}}_B$, the selected best alternative \State $\eta \leftarrow \frac{1}{2} \left[ \left( \frac{2\alpha}{k-1} \right)^{-2/(n_0-1)} - 1 \right]$ \State $t^2 \leftarrow 2 \eta (n_0 - 1)$ \State $I \leftarrow \{\mathbf{x}_1, \ldots, \mathbf{x}_k\}$, $\quad r \leftarrow n_0$ \State Obtain $Y_j (\mathbf{x}_i)$ for $j = 1, \ldots, n_0$ and $i = 1, \ldots, k$ \State $S_{ih}^2 \leftarrow \frac{1}{n_0 - 1} \sum_{j=1}^{n_0} \left( Y_j (\mathbf{x}_i) - Y_j (\mathbf{x}_h) - \left[ \bar{Y} (\mathbf{x}_i;n_0) - \bar{Y} (\mathbf{x}_h;n_0) \right] \right)^2$ for all $i \neq h$ \Repeat \State $I_\text{old} \leftarrow I$ \State $W_{ih}(r) \leftarrow \max \left\{ 0, \frac{\delta}{2r} \left[ \frac{t^2 S_{ih}^2}{\delta^2} - r \right] \right\}$ for all $\mathbf{x}_i, \mathbf{x}_h \in I_\text{old}$ with $i \neq h$ \State $I \leftarrow \left\{ \mathbf{x}_i \in I_\text{old} : \bar{Y} (\mathbf{x}_i;r) \leq \bar{Y} (\mathbf{x}_h;r) + W_{ih}(r) \ \ \forall \mathbf{x}_h \in I_\text{old} \setminus \{\mathbf{x}_i\} \right\}$ \If{$|I| &gt; 1$} \State Obtain $Y_{r+1} (\mathbf{x}_i)$ and update $\bar{Y} (\mathbf{x}_i;r+1)$ for all $\mathbf{x}_i \in I$ \State $r \leftarrow r + 1$ \EndIf \Until{$|I| = 1$} \Return $\hat{\mathbf{x}}_B$, the single alternative in $I$ \end{algorithmic} \end{algorithm}
+</div>
+</div>
+<p>Both <img src="https://latex.codecogs.com/png.latex?t%5E2"> and <img src="https://latex.codecogs.com/png.latex?S_%7Bih%7D%5E2"> are computed once in the first stage and are never updated as more observations arrive; only the sample means <img src="https://latex.codecogs.com/png.latex?%5Cbar%7BY%7D%20(%5Cmathbf%7Bx%7D_i;r)"> and the counter <img src="https://latex.codecogs.com/png.latex?r"> change from one screening to the next.</p>
+<p>As the algorithm proceeds, <img src="https://latex.codecogs.com/png.latex?r"> increases and <img src="https://latex.codecogs.com/png.latex?W_%7Bih%7D(r)"> decreases, reaching <img src="https://latex.codecogs.com/png.latex?0"> once <img src="https://latex.codecogs.com/png.latex?r%20%5Cgeq%20%5Cfrac%7Bt%5E2%20S_%7Bih%7D%5E2%7D%7B%5Cdelta%5E2%7D">. Once every pair has reached that point, that is, once <img src="https://latex.codecogs.com/png.latex?r%20%5Cgeq%20%5Cmax_%7Bi%20%5Cneq%20h%7D%20%5Cfrac%7Bt%5E2%20S_%7Bih%7D%5E2%7D%7B%5Cdelta%5E2%7D">, screening simply compares the sample means of the remaining alternatives, and all but the one with the smallest sample mean are eliminated. This bounds the run length: <span class="citation" data-cites="Kim2001-vv">Kim and Nelson (2001)</span> show that the procedure stops by <img src="https://latex.codecogs.com/png.latex?r%20=%20%5Cmax_i%20N_i%20+%201">, where <img src="https://latex.codecogs.com/png.latex?N_i%20=%20%5Cmax_%7Bh%20%5Cneq%20i%7D%20%5Clfloor%20t%5E2%20S_%7Bih%7D%5E2%20/%20%5Cdelta%5E2%20%5Crfloor">.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Kim2001-vv" class="csl-entry">
+Kim, Seong-Hee, and Barry L Nelson. 2001. <span>“A Fully Sequential Procedure for Indifference-Zone Selection in Simulation.”</span> <em>ACM Transactions on Modeling and Computer Simulation</em> 11 (3): 251–73. <a href="https://doi.org/10.1145/502109.502111">https://doi.org/10.1145/502109.502111</a>.
+</div>
+<div id="ref-Nelson2021-fs" class="csl-entry">
+Nelson, Barry L, and Linda Pei. 2021. <em>Foundations and Methods of Stochastic Simulation: A First Course</em>. 2nd ed. International Series in Operations Research &amp; Management Science 316. Springer. <a href="https://doi.org/10.1007/978-3-030-86194-0">https://doi.org/10.1007/978-3-030-86194-0</a>.
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Operations Research</category>
+  <category>Simulation</category>
+  <guid>https://zi-ang-liu.github.io/blog/26-09-01-ranking-selection/</guid>
+  <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Bandit-Based Algorithm for Hyperparameter Optimization</title>
   <dc:creator>Ziang Liu</dc:creator>
   <link>https://zi-ang-liu.github.io/blog/26-07-06-hyperband/</link>
@@ -149,7 +190,7 @@ Sachs, Anna-Lena, and Stefan Minner. 2014. <span>“The Data-Driven Newsvendor w
 <h3 class="anchored" data-anchor-id="successive-halving">Successive Halving</h3>
 <p>Successive Halving was originally proposed by <span class="citation" data-cites="Karnin2013-az">Karnin et al. (2013)</span>. Later, <span class="citation" data-cites="Jamieson2016-sg">Jamieson and Talwalkar (2016)</span> proposed to use this method for HPO.</p>
 <p>Successive Halving requires a budget <img src="https://latex.codecogs.com/png.latex?B"> and a number of configurations <img src="https://latex.codecogs.com/png.latex?n">. In the context of HPO for machine learning models, a configuration refers to a specific combination of hyperparameters. The budget <img src="https://latex.codecogs.com/png.latex?B"> can be defined as the total number of iterations that can be used. The performance of a configuration is evaluated by the loss function. In this algorithm, <img src="https://latex.codecogs.com/png.latex?l_%7Bi,%20r%7D"> denotes the loss of configuration <img src="https://latex.codecogs.com/png.latex?i"> after <img src="https://latex.codecogs.com/png.latex?r"> iterations.</p>
-<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-indent-lines="false" data-indent-size="1.2em" data-line-number="true" data-caption-prefix="Algorithm" data-no-end="false" data-line-number-punc=":" data-comment-delimiter="//" data-pseudocode-number="1">
+<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-line-number-punc=":" data-caption-prefix="Algorithm" data-indent-size="1.2em" data-indent-lines="false" data-comment-delimiter="//" data-pseudocode-number="1" data-line-number="true" data-no-end="false">
 <div class="pseudocode">
 \begin{algorithm} \caption{Successive Halving} \begin{algorithmic} \Require Budget $B$, number of configurations $n$ \State $S_0 \leftarrow \{1, 2, \dots, n\}$ \For{$k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$} \State $r_k \leftarrow \lfloor \frac{B}{|S_k| \lceil \log_2 n \rceil} \rfloor$ \State $R_k \leftarrow \sum_{j=0}^{k} r_j$ \State Run each configuration in $S_k$ for $r_k$ additional iterations \State Get $l_{i, R_k}$ for each configuration $i \in S_k$ \State $S_{k+1} \leftarrow \left\{ i \in S_k : l_{i, R_k} \text{ is among the best } \lfloor |S_k| / 2 \rfloor \text{ losses} \right\}$ \EndFor \end{algorithmic} \end{algorithm}
 </div>
@@ -204,14 +245,14 @@ Sachs, Anna-Lena, and Stefan Minner. 2014. <span>“The Data-Driven Newsvendor w
 <section id="hyperband" class="level3">
 <h3 class="anchored" data-anchor-id="hyperband">Hyperband</h3>
 <p>In the Successive Halving algorithm, it is required to specify <img src="https://latex.codecogs.com/png.latex?B"> and <img src="https://latex.codecogs.com/png.latex?n"> in advance. However, it is may be difficult to choose a good value for <img src="https://latex.codecogs.com/png.latex?n"> in practice. Hyperband <span class="citation" data-cites="Li2016-fm">(Li et al. 2016)</span> can be considered as a extension of Successive Halving.</p>
-<div id="algo-hyperband" class="pseudocode-container quarto-float" data-indent-lines="false" data-indent-size="1.2em" data-line-number="true" data-caption-prefix="Algorithm" data-no-end="false" data-line-number-punc=":" data-comment-delimiter="//" data-pseudocode-number="2">
+<div id="algo-hyperband" class="pseudocode-container quarto-float" data-line-number-punc=":" data-caption-prefix="Algorithm" data-indent-size="1.2em" data-indent-lines="false" data-comment-delimiter="//" data-pseudocode-number="2" data-line-number="true" data-no-end="false">
 <div class="pseudocode">
 \begin{algorithm} \caption{Hyperband} \begin{algorithmic} \Require $R$, $\eta$ \State $s_{max} \leftarrow \lfloor \log_\eta R \rfloor$ \State $B \leftarrow (s_{max} + 1) R$ \For{$s = s_{\max}, s_{\max} - 1, \dots, 0$} \State $n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s$ \State $r \leftarrow R \eta^{-s}$ \For{$i = 0, 1, \dots, s$} \State $n_i \leftarrow \lfloor n \eta^{-i} \rfloor$ \State $r_i \leftarrow r \eta^i$ \State Run each configuration in $S_i$ for $r_i$ iterations \State Get $l_{i, r_i}$ for each configuration $i \in S_i$ \State $S_{i+1} \leftarrow \left\{ i \in S_i : l_{i, r_i} \text{ is among the best } \lfloor n_i / \eta \rfloor \text{ losses} \right\}$ \EndFor \EndFor \end{algorithmic} \end{algorithm}
 </div>
 </div>
 <p>Note that the original paper writes this step as <img src="https://latex.codecogs.com/png.latex?n%20%5Cleftarrow%20%5Clceil%20%5Cfrac%7BB%7D%7BR%7D%20%5Cfrac%7B%5Ceta%5Es%7D%7Bs%20+%201%7D%20%5Crceil">, rounding up only at the end; here we use <img src="https://latex.codecogs.com/png.latex?n%20%5Cleftarrow%20%5Clfloor%20%5Cfrac%7BB%7D%7BR%20(s%20+%201)%7D%20%5Crfloor%20%5Ceta%5Es">, which floors the per-round budget first and matches the values in the paper’s Table 1 and its reference implementation.</p>
 <p>The following example is adapted from <span class="citation" data-cites="Li2016-fm">Li et al. (2016)</span>. Let <img src="https://latex.codecogs.com/png.latex?R%20=%2081"> and <img src="https://latex.codecogs.com/png.latex?%5Ceta%20=%203">, so that <img src="https://latex.codecogs.com/png.latex?s_%7Bmax%7D%20=%20%5Clfloor%20%5Clog_3%2081%20%5Crfloor%20=%204">. The following table shows the values of <img src="https://latex.codecogs.com/png.latex?n"> and <img src="https://latex.codecogs.com/png.latex?r"> for each value of <img src="https://latex.codecogs.com/png.latex?s">.</p>
-<div id="c1ffabf5" class="cell" data-execution_count="1">
+<div id="a8f0101a" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
