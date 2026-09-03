@@ -31,7 +31,7 @@
 <section id="fully-sequential-indifference-zone-selection-procedure" class="level2">
 <h2 class="anchored" data-anchor-id="fully-sequential-indifference-zone-selection-procedure">Fully Sequential, Indifference-Zone Selection Procedure</h2>
 <p><span class="citation" data-cites="Kim2001-vv">Kim and Nelson (2001)</span> proposed the fully sequential, indifference-zone selection procedure shown in Algorithm 1. The presentation below follows <span class="citation" data-cites="Nelson2021-fs">Nelson and Pei (2021)</span>, in which the best alternative <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_B"> is the one with the <em>smallest</em> expected performance, <img src="https://latex.codecogs.com/png.latex?%5Ctheta(%5Cmathbf%7Bx%7D_B)%20=%20%5Cmin_i%20%5Ctheta(%5Cmathbf%7Bx%7D_i)">. <span class="citation" data-cites="Kim2001-vv">Kim and Nelson (2001)</span> state the procedure for maximization, where the screening inequality is reversed.</p>
-<div id="algo-indifference-zone-selection" class="pseudocode-container quarto-float" data-comment-delimiter="//" data-caption-prefix="Algorithm" data-pseudocode-number="1" data-no-end="false" data-line-number-punc=":" data-line-number="true" data-indent-lines="true" data-indent-size="1.2em">
+<div id="algo-indifference-zone-selection" class="pseudocode-container quarto-float" data-comment-delimiter="//" data-indent-size="1.2em" data-line-number-punc=":" data-indent-lines="true" data-caption-prefix="Algorithm" data-no-end="false" data-line-number="true" data-pseudocode-number="1">
 <div class="pseudocode">
 \begin{algorithm} \caption{Fully Sequential, Indifference-Zone Selection Procedure} \begin{algorithmic} \Require alternatives $\mathbf{x}_1, \ldots, \mathbf{x}_k$, indifference zone $\delta$, first-stage sample size $n_0 \geq 2$, confidence level $1-\alpha$ \Ensure $\hat{\mathbf{x}}_B$, the selected best alternative \State $\eta \leftarrow \frac{1}{2} \left[ \left( \frac{2\alpha}{k-1} \right)^{-2/(n_0-1)} - 1 \right]$ \State $t^2 \leftarrow 2 \eta (n_0 - 1)$ \State $I \leftarrow \{\mathbf{x}_1, \ldots, \mathbf{x}_k\}$, $\quad r \leftarrow n_0$ \State Obtain $Y_j (\mathbf{x}_i)$ for $j = 1, \ldots, n_0$ and $i = 1, \ldots, k$ \State $S_{ih}^2 \leftarrow \frac{1}{n_0 - 1} \sum_{j=1}^{n_0} \left( Y_j (\mathbf{x}_i) - Y_j (\mathbf{x}_h) - \left[ \bar{Y} (\mathbf{x}_i;n_0) - \bar{Y} (\mathbf{x}_h;n_0) \right] \right)^2$ for all $i \neq h$ \Repeat \State $I_\text{old} \leftarrow I$ \State $W_{ih}(r) \leftarrow \max \left\{ 0, \frac{\delta}{2r} \left[ \frac{t^2 S_{ih}^2}{\delta^2} - r \right] \right\}$ for all $\mathbf{x}_i, \mathbf{x}_h \in I_\text{old}$ with $i \neq h$ \State $I \leftarrow \left\{ \mathbf{x}_i \in I_\text{old} : \bar{Y} (\mathbf{x}_i;r) \leq \bar{Y} (\mathbf{x}_h;r) + W_{ih}(r) \ \ \forall \mathbf{x}_h \in I_\text{old} \setminus \{\mathbf{x}_i\} \right\}$ \If{$|I| &gt; 1$} \State Obtain $Y_{r+1} (\mathbf{x}_i)$ and update $\bar{Y} (\mathbf{x}_i;r+1)$ for all $\mathbf{x}_i \in I$ \State $r \leftarrow r + 1$ \EndIf \Until{$|I| = 1$} \Return $\hat{\mathbf{x}}_B$, the single alternative in $I$ \end{algorithmic} \end{algorithm}
 </div>
@@ -190,7 +190,7 @@ Sachs, Anna-Lena, and Stefan Minner. 2014. <span>“The Data-Driven Newsvendor w
 <h3 class="anchored" data-anchor-id="successive-halving">Successive Halving</h3>
 <p>Successive Halving was originally proposed by <span class="citation" data-cites="Karnin2013-az">Karnin et al. (2013)</span>. Later, <span class="citation" data-cites="Jamieson2016-sg">Jamieson and Talwalkar (2016)</span> proposed to use this method for HPO.</p>
 <p>Successive Halving requires a budget <img src="https://latex.codecogs.com/png.latex?B"> and a number of configurations <img src="https://latex.codecogs.com/png.latex?n">. In the context of HPO for machine learning models, a configuration refers to a specific combination of hyperparameters. The budget <img src="https://latex.codecogs.com/png.latex?B"> can be defined as the total number of iterations that can be used. The performance of a configuration is evaluated by the loss function. In this algorithm, <img src="https://latex.codecogs.com/png.latex?l_%7Bi,%20r%7D"> denotes the loss of configuration <img src="https://latex.codecogs.com/png.latex?i"> after <img src="https://latex.codecogs.com/png.latex?r"> iterations.</p>
-<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-pseudocode-number="1" data-comment-delimiter="//" data-indent-size="1.2em" data-no-end="false" data-line-number-punc=":" data-line-number="true" data-indent-lines="false" data-caption-prefix="Algorithm">
+<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-comment-delimiter="//" data-line-number="true" data-indent-lines="false" data-no-end="false" data-caption-prefix="Algorithm" data-line-number-punc=":" data-pseudocode-number="1" data-indent-size="1.2em">
 <div class="pseudocode">
 \begin{algorithm} \caption{Successive Halving} \begin{algorithmic} \Require Budget $B$, number of configurations $n$ \State $S_0 \leftarrow \{1, 2, \dots, n\}$ \For{$k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$} \State $r_k \leftarrow \lfloor \frac{B}{|S_k| \lceil \log_2 n \rceil} \rfloor$ \State $R_k \leftarrow \sum_{j=0}^{k} r_j$ \State Run each configuration in $S_k$ for $r_k$ additional iterations \State Get $l_{i, R_k}$ for each configuration $i \in S_k$ \State $S_{k+1} \leftarrow \left\{ i \in S_k : l_{i, R_k} \text{ is among the best } \lfloor |S_k| / 2 \rfloor \text{ losses} \right\}$ \EndFor \end{algorithmic} \end{algorithm}
 </div>
@@ -245,14 +245,14 @@ Sachs, Anna-Lena, and Stefan Minner. 2014. <span>“The Data-Driven Newsvendor w
 <section id="hyperband" class="level3">
 <h3 class="anchored" data-anchor-id="hyperband">Hyperband</h3>
 <p>In the Successive Halving algorithm, it is required to specify <img src="https://latex.codecogs.com/png.latex?B"> and <img src="https://latex.codecogs.com/png.latex?n"> in advance. However, it is may be difficult to choose a good value for <img src="https://latex.codecogs.com/png.latex?n"> in practice. Hyperband <span class="citation" data-cites="Li2016-fm">(Li et al. 2016)</span> can be considered as a extension of Successive Halving.</p>
-<div id="algo-hyperband" class="pseudocode-container quarto-float" data-pseudocode-number="2" data-comment-delimiter="//" data-indent-size="1.2em" data-no-end="false" data-line-number-punc=":" data-line-number="true" data-indent-lines="false" data-caption-prefix="Algorithm">
+<div id="algo-hyperband" class="pseudocode-container quarto-float" data-comment-delimiter="//" data-line-number="true" data-indent-lines="false" data-no-end="false" data-caption-prefix="Algorithm" data-line-number-punc=":" data-pseudocode-number="2" data-indent-size="1.2em">
 <div class="pseudocode">
 \begin{algorithm} \caption{Hyperband} \begin{algorithmic} \Require $R$, $\eta$ \State $s_{max} \leftarrow \lfloor \log_\eta R \rfloor$ \State $B \leftarrow (s_{max} + 1) R$ \For{$s = s_{\max}, s_{\max} - 1, \dots, 0$} \State $n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s$ \State $r \leftarrow R \eta^{-s}$ \For{$i = 0, 1, \dots, s$} \State $n_i \leftarrow \lfloor n \eta^{-i} \rfloor$ \State $r_i \leftarrow r \eta^i$ \State Run each configuration in $S_i$ for $r_i$ iterations \State Get $l_{i, r_i}$ for each configuration $i \in S_i$ \State $S_{i+1} \leftarrow \left\{ i \in S_i : l_{i, r_i} \text{ is among the best } \lfloor n_i / \eta \rfloor \text{ losses} \right\}$ \EndFor \EndFor \end{algorithmic} \end{algorithm}
 </div>
 </div>
 <p>Note that the original paper writes this step as <img src="https://latex.codecogs.com/png.latex?n%20%5Cleftarrow%20%5Clceil%20%5Cfrac%7BB%7D%7BR%7D%20%5Cfrac%7B%5Ceta%5Es%7D%7Bs%20+%201%7D%20%5Crceil">, rounding up only at the end; here we use <img src="https://latex.codecogs.com/png.latex?n%20%5Cleftarrow%20%5Clfloor%20%5Cfrac%7BB%7D%7BR%20(s%20+%201)%7D%20%5Crfloor%20%5Ceta%5Es">, which floors the per-round budget first and matches the values in the paper’s Table 1 and its reference implementation.</p>
 <p>The following example is adapted from <span class="citation" data-cites="Li2016-fm">Li et al. (2016)</span>. Let <img src="https://latex.codecogs.com/png.latex?R%20=%2081"> and <img src="https://latex.codecogs.com/png.latex?%5Ceta%20=%203">, so that <img src="https://latex.codecogs.com/png.latex?s_%7Bmax%7D%20=%20%5Clfloor%20%5Clog_3%2081%20%5Crfloor%20=%204">. The following table shows the values of <img src="https://latex.codecogs.com/png.latex?n"> and <img src="https://latex.codecogs.com/png.latex?r"> for each value of <img src="https://latex.codecogs.com/png.latex?s">.</p>
-<div id="c7433325" class="cell" data-execution_count="1">
+<div id="efcad700" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
@@ -604,65 +604,6 @@ OZAKI, Yoshihiko, Masahiro NOMURA, and Masaki ONISHI. 2020. <span>“Hyperparame
   <category>Optimization</category>
   <guid>https://zi-ang-liu.github.io/blog/26-07-06-hyperband/</guid>
   <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Algorithm Configuration</title>
-  <dc:creator>Ziang Liu</dc:creator>
-  <link>https://zi-ang-liu.github.io/blog/26-07-01-Algorithm-Configuration/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Let <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BI%7D"> be the set of problem instances, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BD%7D"> be the probability distribution over <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BI%7D">. Let <img src="https://latex.codecogs.com/png.latex?p_1,%20p_2,%20%5Cldots,%20p_k"> be the parameters of an algorithm. The domain of each parameter <img src="https://latex.codecogs.com/png.latex?p_i"> is denoted as <img src="https://latex.codecogs.com/png.latex?%5CTheta_i">, and the parameter space is defined as <img src="https://latex.codecogs.com/png.latex?%5CTheta%20=%20%5CTheta_1%20%5Ctimes%20%5CTheta_2%20%5Ctimes%20%5Cldots%20%5Ctimes%20%5CTheta_k">. Note that the the domain of each parameter can be continuous, discrete, or categorical. The parameter configuration of the algorithm is denoted as <img src="https://latex.codecogs.com/png.latex?%5Ctheta%20=%20(p_1,%20p_2,%20%5Cldots,%20p_k)%20%5Cin%20%5CTheta">.</p>
-<p>The objective of algorithm configuration is to find the optimal parameter configuration <img src="https://latex.codecogs.com/png.latex?%5Ctheta%5E*%20%5Cin%20%5CTheta"> that minimizes the expected cost of the algorithm over the distribution of problem instances:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctheta%5E*%20%5Cin%20%5Carg%5Cmin_%7B%5Ctheta%20%5Cin%20%5CTheta%7D%20%5Cmathbb%7BE%7D_%7Bi%20%5Csim%20%5Cmathcal%7BD%7D%7D%5Bc(%5Ctheta,%20i)%5D%0A"></p>
-<p>where <img src="https://latex.codecogs.com/png.latex?c(%5Ctheta,%20i)"> is the cost of the algorithm parameter configuration <img src="https://latex.codecogs.com/png.latex?%5Ctheta"> on problem instance <img src="https://latex.codecogs.com/png.latex?i">.</p>
-<p>Normally, the distribution <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BD%7D"> is unknown. Thus, arithmetic mean is often used as an estimator of the expected cost. The problem is then formulated as follows:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctheta%5E*%20%5Cin%20%5Carg%5Cmin_%7B%5Ctheta%20%5Cin%20%5CTheta%7D%20%5Cfrac%7B1%7D%7B%7C%5Cmathcal%7BI%7D%7C%7D%20%5Csum_%7Bi%20%5Cin%20%5Cmathcal%7BI%7D%7D%20c(%5Ctheta,%20i)%0A"></p>
-<section id="automl" class="level3">
-<h3 class="anchored" data-anchor-id="automl">AutoML</h3>
-</section>
-<section id="neural-architecture-search" class="level3">
-<h3 class="anchored" data-anchor-id="neural-architecture-search">Neural Architecture Search</h3>
-</section>
-<section id="hyperparameter-optimization" class="level3">
-<h3 class="anchored" data-anchor-id="hyperparameter-optimization">Hyperparameter Optimization</h3>
-<p>Hyperparameter optimization (HPO) is a special case of algorithm configuration.</p>
-</section>
-<section id="dynamic-algorithm-configuration" class="level3">
-<h3 class="anchored" data-anchor-id="dynamic-algorithm-configuration">Dynamic Algorithm Configuration</h3>
-<ul>
-<li>SMAC3 <span class="citation" data-cites="Lindauer2021-cy">(Lindauer et al. 2021)</span></li>
-<li>Population-based training (PBT) <span class="citation" data-cites="Jaderberg2017-el">(Jaderberg et al. 2017)</span>
-<ul>
-<li>https://deepmind.google/blog/population-based-training-of-neural-networks/</li>
-</ul></li>
-<li>Optuna <span class="citation" data-cites="Akiba2019-aj">(Akiba et al. 2019)</span></li>
-</ul>
-</section>
-<section id="references" class="level3">
-<h3 class="anchored" data-anchor-id="references">References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-Akiba2019-aj" class="csl-entry">
-Akiba, Takuya, Shotaro Sano, Toshihiko Yanase, Takeru Ohta, and Masanori Koyama. 2019. <span>“Optuna: A Next-Generation Hyperparameter Optimization Framework.”</span> <em>Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining</em> (New York, NY, USA), 2623–31. <a href="https://doi.org/10.1145/3292500.3330701">https://doi.org/10.1145/3292500.3330701</a>.
-</div>
-<div id="ref-Jaderberg2017-el" class="csl-entry">
-Jaderberg, Max, Valentin Dalibard, Simon Osindero, et al. 2017. <span>“Population Based Training of Neural Networks.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.1711.09846">https://doi.org/10.48550/arXiv.1711.09846</a>.
-</div>
-<div id="ref-Lindauer2021-cy" class="csl-entry">
-Lindauer, Marius, Katharina Eggensperger, Matthias Feurer, et al. 2021. <span>“<span>SMAC3</span>: A Versatile Bayesian Optimization Package for Hyperparameter Optimization.”</span> <em>arXiv [Cs.LG]</em>, ahead of print. <a href="https://doi.org/10.48550/arXiv.2109.09831">https://doi.org/10.48550/arXiv.2109.09831</a>.
-</div>
-</div>
-
-
-</section>
-
- ]]></description>
-  <category>Optimization</category>
-  <guid>https://zi-ang-liu.github.io/blog/26-07-01-Algorithm-Configuration/</guid>
-  <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
