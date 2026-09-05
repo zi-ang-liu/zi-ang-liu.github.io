@@ -69,9 +69,9 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-959295b59630de3d8499169efe1922db.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-367d22c62e5ccfa04f52880034e9663c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-9633fa659ac178616663c1a607ab2eee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-367d22c62e5ccfa04f52880034e9663c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-5773259e2de0835fadf102871d8df01a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ce0177deb5993836365736f0395fdb73.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-5773259e2de0835fadf102871d8df01a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
 <link href="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -512,10 +512,20 @@ window.Quarto = {
 </header>
 
 
+<p>Define <span class="math inline">\mathbf{x}</span> as a <span class="math inline">d</span>-dimensional system (decision variable), <span class="math inline">\theta(\mathbf{x})</span> as the performance measure of interest, <span class="math inline">\mathcal{X}</span> as the feasible region. Here, we consider the problem of finding the best system <span class="math inline">\mathbf{x}_B</span> that minimizes the performance measure <span class="math inline">\theta(\mathbf{x})</span> over the feasible region <span class="math inline">\mathcal{X}</span>. The following optimization problem is often considered in simulation optimization:</p>
+<p><span class="math display">
+\min_{\mathbf{x} \in \mathcal{X}} \theta(\mathbf{x}).
+</span></p>
+<p>Let <span class="math inline">\mathbf{x}_B = \arg\min_{i = 1, \ldots, k} \theta(\mathbf{x}_i)</span> be the best alternative among <span class="math inline">k</span> alternatives <span class="math inline">\mathbf{x}_1, \ldots, \mathbf{x}_k</span>.</p>
+<p>The objective of ranking and selection (R&amp;S) is often to select the best system or a good system given the decision-maker’s tolerance <span class="citation" data-cites="Avci2023-zd">Avci et al. (<a href="#ref-Avci2023-zd" role="doc-biblioref">2023</a>)</span>. Formally, we can define the precision measures as follows:</p>
+<ul>
+<li><strong>Probability of Correct Selection (PCS)</strong>: The probability that the selected alternative is indeed the best one, i.e., <span class="math inline">\text{PCS} = \mathbb{P}(\hat{\mathbf{x}}_B = \mathbf{x}_B)</span>.</li>
+<li><strong>Probability of Good Selection (PGS)</strong>: The probability that the selected alternative is within a certain tolerance <span class="math inline">\delta</span> of the best one, i.e., <span class="math inline">\text{PGS} = \mathbb{P}(\theta(\hat{\mathbf{x}}_i) - \theta(\mathbf{x}_B) \leq \delta, \forall i = 1, \ldots, k)</span>.</li>
+</ul>
 <section id="fully-sequential-indifference-zone-selection-procedure" class="level2">
 <h2 class="anchored" data-anchor-id="fully-sequential-indifference-zone-selection-procedure">Fully Sequential, Indifference-Zone Selection Procedure</h2>
 <p><span class="citation" data-cites="Kim2001-vv">Kim and Nelson (<a href="#ref-Kim2001-vv" role="doc-biblioref">2001</a>)</span> proposed the fully sequential, indifference-zone selection procedure shown in <a href="#algo-indifference-zone-selection" class="quarto-xref">Algorithm 1</a>. The presentation below follows <span class="citation" data-cites="Nelson2021-fs">Nelson and Pei (<a href="#ref-Nelson2021-fs" role="doc-biblioref">2021</a>)</span>, in which the best alternative <span class="math inline">\mathbf{x}_B</span> is the one with the <em>smallest</em> expected performance, <span class="math inline">\theta(\mathbf{x}_B) = \min_i \theta(\mathbf{x}_i)</span>. <span class="citation" data-cites="Kim2001-vv">Kim and Nelson (<a href="#ref-Kim2001-vv" role="doc-biblioref">2001</a>)</span> state the procedure for maximization, where the screening inequality is reversed.</p>
-<div id="algo-indifference-zone-selection" class="pseudocode-container quarto-float" data-comment-delimiter="//" data-indent-size="1.2em" data-line-number-punc=":" data-indent-lines="true" data-caption-prefix="Algorithm" data-no-end="false" data-line-number="true" data-pseudocode-number="1">
+<div id="algo-indifference-zone-selection" class="pseudocode-container quarto-float" data-indent-lines="true" data-caption-prefix="Algorithm" data-pseudocode-number="1" data-indent-size="1.2em" data-comment-delimiter="//" data-line-number-punc=":" data-no-end="false" data-line-number="true">
 <div class="pseudocode">
 \begin{algorithm} \caption{Fully Sequential, Indifference-Zone Selection Procedure} \begin{algorithmic} \Require alternatives $\mathbf{x}_1, \ldots, \mathbf{x}_k$, indifference zone $\delta$, first-stage sample size $n_0 \geq 2$, confidence level $1-\alpha$ \Ensure $\hat{\mathbf{x}}_B$, the selected best alternative \State $\eta \leftarrow \frac{1}{2} \left[ \left( \frac{2\alpha}{k-1} \right)^{-2/(n_0-1)} - 1 \right]$ \State $t^2 \leftarrow 2 \eta (n_0 - 1)$ \State $I \leftarrow \{\mathbf{x}_1, \ldots, \mathbf{x}_k\}$, $\quad r \leftarrow n_0$ \State Obtain $Y_j (\mathbf{x}_i)$ for $j = 1, \ldots, n_0$ and $i = 1, \ldots, k$ \State $S_{ih}^2 \leftarrow \frac{1}{n_0 - 1} \sum_{j=1}^{n_0} \left( Y_j (\mathbf{x}_i) - Y_j (\mathbf{x}_h) - \left[ \bar{Y} (\mathbf{x}_i;n_0) - \bar{Y} (\mathbf{x}_h;n_0) \right] \right)^2$ for all $i \neq h$ \Repeat \State $I_\text{old} \leftarrow I$ \State $W_{ih}(r) \leftarrow \max \left\{ 0, \frac{\delta}{2r} \left[ \frac{t^2 S_{ih}^2}{\delta^2} - r \right] \right\}$ for all $\mathbf{x}_i, \mathbf{x}_h \in I_\text{old}$ with $i \neq h$ \State $I \leftarrow \left\{ \mathbf{x}_i \in I_\text{old} : \bar{Y} (\mathbf{x}_i;r) \leq \bar{Y} (\mathbf{x}_h;r) + W_{ih}(r) \ \ \forall \mathbf{x}_h \in I_\text{old} \setminus \{\mathbf{x}_i\} \right\}$ \If{$|I| &gt; 1$} \State Obtain $Y_{r+1} (\mathbf{x}_i)$ and update $\bar{Y} (\mathbf{x}_i;r+1)$ for all $\mathbf{x}_i \in I$ \State $r \leftarrow r + 1$ \EndIf \Until{$|I| = 1$} \Return $\hat{\mathbf{x}}_B$, the single alternative in $I$ \end{algorithmic} \end{algorithm}
 </div>
@@ -526,6 +536,9 @@ window.Quarto = {
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Avci2023-zd" class="csl-entry" role="listitem">
+Avci, Harun, Barry L Nelson, Eunhye Song, and Andreas Wächter. 2023. <span>“Using Cache or Credit for Parallel Ranking and Selection.”</span> <em>ACM Transactions on Modeling and Computer Simulation</em> 33 (4): 1–28. <a href="https://doi.org/10.1145/3618299">https://doi.org/10.1145/3618299</a>.
+</div>
 <div id="ref-Kim2001-vv" class="csl-entry" role="listitem">
 Kim, Seong-Hee, and Barry L Nelson. 2001. <span>“A Fully Sequential Procedure for Indifference-Zone Selection in Simulation.”</span> <em>ACM Transactions on Modeling and Computer Simulation</em> 11 (3): 251–73. <a href="https://doi.org/10.1145/502109.502111">https://doi.org/10.1145/502109.502111</a>.
 </div>
