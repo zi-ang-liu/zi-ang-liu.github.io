@@ -8,6 +8,20 @@ page-layout: article
 draft: false
 ---
 
+Define $\mathbf{x}$ as a $d$-dimensional system (decision variable), $\theta(\mathbf{x})$ as the performance measure of interest, $\mathcal{X}$ as the feasible region. Here, we consider the problem of finding the best system $\mathbf{x}_B$ that minimizes the performance measure $\theta(\mathbf{x})$ over the feasible region $\mathcal{X}$.
+The following optimization problem is often considered in simulation optimization:
+
+$$
+\min_{\mathbf{x} \in \mathcal{X}} \theta(\mathbf{x}).
+$$
+
+Let $\mathbf{x}_B = \arg\min_{i = 1, \ldots, k} \theta(\mathbf{x}_i)$ be the best alternative among $k$ alternatives $\mathbf{x}_1, \ldots, \mathbf{x}_k$.
+
+The objective of ranking and selection (R&S) is often to select the best system or a good system given the decision-maker's tolerance @Avci2023-zd. Formally, we can define the precision measures as follows:
+
+- **Probability of Correct Selection (PCS)**: The probability that the selected alternative is indeed the best one, i.e., $\text{PCS} = \mathbb{P}(\hat{\mathbf{x}}_B = \mathbf{x}_B)$.
+- **Probability of Good Selection (PGS)**: The probability that the selected alternative is within a certain tolerance $\delta$ of the best one, i.e., $\text{PGS} = \mathbb{P}(\theta(\hat{\mathbf{x}}_i) - \theta(\mathbf{x}_B) \leq \delta, \forall i = 1, \ldots, k)$.
+
 ## Fully Sequential, Indifference-Zone Selection Procedure
 
 @Kim2001-vv proposed the fully sequential, indifference-zone selection procedure shown in @algo-indifference-zone-selection.
