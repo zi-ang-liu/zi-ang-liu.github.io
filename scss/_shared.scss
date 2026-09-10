@@ -128,6 +128,11 @@ main.content,
   // a card subtitle, a caption — and justifying a two-word line stretches it
   // across the full column. `inherit` rather than `left` so the centred hero on
   // narrow screens stays centred.
+  //
+  // `.ps-line` is a pseudocode.js algorithm line, and it is here for a stronger
+  // reason than the rest: an algorithm line is code. Justifying one opens gaps
+  // between an operator and its operands, and `hyphens: auto` is free to break
+  // a variable name across lines.
   .hero p,
   .news-list p,
   .cv-list p,
@@ -136,6 +141,7 @@ main.content,
   .course-list p,
   .book-links p,
   .period,
+  .ps-line,
   figcaption,
   .quarto-figure p {
     text-align: inherit;
@@ -1064,6 +1070,87 @@ code:not(.sourceCode) {
   background-color: $inline-code-bg;
   padding: 0.1em 0.35em;
   border-radius: 0.25rem;
+}
+
+// --- Pseudocode (algorithm blocks) -----------------------------------
+// `.ps-*` is pseudocode.js, via the leovan/pseudocode extension.
+//
+// Two things about how these rules are written, both forced by the extension's
+// own stylesheet, which Quarto loads *after* the compiled theme:
+//
+//   1. Everything is nested inside `.pseudocode-container .ps-root` — the
+//      extension's own wrapper plus its root. One class is not enough: the
+//      extension writes `.ps-root .ps-keyword`, so a bare `.ps-keyword` (or a
+//      `.pseudocode-container .ps-keyword`) only ties with it, and on a tie
+//      the later stylesheet wins. Two classes of prefix put every rule here
+//      one step ahead.
+//   2. Each of `.ps-keyword`, `.ps-funcname` and `.ps-comment` restates the
+//      family, because each names its own in that stylesheet and so is not
+//      reached by setting `.ps-root` alone.
+//
+// What was wrong. The extension asks for `KaTeX_Main` at `font-weight: 100`
+// and forces `-webkit-font-smoothing: antialiased`. The family never applied:
+// pseudocode.js emits each algorithm line as a `<p class="ps-line">`, so the
+// `p { font-family }` rule in the typography section matches those paragraphs
+// *directly*, and a directly matched declaration beats an inherited one however
+// specific the ancestor's is. The lines took the site's sans stack — while the
+// weight, which nothing else sets, went on inheriting the 100 meant for a font
+// that has no such weight. Source Sans 3 is a variable font spanning 200–900
+// and honoured it, so the algorithm's prose rendered in ExtraLight: a hairline
+// beside the KaTeX_Main-Bold keywords, which carry family and weight on the
+// span itself and were the only text in the block that looked like anything.
+//
+// The block is now set in the site's own sans, deliberately. An algorithm's
+// prose is prose, and the math inside it stays KaTeX's — the same pairing as
+// any paragraph on the site that carries inline math.
+
+.pseudocode-container .ps-root {
+  font-family: $font-family-sans-serif;
+  // Replaces the extension's `font-weight: 100`.
+  font-weight: 400;
+  // `!important` only because the extension's own declaration carries one.
+  // Nothing else on the site touches font-smoothing; left alone the algorithm
+  // renders a shade lighter than the paragraphs around it.
+  -webkit-font-smoothing: auto !important;
+
+  .ps-algorithm {
+    // The extension's 0.8em leaves the ruled border sitting almost on the
+    // preceding paragraph. Same gap as the theorem panels.
+    margin: 1.5rem 0;
+  }
+
+  .ps-line {
+    // 1.2 is the extension's, set for a serif at a smaller optical size; sans
+    // lines this long need more.
+    line-height: 1.5;
+  }
+
+  // \Require, \repeat, \if — 600 rather than the extension's 700, which in
+  // Source Sans 3 is heavy enough to read as a heading inside the block.
+  .ps-keyword {
+    font-family: $font-family-sans-serif;
+    font-weight: 600;
+  }
+
+  .ps-funcname {
+    font-family: $font-family-sans-serif;
+  }
+
+  // Structural marks, not content: the comments, the line numbers and the
+  // scope rules step back so the algorithm itself carries the contrast.
+  .ps-comment {
+    font-family: $font-family-sans-serif;
+    color: $muted-color;
+  }
+
+  .ps-linenum {
+    color: $muted-color;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .ps-algorithmic.with-scopelines div.ps-block {
+    border-left-color: $border-soft;
+  }
 }
 
 // --- Tables ----------------------------------------------------------
