@@ -22,9 +22,9 @@ The objective of ranking and selection (R&S) is often to select the best system 
 - **Probability of Correct Selection (PCS)**: The probability that the selected alternative is indeed the best one, i.e., $\text{PCS} = \mathbb{P}(\hat{\mathbf{x}}_B = \mathbf{x}_B)$.
 - **Probability of Good Selection (PGS)**: The probability that the selected alternative is within a certain tolerance $\delta$ of the best one, i.e., $\text{PGS} = \mathbb{P}(\theta(\hat{\mathbf{x}}_i) - \theta(\mathbf{x}_B) \leq \delta, \forall i = 1, \ldots, k)$.
 
-## Fully Sequential, Indifference-Zone Selection Procedure
+## The KN Procedure
 
-@Kim2001-vv proposed the fully sequential, indifference-zone selection procedure. This method is also known as Kim–Nelson (KN) procedure. The idea is to set a indifference zone $\delta$, which is the minimum difference in performance that the decision-maker cares about. The procedure guarantees that the probability of correct selection is at least $1 - \alpha$ if the difference between the best and second-best alternatives is at least $\delta$. Formally, this procedure guarantees that $\text{PCS} \geq 1 - \alpha$ if $\theta(\mathbf{x}_2) - \theta(\mathbf{x}_B) \geq \delta$, where $\mathbf{x}_2$ is the second-best alternative.
+@Kim2001-vv proposed the fully sequential, indifference-zone selection procedure. After the name of the authors, this method is also known as Kim–Nelson (KN) procedure. The idea is to set a indifference zone $\delta$, which is the minimum difference in performance that the decision-maker cares about. The procedure guarantees that the probability of correct selection is at least $1 - \alpha$ if the difference between the best and second-best alternatives is at least $\delta$. Formally, this procedure guarantees that $\text{PCS} \geq 1 - \alpha$ if $\theta(\mathbf{x}_2) - \theta(\mathbf{x}_B) \geq \delta$, where $\mathbf{x}_2$ is the second-best alternative.
 
 Traditionally, the selection procedure is performed in a small number of stages, say 1, 2, or 3. The fully sequential procedure, on the other hand, collects one additional sample for each alternative in each iteration and screens them. 
 
@@ -68,6 +68,10 @@ The presentation below follows @Nelson2021-fs, in which the best alternative $\m
 Both $t^2$ and $S_{ih}^2$ are computed once in the first stage and are never updated as more observations arrive; only the sample means $\bar{Y} (\mathbf{x}_i;r)$ and the counter $r$ change from one screening to the next.
 
 As the algorithm proceeds, $r$ increases and $W_{ih}(r)$ decreases, reaching $0$ once $r \geq \frac{t^2 S_{ih}^2}{\delta^2}$. Once every pair has reached that point, that is, once $r \geq \max_{i \neq h} \frac{t^2 S_{ih}^2}{\delta^2}$, screening simply compares the sample means of the remaining alternatives, and all but the one with the smallest sample mean are eliminated. This bounds the run length: @Kim2001-vv show that the procedure stops by $r = \max_i N_i + 1$, where $N_i = \max_{h \neq i} \lfloor t^2 S_{ih}^2 / \delta^2 \rfloor$.
+
+## 
+
+The KN procedure performs well in terms of the expected number of samples required to select the best alternative. However, @Hong2005-kb indicated that the  cost  of  switching  among  the  simulations  of  the  alternative  systems  should  also  be considered. They proposed two sequential indiindifference-zone selection procedures: the Minimum Switching Sequential (MSS), and the Multi-stage Sequential procedure with Tradeoff (MST).
 
 
 
