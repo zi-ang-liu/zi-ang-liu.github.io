@@ -24,7 +24,11 @@ The objective of ranking and selection (R&S) is often to select the best system 
 
 ## Fully Sequential, Indifference-Zone Selection Procedure
 
-@Kim2001-vv proposed the fully sequential, indifference-zone selection procedure shown in @algo-indifference-zone-selection.
+@Kim2001-vv proposed the fully sequential, indifference-zone selection procedure. The idea is to set a indifference zone $\delta$, which is the minimum difference in performance that the decision-maker cares about. The procedure guarantees that the probability of correct selection is at least $1 - \alpha$ if the difference between the best and second-best alternatives is at least $\delta$. Formally, this procedure guarantees that $\text{PCS} \geq 1 - \alpha$ if $\theta(\mathbf{x}_2) - \theta(\mathbf{x}_B) \geq \delta$, where $\mathbf{x}_2$ is the second-best alternative.
+
+Traditionally, the selection procedure is performed in a small number of stages, say 1, 2, or 3. The fully sequential procedure, on the other hand, collects one additional sample for each alternative in each iteration and screens them. 
+
+The procedure is shown in @algo-indifference-zone-selection.
 The presentation below follows @Nelson2021-fs, in which the best alternative $\mathbf{x}_B$ is the one with the *smallest* expected performance, $\theta(\mathbf{x}_B) = \min_i \theta(\mathbf{x}_i)$.
 @Kim2001-vv state the procedure for maximization, where the screening inequality is reversed.
 
