@@ -1,0 +1,21 @@
+---
+title: "Approximate Policy Iteration"
+author: "Ziang Liu"
+date: "2026-09-01"
+categories: ["", "Simulation"]
+bibliography: ["references.bib"]
+page-layout: article
+draft: false
+---
+
+## Classification-based Policy Iteration
+
+@Lagoudakis2003-kz proposed an classification-based policy iteration that uses classifiers such as SVM and neural networks to approximate the policy. 
+
+@Lazaric2016-gg introduced cost-sensitive loss function weighting each classification mistake by its actual regret.
+
+
+## References
+
+:::{#refs}
+:::

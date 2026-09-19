@@ -19,8 +19,52 @@ Let $\mathbf{x}_B = \arg\min_{i = 1, \ldots, k} \theta(\mathbf{x}_i)$ be the bes
 
 The objective of ranking and selection (R&S) is often to select the best system or a good system given the decision-maker's tolerance @Avci2023-zd. Formally, we can define the precision measures as follows:
 
-- **Probability of Correct Selection (PCS)**: The probability that the selected alternative is indeed the best one, i.e., $\text{PCS} = \mathbb{P}(\hat{\mathbf{x}}_B = \mathbf{x}_B)$.
-- **Probability of Good Selection (PGS)**: The probability that the selected alternative is within a certain tolerance $\delta$ of the best one, i.e., $\text{PGS} = \mathbb{P}(\theta(\hat{\mathbf{x}}_i) - \theta(\mathbf{x}_B) \leq \delta, \forall i = 1, \ldots, k)$.
+- **Probability of Correct Selection (PCS)**: The probability that the selected alternative is indeed the best one, i.e., $\text{PCS} = \mathbb{P}(\hat{\mathbf{x}}_B = \mathbf{x}_B) \geq 1 - \alpha$.
+- **Probability of Good Selection (PGS)**: The probability that the selected alternative is within a certain tolerance $\delta$ of the best one, i.e., $\text{PGS} = \mathbb{P}(\theta(\hat{\mathbf{x}}_i) - \theta(\mathbf{x}_B) \leq \delta, \forall i = 1, \ldots, k) \geq 1 - \alpha$.
+- **Probably Approximately Correct (PAC)**: The probability that the selected alternative is within a certain tolerance $\delta$ of the best one, i.e., $\text{PAC} = \mathbb{P}(\theta(\hat{\mathbf{x}}_i) - \theta(\mathbf{x}_B) \leq \delta, \forall i = 1, \ldots, k) \geq 1 - \alpha$.
+
+## Rinott's Two-Stage Procedure
+
+The earliest indifference-zone procedure, due to @Bechhofer1954-ss, assumes that all alternatives have a known, common variance. It takes a single stage of $n$ observations from every alternative, with $n$ chosen so that the alternative with the smallest sample mean is the best with probability at least $1 - \alpha$ whenever $\theta(\mathbf{x}_2) - \theta(\mathbf{x}_B) \geq \delta$. When the variances are unknown, the required sample size depends on them, and no single-stage procedure can deliver the guarantee [@Kim2006-sb]. @Rinott1978-ts therefore uses two stages. The first stage takes $n_0$ observations from every alternative and estimates its variance $S^2 (\mathbf{x}_i)$. The second stage brings the total number of observations of $\mathbf{x}_i$ up to
+
+$$
+N_i = \max \left\{ n_0, \left\lceil \left( \frac{h S (\mathbf{x}_i)}{\delta} \right)^2 \right\rceil \right\},
+$$
+
+so that alternatives with a larger variance receive more observations, and the alternative with the smallest overall sample mean is selected. The procedure is shown in @algo-rinott; the presentation follows Procedure 1 of @Hong2021-rv, adapted to minimization.
+
+```pseudocode
+#| label: algo-rinott
+#| html-indent-lines: true
+
+\begin{algorithm}
+\caption{Rinott's Two-Stage Procedure}
+\begin{algorithmic}
+\Require alternatives $\mathbf{x}_1, \ldots, \mathbf{x}_k$, indifference zone $\delta$, first-stage sample size $n_0 \geq 2$, confidence level $1-\alpha$
+\Ensure $\hat{\mathbf{x}}_B$, the selected best alternative
+
+\State $h \leftarrow$ Rinott's constant for $k$ alternatives, first-stage sample size $n_0$, and confidence level $1 - \alpha$
+\State Obtain $Y_j (\mathbf{x}_i)$ for $j = 1, \ldots, n_0$ and $i = 1, \ldots, k$
+\State $S^2 (\mathbf{x}_i) \leftarrow \frac{1}{n_0 - 1} \sum_{j=1}^{n_0} \left( Y_j (\mathbf{x}_i) - \bar{Y} (\mathbf{x}_i;n_0) \right)^2$ for $i = 1, \ldots, k$
+\State $N_i \leftarrow \max \left\{ n_0, \left\lceil \left( \frac{h S (\mathbf{x}_i)}{\delta} \right)^2 \right\rceil \right\}$ for $i = 1, \ldots, k$
+\State Obtain $Y_j (\mathbf{x}_i)$ for $j = n_0 + 1, \ldots, N_i$ and compute $\bar{Y} (\mathbf{x}_i;N_i)$ for $i = 1, \ldots, k$
+\Return $\hat{\mathbf{x}}_B$, the alternative with the smallest sample mean $\bar{Y} (\mathbf{x}_i;N_i)$
+
+\end{algorithmic}
+\end{algorithm}
+```
+
+The constant $h = h(k, 1 - \alpha, n_0)$ is known as Rinott's constant. It is the solution of
+
+$$
+\int_0^\infty \left[ \int_0^\infty \Phi \left( \frac{h}{\sqrt{(n_0 - 1) \left( 1/x + 1/y \right)}} \right) f_{n_0 - 1}(x) \, dx \right]^{k-1} f_{n_0 - 1}(y) \, dy = 1 - \alpha,
+$$
+
+where $\Phi$ is the standard normal distribution function and $f_{n_0 - 1}$ is the density of the $\chi^2$ distribution with $n_0 - 1$ degrees of freedom. The equation has to be solved numerically; tables are given by @Wilcox1984-ta. The constant increases with $k$ and decreases as $\alpha$ or $n_0$ increases [@Kim2006-sb].
+
+The guarantee rests on two observations. First, $N_i$ depends on the data only through $S^2 (\mathbf{x}_i)$, so by Stein's theorem, conditional on $S^2 (\mathbf{x}_i)$, the sample mean $\bar{Y} (\mathbf{x}_i;N_i)$ is still normal with mean $\theta(\mathbf{x}_i)$ and variance $\sigma_i^2 / N_i \leq (\delta / h)^2 \, \sigma_i^2 / S^2 (\mathbf{x}_i)$, where $(n_0 - 1) S^2 (\mathbf{x}_i) / \sigma_i^2$ follows a $\chi^2$ distribution with $n_0 - 1$ degrees of freedom. The second-stage sample size thus caps the standard deviation of every sample mean, up to the ratio $\sigma_i / S(\mathbf{x}_i)$, at $\delta / h$. Second, the integral above is a lower bound on the probability that $\mathbf{x}_B$ has the smallest sample mean in the least favorable configuration $\theta(\mathbf{x}_i) = \theta(\mathbf{x}_B) + \delta$ for all $i \neq B$: the inner integral is the comparison of $\mathbf{x}_B$ with one other alternative averaged over that alternative's $\chi^2$ variable, the power $k - 1$ treats the comparisons as independent, which is valid as a lower bound by Slepian's inequality, and the outer integral averages over the $\chi^2$ variable of $\mathbf{x}_B$. Equating the bound to $1 - \alpha$ gives $\text{PCS} \geq 1 - \alpha$ whenever $\theta(\mathbf{x}_2) - \theta(\mathbf{x}_B) \geq \delta$. Since neither observation involves the true means, the same argument shows that the selected alternative is within $\delta$ of the best with probability at least $1 - \alpha$ under any configuration of the means, so Rinott's procedure also delivers the PGS guarantee [@Kim2006-sb; @Zhong2022-sx].
+
+Every alternative receives its full second-stage sample no matter how clearly inferior it is, so the total sample size grows with $k$ both through the number of alternatives and through $h^2$, and the procedure becomes expensive when $k$ is large. On the other hand, once the first stage is done, the alternatives never interact until the final comparison, so the second stage can be run on separate processors without any communication. This is why the [KT$^+$ procedure](#kt-plus-procedure) below uses it for the final comparison among the local winners.
 
 ## The KN Procedure
 
@@ -28,14 +72,14 @@ The objective of ranking and selection (R&S) is often to select the best system 
 
 Traditionally, the selection procedure is performed in a small number of stages, say 1, 2, or 3. The fully sequential procedure, on the other hand, collects one additional sample for each alternative in each iteration and screens them. 
 
-The procedure is shown in @algo-indifference-zone-selection.
+The procedure is shown in @algo-kn.
 The presentation below follows @Nelson2021-fs, in which the best alternative $\mathbf{x}_B$ is the one with the *smallest* expected performance, $\theta(\mathbf{x}_B) = \min_i \theta(\mathbf{x}_i)$.
 @Kim2001-vv state the procedure for maximization, where the screening inequality is reversed.
 
 
 
 ```pseudocode
-#| label: algo-indifference-zone-selection
+#| label: algo-kn
 #| html-indent-lines: true
 
 \begin{algorithm}
@@ -69,11 +113,89 @@ Both $t^2$ and $S_{ih}^2$ are computed once in the first stage and are never upd
 
 As the algorithm proceeds, $r$ increases and $W_{ih}(r)$ decreases, reaching $0$ once $r \geq \frac{t^2 S_{ih}^2}{\delta^2}$. Once every pair has reached that point, that is, once $r \geq \max_{i \neq h} \frac{t^2 S_{ih}^2}{\delta^2}$, screening simply compares the sample means of the remaining alternatives, and all but the one with the smallest sample mean are eliminated. This bounds the run length: @Kim2001-vv show that the procedure stops by $r = \max_i N_i + 1$, where $N_i = \max_{h \neq i} \lfloor t^2 S_{ih}^2 / \delta^2 \rfloor$.
 
-## 
+## MSS and MST Procedures
 
 The KN procedure performs well in terms of the expected number of samples required to select the best alternative. However, @Hong2005-kb indicated that the  cost  of  switching  among  the  simulations  of  the  alternative  systems  should  also  be considered. They proposed two sequential indiindifference-zone selection procedures: the Minimum Switching Sequential (MSS), and the Multi-stage Sequential procedure with Tradeoff (MST).
 
+## KT Procedure
 
+When the number of alternatives $k$ is large, the KN procedure becomes expensive in two ways. It takes an additional observation from every surviving alternative in each iteration, and it compares every pair of survivors after each observation, which requires $\mathcal{O}(k^2)$ comparisons on a single processor. @Zhong2022-sx proposed the knockout-tournament (KT) procedure, inspired by the bracket of a tennis tournament. The alternatives are paired up, each pair plays a match, the winner advances to the next round, and the loser is eliminated. About half of the alternatives are eliminated in each round, so the procedure stops after at most $\lceil \log_2 k \rceil$ rounds. Each match is itself a run of the KN procedure on the two alternatives. Since the best alternative has to win every match it plays, the overall guarantee $\text{PCS} \geq 1 - \alpha$ is obtained by allocating a probability of incorrect selection $\alpha_r = \alpha / 2^r$ to each match in round $r$, so that the allocations over all rounds sum to at most $\alpha$. The procedure is shown in @algo-kt.
+
+```pseudocode
+#| label: algo-kt
+#| html-indent-lines: true
+
+\begin{algorithm}
+\caption{Knockout-Tournament (KT) Procedure}
+\begin{algorithmic}
+\Require alternatives $\mathbf{x}_1, \ldots, \mathbf{x}_k$, indifference zone $\delta$, first-stage sample size $n_0 \geq 2$, confidence level $1-\alpha$
+\Ensure $\hat{\mathbf{x}}_B$, the selected best alternative
+
+\State $I \leftarrow \{\mathbf{x}_1, \ldots, \mathbf{x}_k\}$, $\quad r \leftarrow 1$
+\Repeat
+    \State $\alpha_r \leftarrow \alpha / 2^r$
+    \State $I_\text{next} \leftarrow \emptyset$
+    \State Randomly pair up the alternatives in $I$; if $|I|$ is odd, add the unpaired alternative to $I_\text{next}$
+    \For{each pair $\{\mathbf{x}_i, \mathbf{x}_h\}$}
+        \State $\mathbf{x}_w \leftarrow$ \Call{KN}{$\{\mathbf{x}_i, \mathbf{x}_h\}, \delta, n_0, \alpha_r$}
+        \State $I_\text{next} \leftarrow I_\text{next} \cup \{\mathbf{x}_w\}$
+    \EndFor
+    \State $I \leftarrow I_\text{next}$, $\quad r \leftarrow r + 1$
+\Until{$|I| = 1$}
+\Return $\hat{\mathbf{x}}_B$, the single alternative in $I$
+
+\end{algorithmic}
+\end{algorithm}
+```
+
+Every match in @algo-kt is a fresh run of @algo-kn on the pair $\{\mathbf{x}_i, \mathbf{x}_h\}$, with $k = 2$ and $\alpha$ replaced by $\alpha_r$. In particular, the first stage of KN, which takes $n_0$ observations from each alternative and computes the variance estimate $S_{ih}^2$, is repeated in every match. Observations that $\mathbf{x}_i$ accumulated while winning an earlier round are not carried over. This is deliberate. The PCS guarantee of KN holds for an independent run, and reusing observations that helped an alternative win its previous match would bias the new match in its favor. Moreover, $S_{ih}^2$ is the variance of the *difference* $Y_j(\mathbf{x}_i) - Y_j(\mathbf{x}_h)$, which depends on the pair and has to be estimated anew for a new opponent anyway. Because only two alternatives are compared at a time, common random numbers can be used within a match simply by assigning the match its own random-number stream, and different matches can be run on different processors without any communication between them.
+
+Discarding previous observations has a cost: for small $k$, KN needs fewer observations in total than KT. However, there are $k - 1$ matches in total, so each alternative plays fewer than two matches on average, and the number of observations a match needs does not depend on $k$. @Zhong2022-sx show that the expected total sample size of KT is $\mathcal{O}(k)$, which is the lowest possible growth rate for any procedure with a PCS guarantee, whereas that of KN grows faster than linearly in $k$. In their experiments, KT requires fewer observations than KN once $k \geq 10^5$.
+
+## KT⁺ Procedure {#kt-plus-procedure}
+
+In a parallel computing environment with $m$ processors, @algo-kt can be run by splitting the alternatives into $m$ subsets, letting each processor run the tournament on its own subset, and comparing the $m$ local winners at the end. @Zhong2022-sx propose two modifications for this setting, which give the KT$^+$ procedure shown in @algo-kt-plus. First, a match may involve $g \geq 2$ alternatives rather than two. When two clearly inferior alternatives with similar means are paired, KN needs many observations to separate them; with more alternatives in a match, it is unlikely that all of them are equally bad, and every clearly inferior alternative is eliminated quickly. The authors suggest fewer than $30$ alternatives per match when $k \leq 10^5$ and about $50$ when $k \geq 10^5$. Second, a processor that has found its local winner would otherwise sit idle until the others finish. Instead, it uses that time to take enough observations from its winner, as prescribed by Rinott's two-stage procedure (@algo-rinott), so that the final selection among the $m$ local winners can be made by comparing their sample means, without any further sequential sampling.
+
+```pseudocode
+#| label: algo-kt-plus
+#| html-indent-lines: true
+
+\begin{algorithm}
+\caption{Knockout-Tournament Procedure for Parallel Computing (KT$^+$)}
+\begin{algorithmic}
+\Require alternatives $\mathbf{x}_1, \ldots, \mathbf{x}_k$, indifference zone $\delta$, first-stage sample size $n_0 \geq 2$, confidence level $1-\alpha$, number of processors $m$, match size $g \geq 2$
+\Ensure $\hat{\mathbf{x}}_B$, the selected best alternative
+
+\State Assign the alternatives to the processors in a round-robin fashion: $I^{(s)} \leftarrow \{\mathbf{x}_i : (i \bmod m) + 1 = s\}$ for $s = 1, \ldots, m$
+\State $R \leftarrow \lceil \log_g (k/m) \rceil + 1$, $\quad \alpha_R \leftarrow \alpha / 2^R$
+\State $h \leftarrow$ Rinott's constant for $m$ alternatives, first-stage sample size $n_0$, and confidence level $1 - \alpha_R$
+\For{each processor $s = 1, \ldots, m$, \textbf{in parallel}}
+    \State $r \leftarrow 1$
+    \Repeat
+        \State $\alpha_r \leftarrow \alpha / 2^r$
+        \State $I^{(s)}_\text{next} \leftarrow \emptyset$
+        \State Randomly partition $I^{(s)}$ into groups of size $g$; the leftover alternatives, if any, form one smaller group, and a group of size $1$ advances directly to $I^{(s)}_\text{next}$
+        \For{each group $C$ with $|C| \geq 2$}
+            \State $\mathbf{x}_w \leftarrow$ \Call{KN}{$C, \delta, n_0, \alpha_r$}
+            \State $I^{(s)}_\text{next} \leftarrow I^{(s)}_\text{next} \cup \{\mathbf{x}_w\}$
+        \EndFor
+        \State $I^{(s)} \leftarrow I^{(s)}_\text{next}$, $\quad r \leftarrow r + 1$
+    \Until{$|I^{(s)}| = 1$}
+    \State $\hat{\mathbf{x}}^{(s)} \leftarrow$ the single alternative in $I^{(s)}$
+    \State Obtain $Y_j (\hat{\mathbf{x}}^{(s)})$ for $j = 1, \ldots, n_0$
+    \State $S^2 (\hat{\mathbf{x}}^{(s)}) \leftarrow \frac{1}{n_0 - 1} \sum_{j=1}^{n_0} \left( Y_j (\hat{\mathbf{x}}^{(s)}) - \bar{Y} (\hat{\mathbf{x}}^{(s)};n_0) \right)^2$
+    \State $N_s \leftarrow \max \left\{ n_0, \left\lceil \left( \frac{h S (\hat{\mathbf{x}}^{(s)})}{\delta} \right)^2 \right\rceil \right\}$
+    \State Obtain $Y_j (\hat{\mathbf{x}}^{(s)})$ for $j = n_0 + 1, \ldots, N_s$ and compute $\bar{Y} (\hat{\mathbf{x}}^{(s)};N_s)$
+\EndFor
+\Return $\hat{\mathbf{x}}_B$, the local winner $\hat{\mathbf{x}}^{(s)}$ with the smallest sample mean $\bar{Y} (\hat{\mathbf{x}}^{(s)};N_s)$
+
+\end{algorithmic}
+\end{algorithm}
+```
+
+The per-processor part of @algo-kt-plus is @algo-kt with pairs replaced by groups of size $g$; each group is again a fresh run of @algo-kn with $k = |C|$ and $\alpha$ replaced by $\alpha_r$. The PICS per round is kept at $\alpha / 2^r$ rather than $\alpha / g^r$, since with $g > 2$ the latter would leave most of $\alpha$ unused. The final comparison is treated as one more round: $R = \lceil \log_g (k/m) \rceil + 1$ is one more than the number of rounds a processor needs for its roughly $k/m$ alternatives, and the comparison receives the PICS $\alpha_R = \alpha / 2^R$, so the allocations over the tournament rounds and the final comparison again sum to at most $\alpha$. Rinott's constant $h$ is the value for which, once every one of the $m$ local winners has $\max \{ n_0, \lceil (h S / \delta)^2 \rceil \}$ observations, the one with the smallest sample mean is the best among them with probability at least $1 - \alpha_R$ whenever its mean is at least $\delta$ smaller than the others. It depends only on $m$, $n_0$, and $\alpha_R$, and is found by numerically solving an integral equation, so it is computed once before the processors start; @Zhong2022-sx write it inside the per-processor step, but it is the same constant for every processor. Note that the observations used in this final stage are, once more, taken afresh: the tournament observations of a local winner are not reused.
+
+@Zhong2022-sx show that KT$^+$ remains optimal in rate, that is, its expected total sample size is still $\mathcal{O}(k)$ for fixed $m$ and $g$, although the constant grows with $g$, because KN needs more observations in the worst case when a match contains more alternatives, and with $m$, since in the extreme case $m = k$ the procedure reduces to Rinott's procedure. In their experiments on Apache Hadoop, Apache Spark, and Google Cloud Platform with up to about $10^6$ alternatives, KT$^+$ requires fewer observations and less wall-clock time than the good selection procedure (GSP) of Ni et al., the most efficient parallel procedure in the literature before it.
 
 ## References
 
