@@ -33,15 +33,32 @@
 <p>Let <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_B%20=%20%5Carg%5Cmin_%7Bi%20=%201,%20%5Cldots,%20k%7D%20%5Ctheta(%5Cmathbf%7Bx%7D_i)"> be the best alternative among <img src="https://latex.codecogs.com/png.latex?k"> alternatives <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_1,%20%5Cldots,%20%5Cmathbf%7Bx%7D_k">.</p>
 <p>The objective of ranking and selection (R&amp;S) is often to select the best system or a good system given the decision-maker’s tolerance <span class="citation" data-cites="Avci2023-zd">Avci et al. (2023)</span>. Formally, we can define the precision measures as follows:</p>
 <ul>
-<li><strong>Probability of Correct Selection (PCS)</strong>: The probability that the selected alternative is indeed the best one, i.e., <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPCS%7D%20=%20%5Cmathbb%7BP%7D(%5Chat%7B%5Cmathbf%7Bx%7D%7D_B%20=%20%5Cmathbf%7Bx%7D_B)">.</li>
-<li><strong>Probability of Good Selection (PGS)</strong>: The probability that the selected alternative is within a certain tolerance <img src="https://latex.codecogs.com/png.latex?%5Cdelta"> of the best one, i.e., <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPGS%7D%20=%20%5Cmathbb%7BP%7D(%5Ctheta(%5Chat%7B%5Cmathbf%7Bx%7D%7D_i)%20-%20%5Ctheta(%5Cmathbf%7Bx%7D_B)%20%5Cleq%20%5Cdelta,%20%5Cforall%20i%20=%201,%20%5Cldots,%20k)">.</li>
+<li><strong>Probability of Correct Selection (PCS)</strong>: The probability that the selected alternative is indeed the best one, i.e., <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPCS%7D%20=%20%5Cmathbb%7BP%7D(%5Chat%7B%5Cmathbf%7Bx%7D%7D_B%20=%20%5Cmathbf%7Bx%7D_B)%20%5Cgeq%201%20-%20%5Calpha">.</li>
+<li><strong>Probability of Good Selection (PGS)</strong>: The probability that the selected alternative is within a certain tolerance <img src="https://latex.codecogs.com/png.latex?%5Cdelta"> of the best one, i.e., <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPGS%7D%20=%20%5Cmathbb%7BP%7D(%5Ctheta(%5Chat%7B%5Cmathbf%7Bx%7D%7D_i)%20-%20%5Ctheta(%5Cmathbf%7Bx%7D_B)%20%5Cleq%20%5Cdelta,%20%5Cforall%20i%20=%201,%20%5Cldots,%20k)%20%5Cgeq%201%20-%20%5Calpha">.</li>
+<li><strong>Probably Approximately Correct (PAC)</strong>: The probability that the selected alternative is within a certain tolerance <img src="https://latex.codecogs.com/png.latex?%5Cdelta"> of the best one, i.e., <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPAC%7D%20=%20%5Cmathbb%7BP%7D(%5Ctheta(%5Chat%7B%5Cmathbf%7Bx%7D%7D_i)%20-%20%5Ctheta(%5Cmathbf%7Bx%7D_B)%20%5Cleq%20%5Cdelta,%20%5Cforall%20i%20=%201,%20%5Cldots,%20k)%20%5Cgeq%201%20-%20%5Calpha">.</li>
 </ul>
+<section id="rinotts-two-stage-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="rinotts-two-stage-procedure">Rinott’s Two-Stage Procedure</h2>
+<p>The earliest indifference-zone procedure, due to <span class="citation" data-cites="Bechhofer1954-ss">Bechhofer (1954)</span>, assumes that all alternatives have a known, common variance. It takes a single stage of <img src="https://latex.codecogs.com/png.latex?n"> observations from every alternative, with <img src="https://latex.codecogs.com/png.latex?n"> chosen so that the alternative with the smallest sample mean is the best with probability at least <img src="https://latex.codecogs.com/png.latex?1%20-%20%5Calpha"> whenever <img src="https://latex.codecogs.com/png.latex?%5Ctheta(%5Cmathbf%7Bx%7D_2)%20-%20%5Ctheta(%5Cmathbf%7Bx%7D_B)%20%5Cgeq%20%5Cdelta">. When the variances are unknown, the required sample size depends on them, and no single-stage procedure can deliver the guarantee <span class="citation" data-cites="Kim2006-sb">(Kim and Nelson 2006)</span>. <span class="citation" data-cites="Rinott1978-ts">Rinott (1978)</span> therefore uses two stages. The first stage takes <img src="https://latex.codecogs.com/png.latex?n_0"> observations from every alternative and estimates its variance <img src="https://latex.codecogs.com/png.latex?S%5E2%20(%5Cmathbf%7Bx%7D_i)">. The second stage brings the total number of observations of <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_i"> up to</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AN_i%20=%20%5Cmax%20%5Cleft%5C%7B%20n_0,%20%5Cleft%5Clceil%20%5Cleft(%20%5Cfrac%7Bh%20S%20(%5Cmathbf%7Bx%7D_i)%7D%7B%5Cdelta%7D%20%5Cright)%5E2%20%5Cright%5Crceil%20%5Cright%5C%7D,%0A"></p>
+<p>so that alternatives with a larger variance receive more observations, and the alternative with the smallest overall sample mean is selected. The procedure is shown in Algorithm 1; the presentation follows Procedure 1 of <span class="citation" data-cites="Hong2021-rv">Hong et al. (2021)</span>, adapted to minimization.</p>
+<div id="algo-rinott" class="pseudocode-container quarto-float" data-indent-size="1.2em" data-comment-delimiter="//" data-no-end="false" data-line-number-punc=":" data-pseudocode-number="1" data-line-number="true" data-caption-prefix="Algorithm" data-indent-lines="true">
+<div class="pseudocode">
+\begin{algorithm} \caption{Rinott's Two-Stage Procedure} \begin{algorithmic} \Require alternatives $\mathbf{x}_1, \ldots, \mathbf{x}_k$, indifference zone $\delta$, first-stage sample size $n_0 \geq 2$, confidence level $1-\alpha$ \Ensure $\hat{\mathbf{x}}_B$, the selected best alternative \State $h \leftarrow$ Rinott's constant for $k$ alternatives, first-stage sample size $n_0$, and confidence level $1 - \alpha$ \State Obtain $Y_j (\mathbf{x}_i)$ for $j = 1, \ldots, n_0$ and $i = 1, \ldots, k$ \State $S^2 (\mathbf{x}_i) \leftarrow \frac{1}{n_0 - 1} \sum_{j=1}^{n_0} \left( Y_j (\mathbf{x}_i) - \bar{Y} (\mathbf{x}_i;n_0) \right)^2$ for $i = 1, \ldots, k$ \State $N_i \leftarrow \max \left\{ n_0, \left\lceil \left( \frac{h S (\mathbf{x}_i)}{\delta} \right)^2 \right\rceil \right\}$ for $i = 1, \ldots, k$ \State Obtain $Y_j (\mathbf{x}_i)$ for $j = n_0 + 1, \ldots, N_i$ and compute $\bar{Y} (\mathbf{x}_i;N_i)$ for $i = 1, \ldots, k$ \Return $\hat{\mathbf{x}}_B$, the alternative with the smallest sample mean $\bar{Y} (\mathbf{x}_i;N_i)$ \end{algorithmic} \end{algorithm}
+</div>
+</div>
+<p>The constant <img src="https://latex.codecogs.com/png.latex?h%20=%20h(k,%201%20-%20%5Calpha,%20n_0)"> is known as Rinott’s constant. It is the solution of</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_0%5E%5Cinfty%20%5Cleft%5B%20%5Cint_0%5E%5Cinfty%20%5CPhi%20%5Cleft(%20%5Cfrac%7Bh%7D%7B%5Csqrt%7B(n_0%20-%201)%20%5Cleft(%201/x%20+%201/y%20%5Cright)%7D%7D%20%5Cright)%20f_%7Bn_0%20-%201%7D(x)%20%5C,%20dx%20%5Cright%5D%5E%7Bk-1%7D%20f_%7Bn_0%20-%201%7D(y)%20%5C,%20dy%20=%201%20-%20%5Calpha,%0A"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?%5CPhi"> is the standard normal distribution function and <img src="https://latex.codecogs.com/png.latex?f_%7Bn_0%20-%201%7D"> is the density of the <img src="https://latex.codecogs.com/png.latex?%5Cchi%5E2"> distribution with <img src="https://latex.codecogs.com/png.latex?n_0%20-%201"> degrees of freedom. The equation has to be solved numerically; tables are given by <span class="citation" data-cites="Wilcox1984-ta">Wilcox (1984)</span>. The constant increases with <img src="https://latex.codecogs.com/png.latex?k"> and decreases as <img src="https://latex.codecogs.com/png.latex?%5Calpha"> or <img src="https://latex.codecogs.com/png.latex?n_0"> increases <span class="citation" data-cites="Kim2006-sb">(Kim and Nelson 2006)</span>.</p>
+<p>The guarantee rests on two observations. First, <img src="https://latex.codecogs.com/png.latex?N_i"> depends on the data only through <img src="https://latex.codecogs.com/png.latex?S%5E2%20(%5Cmathbf%7Bx%7D_i)">, so by Stein’s theorem, conditional on <img src="https://latex.codecogs.com/png.latex?S%5E2%20(%5Cmathbf%7Bx%7D_i)">, the sample mean <img src="https://latex.codecogs.com/png.latex?%5Cbar%7BY%7D%20(%5Cmathbf%7Bx%7D_i;N_i)"> is still normal with mean <img src="https://latex.codecogs.com/png.latex?%5Ctheta(%5Cmathbf%7Bx%7D_i)"> and variance <img src="https://latex.codecogs.com/png.latex?%5Csigma_i%5E2%20/%20N_i%20%5Cleq%20(%5Cdelta%20/%20h)%5E2%20%5C,%20%5Csigma_i%5E2%20/%20S%5E2%20(%5Cmathbf%7Bx%7D_i)">, where <img src="https://latex.codecogs.com/png.latex?(n_0%20-%201)%20S%5E2%20(%5Cmathbf%7Bx%7D_i)%20/%20%5Csigma_i%5E2"> follows a <img src="https://latex.codecogs.com/png.latex?%5Cchi%5E2"> distribution with <img src="https://latex.codecogs.com/png.latex?n_0%20-%201"> degrees of freedom. The second-stage sample size thus caps the standard deviation of every sample mean, up to the ratio <img src="https://latex.codecogs.com/png.latex?%5Csigma_i%20/%20S(%5Cmathbf%7Bx%7D_i)">, at <img src="https://latex.codecogs.com/png.latex?%5Cdelta%20/%20h">. Second, the integral above is a lower bound on the probability that <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_B"> has the smallest sample mean in the least favorable configuration <img src="https://latex.codecogs.com/png.latex?%5Ctheta(%5Cmathbf%7Bx%7D_i)%20=%20%5Ctheta(%5Cmathbf%7Bx%7D_B)%20+%20%5Cdelta"> for all <img src="https://latex.codecogs.com/png.latex?i%20%5Cneq%20B">: the inner integral is the comparison of <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_B"> with one other alternative averaged over that alternative’s <img src="https://latex.codecogs.com/png.latex?%5Cchi%5E2"> variable, the power <img src="https://latex.codecogs.com/png.latex?k%20-%201"> treats the comparisons as independent, which is valid as a lower bound by Slepian’s inequality, and the outer integral averages over the <img src="https://latex.codecogs.com/png.latex?%5Cchi%5E2"> variable of <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_B">. Equating the bound to <img src="https://latex.codecogs.com/png.latex?1%20-%20%5Calpha"> gives <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPCS%7D%20%5Cgeq%201%20-%20%5Calpha"> whenever <img src="https://latex.codecogs.com/png.latex?%5Ctheta(%5Cmathbf%7Bx%7D_2)%20-%20%5Ctheta(%5Cmathbf%7Bx%7D_B)%20%5Cgeq%20%5Cdelta">. Since neither observation involves the true means, the same argument shows that the selected alternative is within <img src="https://latex.codecogs.com/png.latex?%5Cdelta"> of the best with probability at least <img src="https://latex.codecogs.com/png.latex?1%20-%20%5Calpha"> under any configuration of the means, so Rinott’s procedure also delivers the PGS guarantee <span class="citation" data-cites="Kim2006-sb Zhong2022-sx">(Kim and Nelson 2006; Zhong and Hong 2022)</span>.</p>
+<p>Every alternative receives its full second-stage sample no matter how clearly inferior it is, so the total sample size grows with <img src="https://latex.codecogs.com/png.latex?k"> both through the number of alternatives and through <img src="https://latex.codecogs.com/png.latex?h%5E2">, and the procedure becomes expensive when <img src="https://latex.codecogs.com/png.latex?k"> is large. On the other hand, once the first stage is done, the alternatives never interact until the final comparison, so the second stage can be run on separate processors without any communication. This is why the KT<img src="https://latex.codecogs.com/png.latex?%5E+"> procedure below uses it for the final comparison among the local winners.</p>
+</section>
 <section id="the-kn-procedure" class="level2">
 <h2 class="anchored" data-anchor-id="the-kn-procedure">The KN Procedure</h2>
 <p><span class="citation" data-cites="Kim2001-vv">Kim and Nelson (2001)</span> proposed the fully sequential, indifference-zone selection procedure. After the name of the authors, this method is also known as Kim–Nelson (KN) procedure. The idea is to set a indifference zone <img src="https://latex.codecogs.com/png.latex?%5Cdelta">, which is the minimum difference in performance that the decision-maker cares about. The procedure guarantees that the probability of correct selection is at least <img src="https://latex.codecogs.com/png.latex?1%20-%20%5Calpha"> if the difference between the best and second-best alternatives is at least <img src="https://latex.codecogs.com/png.latex?%5Cdelta">. Formally, this procedure guarantees that <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPCS%7D%20%5Cgeq%201%20-%20%5Calpha"> if <img src="https://latex.codecogs.com/png.latex?%5Ctheta(%5Cmathbf%7Bx%7D_2)%20-%20%5Ctheta(%5Cmathbf%7Bx%7D_B)%20%5Cgeq%20%5Cdelta">, where <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_2"> is the second-best alternative.</p>
 <p>Traditionally, the selection procedure is performed in a small number of stages, say 1, 2, or 3. The fully sequential procedure, on the other hand, collects one additional sample for each alternative in each iteration and screens them.</p>
-<p>The procedure is shown in Algorithm 1. The presentation below follows <span class="citation" data-cites="Nelson2021-fs">Nelson and Pei (2021)</span>, in which the best alternative <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_B"> is the one with the <em>smallest</em> expected performance, <img src="https://latex.codecogs.com/png.latex?%5Ctheta(%5Cmathbf%7Bx%7D_B)%20=%20%5Cmin_i%20%5Ctheta(%5Cmathbf%7Bx%7D_i)">. <span class="citation" data-cites="Kim2001-vv">Kim and Nelson (2001)</span> state the procedure for maximization, where the screening inequality is reversed.</p>
-<div id="algo-indifference-zone-selection" class="pseudocode-container quarto-float" data-indent-size="1.2em" data-comment-delimiter="//" data-pseudocode-number="1" data-caption-prefix="Algorithm" data-indent-lines="true" data-line-number-punc=":" data-line-number="true" data-no-end="false">
+<p>The procedure is shown in Algorithm 2. The presentation below follows <span class="citation" data-cites="Nelson2021-fs">Nelson and Pei (2021)</span>, in which the best alternative <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_B"> is the one with the <em>smallest</em> expected performance, <img src="https://latex.codecogs.com/png.latex?%5Ctheta(%5Cmathbf%7Bx%7D_B)%20=%20%5Cmin_i%20%5Ctheta(%5Cmathbf%7Bx%7D_i)">. <span class="citation" data-cites="Kim2001-vv">Kim and Nelson (2001)</span> state the procedure for maximization, where the screening inequality is reversed.</p>
+<div id="algo-kn" class="pseudocode-container quarto-float" data-indent-size="1.2em" data-comment-delimiter="//" data-no-end="false" data-line-number-punc=":" data-pseudocode-number="2" data-line-number="true" data-caption-prefix="Algorithm" data-indent-lines="true">
 <div class="pseudocode">
 \begin{algorithm} \caption{Fully Sequential, Indifference-Zone Selection Procedure} \begin{algorithmic} \Require alternatives $\mathbf{x}_1, \ldots, \mathbf{x}_k$, indifference zone $\delta$, first-stage sample size $n_0 \geq 2$, confidence level $1-\alpha$ \Ensure $\hat{\mathbf{x}}_B$, the selected best alternative \State $\eta \leftarrow \frac{1}{2} \left[ \left( \frac{2\alpha}{k-1} \right)^{-2/(n_0-1)} - 1 \right]$ \State $t^2 \leftarrow 2 \eta (n_0 - 1)$ \State $I \leftarrow \{\mathbf{x}_1, \ldots, \mathbf{x}_k\}$, $\quad r \leftarrow n_0$ \State Obtain $Y_j (\mathbf{x}_i)$ for $j = 1, \ldots, n_0$ and $i = 1, \ldots, k$ \State $S_{ih}^2 \leftarrow \frac{1}{n_0 - 1} \sum_{j=1}^{n_0} \left( Y_j (\mathbf{x}_i) - Y_j (\mathbf{x}_h) - \left[ \bar{Y} (\mathbf{x}_i;n_0) - \bar{Y} (\mathbf{x}_h;n_0) \right] \right)^2$ for all $i \neq h$ \Repeat \State $I_\text{old} \leftarrow I$ \State $W_{ih}(r) \leftarrow \max \left\{ 0, \frac{\delta}{2r} \left[ \frac{t^2 S_{ih}^2}{\delta^2} - r \right] \right\}$ for all $\mathbf{x}_i, \mathbf{x}_h \in I_\text{old}$ with $i \neq h$ \State $I \leftarrow \left\{ \mathbf{x}_i \in I_\text{old} : \bar{Y} (\mathbf{x}_i;r) \leq \bar{Y} (\mathbf{x}_h;r) + W_{ih}(r) \ \ \forall \mathbf{x}_h \in I_\text{old} \setminus \{\mathbf{x}_i\} \right\}$ \If{$|I| &gt; 1$} \State Obtain $Y_{r+1} (\mathbf{x}_i)$ and update $\bar{Y} (\mathbf{x}_i;r+1)$ for all $\mathbf{x}_i \in I$ \State $r \leftarrow r + 1$ \EndIf \Until{$|I| = 1$} \Return $\hat{\mathbf{x}}_B$, the single alternative in $I$ \end{algorithmic} \end{algorithm}
 </div>
@@ -49,9 +66,31 @@
 <p>Both <img src="https://latex.codecogs.com/png.latex?t%5E2"> and <img src="https://latex.codecogs.com/png.latex?S_%7Bih%7D%5E2"> are computed once in the first stage and are never updated as more observations arrive; only the sample means <img src="https://latex.codecogs.com/png.latex?%5Cbar%7BY%7D%20(%5Cmathbf%7Bx%7D_i;r)"> and the counter <img src="https://latex.codecogs.com/png.latex?r"> change from one screening to the next.</p>
 <p>As the algorithm proceeds, <img src="https://latex.codecogs.com/png.latex?r"> increases and <img src="https://latex.codecogs.com/png.latex?W_%7Bih%7D(r)"> decreases, reaching <img src="https://latex.codecogs.com/png.latex?0"> once <img src="https://latex.codecogs.com/png.latex?r%20%5Cgeq%20%5Cfrac%7Bt%5E2%20S_%7Bih%7D%5E2%7D%7B%5Cdelta%5E2%7D">. Once every pair has reached that point, that is, once <img src="https://latex.codecogs.com/png.latex?r%20%5Cgeq%20%5Cmax_%7Bi%20%5Cneq%20h%7D%20%5Cfrac%7Bt%5E2%20S_%7Bih%7D%5E2%7D%7B%5Cdelta%5E2%7D">, screening simply compares the sample means of the remaining alternatives, and all but the one with the smallest sample mean are eliminated. This bounds the run length: <span class="citation" data-cites="Kim2001-vv">Kim and Nelson (2001)</span> show that the procedure stops by <img src="https://latex.codecogs.com/png.latex?r%20=%20%5Cmax_i%20N_i%20+%201">, where <img src="https://latex.codecogs.com/png.latex?N_i%20=%20%5Cmax_%7Bh%20%5Cneq%20i%7D%20%5Clfloor%20t%5E2%20S_%7Bih%7D%5E2%20/%20%5Cdelta%5E2%20%5Crfloor">.</p>
 </section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="mss-and-mst-procedures" class="level2">
+<h2 class="anchored" data-anchor-id="mss-and-mst-procedures">MSS and MST Procedures</h2>
 <p>The KN procedure performs well in terms of the expected number of samples required to select the best alternative. However, <span class="citation" data-cites="Hong2005-kb">Hong and Nelson (2005)</span> indicated that the cost of switching among the simulations of the alternative systems should also be considered. They proposed two sequential indiindifference-zone selection procedures: the Minimum Switching Sequential (MSS), and the Multi-stage Sequential procedure with Tradeoff (MST).</p>
+</section>
+<section id="kt-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="kt-procedure">KT Procedure</h2>
+<p>When the number of alternatives <img src="https://latex.codecogs.com/png.latex?k"> is large, the KN procedure becomes expensive in two ways. It takes an additional observation from every surviving alternative in each iteration, and it compares every pair of survivors after each observation, which requires <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BO%7D(k%5E2)"> comparisons on a single processor. <span class="citation" data-cites="Zhong2022-sx">Zhong and Hong (2022)</span> proposed the knockout-tournament (KT) procedure, inspired by the bracket of a tennis tournament. The alternatives are paired up, each pair plays a match, the winner advances to the next round, and the loser is eliminated. About half of the alternatives are eliminated in each round, so the procedure stops after at most <img src="https://latex.codecogs.com/png.latex?%5Clceil%20%5Clog_2%20k%20%5Crceil"> rounds. Each match is itself a run of the KN procedure on the two alternatives. Since the best alternative has to win every match it plays, the overall guarantee <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPCS%7D%20%5Cgeq%201%20-%20%5Calpha"> is obtained by allocating a probability of incorrect selection <img src="https://latex.codecogs.com/png.latex?%5Calpha_r%20=%20%5Calpha%20/%202%5Er"> to each match in round <img src="https://latex.codecogs.com/png.latex?r">, so that the allocations over all rounds sum to at most <img src="https://latex.codecogs.com/png.latex?%5Calpha">. The procedure is shown in Algorithm 3.</p>
+<div id="algo-kt" class="pseudocode-container quarto-float" data-indent-size="1.2em" data-comment-delimiter="//" data-no-end="false" data-line-number-punc=":" data-pseudocode-number="3" data-line-number="true" data-caption-prefix="Algorithm" data-indent-lines="true">
+<div class="pseudocode">
+\begin{algorithm} \caption{Knockout-Tournament (KT) Procedure} \begin{algorithmic} \Require alternatives $\mathbf{x}_1, \ldots, \mathbf{x}_k$, indifference zone $\delta$, first-stage sample size $n_0 \geq 2$, confidence level $1-\alpha$ \Ensure $\hat{\mathbf{x}}_B$, the selected best alternative \State $I \leftarrow \{\mathbf{x}_1, \ldots, \mathbf{x}_k\}$, $\quad r \leftarrow 1$ \Repeat \State $\alpha_r \leftarrow \alpha / 2^r$ \State $I_\text{next} \leftarrow \emptyset$ \State Randomly pair up the alternatives in $I$; if $|I|$ is odd, add the unpaired alternative to $I_\text{next}$ \For{each pair $\{\mathbf{x}_i, \mathbf{x}_h\}$} \State $\mathbf{x}_w \leftarrow$ \Call{KN}{$\{\mathbf{x}_i, \mathbf{x}_h\}, \delta, n_0, \alpha_r$} \State $I_\text{next} \leftarrow I_\text{next} \cup \{\mathbf{x}_w\}$ \EndFor \State $I \leftarrow I_\text{next}$, $\quad r \leftarrow r + 1$ \Until{$|I| = 1$} \Return $\hat{\mathbf{x}}_B$, the single alternative in $I$ \end{algorithmic} \end{algorithm}
+</div>
+</div>
+<p>Every match in Algorithm 3 is a fresh run of Algorithm 2 on the pair <img src="https://latex.codecogs.com/png.latex?%5C%7B%5Cmathbf%7Bx%7D_i,%20%5Cmathbf%7Bx%7D_h%5C%7D">, with <img src="https://latex.codecogs.com/png.latex?k%20=%202"> and <img src="https://latex.codecogs.com/png.latex?%5Calpha"> replaced by <img src="https://latex.codecogs.com/png.latex?%5Calpha_r">. In particular, the first stage of KN, which takes <img src="https://latex.codecogs.com/png.latex?n_0"> observations from each alternative and computes the variance estimate <img src="https://latex.codecogs.com/png.latex?S_%7Bih%7D%5E2">, is repeated in every match. Observations that <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_i"> accumulated while winning an earlier round are not carried over. This is deliberate. The PCS guarantee of KN holds for an independent run, and reusing observations that helped an alternative win its previous match would bias the new match in its favor. Moreover, <img src="https://latex.codecogs.com/png.latex?S_%7Bih%7D%5E2"> is the variance of the <em>difference</em> <img src="https://latex.codecogs.com/png.latex?Y_j(%5Cmathbf%7Bx%7D_i)%20-%20Y_j(%5Cmathbf%7Bx%7D_h)">, which depends on the pair and has to be estimated anew for a new opponent anyway. Because only two alternatives are compared at a time, common random numbers can be used within a match simply by assigning the match its own random-number stream, and different matches can be run on different processors without any communication between them.</p>
+<p>Discarding previous observations has a cost: for small <img src="https://latex.codecogs.com/png.latex?k">, KN needs fewer observations in total than KT. However, there are <img src="https://latex.codecogs.com/png.latex?k%20-%201"> matches in total, so each alternative plays fewer than two matches on average, and the number of observations a match needs does not depend on <img src="https://latex.codecogs.com/png.latex?k">. <span class="citation" data-cites="Zhong2022-sx">Zhong and Hong (2022)</span> show that the expected total sample size of KT is <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BO%7D(k)">, which is the lowest possible growth rate for any procedure with a PCS guarantee, whereas that of KN grows faster than linearly in <img src="https://latex.codecogs.com/png.latex?k">. In their experiments, KT requires fewer observations than KN once <img src="https://latex.codecogs.com/png.latex?k%20%5Cgeq%2010%5E5">.</p>
+</section>
+<section id="kt-plus-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="kt-plus-procedure">KT⁺ Procedure</h2>
+<p>In a parallel computing environment with <img src="https://latex.codecogs.com/png.latex?m"> processors, Algorithm 3 can be run by splitting the alternatives into <img src="https://latex.codecogs.com/png.latex?m"> subsets, letting each processor run the tournament on its own subset, and comparing the <img src="https://latex.codecogs.com/png.latex?m"> local winners at the end. <span class="citation" data-cites="Zhong2022-sx">Zhong and Hong (2022)</span> propose two modifications for this setting, which give the KT<img src="https://latex.codecogs.com/png.latex?%5E+"> procedure shown in Algorithm 4. First, a match may involve <img src="https://latex.codecogs.com/png.latex?g%20%5Cgeq%202"> alternatives rather than two. When two clearly inferior alternatives with similar means are paired, KN needs many observations to separate them; with more alternatives in a match, it is unlikely that all of them are equally bad, and every clearly inferior alternative is eliminated quickly. The authors suggest fewer than <img src="https://latex.codecogs.com/png.latex?30"> alternatives per match when <img src="https://latex.codecogs.com/png.latex?k%20%5Cleq%2010%5E5"> and about <img src="https://latex.codecogs.com/png.latex?50"> when <img src="https://latex.codecogs.com/png.latex?k%20%5Cgeq%2010%5E5">. Second, a processor that has found its local winner would otherwise sit idle until the others finish. Instead, it uses that time to take enough observations from its winner, as prescribed by Rinott’s two-stage procedure (Algorithm 1), so that the final selection among the <img src="https://latex.codecogs.com/png.latex?m"> local winners can be made by comparing their sample means, without any further sequential sampling.</p>
+<div id="algo-kt-plus" class="pseudocode-container quarto-float" data-indent-size="1.2em" data-comment-delimiter="//" data-no-end="false" data-line-number-punc=":" data-pseudocode-number="4" data-line-number="true" data-caption-prefix="Algorithm" data-indent-lines="true">
+<div class="pseudocode">
+\begin{algorithm} \caption{Knockout-Tournament Procedure for Parallel Computing (KT$^+$)} \begin{algorithmic} \Require alternatives $\mathbf{x}_1, \ldots, \mathbf{x}_k$, indifference zone $\delta$, first-stage sample size $n_0 \geq 2$, confidence level $1-\alpha$, number of processors $m$, match size $g \geq 2$ \Ensure $\hat{\mathbf{x}}_B$, the selected best alternative \State Assign the alternatives to the processors in a round-robin fashion: $I^{(s)} \leftarrow \{\mathbf{x}_i : (i \bmod m) + 1 = s\}$ for $s = 1, \ldots, m$ \State $R \leftarrow \lceil \log_g (k/m) \rceil + 1$, $\quad \alpha_R \leftarrow \alpha / 2^R$ \State $h \leftarrow$ Rinott's constant for $m$ alternatives, first-stage sample size $n_0$, and confidence level $1 - \alpha_R$ \For{each processor $s = 1, \ldots, m$, \textbf{in parallel}} \State $r \leftarrow 1$ \Repeat \State $\alpha_r \leftarrow \alpha / 2^r$ \State $I^{(s)}_\text{next} \leftarrow \emptyset$ \State Randomly partition $I^{(s)}$ into groups of size $g$; the leftover alternatives, if any, form one smaller group, and a group of size $1$ advances directly to $I^{(s)}_\text{next}$ \For{each group $C$ with $|C| \geq 2$} \State $\mathbf{x}_w \leftarrow$ \Call{KN}{$C, \delta, n_0, \alpha_r$} \State $I^{(s)}_\text{next} \leftarrow I^{(s)}_\text{next} \cup \{\mathbf{x}_w\}$ \EndFor \State $I^{(s)} \leftarrow I^{(s)}_\text{next}$, $\quad r \leftarrow r + 1$ \Until{$|I^{(s)}| = 1$} \State $\hat{\mathbf{x}}^{(s)} \leftarrow$ the single alternative in $I^{(s)}$ \State Obtain $Y_j (\hat{\mathbf{x}}^{(s)})$ for $j = 1, \ldots, n_0$ \State $S^2 (\hat{\mathbf{x}}^{(s)}) \leftarrow \frac{1}{n_0 - 1} \sum_{j=1}^{n_0} \left( Y_j (\hat{\mathbf{x}}^{(s)}) - \bar{Y} (\hat{\mathbf{x}}^{(s)};n_0) \right)^2$ \State $N_s \leftarrow \max \left\{ n_0, \left\lceil \left( \frac{h S (\hat{\mathbf{x}}^{(s)})}{\delta} \right)^2 \right\rceil \right\}$ \State Obtain $Y_j (\hat{\mathbf{x}}^{(s)})$ for $j = n_0 + 1, \ldots, N_s$ and compute $\bar{Y} (\hat{\mathbf{x}}^{(s)};N_s)$ \EndFor \Return $\hat{\mathbf{x}}_B$, the local winner $\hat{\mathbf{x}}^{(s)}$ with the smallest sample mean $\bar{Y} (\hat{\mathbf{x}}^{(s)};N_s)$ \end{algorithmic} \end{algorithm}
+</div>
+</div>
+<p>The per-processor part of Algorithm 4 is Algorithm 3 with pairs replaced by groups of size <img src="https://latex.codecogs.com/png.latex?g">; each group is again a fresh run of Algorithm 2 with <img src="https://latex.codecogs.com/png.latex?k%20=%20%7CC%7C"> and <img src="https://latex.codecogs.com/png.latex?%5Calpha"> replaced by <img src="https://latex.codecogs.com/png.latex?%5Calpha_r">. The PICS per round is kept at <img src="https://latex.codecogs.com/png.latex?%5Calpha%20/%202%5Er"> rather than <img src="https://latex.codecogs.com/png.latex?%5Calpha%20/%20g%5Er">, since with <img src="https://latex.codecogs.com/png.latex?g%20%3E%202"> the latter would leave most of <img src="https://latex.codecogs.com/png.latex?%5Calpha"> unused. The final comparison is treated as one more round: <img src="https://latex.codecogs.com/png.latex?R%20=%20%5Clceil%20%5Clog_g%20(k/m)%20%5Crceil%20+%201"> is one more than the number of rounds a processor needs for its roughly <img src="https://latex.codecogs.com/png.latex?k/m"> alternatives, and the comparison receives the PICS <img src="https://latex.codecogs.com/png.latex?%5Calpha_R%20=%20%5Calpha%20/%202%5ER">, so the allocations over the tournament rounds and the final comparison again sum to at most <img src="https://latex.codecogs.com/png.latex?%5Calpha">. Rinott’s constant <img src="https://latex.codecogs.com/png.latex?h"> is the value for which, once every one of the <img src="https://latex.codecogs.com/png.latex?m"> local winners has <img src="https://latex.codecogs.com/png.latex?%5Cmax%20%5C%7B%20n_0,%20%5Clceil%20(h%20S%20/%20%5Cdelta)%5E2%20%5Crceil%20%5C%7D"> observations, the one with the smallest sample mean is the best among them with probability at least <img src="https://latex.codecogs.com/png.latex?1%20-%20%5Calpha_R"> whenever its mean is at least <img src="https://latex.codecogs.com/png.latex?%5Cdelta"> smaller than the others. It depends only on <img src="https://latex.codecogs.com/png.latex?m">, <img src="https://latex.codecogs.com/png.latex?n_0">, and <img src="https://latex.codecogs.com/png.latex?%5Calpha_R">, and is found by numerically solving an integral equation, so it is computed once before the processors start; <span class="citation" data-cites="Zhong2022-sx">Zhong and Hong (2022)</span> write it inside the per-processor step, but it is the same constant for every processor. Note that the observations used in this final stage are, once more, taken afresh: the tournament observations of a local winner are not reused.</p>
+<p><span class="citation" data-cites="Zhong2022-sx">Zhong and Hong (2022)</span> show that KT<img src="https://latex.codecogs.com/png.latex?%5E+"> remains optimal in rate, that is, its expected total sample size is still <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BO%7D(k)"> for fixed <img src="https://latex.codecogs.com/png.latex?m"> and <img src="https://latex.codecogs.com/png.latex?g">, although the constant grows with <img src="https://latex.codecogs.com/png.latex?g">, because KN needs more observations in the worst case when a match contains more alternatives, and with <img src="https://latex.codecogs.com/png.latex?m">, since in the extreme case <img src="https://latex.codecogs.com/png.latex?m%20=%20k"> the procedure reduces to Rinott’s procedure. In their experiments on Apache Hadoop, Apache Spark, and Google Cloud Platform with up to about <img src="https://latex.codecogs.com/png.latex?10%5E6"> alternatives, KT<img src="https://latex.codecogs.com/png.latex?%5E+"> requires fewer observations and less wall-clock time than the good selection procedure (GSP) of Ni et al., the most efficient parallel procedure in the literature before it.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
@@ -59,14 +98,32 @@
 <div id="ref-Avci2023-zd" class="csl-entry">
 Avci, Harun, Barry L Nelson, Eunhye Song, and Andreas Wächter. 2023. <span>“Using Cache or Credit for Parallel Ranking and Selection.”</span> <em>ACM Transactions on Modeling and Computer Simulation</em> 33 (4): 1–28. <a href="https://doi.org/10.1145/3618299">https://doi.org/10.1145/3618299</a>.
 </div>
+<div id="ref-Bechhofer1954-ss" class="csl-entry">
+Bechhofer, Robert E. 1954. <span>“A Single-Sample Multiple Decision Procedure for Ranking Means of Normal Populations with Known Variances.”</span> <em>The Annals of Mathematical Statistics</em> 25 (1): 16–39. <a href="https://doi.org/10.1214/aoms/1177728845">https://doi.org/10.1214/aoms/1177728845</a>.
+</div>
+<div id="ref-Hong2021-rv" class="csl-entry">
+Hong, L Jeff, Weiwei Fan, and Jun Luo. 2021. <span>“Review on Ranking and Selection: A New Perspective.”</span> <em>Frontiers of Engineering Management</em> 8 (3): 321–43. <a href="https://doi.org/10.1007/s42524-021-0152-6">https://doi.org/10.1007/s42524-021-0152-6</a>.
+</div>
 <div id="ref-Hong2005-kb" class="csl-entry">
 Hong, L Jeff, and Barry L Nelson. 2005. <span>“The Tradeoff Between Sampling and Switching: New Sequential Procedures for Indifference-Zone Selection.”</span> <em>IIE Transactions: Industrial Engineering Research &amp; Development</em> 37 (7): 623–34. <a href="https://doi.org/10.1080/07408170590948486">https://doi.org/10.1080/07408170590948486</a>.
 </div>
 <div id="ref-Kim2001-vv" class="csl-entry">
 Kim, Seong-Hee, and Barry L Nelson. 2001. <span>“A Fully Sequential Procedure for Indifference-Zone Selection in Simulation.”</span> <em>ACM Transactions on Modeling and Computer Simulation</em> 11 (3): 251–73. <a href="https://doi.org/10.1145/502109.502111">https://doi.org/10.1145/502109.502111</a>.
 </div>
+<div id="ref-Kim2006-sb" class="csl-entry">
+Kim, Seong-Hee, and Barry L Nelson. 2006. <span>“Selecting the Best System.”</span> Chap. 17 in <em>Simulation</em>, edited by Shane G Henderson and Barry L Nelson. Handbooks in Operations Research and Management Science 13. Elsevier. <a href="https://doi.org/10.1016/S0927-0507(06)13017-0">https://doi.org/10.1016/S0927-0507(06)13017-0</a>.
+</div>
 <div id="ref-Nelson2021-fs" class="csl-entry">
 Nelson, Barry L, and Linda Pei. 2021. <em>Foundations and Methods of Stochastic Simulation: A First Course</em>. 2nd ed. International Series in Operations Research &amp; Management Science 316. Springer. <a href="https://doi.org/10.1007/978-3-030-86194-0">https://doi.org/10.1007/978-3-030-86194-0</a>.
+</div>
+<div id="ref-Rinott1978-ts" class="csl-entry">
+Rinott, Yosef. 1978. <span>“On Two-Stage Selection Procedures and Related Probability-Inequalities.”</span> <em>Communications in Statistics - Theory and Methods</em> 7 (8): 799–811. <a href="https://doi.org/10.1080/03610927808827671">https://doi.org/10.1080/03610927808827671</a>.
+</div>
+<div id="ref-Wilcox1984-ta" class="csl-entry">
+Wilcox, Rand R. 1984. <span>“A Table for <span class="nocase">Rinott’s</span> Selection Procedure.”</span> <em>Journal of Quality Technology</em> 16 (2): 97–100. <a href="https://doi.org/10.1080/00224065.1984.11978896">https://doi.org/10.1080/00224065.1984.11978896</a>.
+</div>
+<div id="ref-Zhong2022-sx" class="csl-entry">
+Zhong, Ying, and L Jeff Hong. 2022. <span>“Knockout-Tournament Procedures for Large-Scale Ranking and Selection in Parallel Computing Environments.”</span> <em>Operations Research</em> 70 (1): 432–53. <a href="https://doi.org/10.1287/opre.2020.2065">https://doi.org/10.1287/opre.2020.2065</a>.
 </div>
 </div>
 
@@ -77,6 +134,590 @@ Nelson, Barry L, and Linda Pei. 2021. <em>Foundations and Methods of Stochastic 
   <category>Operations Research</category>
   <category>Simulation</category>
   <guid>https://zi-ang-liu.github.io/blog/26-09-01-ranking-selection/</guid>
+  <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Approximate Policy Iteration</title>
+  <dc:creator>Ziang Liu</dc:creator>
+  <link>https://zi-ang-liu.github.io/blog/26-09-14-approximate-PI/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="classification-based-policy-iteration" class="level2">
+<h2 class="anchored" data-anchor-id="classification-based-policy-iteration">Classification-based Policy Iteration</h2>
+<p><span class="citation" data-cites="Lagoudakis2003-kz">Lagoudakis and Parr (2003)</span> proposed an classification-based policy iteration that uses classifiers such as SVM and neural networks to approximate the policy.</p>
+<p><span class="citation" data-cites="Lazaric2016-gg">Lazaric et al. (2016)</span> introduced cost-sensitive loss function weighting each classification mistake by its actual regret.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Lagoudakis2003-kz" class="csl-entry">
+Lagoudakis, Michail G, and Ronald Parr. 2003. <em>Reinforcement Learning as Classification: Leveraging Modern Classifiers</em>. <a href="https://cdn.aaai.org/ICML/2003/ICML03-057.pdf" class="uri">Https://cdn.aaai.org/ICML/2003/ICML03-057.pdf</a>.
+</div>
+<div id="ref-Lazaric2016-gg" class="csl-entry">
+Lazaric, Alessandro, Mohammad Ghavamzadeh, and Rémi Munos. 2016. <span>“Analysis of Classification-Based Policy Iteration Algorithms.”</span> <em>Journal of Machine Learning Research</em> 17 (19): 1–30.
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category></category>
+  <category>Simulation</category>
+  <guid>https://zi-ang-liu.github.io/blog/26-09-14-approximate-PI/</guid>
+  <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>The Newsvendor Problem as a Multi Armed Bandit Problem</title>
+  <dc:creator>Ziang Liu</dc:creator>
+  <link>https://zi-ang-liu.github.io/blog/26-09-19-nw-mba/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>The newsvendor problem is a classic inventory management problem in which a decision-maker must decide how many copies of a newspaper to order each morning. The demand for the newspaper follows a probability distribution. The overage cost occurs when the demand is less than the order quantity, and the underage cost occurs when the demand is greater than the order quantity.</p>
+<p>Note that the classic newsvendor problem assumes that the demand distribution is known and by minimizing the expected cost, we can find the optimal order quantity.</p>
+<p>Here, we assume that the demand distribution is unknown, and we can only observe the demand after ordering the newspaper. The objective is to minimize the cost over some time period. By considering the discrete order quantity as actions, we can model the newsvendor problem as a multi-armed bandit problem.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="https://latex.codecogs.com/png.latex?D_t"></td>
+<td>Demand at time <img src="https://latex.codecogs.com/png.latex?t"></td>
+</tr>
+<tr class="even">
+<td><img src="https://latex.codecogs.com/png.latex?h"></td>
+<td>Holding cost (overage cost)</td>
+</tr>
+<tr class="odd">
+<td><img src="https://latex.codecogs.com/png.latex?p"></td>
+<td>Stockout cost (underage cost)</td>
+</tr>
+</tbody>
+</table>
+<section id="experiments" class="level2">
+<h2 class="anchored" data-anchor-id="experiments">Experiments</h2>
+<p>In the following code, we solve an instance of the newsvendor problem using the simple bandit algorithm. In this example, <img src="https://latex.codecogs.com/png.latex?h%20=%200.18">, <img src="https://latex.codecogs.com/png.latex?p%20=%200.7">, and <img src="https://latex.codecogs.com/png.latex?D%20%5Csim%20%5Cmathcal%7BN%7D(5,%201)">, where <img src="https://latex.codecogs.com/png.latex?D"> is discretized to the nearest integer.</p>
+<p>We set the planning horizon <code>steps = 2000</code>. We use the <img src="https://latex.codecogs.com/png.latex?%5Cepsilon">-greedy policy with <img src="https://latex.codecogs.com/png.latex?%5Cepsilon%20=%200.1">. We run the algorithm 10 times by setting <code>number_of_runs = 10</code> and store the results in the <code>rewards</code> array. Finally, we plot the average reward over time.</p>
+<div id="27aca876" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"></span>
+<span id="cb1-5"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">class</span> newsvendor_as_bandits:</span>
+<span id="cb1-6">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, k, h, p, mu, sigma):</span>
+<span id="cb1-7">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.k <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> k</span>
+<span id="cb1-8">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.h <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> h</span>
+<span id="cb1-9">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.p <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> p</span>
+<span id="cb1-10">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.mu <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> mu</span>
+<span id="cb1-11">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.sigma <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sigma</span>
+<span id="cb1-12"></span>
+<span id="cb1-13">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> bandit(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, action):</span>
+<span id="cb1-14">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># sample demand to integer</span></span>
+<span id="cb1-15">        demand <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">round</span>(np.random.normal(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.mu, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.sigma))</span>
+<span id="cb1-16">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># calculate cost</span></span>
+<span id="cb1-17">        cost <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.h <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">max</span>(action <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> demand, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.p <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">max</span>(demand <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> action, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb1-18">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>cost</span>
+<span id="cb1-19"></span>
+<span id="cb1-20"></span>
+<span id="cb1-21"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">class</span> bandit_algorithm:</span>
+<span id="cb1-22">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, bandit, epsilon, steps):</span>
+<span id="cb1-23">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.bandit <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> bandit</span>
+<span id="cb1-24">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.epsilon <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> epsilon</span>
+<span id="cb1-25">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.steps <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> steps</span>
+<span id="cb1-26">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.k <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> bandit.k</span>
+<span id="cb1-27">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.Q <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.zeros(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.k)</span>
+<span id="cb1-28">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.N <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.zeros(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.k)</span>
+<span id="cb1-29">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.reward <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.zeros(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.steps)</span>
+<span id="cb1-30"></span>
+<span id="cb1-31">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> learn(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-32">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> t <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.steps):</span>
+<span id="cb1-33">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># epsilon greedy</span></span>
+<span id="cb1-34">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> np.random.rand() <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.epsilon:</span>
+<span id="cb1-35">                action <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.random.randint(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.k)</span>
+<span id="cb1-36">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">else</span>:</span>
+<span id="cb1-37">                <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># choose action with maximum Q, if multiple, choose randomly</span></span>
+<span id="cb1-38">                action <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.random.choice(np.where(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.Q <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> np.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">max</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.Q))[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>])</span>
+<span id="cb1-39">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># get reward</span></span>
+<span id="cb1-40">            reward <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.bandit.bandit(action)</span>
+<span id="cb1-41">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># update Q</span></span>
+<span id="cb1-42">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.N[action] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb1-43">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.Q[action] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> (reward <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.Q[action]) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.N[action]</span>
+<span id="cb1-44">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># update reward</span></span>
+<span id="cb1-45">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.reward[t] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> reward</span>
+<span id="cb1-46"></span>
+<span id="cb1-47"></span>
+<span id="cb1-48"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">__name__</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"__main__"</span>:</span>
+<span id="cb1-49"></span>
+<span id="cb1-50">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># set random seed for reproducibility</span></span>
+<span id="cb1-51">    np.random.seed(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb1-52"></span>
+<span id="cb1-53">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># parameters</span></span>
+<span id="cb1-54">    k <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span></span>
+<span id="cb1-55">    h <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.18</span></span>
+<span id="cb1-56">    p <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.7</span></span>
+<span id="cb1-57">    mu <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span></span>
+<span id="cb1-58">    sigma <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb1-59">    optimal <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span></span>
+<span id="cb1-60">    epsilon_list <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.1</span>]</span>
+<span id="cb1-61">    steps <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2000</span></span>
+<span id="cb1-62"></span>
+<span id="cb1-63">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># mean reward</span></span>
+<span id="cb1-64">    number_of_runs <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span></span>
+<span id="cb1-65">    rewards <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.zeros((<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(epsilon_list), number_of_runs, steps))</span>
+<span id="cb1-66"></span>
+<span id="cb1-67">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># newsvendor problem</span></span>
+<span id="cb1-68">    newsvendor <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> newsvendor_as_bandits(k, h, p, mu, sigma)</span>
+<span id="cb1-69"></span>
+<span id="cb1-70">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(epsilon_list)):</span>
+<span id="cb1-71">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> j <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(number_of_runs):</span>
+<span id="cb1-72">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># initialize bandit algorithm</span></span>
+<span id="cb1-73">            bandit <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> bandit_algorithm(newsvendor, epsilon_list[i], steps)</span>
+<span id="cb1-74">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># learn</span></span>
+<span id="cb1-75">            bandit.learn()</span>
+<span id="cb1-76">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># store results</span></span>
+<span id="cb1-77">            rewards[i, j, :] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> bandit.reward</span>
+<span id="cb1-78">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># print optimal action and Q value</span></span>
+<span id="cb1-79">            <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(</span>
+<span id="cb1-80">                <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"optimal action = </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">, Q = </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">format</span>(</span>
+<span id="cb1-81">                    np.argmax(bandit.Q), bandit.Q[np.argmax(bandit.Q)]</span>
+<span id="cb1-82">                )</span>
+<span id="cb1-83">            )</span>
+<span id="cb1-84"></span>
+<span id="cb1-85">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># plot</span></span>
+<span id="cb1-86">    plt.figure(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>))</span>
+<span id="cb1-87">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(epsilon_list)):</span>
+<span id="cb1-88">        plt.plot(</span>
+<span id="cb1-89">            np.mean(rewards[i, :, :], axis<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>),</span>
+<span id="cb1-90">            label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"epsilon = </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">format</span>(epsilon_list[i]),</span>
+<span id="cb1-91">        )</span>
+<span id="cb1-92">    plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Steps"</span>, fontsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">14</span>)</span>
+<span id="cb1-93">    plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Average Reward"</span>, fontsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">14</span>)</span>
+<span id="cb1-94">    plt.title(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Average Reward vs Steps"</span>, fontsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>)</span>
+<span id="cb1-95">    plt.tick_params(axis<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"both"</span>, which<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"major"</span>, labelsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb1-96">    plt.legend(fontsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb1-97">    plt.show()</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>optimal action = 6, Q = -0.2510071942446042
+optimal action = 6, Q = -0.2510820045558093
+optimal action = 6, Q = -0.24312393887945655
+optimal action = 6, Q = -0.24921290322580647
+optimal action = 6, Q = -0.25454344216934205
+optimal action = 6, Q = -0.24310325786858075
+optimal action = 6, Q = -0.2506343077771653
+optimal action = 6, Q = -0.24419944598337928
+optimal action = 6, Q = -0.251546052631579
+optimal action = 6, Q = -0.2518596881959912</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://zi-ang-liu.github.io/blog/26-09-19-nw-mba/index_files/figure-html/cell-2-output-2.png" width="846" height="536" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs">
+
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Operations Research</category>
+  <category>Multi-Armed Bandit Problem</category>
+  <guid>https://zi-ang-liu.github.io/blog/26-09-19-nw-mba/</guid>
   <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -210,7 +851,7 @@ Sachs, Anna-Lena, and Stefan Minner. 2014. <span>“The Data-Driven Newsvendor w
 <h3 class="anchored" data-anchor-id="successive-halving">Successive Halving</h3>
 <p>Successive Halving was originally proposed by <span class="citation" data-cites="Karnin2013-az">Karnin et al. (2013)</span>. Later, <span class="citation" data-cites="Jamieson2016-sg">Jamieson and Talwalkar (2016)</span> proposed to use this method for HPO.</p>
 <p>Successive Halving requires a budget <img src="https://latex.codecogs.com/png.latex?B"> and a number of configurations <img src="https://latex.codecogs.com/png.latex?n">. In the context of HPO for machine learning models, a configuration refers to a specific combination of hyperparameters. The budget <img src="https://latex.codecogs.com/png.latex?B"> can be defined as the total number of iterations that can be used. The performance of a configuration is evaluated by the loss function. In this algorithm, <img src="https://latex.codecogs.com/png.latex?l_%7Bi,%20r%7D"> denotes the loss of configuration <img src="https://latex.codecogs.com/png.latex?i"> after <img src="https://latex.codecogs.com/png.latex?r"> iterations.</p>
-<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-indent-lines="false" data-indent-size="1.2em" data-no-end="false" data-comment-delimiter="//" data-pseudocode-number="1" data-line-number="true" data-line-number-punc=":" data-caption-prefix="Algorithm">
+<div id="algo-successive-halving" class="pseudocode-container quarto-float" data-line-number="true" data-caption-prefix="Algorithm" data-no-end="false" data-line-number-punc=":" data-comment-delimiter="//" data-pseudocode-number="1" data-indent-size="1.2em" data-indent-lines="false">
 <div class="pseudocode">
 \begin{algorithm} \caption{Successive Halving} \begin{algorithmic} \Require Budget $B$, number of configurations $n$ \State $S_0 \leftarrow \{1, 2, \dots, n\}$ \For{$k = 0, 1, \dots, \lceil \log_2 n \rceil - 1$} \State $r_k \leftarrow \lfloor \frac{B}{|S_k| \lceil \log_2 n \rceil} \rfloor$ \State $R_k \leftarrow \sum_{j=0}^{k} r_j$ \State Run each configuration in $S_k$ for $r_k$ additional iterations \State Get $l_{i, R_k}$ for each configuration $i \in S_k$ \State $S_{k+1} \leftarrow \left\{ i \in S_k : l_{i, R_k} \text{ is among the best } \lfloor |S_k| / 2 \rfloor \text{ losses} \right\}$ \EndFor \end{algorithmic} \end{algorithm}
 </div>
@@ -265,14 +906,14 @@ Sachs, Anna-Lena, and Stefan Minner. 2014. <span>“The Data-Driven Newsvendor w
 <section id="hyperband" class="level3">
 <h3 class="anchored" data-anchor-id="hyperband">Hyperband</h3>
 <p>In the Successive Halving algorithm, it is required to specify <img src="https://latex.codecogs.com/png.latex?B"> and <img src="https://latex.codecogs.com/png.latex?n"> in advance. However, it is may be difficult to choose a good value for <img src="https://latex.codecogs.com/png.latex?n"> in practice. Hyperband <span class="citation" data-cites="Li2016-fm">(Li et al. 2016)</span> can be considered as a extension of Successive Halving.</p>
-<div id="algo-hyperband" class="pseudocode-container quarto-float" data-indent-lines="false" data-indent-size="1.2em" data-no-end="false" data-comment-delimiter="//" data-pseudocode-number="2" data-line-number="true" data-line-number-punc=":" data-caption-prefix="Algorithm">
+<div id="algo-hyperband" class="pseudocode-container quarto-float" data-line-number="true" data-caption-prefix="Algorithm" data-no-end="false" data-line-number-punc=":" data-comment-delimiter="//" data-pseudocode-number="2" data-indent-size="1.2em" data-indent-lines="false">
 <div class="pseudocode">
 \begin{algorithm} \caption{Hyperband} \begin{algorithmic} \Require $R$, $\eta$ \State $s_{max} \leftarrow \lfloor \log_\eta R \rfloor$ \State $B \leftarrow (s_{max} + 1) R$ \For{$s = s_{\max}, s_{\max} - 1, \dots, 0$} \State $n \leftarrow \lfloor \frac{B}{R (s + 1)} \rfloor \eta^s$ \State $r \leftarrow R \eta^{-s}$ \For{$i = 0, 1, \dots, s$} \State $n_i \leftarrow \lfloor n \eta^{-i} \rfloor$ \State $r_i \leftarrow r \eta^i$ \State Run each configuration in $S_i$ for $r_i$ iterations \State Get $l_{i, r_i}$ for each configuration $i \in S_i$ \State $S_{i+1} \leftarrow \left\{ i \in S_i : l_{i, r_i} \text{ is among the best } \lfloor n_i / \eta \rfloor \text{ losses} \right\}$ \EndFor \EndFor \end{algorithmic} \end{algorithm}
 </div>
 </div>
 <p>Note that the original paper writes this step as <img src="https://latex.codecogs.com/png.latex?n%20%5Cleftarrow%20%5Clceil%20%5Cfrac%7BB%7D%7BR%7D%20%5Cfrac%7B%5Ceta%5Es%7D%7Bs%20+%201%7D%20%5Crceil">, rounding up only at the end; here we use <img src="https://latex.codecogs.com/png.latex?n%20%5Cleftarrow%20%5Clfloor%20%5Cfrac%7BB%7D%7BR%20(s%20+%201)%7D%20%5Crfloor%20%5Ceta%5Es">, which floors the per-round budget first and matches the values in the paper’s Table 1 and its reference implementation.</p>
 <p>The following example is adapted from <span class="citation" data-cites="Li2016-fm">Li et al. (2016)</span>. Let <img src="https://latex.codecogs.com/png.latex?R%20=%2081"> and <img src="https://latex.codecogs.com/png.latex?%5Ceta%20=%203">, so that <img src="https://latex.codecogs.com/png.latex?s_%7Bmax%7D%20=%20%5Clfloor%20%5Clog_3%2081%20%5Crfloor%20=%204">. The following table shows the values of <img src="https://latex.codecogs.com/png.latex?n"> and <img src="https://latex.codecogs.com/png.latex?r"> for each value of <img src="https://latex.codecogs.com/png.latex?s">.</p>
-<div id="65224019" class="cell" data-execution_count="1">
+<div id="c6abec50" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
