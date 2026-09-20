@@ -43,15 +43,18 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          # Reuses downloaded wheels across runs; the cache key is the hash of
+          # requirements.txt, so it refreshes whenever the pins change.
+          cache: pip
 
       # The jupyter engine is needed because blog posts carry executable
       # ```{python} cells and /_freeze/ is gitignored — CI re-runs those cells on
-      # every publish rather than replaying a committed freeze. `jupyter` is the
-      # whole dependency list: the cells that exist use only the standard
-      # library. A post that imports numpy/matplotlib needs a requirements.txt
-      # here (add `- run: pip install -r requirements.txt` below), or the
-      # `execute: freeze: auto` route with /_freeze/ committed instead.
-      - run: pip install jupyter
+      # every publish rather than replaying a committed freeze. requirements.txt
+      # is the whole dependency list: the engine plus every package a post
+      # imports (a post importing something not listed there fails to render
+      # here with ModuleNotFoundError, even if it renders on a laptop). The
+      # alternative would be `execute: freeze: auto` with /_freeze/ committed.
+      - run: pip install -r requirements.txt
 
       - name: Render and publish
         uses: quarto-dev/quarto-actions/publish@v2

@@ -1,0 +1,14 @@
+# Python needed to render the site — installed by .github/workflows/publish.yml
+# and usable locally with `pip install -r requirements.txt` in a fresh venv.
+#
+# Quarto's jupyter engine runs the ```{python} cells in blog posts on every
+# publish (/_freeze/ is gitignored), so any package a post imports must be here.
+
+# The engine itself.
+jupyter
+
+# Imported by blog/26-09-19-nw-mba/index.qmd. Pinned to the versions the post
+# was authored and rendered against, so an upstream release cannot silently
+# change the figure. Bump deliberately, and re-render locally to check.
+numpy==2.2.6
+matplotlib==3.10.6
