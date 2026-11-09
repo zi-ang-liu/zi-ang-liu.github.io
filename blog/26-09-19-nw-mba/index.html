@@ -104,9 +104,9 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-959295b59630de3d8499169efe1922db.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-05b02b70161a90c059a6b1724c544078.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-a14edb19bcb3a002751832bead77b4f1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-05b02b70161a90c059a6b1724c544078.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-57fb01e90c6a292215a943047220a00b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-63371e33f2071384df21c60664915fcd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-57fb01e90c6a292215a943047220a00b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
 <link href="../../site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -580,7 +580,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="experiments">Experiments</h2>
 <p>In the following code, we solve an instance of the newsvendor problem using the simple bandit algorithm. In this example, <span class="math inline">h = 0.18</span>, <span class="math inline">p = 0.7</span>, and <span class="math inline">D \sim \mathcal{N}(5, 1)</span>, where <span class="math inline">D</span> is discretized to the nearest integer.</p>
 <p>We set the planning horizon <code>steps = 2000</code>. We use the <span class="math inline">\epsilon</span>-greedy policy with <span class="math inline">\epsilon = 0.1</span>. We run the algorithm 10 times by setting <code>number_of_runs = 10</code> and store the results in the <code>rewards</code> array. Finally, we plot the average reward over time.</p>
-<div id="27aca876" class="cell" data-execution_count="1">
+<div id="b6a728aa" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -698,6 +698,8 @@ optimal action = 6, Q = -0.2518596881959912</code></pre>
 </div>
 </div>
 </div>
+<!-- ## 
+The multi-armed bandit problem is a nonassociative problem, that is it does not involve learning to action in more than one situation. Consider the newsvendor problem, the number of newspapers in the morning is always 0, regardless of the previous day's orders and sales. However, many real-world problems are associative. Therefore, we need to learn to choose different actions in different situations. -->
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
