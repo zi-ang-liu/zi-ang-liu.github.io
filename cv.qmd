@@ -88,6 +88,8 @@ Project details on the [Research](research.qmd){.info-link} page.
      every other list here. -->
 
 ::: {.cv-list}
+[2027–]{.cv-when} **Associate Editor**, *IEEE Transactions on Automation Science and Engineering* (T-ASE)
+
 [2021–]{.cv-when} **Secretary**, Cyber-Physical Flexible Automation (CyFA) research committee
 
 [2026]{.cv-when} **Executive Committee**, International Symposium on Flexible Automation (ISFA) 2026
@@ -117,8 +119,13 @@ Project details on the [Research](research.qmd){.info-link} page.
 
 <!-- researchmap records IEEE as 2024年3月–2025年3月, i.e. lapsed; listed with
      its range rather than silently dropped or shown as current. -->
+<!-- 
+Institute of Systems, Control and Information Engineers (2021–) · Japan Society of Mechanical Engineers (2020–) · IEEE (2024–2025) -->
 
-Institute of Systems, Control and Information Engineers (2021–) · Japan Society of Mechanical Engineers (2020–) · IEEE (2024–2025)
+<!-- 
+2026/09/30~ IEEE 
+
+ -->
 
 ## Publications
 

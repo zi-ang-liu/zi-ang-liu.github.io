@@ -127,6 +127,9 @@ if __name__ == "__main__":
 ```
 
 
+<!-- ## 
+The multi-armed bandit problem is a nonassociative problem, that is it does not involve learning to action in more than one situation. Consider the newsvendor problem, the number of newspapers in the morning is always 0, regardless of the previous day's orders and sales. However, many real-world problems are associative. Therefore, we need to learn to choose different actions in different situations. -->
+
 ## References
 
 :::{#refs}

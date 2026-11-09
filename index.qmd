@@ -90,6 +90,8 @@ Assistant Professor at Okayama University before joining Hosei in April 2025.
      a list, not across the site. -->
 
 ::: {.news-list}
+[Nov 2026]{.news-date} Appointed Associate Editor of *IEEE Transactions on Automation Science and Engineering* (T-ASE).
+
 [Jul 2026]{.news-date} Received the Young Investigator Award at ISFA 2026.
 
 [Apr 2025]{.news-date} Joined Hosei University as Associate Professor of Industrial and Systems Engineering.
