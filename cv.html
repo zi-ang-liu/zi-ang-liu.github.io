@@ -48,9 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-959295b59630de3d8499169efe1922db.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-57fb01e90c6a292215a943047220a00b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-63371e33f2071384df21c60664915fcd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-57fb01e90c6a292215a943047220a00b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0607d0bfcf3269d0f80ebbcd2c87ce68.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-9708d410b6b4c6295823859f57ae0d09.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-0607d0bfcf3269d0f80ebbcd2c87ce68.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.js"></script>
 <link href="site_libs/quarto-contrib/pseudocode-2.4.1/pseudocode.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -452,9 +452,13 @@ ul.task-list li input[type="checkbox"] {
      navbar of every page already. A pill row earns its place only where the
      links are the page's own subject: the bibliographic profiles belong on
      publications.qmd, KAKEN on research.qmd, and what belongs here is the way
-     to reach the person whose CV this is.
+     to reach the person whose CV this is, plus this CV as a PDF.
 
-     No inline `<i>` on this one, unlike those rows: `email-obfuscation:
+     The PDF is built from cv/Ziang_Liu_CV.tex. Quarto copies a local file into
+     _site because this page links to it, so no `resources:` entry is needed.
+     Rebuild the PDF before `quarto publish` whenever this page changes.
+
+     No inline `<i>` on the email pill, unlike those rows: `email-obfuscation:
      javascript` (in the front matter) rebuilds this link with document.write and
      entity-escapes the link text, so an icon written here renders as the literal
      string `<i class="bi bi-envelope-fill"></i>`. Quarto tags the generated link
@@ -466,7 +470,7 @@ ul.task-list li input[type="checkbox"] {
 h='&#104;&#x6f;&#x73;&#x65;&#x69;&#46;&#x61;&#x63;&#46;&#106;&#112;';a='&#64;';n='&#108;&#x69;&#x75;';e=n+a+h;
 document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail profile-link">'+e+'<\/'+'a'+'>');
 // -->
-</script><noscript>liu at hosei dot ac dot jp</noscript></p>
+</script><noscript>liu at hosei dot ac dot jp</noscript> <a href="cv/Ziang_Liu_CV.pdf" class="profile-link"><i class="bi bi-file-earmark-pdf-fill"></i> CV (PDF)</a></p>
 </div>
 <section id="appointments" class="level2">
 <h2 class="anchored" data-anchor-id="appointments">Appointments</h2>
@@ -517,18 +521,13 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail profile-
 <p><span class="cv-when">2023</span> <strong>Organizing Committee</strong>, 67th Annual Conference of the Institute of Systems, Control and Information Engineers (SCI’23)</p>
 <p><span class="cv-when">2021</span> <strong>Organizing Committee</strong>, 65th Annual Conference of the Institute of Systems, Control and Information Engineers (SCI’21)</p>
 </div>
-<!-- 
-2026/8/22~ 第71回 システム制御情報学会 研究発表講演会 プログラムオーガナイザー 
-2026/8/28~ International Symposium on Scheduling 2027 現地実行委員
-2027年7月にスケジューリング学会の国際シンポジウムを立命館大学大阪いばらきキャンパス
--->
 <section id="session-chair" class="level3">
 <h3 class="anchored" data-anchor-id="session-chair">Session Chair</h3>
 <p><em>Annual Conference of the Institute of Systems, Control and Information Engineers</em> (2022, 2024) · <em>JSME Manufacturing Systems Division Conference</em> (MSD2024) · <em>Scheduling Symposium</em> (2023)</p>
 </section>
 <section id="reviewing" class="level3">
 <h3 class="anchored" data-anchor-id="reviewing">Reviewing</h3>
-<p><em>IEEE Transactions on Automation Science and Engineering</em> · <em>Engineering Applications of Artificial Intelligence</em> · <em>Expert Systems with Applications</em></p>
+<p><em>IEEE Transactions on Automation Science and Engineering</em> · <em>Engineering Applications of Artificial Intelligence</em> · <em>Expert Systems with Applications</em> · <em>IEEJ Transactions on Electronics, Information and Systems</em> (Quick Paper Review Promotion Award, 2026)</p>
 </section>
 <section id="memberships" class="level3">
 <h3 class="anchored" data-anchor-id="memberships">Memberships</h3>
