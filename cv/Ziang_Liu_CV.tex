@@ -1,0 +1,301 @@
+% !TEX program = pdflatex
+% Curriculum vitae of Ziang Liu.
+%
+% The public PDF linked from cv.qmd (published at /cv/Ziang_Liu_CV.pdf). First
+% drafted 30 September 2026 for the IEEE T-ASE Associate Editor nomination; that
+% tailored version is archived, unpublished, in ideas/cv/.
+%
+% Sources: cv.qmd and references.bib in this repository. Department names, the
+% invited talks, and the Wesco grant come from researchmap
+% (https://researchmap.jp/liu.ziang). Research Interests follows cv.qmd word for
+% word. List only roles that cv.qmd lists too, because this PDF is just as
+% public as that page.
+%
+% The two publication lists and the venue-count sentence are a static copy of
+% references.bib, newest first. They do NOT update when the bib changes: re-sync
+% them by hand.
+%
+% Build (from cv/): latexmk -pdf Ziang_Liu_CV.tex. Commit the rebuilt PDF too,
+% because `quarto publish` copies whatever PDF is on disk.
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{XCharter}
+\usepackage[a4paper,hmargin=2.2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+
+\definecolor{accent}{RGB}{0,62,116}
+\definecolor{muted}{gray}{0.42}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor   = black, % publication titles link to their DOIs but print black
+  linkcolor  = black,
+  pdftitle   = {Ziang Liu -- Curriculum Vitae},
+  pdfauthor  = {Ziang Liu},
+}
+\newcommand{\hlink}[2]{\href{#1}{\textcolor{accent}{#2}}}
+\newcommand{\doititle}[2]{\href{https://doi.org/#1}{#2}}
+
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em} % a loose line beats one that runs into the margin
+\frenchspacing
+
+% Section headings: small caps in the accent colour over a thin rule.
+\titleformat{\section}{\large\scshape\color{accent}}{}{0pt}{}[{\color{accent}\titlerule[0.5pt]}]
+\titlespacing*{\section}{0pt}{3ex plus 0.6ex minus 0.4ex}{1.2ex}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{1.8ex plus 0.4ex}{0.8ex}
+
+% Every list hangs from the same left column: years for dated rows,
+% [J1]/[C1] for publications, empty for plain rows.
+\newlength{\datecol}
+\setlength{\datecol}{2.5cm}
+\newenvironment{cvlist}{%
+  \begin{list}{}{%
+    \setlength{\leftmargin}{\datecol}%
+    \setlength{\labelwidth}{\datecol}%
+    \setlength{\labelsep}{0pt}%
+    \setlength{\itemsep}{3pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{2pt}%
+    \renewcommand{\makelabel}[1]{##1\hfil}}%
+  \raggedright}% short rows full of proper nouns justify badly
+  {\end{list}}
+\newcounter{pubno}
+\newenvironment{publist}[1]{%
+  \begin{list}{[#1\arabic{pubno}]}{%
+    \usecounter{pubno}%
+    \setlength{\leftmargin}{\datecol}%
+    \setlength{\labelwidth}{\datecol}%
+    \setlength{\labelsep}{0pt}%
+    \setlength{\itemsep}{3pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{2pt}%
+    \renewcommand{\makelabel}[1]{##1\hfil}}}%
+  {\end{list}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+% The footer date is the build month, so it can never go stale.
+\newcommand{\buildmonth}{\ifcase\month\or January\or February\or March\or
+  April\or May\or June\or July\or August\or September\or October\or November\or
+  December\fi\ \number\year}
+\fancyfoot[L]{\footnotesize\color{muted}Ziang Liu \,\textperiodcentered\, Curriculum Vitae \,\textperiodcentered\, \buildmonth}
+\fancyfoot[R]{\footnotesize\color{muted}\thepage\ of \pageref*{LastPage}}
+
+\begin{document}
+
+{\fontsize{24}{28}\selectfont\bfseries Ziang Liu}\par
+\vspace{6pt}
+{\large Associate Professor}\par
+\vspace{2pt}
+Department of Industrial and Systems Engineering, Faculty of Science and Engineering\par
+Hosei University, 3-7-2 Kajino-cho, Koganei-shi, Tokyo 184-8584, Japan\par
+\vspace{6pt}
+{\small
+\hlink{mailto:liu@hosei.ac.jp}{liu@hosei.ac.jp}\quad\textperiodcentered\quad
+\hlink{https://zi-ang-liu.github.io}{zi-ang-liu.github.io}\quad\textperiodcentered\quad
+ORCID \hlink{https://orcid.org/0000-0002-1364-3502}{0000-0002-1364-3502}\quad\textperiodcentered\quad
+\hlink{https://scholar.google.com/citations?user=dRuC1OoAAAAJ}{Google Scholar}\par}
+
+\section{Research Interests}
+
+\begin{cvlist}
+\item[] Operations research, optimization, and machine learning---in
+particular, algorithms for autonomous decision-making in inventory,
+manufacturing, and supply chain systems. Current work covers data-driven
+optimization for multi-echelon supply chains under uncertainty, optimization for
+robotic manufacturing systems, and reinforcement learning with an emphasis on
+explainability and human-centric, trustworthy decision support.
+\end{cvlist}
+
+\section{Academic Appointments}
+
+\begin{cvlist}
+\item[2025--] \textbf{Associate Professor}, Department of Industrial and Systems
+  Engineering, Faculty of Science and Engineering, Hosei University, Japan
+\item[2021--2025] \textbf{Assistant Professor}, Faculty of Environmental, Life,
+  Natural Science and Technology (Faculty of Natural Science and Technology
+  until 2023), Okayama University, Japan
+\end{cvlist}
+
+\section{Education}
+
+\begin{cvlist}
+\item[2021] \textbf{Ph.D. in Engineering}, Osaka University, Japan\\
+  Graduate School of Engineering Science, Department of Systems Innovation,
+  Division of Mathematical Science for Social Systems
+\end{cvlist}
+
+\section{Professional Service}
+
+\subsection*{Editorial Board}
+
+\begin{cvlist}
+\item[2027--] \textbf{Associate Editor}, \textit{IEEE Transactions on
+  Automation Science and Engineering} (T-ASE)
+\end{cvlist}
+
+\subsection*{Journal Reviewing}
+
+\begin{cvlist}
+\item[] \textit{IEEE Transactions on Automation Science and Engineering};
+  \textit{Engineering Applications of Artificial Intelligence};
+  \textit{Expert Systems with Applications};
+  \textit{IEEJ Transactions on Electronics, Information and Systems}
+  (Quick Paper Review Promotion Award, 2026)
+\end{cvlist}
+
+\subsection*{Conference Organization and Committees}
+
+\begin{cvlist}
+\item[2021--] \textbf{Secretary}, Cyber-Physical Flexible Automation (CyFA)
+  Research Committee
+\item[2026] \textbf{Executive Committee}, 2026 International Symposium on
+  Flexible Automation (ISFA 2026); secured a JPY 1,000,000 grant from the
+  Precise Measurement Technology Promotion Foundation to support the symposium
+\item[2025] \textbf{Program Committee}, 44th IFIP WG 5.7 International
+  Conference on Advances in Production Management Systems (APMS 2025)
+\item[2023] \textbf{Organizing Committee}, 67th Annual Conference of the
+  Institute of Systems, Control and Information Engineers (SCI'23)
+\item[2021] \textbf{Organizing Committee}, 65th Annual Conference of the
+  Institute of Systems, Control and Information Engineers (SCI'21)
+\end{cvlist}
+
+\subsection*{Session Chair}
+
+\begin{cvlist}
+\item[] Annual Conference of the Institute of Systems, Control and Information
+  Engineers (2022, 2024); JSME Manufacturing Systems Division Conference
+  (MSD2024); Scheduling Symposium (2023)
+\end{cvlist}
+
+\section{Awards and Honors}
+
+\begin{cvlist}
+\item[2026] \textbf{Young Investigator Award}, 2026 International Symposium on
+  Flexible Automation (ISFA 2026)
+\item[2024] \textbf{Distinguished Young IEOM Researcher Award}, IEOM Society
+  International
+\item[2019] \textbf{Best Paper Award}, 2019 IEEE International Conference on
+  Industrial Engineering and Engineering Management (IEEM)
+\end{cvlist}
+
+\section{Research Grants}
+
+\begin{cvlist}
+\item[2023--2026] \textbf{Principal Investigator}, JSPS KAKENHI Grant-in-Aid for
+  Early-Career Scientists (No.~23K13514)\\
+  \textit{Developing explainable decision support systems for inventory
+  management using deep reinforcement learning}
+\item[2022--2026] \textbf{Co-Investigator}, JSPS KAKENHI Grant-in-Aid for
+  Scientific Research~(B) (No.~23K22983)\\
+  \textit{Development of data-driven optimization fundamentals for supply
+  chains using dynamic model construction platform}
+\item[2022--2023] \textbf{Principal Investigator}, Research Grant, Wesco
+  Scientific Promotion Foundation\\
+  \textit{Development of data-driven evolutionary computation methods for
+  supply chains}
+\end{cvlist}
+
+\section{Invited Talks}
+
+\begin{cvlist}
+\item[2024] \textbf{Keynote Speech}, 5th Asia Pacific Conference on Industrial
+  Engineering and Operations Management (IEOM), September 2024\\
+  \textit{Integrating machine learning and optimization for decision making in
+  supply chain management}
+\item[2024] \textbf{Invited Talk}, Research Group on Mathematical Optimization
+  and Machine Learning (MOAI), Scheduling Society of Japan, January 2024\\
+  \textit{Inventory management by machine learning and optimization} (in Japanese)
+\end{cvlist}
+
+% \section{Professional Memberships}
+
+% \begin{cvlist}
+% \item[2021--] Institute of Systems, Control and Information Engineers (ISCIE)
+% \item[2020--] Japan Society of Mechanical Engineers (JSME)
+% \item[2024--2025] Institute of Electrical and Electronics Engineers (IEEE)
+% \end{cvlist}
+
+\section{Publications}
+
+\begin{cvlist}
+\item[] 23 journal articles and 26 conference papers, all peer-reviewed.
+  Journals include \textit{European Journal of Operational Research},
+  \textit{Expert Systems with Applications}, \textit{Information Sciences}, and
+  \textit{Engineering Applications of Artificial Intelligence}. Conference
+  papers: IEEE CASE (4), IEEE/RSJ IROS (1), IEEE IEEM (9), IEEE SMC (1), IEEE
+  CEC (1), IEEE DOCS (1), IFAC World Congress (1), CIRP CMS (2), IFIP APMS (5),
+  and ISFA (1).
+\end{cvlist}
+
+\subsection*{Journal Articles}
+
+\begin{publist}{J}
+\item E.~Alenany, A.~Shamsan, M.~I.~Alhussam, and \textbf{Z.~Liu}, ``\doititle{10.1016/j.sca.2026.100237}{A data-driven constraint learning approach for multi-echelon supply chains},'' \textit{Supply Chain Analytics}, Art.~no.~100237, 2026.
+\item M.~Kaimujjaman, T.~Nishi, \textbf{Z.~Liu}, and T.~Fujiwara, ``\doititle{10.5687/iscie.39.21}{Motion and path planning of mobile robot for autonomous navigation with {A}* and {Q}-learning algorithms},'' \textit{Transactions of the Institute of Systems, Control and Information Engineers}, vol.~39, no.~2, pp.~21--29, 2026.
+\item T.~Kawabe, T.~Nishi, \textbf{Z.~Liu}, and T.~Fujiwara, ``\doititle{10.1016/j.engappai.2025.110530}{Surrogate-assisted motion planning and layout design of robotic cellular manufacturing systems},'' \textit{Engineering Applications of Artificial Intelligence}, vol.~150, Art.~no.~110530, 2025.
+\item Y.~Nomura, \textbf{Z.~Liu}, and T.~Nishi, ``\doititle{10.3390/app15052421}{Deep reinforcement learning for dynamic pricing and ordering policies in perishable inventory management},'' \textit{Applied Sciences}, vol.~15, no.~5, Art.~no.~2421, 2025.
+\item \textbf{Z.~Liu}, T.~Kawabe, T.~Nishi, S.~Ito, and T.~Fujiwara, ``\doititle{10.1080/08839514.2024.2398895}{Surrogate-assisted multi-objective optimization for simultaneous three-dimensional packing and motion planning problems using the sequence-triple representation},'' \textit{Applied Artificial Intelligence}, vol.~38, no.~1, Art.~no.~2398895, 2024.
+\item S.~Korekane, T.~Nishi, K.~Tierney, and \textbf{Z.~Liu}, ``\doititle{10.1016/j.ejor.2024.06.040}{Neural network assisted branch and bound algorithm for dynamic berth allocation problems},'' \textit{European Journal of Operational Research}, vol.~319, no.~2, pp.~531--542, 2024.
+\item \textbf{Z.~Liu} and T.~Nishi, ``\doititle{10.1016/j.eswa.2023.122179}{Surrogate-assisted evolutionary optimization for perishable inventory management in multi-echelon distribution systems},'' \textit{Expert Systems with Applications}, vol.~238, Art.~no.~122179, 2024.
+\item \textbf{Z.~Liu} and T.~Nishi, ``\doititle{10.1007/s40747-023-01179-0}{Data-driven evolutionary computation for service constrained inventory optimization in multi-echelon supply chains},'' \textit{Complex \& Intelligent Systems}, vol.~10, no.~1, pp.~825--846, 2024.
+\item T.~Nishi, N.~Debuchi, and \textbf{Z.~Liu}, ``\doititle{10.1299/jamdsm.2024jamdsm0073}{Distributed optimization algorithm for multi-agent optimization problems using consensus control},'' \textit{Journal of Advanced Mechanical Design, Systems, and Manufacturing}, vol.~18, no.~5, Art.~no.~JAMDSM0073, 2024.
+\item T.~Nishi, H.~Kurakado, and \textbf{Z.~Liu}, ``\doititle{10.1299/jamdsm.2024jamdsm0062}{Resource constrained project scheduling formulation for optimization of product input sequence and workforce scheduling for multi-stage multi-product cellular production lines},'' \textit{Journal of Advanced Mechanical Design, Systems, and Manufacturing}, vol.~18, no.~5, Art.~no.~JAMDSM0062, 2024.
+\item T.~Fujiwara, T.~Nishi, and \textbf{Z.~Liu}, ``\doititle{10.5687/iscie.37.283}{Study on energy efficient motion planning for industrial SCARA robots by particle swarm optimization},'' \textit{Transactions of the Institute of Systems, Control and Information Engineers}, vol.~37, no.~11, pp.~283--290, 2024 (in Japanese).
+\item K.~Fukushima, T.~Nishi, \textbf{Z.~Liu}, and T.~Fujiwara, ``\doititle{10.5687/iscie.37.207}{A route planning method for multiple mobile robots by combining deep {Q}-network and graph search},'' \textit{Transactions of the Institute of Systems, Control and Information Engineers}, vol.~37, no.~8, pp.~207--215, 2024 (in Japanese).
+\item Y.~Nishihata, \textbf{Z.~Liu}, and T.~Nishi, ``\doititle{10.3390/app132011308}{Evolutionary-game-theory-based epidemiological model for prediction of infections with application to demand forecasting in pharmaceutical inventory management problems},'' \textit{Applied Sciences}, vol.~13, no.~20, Art.~no.~11308, 2023.
+\item M.~M.~Alam, T.~Nishi, \textbf{Z.~Liu}, and T.~Fujiwara, ``\doititle{10.3390/en16196910}{A novel sampling-based optimal motion planning algorithm for energy-efficient robotic pick and place},'' \textit{Energies}, vol.~16, no.~19, Art.~no.~6910, 2023.
+\item T.~Kawabe, T.~Nishi, and \textbf{Z.~Liu}, ``\doititle{10.3390/app13031879}{Flexible route planning for multiple mobile robots by combining Q-learning and graph search algorithm},'' \textit{Applied Sciences}, vol.~13, no.~3, Art.~no.~1879, 2023.
+\item H.~Togo, K.~Asanuma, T.~Nishi, and \textbf{Z.~Liu}, ``\doititle{10.3390/app12199472}{Machine learning and inverse optimization for estimation of weighting factors in multi-objective production scheduling problems},'' \textit{Applied Sciences}, vol.~12, no.~19, Art.~no.~9472, 2022.
+\item K.~Nonoyama, \textbf{Z.~Liu}, T.~Fujiwara, M.~M.~Alam, and T.~Nishi, ``\doititle{10.3390/en15062074}{Energy-efficient robot configuration and motion planning using genetic algorithm and particle swarm optimization},'' \textit{Energies}, vol.~15, no.~6, Art.~no.~2074, 2022.
+\item \textbf{Z.~Liu} and T.~Nishi, ``\doititle{10.1016/j.ins.2021.10.028}{Strategy dynamics particle swarm optimizer},'' \textit{Information Sciences}, vol.~582, pp.~665--703, 2022.
+\item \textbf{Z.~Liu} and T.~Nishi, ``\doititle{10.1299/jamdsm.2022jamdsm0035}{Adaptive heterogeneous particle swarm optimization with comprehensive learning strategy},'' \textit{Journal of Advanced Mechanical Design, Systems, and Manufacturing}, vol.~16, no.~4, Art.~no.~JAMDSM0035, 2022.
+\item \textbf{Z.~Liu} and T.~Nishi, ``\doititle{10.1155/2020/1450985}{Multipopulation ensemble particle swarm optimizer for engineering design problems},'' \textit{Mathematical Problems in Engineering}, vol.~2020, no.~1, Art.~no.~1450985, 2020.
+\item T.~Nishi, M.~Matsuda, M.~Hasegawa, R.~Alizadeh, \textbf{Z.~Liu}, and T.~Terunuma, ``\doititle{10.20965/ijat.2020.p0713}{Automatic construction of virtual supply chain as multi-agent system using enterprise {E}-catalogues},'' \textit{International Journal of Automation Technology}, vol.~14, no.~5, pp.~713--722, 2020.
+\item \textbf{Z.~Liu} and T.~Nishi, ``\doititle{10.1299/jamdsm.2020jamdsm0070}{Analyzing just-in-time purchasing strategy in supply chains using an evolutionary game approach},'' \textit{Journal of Advanced Mechanical Design, Systems, and Manufacturing}, vol.~14, no.~5, Art.~no.~JAMDSM0070, 2020.
+\item \textbf{Z.~Liu} and T.~Nishi, ``\doititle{10.3390/su11185030}{Government regulations on closed-loop supply chain with evolutionarily stable strategy},'' \textit{Sustainability}, vol.~11, no.~18, Art.~no.~5030, 2019.
+\end{publist}
+
+\subsection*{Conference Papers}
+
+\begin{publist}{C}
+\item K.~Toda, T.~Nishi, and \textbf{Z.~Liu}, ``\doititle{10.1007/978-3-032-03534-9_20}{Local explanation method for ordering policy in perishable inventory management problem using {LLM} and {LIME}},'' in \textit{Advances in Production Management Systems (APMS~2025)}, IFIP AICT, vol.~765, Springer, 2026, pp.~289--302.
+\item M.~S.~Akter, T.~Nishi, and \textbf{Z.~Liu}, ``\doititle{10.1007/978-3-032-03534-9_21}{A multi-period multi-objective model for sustainable supply chain optimization using {MILP} framework},'' in \textit{Advances in Production Management Systems (APMS~2025)}, IFIP AICT, vol.~765, Springer, 2026, pp.~303--319.
+\item T.~Taniguchi, T.~Nishi, \textbf{Z.~Liu}, and T.~Fujiwara, ``\doititle{10.1109/ieem62345.2024.10857105}{Simultaneous optimization of placement planning and motion planning for a single robotic arm using genetic algorithm},'' in \textit{2024 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)}, 2024, pp.~708--712.
+\item H.~Matsuda, T.~Nishi, \textbf{Z.~Liu}, and T.~Fujiwara, ``\doititle{10.1109/ieem62345.2024.10857125}{A transfer learning for estimation of operation time for 6-axis robot arms},'' in \textit{2024 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)}, 2024, pp.~1154--1158.
+\item T.~Kawabe, T.~Nishi, \textbf{Z.~Liu}, and T.~Fujiwara, ``\doititle{10.1109/case59546.2024.10711671}{Task planning for robot manipulator using natural language task input with large language models},'' in \textit{2024 IEEE 20th International Conference on Automation Science and Engineering (CASE)}, 2024, pp.~3484--3489.
+\item M.~Kaimujjaman, T.~Nishi, T.~Fujiwara, and \textbf{Z.~Liu}, ``\doititle{10.1115/isfa2024-141112}{Designing a mobile manipulator and motion planning for autonomous navigation with {A}* and {Q}-learning algorithms},'' in \textit{2024 International Symposium on Flexible Automation (ISFA)}, ASME, 2024, Art.~no.~V001T05A005.
+\item \textbf{Z.~Liu} and T.~Nishi, ``\doititle{10.1109/cec60901.2024.10612189}{Surrogate-assisted evolutionary computation for distributed simulation-based inventory optimization in serial supply chains},'' in \textit{2024 IEEE Congress on Evolutionary Computation (CEC)}, 2024, pp.~1--7.
+\item N.~Mikyu, T.~Nishi, \textbf{Z.~Liu}, and T.~Fujiwara, ``\doititle{10.1007/978-3-031-65894-5_4}{Three-dimensional bin packing problems with the operating time of a robot manipulator},'' in \textit{Advances in Production Management Systems (APMS~2024)}, IFIP AICT, vol.~729, Springer, 2024, pp.~44--60.
+\item H.~Kurakado, T.~Nishi, and \textbf{Z.~Liu}, ``\doititle{10.1007/978-3-031-65894-5_2}{Data-driven scheduling of cellular manufacturing systems using process mining with {P}etri nets},'' in \textit{Advances in Production Management Systems (APMS~2024)}, IFIP AICT, vol.~729, Springer, 2024, pp.~17--28.
+\item Y.~Nomura, \textbf{Z.~Liu}, and T.~Nishi, ``\doititle{10.1109/ieem58616.2023.10406759}{Deep reinforcement learning for perishable inventory optimization problem},'' in \textit{2023 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)}, 2023, pp.~0370--0374.
+\item \textbf{Z.~Liu}, S.~Ito, T.~Kawabe, T.~Nishi, and T.~Fujiwara, ``\doititle{10.1109/ieem58616.2023.10406772}{Multi-objective optimization for three-dimensional packing problem using the sequence-triple representation with robot motion planning},'' in \textit{2023 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)}, 2023, pp.~1--5.
+\item M.~Shiraga, T.~Nishi, \textbf{Z.~Liu}, and T.~Fujiwara, ``\doititle{10.1109/ieem58616.2023.10406354}{Motion planning of industrial robot by data-driven optimization using {P}etri nets},'' in \textit{2023 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)}, 2023, pp.~1199--1203.
+\item J.~Nakao, T.~Nishi, and \textbf{Z.~Liu}, ``\doititle{10.1109/smc53992.2023.10394540}{Robust optimization for bilevel production planning problems under customer's uncertainties},'' in \textit{2023 IEEE International Conference on Systems, Man, and Cybernetics (SMC)}, 2023, pp.~3546--3551.
+\item \textbf{Z.~Liu} and T.~Nishi, ``\doititle{10.1109/docs60977.2023.10294547}{Inventory control with lateral transshipment using proximal policy optimization},'' in \textit{2023 5th International Conference on Data-driven Optimization of Complex Systems (DOCS)}, 2023, pp.~1--6.
+\item K.~Fukushima, T.~Nishi, and \textbf{Z.~Liu}, ``\doititle{10.1109/case56687.2023.10260638}{A combined deep {Q}-network and graph search for three dimensional route planning problems for multiple mobile robots},'' in \textit{2023 IEEE 19th International Conference on Automation Science and Engineering (CASE)}, 2023, pp.~1--6.
+\item K.~Hara, T.~Nishi, \textbf{Z.~Liu}, and T.~Fujiwara, ``\doititle{10.1109/case56687.2023.10260329}{Collision-free motion planning for multiple robot arms by combining deep {Q}-network and graph search algorithm},'' in \textit{2023 IEEE 19th International Conference on Automation Science and Engineering (CASE)}, 2023, pp.~1--6.
+\item T.~Kawabe, T.~Nishi, \textbf{Z.~Liu}, and T.~Fujiwara, ``\doititle{10.1109/case56687.2023.10260452}{Symbolic sequence optimization approach for task and motion planning of robot manipulators},'' in \textit{2023 IEEE 19th International Conference on Automation Science and Engineering (CASE)}, 2023, pp.~1--6.
+\item \textbf{Z.~Liu}, R.~Shirakashi, R.~Kamiebisu, T.~Nishi, and M.~Matsuda, ``\doititle{10.1016/j.ifacol.2023.10.1145}{Simulation-based optimization using virtual supply chain structured by the configuration platform},'' in \textit{22nd {IFAC} World Congress}, IFAC-PapersOnLine, vol.~56, no.~2, 2023, pp.~7840--7845.
+\item T.~Kawabe, \textbf{Z.~Liu}, T.~Nishi, M.~M.~Alam, and T.~Fujiwara, ``\doititle{10.1109/ieem55944.2022.9989566}{Optimal motion planning and layout design in robotic cellular manufacturing systems},'' in \textit{2022 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)}, 2022, pp.~1541--1545.
+\item Y.~Nishihata, \textbf{Z.~Liu}, and T.~Nishi, ``\doititle{10.1109/ieem55944.2022.9989989}{Epidemiological model of {COVID}-19 based on evolutionary game theory: Considering the viral mutations},'' in \textit{2022 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)}, 2022, pp.~686--690.
+\item Y.~Oyama, T.~Nishi, \textbf{Z.~Liu}, M.~M.~Alam, and T.~Fujiwara, ``\doititle{10.1109/ieem55944.2022.9989780}{Decision support system for selecting robot systems for pick-and-place operation of robot manipulator},'' in \textit{2022 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)}, 2022, pp.~0530--0534.
+\item T.~Bando, T.~Nishi, M.~M.~Alam, \textbf{Z.~Liu}, and T.~Fujiwara, ``\doititle{10.1109/iros47612.2022.9982201}{Automatic generation of optimization model using process mining and {P}etri nets for optimal motion planning of 6-{DOF} manipulators},'' in \textit{2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 2022, pp.~11767--11772.
+\item R.~Kamiebisu, T.~Saso, J.~Nakao, \textbf{Z.~Liu}, T.~Nishi, and M.~Matsuda, ``\doititle{10.1016/j.procir.2022.05.046}{Use cases of the platform for structuring a smart supply chain in discrete manufacturing},'' in \textit{55th {CIRP} Conference on Manufacturing Systems}, Procedia CIRP, vol.~107, 2022, pp.~687--692.
+\item N.~Debuchi, T.~Nishi, and \textbf{Z.~Liu}, ``\doititle{10.1007/978-3-031-16411-8_27}{Distributed optimization for supply chain planning for multiple companies using subgradient method and consensus control},'' in \textit{Advances in Production Management Systems (APMS~2022)}, IFIP AICT, vol.~664, Springer, 2022, pp.~216--223.
+\item M.~Matsuda, T.~Nishi, R.~Kamiebisu, M.~Hasegawa, R.~Alizadeh, and \textbf{Z.~Liu}, ``\doititle{10.1016/j.procir.2021.11.059}{Use of virtual supply chain constructed by cyber-physical systems concept},'' in \textit{54th {CIRP} Conference on Manufacturing Systems}, Procedia CIRP, vol.~104, 2021, pp.~351--356.
+\item \textbf{Z.~Liu} and T.~Nishi, ``\doititle{10.1109/ieem44572.2019.8978741}{An evolutionary game model in closed-loop supply chain},'' in \textit{2019 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)}, 2019, pp.~896--900. \textbf{Best Paper Award.}
+\end{publist}
+
+\end{document}

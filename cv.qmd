@@ -23,9 +23,13 @@ are listed separately on the [Publications](publications.qmd){.info-link} page.
      navbar of every page already. A pill row earns its place only where the
      links are the page's own subject: the bibliographic profiles belong on
      publications.qmd, KAKEN on research.qmd, and what belongs here is the way
-     to reach the person whose CV this is.
+     to reach the person whose CV this is, plus this CV as a PDF.
 
-     No inline `<i>` on this one, unlike those rows: `email-obfuscation:
+     The PDF is built from cv/Ziang_Liu_CV.tex. Quarto copies a local file into
+     _site because this page links to it, so no `resources:` entry is needed.
+     Rebuild the PDF before `quarto publish` whenever this page changes.
+
+     No inline `<i>` on the email pill, unlike those rows: `email-obfuscation:
      javascript` (in the front matter) rebuilds this link with document.write and
      entity-escapes the link text, so an icon written here renders as the literal
      string `<i class="bi bi-envelope-fill"></i>`. Quarto tags the generated link
@@ -33,6 +37,7 @@ are listed separately on the [Publications](publications.qmd){.info-link} page.
      see `.profile-link.email::before` in scss/_shared.scss. -->
 ::: {.profile-links}
 [liu@hosei.ac.jp](mailto:liu@hosei.ac.jp){.profile-link}
+[<i class="bi bi-file-earmark-pdf-fill"></i> CV (PDF)](cv/Ziang_Liu_CV.pdf){.profile-link}
 :::
 
 ## Appointments
@@ -101,19 +106,13 @@ Project details on the [Research](research.qmd){.info-link} page.
 [2021]{.cv-when} **Organizing Committee**, 65th Annual Conference of the Institute of Systems, Control and Information Engineers (SCI'21)
 :::
 
-<!-- 
-2026/8/22~ 第71回 システム制御情報学会 研究発表講演会 プログラムオーガナイザー 
-2026/8/28~ International Symposium on Scheduling 2027 現地実行委員
-2027年7月にスケジューリング学会の国際シンポジウムを立命館大学大阪いばらきキャンパス
--->
-
 ### Session Chair
 
 *Annual Conference of the Institute of Systems, Control and Information Engineers* (2022, 2024) · *JSME Manufacturing Systems Division Conference* (MSD2024) · *Scheduling Symposium* (2023)
 
 ### Reviewing
 
-*IEEE Transactions on Automation Science and Engineering* · *Engineering Applications of Artificial Intelligence* · *Expert Systems with Applications*
+*IEEE Transactions on Automation Science and Engineering* · *Engineering Applications of Artificial Intelligence* · *Expert Systems with Applications* · *IEEJ Transactions on Electronics, Information and Systems* (Quick Paper Review Promotion Award, 2026)
 
 ### Memberships
 
